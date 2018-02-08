@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="OrderModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="OrderModelStoreContainer" />
+        <Function Name="sp_ROMS010_OrderRefresh_SearchAll_Receiving" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_ROMS010_OrderRefresh_SearchAll_Shipping" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="CustomerID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_ROMS011_OrderRefresh_SearchReceivingDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_ROMS012_OrderRefresh_SearchShippingDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_ROMS020_OrderCancel_SearchAll_Receiving" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ReceiveNo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_ROMS020_OrderCancel_SearchAll_Shipping" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OrderModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="O_R_OrderModel" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="sp_ROMS010_OrderRefresh_SearchAll" ReturnType="Collection(OrderModel.sp_ROMS010_OrderRefresh_SearchAll_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ROMS010_OrderRefresh_SearchAll_Receiving" ReturnType="Collection(OrderModel.sp_ROMS010_OrderRefresh_SearchAll_Receiving_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ROMS011_OrderRefresh_SearchReceivingDetail" ReturnType="Collection(OrderModel.sp_ROMS011_OrderRefresh_SearchReceivingDetail_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ROMS012_OrderRefresh_SearchShippingDetail" ReturnType="Collection(OrderModel.sp_ROMS012_OrderRefresh_SearchShippingDetail_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ROMS020_OrderCancel_SearchAll" ReturnType="Collection(OrderModel.sp_ROMS020_OrderCancel_SearchAll_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ROMS020_OrderCancel_SearchAll_Receiving" ReturnType="Collection(OrderModel.sp_ROMS020_OrderCancel_SearchAll_Receiving_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ReceiveNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ROMS020_OrderCancel_SearchAll_Shipping" ReturnType="Collection(OrderModel.sp_ROMS020_OrderCancel_SearchAll_Shipping_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+            <Parameter Name="PickingNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ROMS010_OrderRefresh_SearchAll_Shipping" ReturnType="Collection(OrderModel.sp_ROMS010_OrderRefresh_SearchAll_Shipping_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+            <Parameter Name="PickingNo" Mode="In" Type="String" />
+            <Parameter Name="CustomerID" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="sp_ROMS010_OrderRefresh_SearchAll_Result">
+          <Property Type="Boolean" Name="Select" Nullable="true" />
+          <Property Type="String" Name="WorkUnit" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Entry" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="StockControl" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="PickingInstruction" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Picking" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Shipping" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Transportation" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="sp_ROMS010_OrderRefresh_SearchAll_Receiving_Result">
+          <Property Type="Boolean" Name="Select" Nullable="true" />
+          <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+          <Property Type="DateTime" Name="Entry" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="TransitInstruction" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ReceivingDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="TransitDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="WarehouseID" Nullable="true" />
+          <Property Type="Int32" Name="SupplierID" Nullable="true" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="Installment" Nullable="false" />
+          <Property Type="String" Name="WarehouseCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="SupplierCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="SupplierName" Nullable="true" MaxLength="60" />
+          <Property Type="Int32" Name="OwnerID" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_ROMS011_OrderRefresh_SearchReceivingDetail_Result">
+          <Property Type="String" Name="LineNo" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Condition" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="LotNo" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Qty" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="TypeOfQty" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Weight" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Measurement" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="TypeOfPackage" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="InPackage" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="PONo" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="sp_ROMS012_OrderRefresh_SearchShippingDetail_Result">
+          <Property Type="String" Name="LineNo" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Condition" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="LotNo" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Qty" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="TypeOfQty" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Weight" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Measurement" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="TypeOfPackage" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="InPackage" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="PONo" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="sp_ROMS020_OrderCancel_SearchAll_Result">
+          <Property Type="Boolean" Name="Select" Nullable="true" />
+          <Property Type="String" Name="Progress" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="LineNo" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Condition" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Qty" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="sp_ROMS020_OrderCancel_SearchAll_Receiving_Result">
+          <Property Type="Boolean" Name="Select" Nullable="true" />
+          <Property Type="String" Name="Progress" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="LineNo" Nullable="false" />
+          <Property Type="Int64" Name="SortedLineNo" Nullable="true" />
+          <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ProductCondition" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="Qty" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="DateTime" Name="ReceivingEntryDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="TransitInstructionIssuedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ReceivingDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="TransitDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="DetailRemark" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+          <Property Type="String" Name="SupplierCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="SupplierName" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="PortOfDischargeCode" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="PortOfDischargeName" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="FinalDestinationCode" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="FinalDestinationName" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="StatusID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_ROMS020_OrderCancel_SearchAll_Shipping_Result">
+          <Property Type="Boolean" Name="Select" Nullable="true" />
+          <Property Type="String" Name="Progress" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="LineNo" Nullable="false" />
+          <Property Type="Int64" Name="SortedLineNo" Nullable="true" />
+          <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ProductCondition" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="Qty" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="DateTime" Name="EntryDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="StockControlDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="PickingListIssuedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="PickingDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ShippingDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="DOIssueDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="DetailRemark" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+          <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="PortOfDischargeCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PortOfDischargeName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FinalDestinationCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="FinalDestinationName" Nullable="true" MaxLength="60" />
+          <Property Type="Int32" Name="StatusID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_ROMS010_OrderRefresh_SearchAll_Shipping_Result">
+          <Property Type="Boolean" Name="Select" Nullable="true" />
+          <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+          <Property Type="DateTime" Name="Entry" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="StockControl" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="PickingInstruction" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="Picking" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="Shipping" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="Transporation" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="WarehouseID" Nullable="true" />
+          <Property Type="DateTime" Name="DeliveryDate" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="FinalDestinationID" Nullable="true" />
+          <Property Type="String" Name="WarehouseCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="FinalDestinationCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PortCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PortName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="Installment" Nullable="false" />
+          <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OrderModelStoreContainer" CdmEntityContainer="O_R_OrderModel" >
+          <FunctionImportMapping FunctionImportName="sp_ROMS010_OrderRefresh_SearchAll_Receiving" FunctionName="OrderModel.Store.sp_ROMS010_OrderRefresh_SearchAll_Receiving">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OrderModel.sp_ROMS010_OrderRefresh_SearchAll_Receiving_Result">
+                <ScalarProperty Name="Select" ColumnName="Select" />
+                <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+                <ScalarProperty Name="TransitInstruction" ColumnName="TransitInstruction" />
+                <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+                <ScalarProperty Name="TransitDate" ColumnName="TransitDate" />
+                <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+                <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Installment" ColumnName="Installment" />
+                <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+                <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+                <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ROMS011_OrderRefresh_SearchReceivingDetail" FunctionName="OrderModel.Store.sp_ROMS011_OrderRefresh_SearchReceivingDetail">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OrderModel.sp_ROMS011_OrderRefresh_SearchReceivingDetail_Result">
+                <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="Condition" ColumnName="Condition" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="TypeOfQty" ColumnName="TypeOfQty" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Measurement" ColumnName="Measurement" />
+                <ScalarProperty Name="TypeOfPackage" ColumnName="TypeOfPackage" />
+                <ScalarProperty Name="InPackage" ColumnName="InPackage" />
+                <ScalarProperty Name="PONo" ColumnName="PONo" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ROMS012_OrderRefresh_SearchShippingDetail" FunctionName="OrderModel.Store.sp_ROMS012_OrderRefresh_SearchShippingDetail">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OrderModel.sp_ROMS012_OrderRefresh_SearchShippingDetail_Result">
+                <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="Condition" ColumnName="Condition" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="TypeOfQty" ColumnName="TypeOfQty" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Measurement" ColumnName="Measurement" />
+                <ScalarProperty Name="TypeOfPackage" ColumnName="TypeOfPackage" />
+                <ScalarProperty Name="InPackage" ColumnName="InPackage" />
+                <ScalarProperty Name="PONo" ColumnName="PONo" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ROMS020_OrderCancel_SearchAll_Receiving" FunctionName="OrderModel.Store.sp_ROMS020_OrderCancel_SearchAll_Receiving">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OrderModel.sp_ROMS020_OrderCancel_SearchAll_Receiving_Result">
+                <ScalarProperty Name="Select" ColumnName="Select" />
+                <ScalarProperty Name="Progress" ColumnName="Progress" />
+                <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+                <ScalarProperty Name="SortedLineNo" ColumnName="SortedLineNo" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductCondition" ColumnName="ProductCondition" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="ReceivingEntryDate" ColumnName="ReceivingEntryDate" />
+                <ScalarProperty Name="TransitInstructionIssuedDate" ColumnName="TransitInstructionIssuedDate" />
+                <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+                <ScalarProperty Name="TransitDate" ColumnName="TransitDate" />
+                <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+                <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+                <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+                <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+                <ScalarProperty Name="PortOfDischargeCode" ColumnName="PortOfDischargeCode" />
+                <ScalarProperty Name="PortOfDischargeName" ColumnName="PortOfDischargeName" />
+                <ScalarProperty Name="FinalDestinationCode" ColumnName="FinalDestinationCode" />
+                <ScalarProperty Name="FinalDestinationName" ColumnName="FinalDestinationName" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ROMS020_OrderCancel_SearchAll_Shipping" FunctionName="OrderModel.Store.sp_ROMS020_OrderCancel_SearchAll_Shipping">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OrderModel.sp_ROMS020_OrderCancel_SearchAll_Shipping_Result">
+                <ScalarProperty Name="Select" ColumnName="Select" />
+                <ScalarProperty Name="Progress" ColumnName="Progress" />
+                <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+                <ScalarProperty Name="SortedLineNo" ColumnName="SortedLineNo" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductCondition" ColumnName="ProductCondition" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="StockControlDate" ColumnName="StockControlDate" />
+                <ScalarProperty Name="PickingListIssuedDate" ColumnName="PickingListIssuedDate" />
+                <ScalarProperty Name="PickingDate" ColumnName="PickingDate" />
+                <ScalarProperty Name="ShippingDate" ColumnName="ShippingDate" />
+                <ScalarProperty Name="DOIssueDate" ColumnName="DOIssueDate" />
+                <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+                <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+                <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="PortOfDischargeCode" ColumnName="PortOfDischargeCode" />
+                <ScalarProperty Name="PortOfDischargeName" ColumnName="PortOfDischargeName" />
+                <ScalarProperty Name="FinalDestinationCode" ColumnName="FinalDestinationCode" />
+                <ScalarProperty Name="FinalDestinationName" ColumnName="FinalDestinationName" />
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ROMS010_OrderRefresh_SearchAll_Shipping" FunctionName="OrderModel.Store.sp_ROMS010_OrderRefresh_SearchAll_Shipping">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OrderModel.sp_ROMS010_OrderRefresh_SearchAll_Shipping_Result">
+                <ScalarProperty Name="Select" ColumnName="Select" />
+                <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+                <ScalarProperty Name="StockControl" ColumnName="StockControl" />
+                <ScalarProperty Name="PickingInstruction" ColumnName="PickingInstruction" />
+                <ScalarProperty Name="Picking" ColumnName="Picking" />
+                <ScalarProperty Name="Shipping" ColumnName="Shipping" />
+                <ScalarProperty Name="Transporation" ColumnName="Transporation" />
+                <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="FinalDestinationID" ColumnName="FinalDestinationID" />
+                <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+                <ScalarProperty Name="FinalDestinationCode" ColumnName="FinalDestinationCode" />
+                <ScalarProperty Name="PortCode" ColumnName="PortCode" />
+                <ScalarProperty Name="PortName" ColumnName="PortName" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Installment" ColumnName="Installment" />
+                <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="O_R_OrderModel" />
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

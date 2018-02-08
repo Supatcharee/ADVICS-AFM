@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<dsDatabase>
+  <dtDatabase>
+    <WebApiUrl>http://10.87.53.162/AdvicsWebAPI/</WebApiUrl>
+  </dtDatabase>
+  <dtAutoUpdate>
+    <WebUrl>http://10.87.53.162/AdvicsAutoUpdate/</WebUrl>
+  </dtAutoUpdate>
+  <dtVersion>
+    <Version>2.0</Version>
+  </dtVersion>
+</dsDatabase>

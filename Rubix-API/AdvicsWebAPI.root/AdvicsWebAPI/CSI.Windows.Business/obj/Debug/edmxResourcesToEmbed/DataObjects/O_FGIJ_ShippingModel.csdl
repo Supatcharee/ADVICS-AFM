@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="O_FGIJ_ShippingModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="O_FGIJ_ShippingModelContainer" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_FSES010_ShippingInstruction_LoadFinalDestinationInfo" ReturnType="Collection(O_FGIJ_ShippingModel.sp_FSES010_ShippingInstruction_LoadFinalDestinationInfo_Result)">
+      <Parameter Name="FinalDestinationID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_FSES010_ShippingInstruction_LoadProductUnitInfo" ReturnType="Collection(O_FGIJ_ShippingModel.sp_FSES010_ShippingInstruction_LoadProductUnitInfo_Result)">
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_FSES012_TransportDetail_Search" ReturnType="Collection(O_FGIJ_ShippingModel.sp_FSES012_TransportDetail_Search_Result)">
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+      <Parameter Name="Installment" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_FSES012_ShippingOtherCharge_Other_Detail_Search" ReturnType="Collection(O_FGIJ_ShippingModel.sp_FSES012_ShippingOtherCharge_Other_Detail_Search_Result)">
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GSCS010_StockControlProcess_SearchAll" ReturnType="Collection(O_FGIJ_ShippingModel.sp_GSCS010_StockControlProcess_SearchAll_Result)">
+      <Parameter Name="CustomerID" Mode="In" Type="Int32" />
+      <Parameter Name="DCID" Mode="In" Type="Int32" />
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="PickingDateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="FinalDestinationID" Mode="In" Type="Int32" />
+      <Parameter Name="ShippingCustomerID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GSCS012_StockControlDetail_Search" ReturnType="Collection(O_FGIJ_ShippingModel.sp_GSCS012_StockControlDetail_Search_Result)">
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_FSES021_TransferInstruction_ReceivingHeader_Add" ReturnType="Collection(String)">
+      <Parameter Name="CustomerID" Mode="In" Type="Int32" />
+      <Parameter Name="DCID" Mode="In" Type="Int32" />
+      <Parameter Name="ArrivalDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Remark" Mode="In" Type="String" />
+      <Parameter Name="CreateUser" Mode="In" Type="String" />
+      <Parameter Name="ShipmentNO" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_FSES021_TransferInstruction_ReceivingDetail_Add">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+      <Parameter Name="XMLData" Mode="In" Type="String" />
+      <Parameter Name="CreateUser" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_FSES010_LoadLotByProductCode" ReturnType="Collection(O_FGIJ_ShippingModel.sp_FSES010_LoadLotByProductCode_Result)">
+      <Parameter Name="ProductCode" Mode="In" Type="String" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_FSES012_TransportDetail_TransportCharge_Search" ReturnType="Collection(O_FGIJ_ShippingModel.sp_FSES012_TransportDetail_TransportCharge_Search_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="CustomerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="TransportTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="FinalDestinationID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_FSES013_ShippingByLot_Search" ReturnType="Collection(O_FGIJ_ShippingModel.sp_FSES013_ShippingByLot_Search_Result)">
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ISHS060_PrintDeliveryOrder_SearchAll" ReturnType="Collection(O_FGIJ_ShippingModel.sp_ISHS060_PrintDeliveryOrder_SearchAll_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+      <Parameter Name="PickDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="PickDateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="CustomerID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ISHS060_PrintDeliveryOrder_EntryDO" ReturnType="Collection(O_FGIJ_ShippingModel.sp_ISHS060_PrintDeliveryOrder_EntryDO_Result)">
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+      <Parameter Name="Installment" Mode="In" Type="Int32" />
+      <Parameter Name="User" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ISHS060_LoadPickingNo" ReturnType="Collection(O_FGIJ_ShippingModel.sp_ISHS060_LoadPickingNo_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="tbt_ShippingInstruction" EntityType="O_FGIJ_ShippingModel.tbt_ShippingInstruction" />
+    <FunctionImport Name="sp_JTRS010_InquiryTransportation_SearchAll" ReturnType="Collection(O_FGIJ_ShippingModel.sp_JTRS010_InquiryTransportation_SearchAll_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="DeliveryDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="DeliveryDateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="FinalDestinationID" Mode="In" Type="Int32" />
+      <Parameter Name="PortID" Mode="In" Type="Int32" />
+      <Parameter Name="TruckCompanyID" Mode="In" Type="Int32" />
+      <Parameter Name="CustomerID" Mode="In" Type="Int32" />
+      <Parameter Name="NoTransportData" Mode="In" Type="Int32" />
+      <Parameter Name="ContainerNo" Mode="In" Type="String" />
+      <Parameter Name="TransportDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="TransportDateTo" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ISHS010_ExportDocument_SearchAll" ReturnType="Collection(O_FGIJ_ShippingModel.sp_ISHS010_ExportDocument_SearchAll_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="CustomerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ShippingDateFrom" Mode="In" Type="String" />
+      <Parameter Name="ShippingDateTo" Mode="In" Type="String" />
+      <Parameter Name="CustomerPONo" Mode="In" Type="String" />
+      <Parameter Name="SONo" Mode="In" Type="String" />
+      <Parameter Name="ContainerNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ISHS010_ExportDocument_UpdatePrePrint">
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="Installment" Mode="In" Type="Int32" />
+      <Parameter Name="ContainerNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_FSES011_ShippingInstruction_SearchDetail" ReturnType="Collection(O_FGIJ_ShippingModel.sp_FSES011_ShippingInstruction_SearchDetail_Result)">
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ISHS070_ReturnPick_Get" ReturnType="Collection(O_FGIJ_ShippingModel.sp_ISHS070_ReturnPick_Get_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+      <Parameter Name="ShipFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="ShipTo" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ISHS071_ReturnPick_Get" ReturnType="Collection(O_FGIJ_ShippingModel.sp_ISHS071_ReturnPick_Get_Result)">
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+      <Parameter Name="ItemID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_FSES010_ShippingInstruction_GetInfoWhereShipmentNo" ReturnType="Collection(O_FGIJ_ShippingModel.sp_FSES010_ShippingInstruction_GetInfoWhereShipmentNo_Result)">
+      <Parameter Name="ShippingNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ISHS030_ConfirmShipService_GetConfirmShip" ReturnType="Collection(O_FGIJ_ShippingModel.sp_ISHS030_ConfirmShipService_GetConfirmShip_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+      <Parameter Name="ShippingAreaID" Mode="In" Type="Int32" />
+      <Parameter Name="PickDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="PickDateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="CustomerID" Mode="In" Type="Int32" />
+      <Parameter Name="DeliveryDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="DeliveryDateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="ShippingComplete" Mode="In" Type="Int32" />
+      <Parameter Name="InvoiceNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_FSES010_ShippingInstruction_SearchAll" ReturnType="Collection(O_FGIJ_ShippingModel.sp_FSES010_ShippingInstruction_SearchAll_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+      <Parameter Name="CustomerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="IsShowAllStatus" Mode="In" Type="Int32" />
+      <Parameter Name="isActual" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_FSES010_ShippingInstruction_LoadFinalDestinationInfo_Result">
+    <Property Type="String" Name="FinalDestinationAddress" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="MobileNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PhoneNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Extension" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_FSES010_ShippingInstruction_LoadProductUnitInfo_Result">
+    <Property Type="Int32" Name="TypeOfUnitLevel2" Nullable="true" />
+    <Property Type="Int32" Name="TypeOfUnitInventory" Nullable="true" />
+    <Property Type="Decimal" Name="NumberOfUnitLevel2" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="NetWeight" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="VolumeOfUnitLevel1" Nullable="true" Precision="19" Scale="5" />
+    <Property Type="Int32" Name="PackageID" Nullable="true" />
+    <Property Type="Decimal" Name="Inventory" Nullable="false" Precision="2" Scale="2" />
+    <Property Type="Decimal" Name="Weight" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="M3" Nullable="true" Precision="19" Scale="5" />
+    <Property Type="Int32" Name="TypeOfUnitLevel1" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_FSES012_TransportDetail_Search_Result">
+    <Property Type="Int32" Name="TransportSeq" Nullable="false" />
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="TruckCompanyID" Nullable="false" />
+    <Property Type="Int32" Name="TransportTypeID" Nullable="false" />
+    <Property Type="Decimal" Name="TransportCharge" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="OutgoingCharge" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="String" Name="RegistrationNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ContainerNo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DriverName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="255" />
+    <Property Type="DateTime" Name="PlanIn" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="PlanOut" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ActualIn" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ActualOut" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="TotalShipWeight" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="UpdateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="UpdateUser" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TruckCompanyCode" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="TruckCompanyName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TransportTypeCode" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="TransportTypeName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_FSES012_ShippingOtherCharge_Other_Detail_Search_Result">
+    <Property Type="Int32" Name="OtherChargeID" Nullable="false" />
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+    <Property Type="DateTime" Name="ChargeDate" Nullable="false" />
+    <Property Type="Decimal" Name="OtherCharge" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="String" Name="Remark" Nullable="false" MaxLength="255" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="20" />
+    <Property Type="DateTime" Name="UpdateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="UpdateUser" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="RowStatus" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_GSCS010_StockControlProcess_SearchAll_Result">
+    <Property Type="Boolean" Name="Select" Nullable="true" />
+    <Property Type="String" Name="StockOut" Nullable="false" MaxLength="9" />
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="DCID" Nullable="true" />
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="Int32" Name="PortOfLoadingID" Nullable="true" />
+    <Property Type="String" Name="PortOfLoadingCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PortOfLoadingName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="PortOfDischargeID" Nullable="true" />
+    <Property Type="String" Name="PortOfDischargeCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PortOfDischargeName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="FinalDestinationID" Nullable="true" />
+    <Property Type="String" Name="FinalDestinationCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="FinalDestinationName" Nullable="true" MaxLength="60" />
+    <Property Type="DateTime" Name="PickingDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="NumberOfDetails" Nullable="true" />
+    <Property Type="DateTime" Name="DeliveryDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="SumAssignQtyFromShipping" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="SumQuantityFromStockByLocation" Nullable="true" Precision="18" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="sp_GSCS012_StockControlDetail_Search_Result">
+    <Property Type="Int32" Name="Lineno" Nullable="false" />
+    <Property Type="Int64" Name="SortedLineNo" Nullable="true" />
+    <Property Type="String" Name="ItemCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ItemName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ItemCondition" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="OrderQty" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="AssignQty" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="Inventory" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="sp_FSES010_LoadLotByProductCode_Result">
+    <Property Type="DateTime" Name="ReceivingDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PalletNo" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="PalletNoRef" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="ReceiveQty" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="Inventory" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="String" Name="UnitCode" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="UnitID" Nullable="false" />
+    <Property Type="String" Name="ProductConditionName" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="ProductConditionID" Nullable="false" />
+    <Property Type="String" Name="LotKey" Nullable="true" MaxLength="41" />
+    <Property Type="String" Name="PONo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="RecInstallment" Nullable="false" />
+    <Property Type="Int32" Name="RecLineNo" Nullable="false" />
+    <Property Type="String" Name="DetailRemark" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_FSES012_TransportDetail_TransportCharge_Search_Result">
+    <Property Type="Int32" Name="TransportUnstaffingID" Nullable="false" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="Int32" Name="CustomerID" Nullable="true" />
+    <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+    <Property Type="Int32" Name="TransportTypeID" Nullable="false" />
+    <Property Type="Int32" Name="FinalDestinationID" Nullable="false" />
+    <Property Type="Int32" Name="TruckCompanyID" Nullable="true" />
+    <Property Type="DateTime" Name="EffectiveDate" Nullable="false" />
+    <Property Type="Decimal" Name="Charge" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="FuelPrice" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="DeleteFlag" Nullable="false" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="UpdateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="UpdateUser" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_FSES013_ShippingByLot_Search_Result">
+    <Property Type="Boolean" Name="Select" Nullable="true" />
+    <Property Type="DateTime" Name="ReceivingDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PalletNo" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="PalletNoRef" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="ReceiveQty" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="String" Name="RcvUnitCode" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="RcvUnitID" Nullable="false" />
+    <Property Type="Decimal" Name="InventoryRcv" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="ShippingQty" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="Inventory" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="AvalQty" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="PlanQty" Nullable="false" Precision="18" Scale="3" />
+    <Property Type="String" Name="UnitCode" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="UnitID" Nullable="false" />
+    <Property Type="String" Name="ProductConditionName" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="ProductConditionCode" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="ProductConditionID" Nullable="false" />
+    <Property Type="String" Name="LotKey" Nullable="true" MaxLength="41" />
+    <Property Type="String" Name="PONo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="RecInstallment" Nullable="false" />
+    <Property Type="Int32" Name="RecLineNo" Nullable="false" />
+    <Property Type="String" Name="DetailRemark" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_ISHS060_PrintDeliveryOrder_SearchAll_Result">
+    <Property Type="Boolean" Name="Select" Nullable="true" />
+    <Property Type="Int32" Name="StatusID" Nullable="false" />
+    <Property Type="String" Name="StatusName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="PortOfLoading" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="PortOfDischarge" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="FinalDestination" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="DeliveryNo" Nullable="false" MaxLength="30" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="Int32" Name="NumberOfDetail" Nullable="true" />
+    <Property Type="DateTime" Name="PickingDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_ISHS060_PrintDeliveryOrder_EntryDO_Result">
+    <Property Type="Int32" Name="RESULT" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_ISHS060_LoadPickingNo_Result">
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+  </ComplexType>
+  <EntityType Name="tbt_ShippingInstruction">
+    <Key>
+      <PropertyRef Name="ShipmentNo" />
+      <PropertyRef Name="Installment" />
+    </Key>
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="Int32" Name="CustomerID" />
+    <Property Type="String" Name="SONo" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CutDate" />
+    <Property Type="DateTime" Name="ETD" Nullable="false" />
+    <Property Type="DateTime" Name="ETA" />
+    <Property Type="String" Name="InvoiceNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BookingNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="VesselName1" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="VesselName2" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AgentOwner" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="PortOfLoadingID" />
+    <Property Type="Int32" Name="PortOfDischargeID" />
+    <Property Type="Decimal" Name="Freight" Precision="18" Scale="3" />
+    <Property Type="Int32" Name="CurrencyID" />
+    <Property Type="Int32" Name="FinalDestinationID" />
+    <Property Type="String" Name="Remark" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="ShipCompleteFlag" />
+    <Property Type="DateTime" Name="ShipCompleteDate" />
+    <Property Type="Int32" Name="TransferType" />
+    <Property Type="DateTime" Name="TransferDate" />
+    <Property Type="DateTime" Name="InvoiceIssuedDate" />
+    <Property Type="String" Name="PaymentType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="UpdateDate" />
+    <Property Type="String" Name="UpdateUser" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ETDActual" />
+  </EntityType>
+  <ComplexType Name="sp_JTRS010_InquiryTransportation_SearchAll_Result">
+    <Property Type="DateTime" Name="DeliveryDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="PackingNo" Nullable="false" MaxLength="40" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="FinalDestination" Nullable="true" MaxLength="60" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="Int32" Name="FinalDestinationID" Nullable="true" />
+    <Property Type="String" Name="ShippingRemark" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="TransportationData" Nullable="false" MaxLength="9" />
+    <Property Type="String" Name="TruckCompanyLongName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TransportTypeName" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="TransportCharge" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="OutgoingCharge" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="RegistrationNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ContainerNo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DriverName" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="PlanIn" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="PlanOut" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ActualIn" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ActualOut" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="TotalShipWeight" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="String" Name="TransportRemark" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="TransportSeq" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_ISHS010_ExportDocument_SearchAll_Result">
+    <Property Type="DateTime" Name="ETD" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SONo" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="CustomerPONo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="OwnerCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="OwnerName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="WarehouseCode" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="CustomerCode" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CreateUser" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="UpdateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="UpdateUser" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ContainerNo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="sp_FSES011_ShippingInstruction_SearchDetail_Result">
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="Int64" Name="SortedLineNo" Nullable="true" />
+    <Property Type="String" Name="PONo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ProductID" Nullable="true" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="OrderQty" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="ShipQty" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Int32" Name="UnitOfQty" Nullable="true" />
+    <Property Type="Decimal" Name="Inventory" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Int32" Name="UnitOfInventory" Nullable="true" />
+    <Property Type="Int32" Name="ProductConditionID" Nullable="true" />
+    <Property Type="String" Name="ProductConditionCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="ProductConditionName" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="TypeOfPackage" Nullable="true" />
+    <Property Type="Decimal" Name="InPackage" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Int32" Name="UnitOfInPackage" Nullable="true" />
+    <Property Type="Decimal" Name="NetWeight" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="Measurement" Nullable="true" Precision="19" Scale="5" />
+    <Property Type="Decimal" Name="Weight" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="M3" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="String" Name="ReferenceNo" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="DetailRemark" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="DatasourceFlag" Nullable="true" />
+    <Property Type="String" Name="ReceivingNo" Nullable="true" MaxLength="22" />
+    <Property Type="Int32" Name="RecInstallment" Nullable="true" />
+    <Property Type="Int32" Name="RecLineNo" Nullable="true" />
+    <Property Type="Int32" Name="LocationID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_ISHS070_ReturnPick_Get_Result">
+    <Property Type="DateTime" Name="ShippingDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="Int64" Name="SortedLineNo" Nullable="true" />
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="String" Name="ItemCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ItemName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ItemCondition" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="Qty2" Nullable="true" Precision="28" Scale="10" />
+    <Property Type="Decimal" Name="Qty3" Nullable="true" Precision="28" Scale="10" />
+    <Property Type="String" Name="Unit2" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Unit3" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+    <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="UpdateDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_ISHS071_ReturnPick_Get_Result">
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="Int32" Name="ProductConditionID" Nullable="false" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="OrderQty" Nullable="true" Precision="28" Scale="10" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+    <Property Type="String" Name="UnitName" Nullable="false" MaxLength="100" />
+    <Property Type="Decimal" Name="NumberOfUnitLevel4" Nullable="true" Precision="18" Scale="3" />
+  </ComplexType>
+  <ComplexType Name="sp_FSES010_ShippingInstruction_GetInfoWhereShipmentNo_Result">
+    <Property Type="DateTime" Name="CutDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ETD" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="ETA" Nullable="true" Precision="23" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="BookingNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="VesselName1" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="VesselName2" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="AgentOwner" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="PortOfLoadingID" Nullable="true" />
+    <Property Type="Int32" Name="PortOfDischargeID" Nullable="true" />
+    <Property Type="Int32" Name="FinalDestinationID" Nullable="true" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="sp_ISHS030_ConfirmShipService_GetConfirmShip_Result">
+    <Property Type="Boolean" Name="SELECT" Nullable="true" />
+    <Property Type="DateTime" Name="PickingDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="Int64" Name="SortedLineNo" Nullable="true" />
+    <Property Type="String" Name="ItemCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ItemName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ItemCondition" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="PickQty2" Nullable="true" Precision="28" Scale="10" />
+    <Property Type="Decimal" Name="PickQty3" Nullable="true" Precision="28" Scale="10" />
+    <Property Type="Decimal" Name="ShipQty" Nullable="true" Precision="28" Scale="10" />
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="Int32" Name="ProductConditionID" Nullable="true" />
+    <Property Type="Int32" Name="UnitOfOrderQty" Nullable="true" />
+    <Property Type="String" Name="Unit2" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Unit3" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="StatusID" Nullable="false" />
+    <Property Type="Int32" Name="AllStatus" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_FSES010_ShippingInstruction_SearchAll_Result">
+    <Property Type="Int32" Name="StatusID" Nullable="true" />
+    <Property Type="String" Name="StatusName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="SONo" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="String" Name="OwnerCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="OwnerName" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="String" Name="CustomerCode" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="WarehouseID" Nullable="true" />
+    <Property Type="String" Name="WarehouseCode" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+    <Property Type="Int32" Name="ShippingAreaID" Nullable="true" />
+    <Property Type="String" Name="ShippingAreaCode" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="ShippingAreaName" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="PickingDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="VanningDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="TransportationDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="CutDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ETD" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="ETDActual" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DeliveryDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="AgentSeal" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="InspectionSeal" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="BookingNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="VesselName1" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="VesselName2" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="AgentOwner" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="PortOfLoadingID" Nullable="true" />
+    <Property Type="String" Name="PortOfLoadingCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PortOfLoadingName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="PortOfDischargeID" Nullable="true" />
+    <Property Type="String" Name="PortOfDischargeCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PortOfDischargeName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="FinalDestinationID" Nullable="true" />
+    <Property Type="String" Name="FinalDestinationCode" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="FinalDestinationLongName" Nullable="true" MaxLength="60" />
+    <Property Type="Boolean" Name="ShipCompleteFlag" Nullable="false" />
+    <Property Type="Int32" Name="NumberOfPallet" Nullable="true" />
+    <Property Type="DateTime" Name="ShipCompleteDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Freight" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Int32" Name="CurrencyID" Nullable="true" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="UpdateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="UpdateUser" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

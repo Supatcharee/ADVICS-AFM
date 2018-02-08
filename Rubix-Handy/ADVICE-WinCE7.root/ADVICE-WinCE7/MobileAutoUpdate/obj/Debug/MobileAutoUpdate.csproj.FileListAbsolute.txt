@@ -1,0 +1,9 @@
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\MobileAutoUpdate\bin\Debug\ADVICS-WMS.exe
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\MobileAutoUpdate\bin\Debug\ADVICS-WMS.pdb
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\MobileAutoUpdate\bin\Debug\Newtonsoft.Json.Compact.dll
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\MobileAutoUpdate\obj\Debug\ResolveAssemblyReference.cache
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\MobileAutoUpdate\obj\Debug\MobileAutoUpdate.MobileUpdate.resources
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\MobileAutoUpdate\obj\Debug\MobileAutoUpdate.Properties.Resources.resources
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\MobileAutoUpdate\obj\Debug\MobileAutoUpdate.csproj.GenerateResource.Cache
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\MobileAutoUpdate\obj\Debug\ADVICS-WMS.exe
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\MobileAutoUpdate\obj\Debug\ADVICS-WMS.pdb

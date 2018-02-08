@@ -1,0 +1,1087 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ReportModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="ReportModelContainer" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_RPT003_OtherChargeReport_GetData" ReturnType="Collection(ReportModel.sp_RPT003_OtherChargeReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="TransactionDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="TransactionDateTo" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT004_SummaryChargeReport_GetData" ReturnType="Collection(ReportModel.sp_RPT004_SummaryChargeReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="TransactionDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="TransactionDateTo" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT005_ReceivingTransportationChargeReport_GetData" ReturnType="Collection(ReportModel.sp_RPT005_ReceivingTransportationChargeReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT006_UnstaffingChargeReport_GetData" ReturnType="Collection(ReportModel.sp_RPT006_UnstaffingChargeReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="Date1" Mode="In" Type="DateTime" />
+      <Parameter Name="Date2" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT007_IncomingChargeReport_GetData" ReturnType="Collection(ReportModel.sp_RPT007_IncomingChargeReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="Date1" Mode="In" Type="DateTime" />
+      <Parameter Name="Date2" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT001_ReceivingReport_GetData" ReturnType="Collection(ReportModel.sp_RPT001_ReceivingReport_GetData_Result)">
+      <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT001_ReceivingReport_SearchAll" ReturnType="Collection(ReportModel.sp_RPT001_ReceivingReport_SearchAll_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+      <Parameter Name="ReceivingDate1" Mode="In" Type="DateTime" />
+      <Parameter Name="ReceivingDate2" Mode="In" Type="DateTime" />
+      <Parameter Name="ReceivingDateActual1" Mode="In" Type="DateTime" />
+      <Parameter Name="ReceivingDateActual2" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT007_IncomingChargeReport_SubReport_GetData" ReturnType="Collection(ReportModel.sp_RPT007_IncomingChargeReport_SubReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="Date1" Mode="In" Type="DateTime" />
+      <Parameter Name="Date2" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT002_PutAwayReport_GetData" ReturnType="Collection(ReportModel.sp_RPT002_PutAwayReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+      <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+      <Parameter Name="TransitDate1" Mode="In" Type="DateTime" />
+      <Parameter Name="TransitDate2" Mode="In" Type="DateTime" />
+      <Parameter Name="ZoneID" Mode="In" Type="Int32" />
+      <Parameter Name="TypeID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT008_TransitChargeReport_SubReport_GetData" ReturnType="Collection(ReportModel.sp_RPT008_TransitChargeReport_SubReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="DateStart" Mode="In" Type="DateTime" />
+      <Parameter Name="DateEnd" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT008_TransitChargeReport_GetData" ReturnType="Collection(ReportModel.sp_RPT008_TransitChargeReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="DateStart" Mode="In" Type="DateTime" />
+      <Parameter Name="DateEnd" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT009_PickingChargeReport_GetData" ReturnType="Collection(ReportModel.sp_RPT009_PickingChargeReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="Date1" Mode="In" Type="DateTime" />
+      <Parameter Name="Date2" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT010_OutgoingChargeReport_GetData" ReturnType="Collection(ReportModel.sp_RPT010_OutgoingChargeReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="Date1" Mode="In" Type="DateTime" />
+      <Parameter Name="Date2" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT010_OutgoingChargeReport_SubReport_GetData" ReturnType="Collection(ReportModel.sp_RPT010_OutgoingChargeReport_SubReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="Date1" Mode="In" Type="DateTime" />
+      <Parameter Name="Date2" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT012_EstimatePriceReport_GetData" ReturnType="Collection(ReportModel.sp_RPT012_EstimatePriceReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT013_ShippingDeliveryReport_GetData" ReturnType="Collection(ReportModel.sp_RPT013_ShippingDeliveryReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="DeliveryDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="DeliveryDateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="InvoiceNo" Mode="In" Type="String" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT016_InventoryCheckingListByProduct_GetData" ReturnType="Collection(ReportModel.sp_RPT016_InventoryCheckingListByProduct_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT017_InventoryCheckingListByZone_SubReport_GetData" ReturnType="Collection(ReportModel.sp_RPT017_InventoryCheckingListByZone_SubReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+      <Parameter Name="ZoneID" Mode="In" Type="Int32" />
+      <Parameter Name="Floor" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT020_ShipmentLabel_GetData" ReturnType="Collection(ReportModel.sp_RPT020_ShipmentLabel_GetData_Result)">
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT021_PickingList_GetData" ReturnType="Collection(ReportModel.sp_RPT021_PickingList_GetData_Result)">
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT021_PickingList_SubReport_GetData" ReturnType="Collection(ReportModel.sp_RPT021_PickingList_SubReport_GetData_Result)">
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT022_DeliveryOrder_GetData" ReturnType="Collection(ReportModel.sp_RPT022_DeliveryOrder_GetData_Result)">
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT022_DeliveryOrder_SubReport_GetData" ReturnType="Collection(ReportModel.sp_RPT022_DeliveryOrder_SubReport_GetData_Result)">
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT023_MovementReport_SubReport_GetData" ReturnType="Collection(ReportModel.sp_RPT023_MovementReport_SubReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+      <Parameter Name="DateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT024_MovementReport_Chart" ReturnType="Collection(ReportModel.sp_RPT024_MovementReport_Chart_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+      <Parameter Name="DateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="IsMonthly" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT025_InventoryUsageReport_GetData" ReturnType="Collection(ReportModel.sp_RPT025_InventoryUsageReport_GetData_Result)">
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT025_InventoryUsageReport_GetData_Sub_Report" ReturnType="Collection(ReportModel.sp_RPT025_InventoryUsageReport_GetData_Sub_Report_Result)">
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT026_InventoryUsageReport_Chart_GetData" ReturnType="Collection(ReportModel.sp_RPT026_InventoryUsageReport_Chart_GetData_Result)">
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT028_PalletReport_GetData" ReturnType="Collection(ReportModel.sp_RPT028_PalletReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+      <Parameter Name="DateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="IsMonthly" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT029_ReceivePlanList_GetData" ReturnType="Collection(ReportModel.sp_RPT029_ReceivePlanList_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="DateForm" Mode="In" Type="DateTime" />
+      <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT029_ReceivePlanList_SubReport_GetData" ReturnType="Collection(ReportModel.sp_RPT029_ReceivePlanList_SubReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="DateForm" Mode="In" Type="DateTime" />
+      <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT030_StockCard_GetData" ReturnType="Collection(ReportModel.sp_RPT030_StockCard_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductGroupID" Mode="In" Type="Int32" />
+      <Parameter Name="DateForm" Mode="In" Type="DateTime" />
+      <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT032_OrderBalance_GetData" ReturnType="Collection(ReportModel.sp_RPT032_OrderBalance_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="DateForm" Mode="In" Type="DateTime" />
+      <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT_GET_TypeOfGood_By_Product" ReturnType="Collection(String)">
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT023_MovementReport_GetData" ReturnType="Collection(ReportModel.sp_RPT023_MovementReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+      <Parameter Name="DateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT011_TransportationChargeReport_GetData" ReturnType="Collection(ReportModel.sp_RPT011_TransportationChargeReport_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="DateStart" Mode="In" Type="DateTime" />
+      <Parameter Name="DateEnd" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT017_InventoryCheckingListByZone_GetData" ReturnType="Collection(ReportModel.sp_RPT017_InventoryCheckingListByZone_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+      <Parameter Name="ZoneID" Mode="In" Type="Int32" />
+      <Parameter Name="Floor" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT019_ReceivingLabel_GetData" ReturnType="Collection(ReportModel.sp_RPT019_ReceivingLabel_GetData_Result)">
+      <Parameter Name="PalletNo" Mode="In" Type="String" />
+      <Parameter Name="LocationID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+      <Parameter Name="LotNo" Mode="In" Type="String" />
+      <Parameter Name="ProductConditionID" Mode="In" Type="Int32" />
+      <Parameter Name="Flag" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT033_PartDeliverySheet_GetData" ReturnType="Collection(ReportModel.sp_RPT033_PartDeliverySheet_GetData_Result)">
+      <Parameter Name="PONo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT033_PartDeliverySheet_GetSubData" ReturnType="Collection(ReportModel.sp_RPT033_PartDeliverySheet_GetSubData_Result)">
+      <Parameter Name="PONo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT032_RMTag_GetData" ReturnType="Collection(ReportModel.sp_RPT032_RMTag_GetData_Result)">
+      <Parameter Name="PONo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT036_LoadingInstruction_GetData" ReturnType="Collection(ReportModel.sp_RPT036_LoadingInstruction_GetData_Result)">
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="Installment" Mode="In" Type="Int32" />
+      <Parameter Name="ContainNo" Mode="In" Type="String" />
+      <Parameter Name="PlanOut" Mode="In" Type="DateTime" />
+      <Parameter Name="ActualOut" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT043_PrivilegeFormat_GetData" ReturnType="Collection(ReportModel.sp_RPT043_PrivilegeFormat_GetData_Result)">
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="ContainerNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT042_AdivceOfShipment_GetData" ReturnType="Collection(ReportModel.sp_RPT042_AdivceOfShipment_GetData_Result)">
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="Installment" Mode="In" Type="Int32" />
+      <Parameter Name="ContainerNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT034_PurchaseOrder_GetData" ReturnType="Collection(ReportModel.sp_RPT034_PurchaseOrder_GetData_Result)">
+      <Parameter Name="ReceivingNoXML" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT044_PackingList_GetData" ReturnType="Collection(ReportModel.sp_RPT044_PackingList_GetData_Result)">
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="Installment" Mode="In" Type="Int32" />
+      <Parameter Name="ContainerNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT031_SlowMovement_GetData" ReturnType="Collection(ReportModel.sp_RPT031_SlowMovement_GetData_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+      <Parameter Name="Period1" Mode="In" Type="Int32" />
+      <Parameter Name="Period2" Mode="In" Type="Int32" />
+      <Parameter Name="Period3" Mode="In" Type="Int32" />
+      <Parameter Name="Period4" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT035_PackingInstruction_Material_GetData" ReturnType="Collection(ReportModel.sp_RPT035_PackingInstruction_Material_GetData_Result)">
+      <Parameter Name="PackingNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT037_CaseMark_GetData" ReturnType="Collection(ReportModel.sp_RPT037_CaseMark_GetData_Result)">
+      <Parameter Name="PalletNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT018_ReceivingInstruction_GetData" ReturnType="Collection(ReportModel.sp_RPT018_ReceivingInstruction_GetData_Result)">
+      <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+      <Parameter Name="Installment" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT035_PackingInstruction_GetData" ReturnType="Collection(ReportModel.sp_RPT035_PackingInstruction_GetData_Result)">
+      <Parameter Name="PackingNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT045_LabelSticker_GetData" ReturnType="Collection(ReportModel.sp_RPT045_LabelSticker_GetData_Result)">
+      <Parameter Name="PackingNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT045_LabelStickerByRMTag_GetData" ReturnType="Collection(ReportModel.sp_RPT045_LabelSticker_GetData_Result)">
+      <Parameter Name="PackingNo" Mode="In" Type="String" />
+      <Parameter Name="RMTagStart" Mode="In" Type="String" />
+      <Parameter Name="RMTagEnd" Mode="In" Type="String" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT046_UserStickerLaber_GetData" ReturnType="Collection(ReportModel.sp_RPT046_UserStickerLaber_GetData_Result)" />
+  </EntityContainer>
+  <ComplexType Name="sp_RPT003_OtherChargeReport_GetData_Result">
+    <Property Type="DateTime" Name="TransactionDate" Nullable="false" />
+    <Property Type="String" Name="SlipNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="ReceivingNo" Nullable="true" MaxLength="22" />
+    <Property Type="Decimal" Name="ReceivingAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="ReceivingDescription" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="ShippingNo" Nullable="true" MaxLength="22" />
+    <Property Type="Decimal" Name="ShippingAmount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="ShippingDescription" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT004_SummaryChargeReport_GetData_Result">
+    <Property Type="Decimal" Name="UnstaffingCharge" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="IncomingCharge" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TransitCharge" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PickingCharge" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="OutgoingCharge" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ReceiveCharge" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TransportCharge" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="OtherCharge" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="UnstaffingQty" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="IncomingQty" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TransitQty" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PickingQty" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="OutgoingQty" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ReceiveQty" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TransportQty" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="OtherQty" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="String" Name="UnstaffingUnit" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="IncomingUnit" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="TransitUnit" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="PickingUnit" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="OutgoingUnit" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="ReceiveUnit" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="TransportUnit" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="OtherUnit" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT005_ReceivingTransportationChargeReport_GetData_Result">
+    <Property Type="DateTime" Name="TransportationDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="TransportTypeName" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="Trips" Nullable="true" />
+    <Property Type="Int32" Name="TotalContainer" Nullable="true" />
+    <Property Type="Decimal" Name="TransportAmount" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" />
+    <Property Type="String" Name="UnitName" Nullable="false" MaxLength="3" />
+    <Property Type="Decimal" Name="ReceiveQty" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT006_UnstaffingChargeReport_GetData_Result">
+    <Property Type="String" Name="TransactionDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="TransportTypeName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Qty" Nullable="true" />
+    <Property Type="Decimal" Name="Rate" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="String" Name="TaxInvoice" Nullable="false" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT007_IncomingChargeReport_GetData_Result">
+    <Property Type="DateTime" Name="ReceiveDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="Qty" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="Volumn" Nullable="true" Precision="19" Scale="5" />
+    <Property Type="Decimal" Name="Rate" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="String" Name="RateUOM" Nullable="true" MaxLength="15" />
+    <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" />
+    <Property Type="String" Name="PalletNo" Nullable="false" MaxLength="1" />
+    <Property Type="Decimal" Name="InventoryQty" Nullable="true" Precision="38" Scale="7" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT001_ReceivingReport_GetData_Result">
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="Attention" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="OwnerID" Nullable="true" />
+    <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="ReceivingDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="CusAddress" Nullable="true" MaxLength="369" />
+    <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="DCAddress" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="SupplierLongName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" />
+    <Property Type="String" Name="PONo" Nullable="true" />
+    <Property Type="String" Name="ContainerNo" Nullable="true" />
+    <Property Type="String" Name="TruckCompanyLongName" Nullable="true" />
+    <Property Type="String" Name="TransportTypeName" Nullable="true" />
+    <Property Type="String" Name="RegistrationNo" Nullable="true" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="SQty" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="String" Name="UnitName" Nullable="false" MaxLength="10" />
+    <Property Type="Decimal" Name="UnitVolume" Nullable="true" Precision="19" Scale="5" />
+    <Property Type="String" Name="ProductConditionCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="DetailRemark" Nullable="true" MaxLength="135" />
+    <Property Type="DateTime" Name="ExpiryDate" Nullable="true" />
+    <Property Type="String" Name="PackingSize" Nullable="true" MaxLength="81" />
+    <Property Type="String" Name="PalletNoRef" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT001_ReceivingReport_SearchAll_Result">
+    <Property Type="Boolean" Name="select" Nullable="true" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="OwnerID" Nullable="true" />
+    <Property Type="String" Name="OwnerCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="WarehouseCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="SupplierName" Nullable="true" MaxLength="60" />
+    <Property Type="DateTime" Name="ArrivalDate" Nullable="true" />
+    <Property Type="DateTime" Name="ReceivingDate" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT007_IncomingChargeReport_SubReport_GetData_Result">
+    <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="Qty" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT002_PutAwayReport_GetData_Result">
+    <Property Type="DateTime" Name="TransitDate" Nullable="true" />
+    <Property Type="DateTime" Name="ReceivingDate" Nullable="true" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PalletNoRef" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="Qty" Nullable="false" Precision="38" Scale="7" />
+    <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+    <Property Type="Decimal" Name="StockActualQty" Nullable="false" Precision="38" Scale="6" />
+    <Property Type="String" Name="UnitName" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="DetailRemark" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="Flag" Nullable="false" />
+    <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ZoneName" Nullable="true" MaxLength="55" />
+    <Property Type="Int32" Name="lvl" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT008_TransitChargeReport_SubReport_GetData_Result">
+    <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="Balance" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT008_TransitChargeReport_GetData_Result">
+    <Property Type="String" Name="TransactionDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="OpenningVolume" Nullable="true" Precision="19" Scale="5" />
+    <Property Type="String" Name="LotNo" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="ShippingDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Balance" Nullable="true" Precision="38" Scale="7" />
+    <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="Rate" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="String" Name="RateUOM" Nullable="true" MaxLength="15" />
+    <Property Type="Int32" Name="StockDay" Nullable="true" />
+    <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="PalletNo" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="ChargeByPallet" Nullable="true" />
+    <Property Type="DateTime" Name="ReceivingDate" Nullable="false" Precision="23" />
+    <Property Type="Decimal" Name="ShippingQty" Nullable="false" Precision="2" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT009_PickingChargeReport_GetData_Result">
+    <Property Type="String" Name="TransactionDate" Nullable="true" MaxLength="30" />
+    <Property Type="Decimal" Name="PickingQty" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="Rate" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="RateUOM" Nullable="true" MaxLength="15" />
+    <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="InvoiceNo1" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT010_OutgoingChargeReport_GetData_Result">
+    <Property Type="String" Name="TransactionDate" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="OutQty" Nullable="true" Precision="38" Scale="7" />
+    <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="Rate" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="String" Name="BathUOM" Nullable="true" MaxLength="15" />
+    <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT010_OutgoingChargeReport_SubReport_GetData_Result">
+    <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="OutQty" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT012_EstimatePriceReport_GetData_Result">
+    <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="Price" Nullable="false" Precision="18" Scale="3" />
+    <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="Qty" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="Volume" Nullable="true" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="String" Name="PackingSize" Nullable="true" MaxLength="41" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT013_ShippingDeliveryReport_GetData_Result">
+    <Property Type="Int64" Name="No" Nullable="true" />
+    <Property Type="String" Name="PalletNo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="PalletNoRef" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" />
+    <Property Type="String" Name="ShipmentNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ReceivingNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="ReceivingDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DeliveryDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="LotNo" Nullable="true" />
+    <Property Type="Int32" Name="Location" Nullable="true" />
+    <Property Type="Decimal" Name="BeginQty" Nullable="false" Precision="3" Scale="3" />
+    <Property Type="Decimal" Name="ReceivingQty" Nullable="true" Precision="38" Scale="7" />
+    <Property Type="Decimal" Name="ShippingQty" Nullable="true" Precision="38" Scale="7" />
+    <Property Type="Decimal" Name="BalanceQty" Nullable="true" Precision="38" Scale="7" />
+    <Property Type="Int32" Name="lvl" Nullable="false" />
+    <Property Type="String" Name="UOM" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT016_InventoryCheckingListByProduct_GetData_Result">
+    <Property Type="String" Name="ZoneCode" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+    <Property Type="DateTime" Name="ExpiredDate" Nullable="true" />
+    <Property Type="String" Name="ProductConditionName" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="QtyLevel1" Nullable="false" Precision="38" Scale="6" />
+    <Property Type="String" Name="TypeOfUnitLevel1" Nullable="false" MaxLength="10" />
+    <Property Type="Decimal" Name="QtyLevel2" Nullable="false" Precision="38" Scale="6" />
+    <Property Type="String" Name="TypeOfUnitLevel2" Nullable="false" MaxLength="10" />
+    <Property Type="Decimal" Name="QtyLevel3" Nullable="false" Precision="38" Scale="6" />
+    <Property Type="String" Name="TypeOfUnitLevel3" Nullable="false" MaxLength="10" />
+    <Property Type="Decimal" Name="QtyLevel4" Nullable="false" Precision="38" Scale="6" />
+    <Property Type="String" Name="TypeOfUnitLevel4" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT017_InventoryCheckingListByZone_SubReport_GetData_Result">
+    <Property Type="String" Name="UnitOfLevel" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="QtyTotal" Nullable="true" Precision="38" Scale="7" />
+    <Property Type="Int32" Name="lvl" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT020_ShipmentLabel_GetData_Result">
+    <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="255" />
+    <Property Type="DateTime" Name="TransportationDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="String" Name="ProductCodeLabel" Nullable="true" />
+    <Property Type="String" Name="ShipmentLabel" Nullable="true" MaxLength="48" />
+    <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="ShipQty" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="String" Name="PalletNoRef" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT021_PickingList_GetData_Result">
+    <Property Type="String" Name="OwnerCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="WarehouseCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="ShippingAreaCode" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="ETD" Nullable="false" Precision="23" />
+    <Property Type="String" Name="FinalCodeName" Nullable="true" MaxLength="83" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="BookingNo" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="PickingDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="VanningDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="TransportationDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PortOfLoading" Nullable="true" MaxLength="123" />
+    <Property Type="String" Name="PortOfDischarge" Nullable="true" MaxLength="123" />
+    <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+    <Property Type="Decimal" Name="StockQty" Nullable="false" Precision="18" Scale="3" />
+    <Property Type="String" Name="UOMInventory" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="AssignQty" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="String" Name="UnitCode" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="PONo" Nullable="true" />
+    <Property Type="String" Name="DetailRemark" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="PickingLineNo" Nullable="true" MaxLength="53" />
+    <Property Type="String" Name="PalletNoRef" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ProductConditionCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="ProductConditionName" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="PalletQty" Nullable="true" />
+    <Property Type="Int32" Name="lvl" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT021_PickingList_SubReport_GetData_Result">
+    <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="TotalInstructionQty" Nullable="true" Precision="38" Scale="3" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT022_DeliveryOrder_GetData_Result">
+    <Property Type="String" Name="DeliveryDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="318" />
+    <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="242" />
+    <Property Type="String" Name="ShippingAreaCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PortOfLoading" Nullable="true" MaxLength="123" />
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="PortOfDischarge" Nullable="true" MaxLength="123" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="FinalCodeName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="FinalAddress" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="BookingNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ContainerNo" Nullable="true" />
+    <Property Type="String" Name="DriverName" Nullable="true" />
+    <Property Type="String" Name="TruckCompanyLongName" Nullable="true" />
+    <Property Type="String" Name="TransportTypeName" Nullable="true" />
+    <Property Type="String" Name="RegistrationNo" Nullable="true" />
+    <Property Type="String" Name="PONo" Nullable="true" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="ShipQty" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="Weight" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="M3" Nullable="true" Precision="19" Scale="5" />
+    <Property Type="String" Name="DetailRemark" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DOIssuedDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="ReferenceNo" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="PalletNoRef" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PackingSize" Nullable="true" MaxLength="81" />
+    <Property Type="String" Name="PackingSale" Nullable="true" />
+    <Property Type="Decimal" Name="SumPackingSale" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT022_DeliveryOrder_SubReport_GetData_Result">
+    <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="TotalQty" Nullable="true" Precision="38" Scale="3" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT023_MovementReport_SubReport_GetData_Result">
+    <Property Type="Decimal" Name="Stock" Nullable="false" Precision="38" Scale="7" />
+    <Property Type="Decimal" Name="In" Nullable="false" Precision="38" Scale="7" />
+    <Property Type="Decimal" Name="Out" Nullable="false" Precision="38" Scale="7" />
+    <Property Type="Decimal" Name="Balance" Nullable="false" Precision="38" Scale="7" />
+    <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT024_MovementReport_Chart_Result">
+    <Property Type="DateTime" Name="TransactionDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="In" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="Out" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="Balance" Nullable="true" Precision="38" Scale="3" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT025_InventoryUsageReport_GetData_Result">
+    <Property Type="Decimal" Name="ActualUsage" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="ActualInPercent" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="TypeOfGoodsID" Nullable="false" />
+    <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+    <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TypeOfGoodsCode" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="TypeOfGoodsName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT025_InventoryUsageReport_GetData_Sub_Report_Result">
+    <Property Type="Int32" Name="WarehouseID" Nullable="true" />
+    <Property Type="Int32" Name="OwnerID" Nullable="true" />
+    <Property Type="Decimal" Name="ActualUsage" Nullable="true" Precision="12" Scale="2" />
+    <Property Type="Decimal" Name="AllInventoryUsage" Nullable="true" Precision="12" Scale="2" />
+    <Property Type="Decimal" Name="ActualUsageInPercent" Nullable="true" Precision="12" Scale="2" />
+    <Property Type="Decimal" Name="IdealUsage" Nullable="true" Precision="12" Scale="2" />
+    <Property Type="Decimal" Name="OverUsage" Nullable="true" Precision="12" Scale="2" />
+    <Property Type="Decimal" Name="OverUsageInPercent" Nullable="true" Precision="12" Scale="2" />
+    <Property Type="String" Name="WarehouseName" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT026_InventoryUsageReport_Chart_GetData_Result">
+    <Property Type="Decimal" Name="ActualUsage" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="ActualInPercent" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Int32" Name="TypeOfGoodsID" Nullable="false" />
+    <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+    <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TypeOfGoodsCode" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="TypeOfGoodsName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT028_PalletReport_GetData_Result">
+    <Property Type="DateTime" Name="Period" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="OwnerID" Nullable="true" />
+    <Property Type="Int32" Name="WarehouseID" Nullable="true" />
+    <Property Type="String" Name="WarehouseCode" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="PalletCnt" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT029_ReceivePlanList_GetData_Result">
+    <Property Type="DateTime" Name="ArrivalDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ReceivingNo" Nullable="true" MaxLength="22" />
+    <Property Type="String" Name="SupplierLongName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" />
+    <Property Type="String" Name="TruckCompanyNameList" Nullable="true" />
+    <Property Type="String" Name="ContainerNoList" Nullable="true" />
+    <Property Type="Int64" Name="LineNo" Nullable="true" />
+    <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="Qty" Nullable="false" Precision="18" Scale="3" />
+    <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="NetWeight" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="PackingSize" Nullable="false" Precision="18" Scale="3" />
+    <Property Type="String" Name="PackingSizeUnit" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="101" />
+    <Property Type="Decimal" Name="InventoryQty" Nullable="true" Precision="38" Scale="7" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT029_ReceivePlanList_SubReport_GetData_Result">
+    <Property Type="String" Name="ContainerNoList" Nullable="true" />
+    <Property Type="DateTime" Name="ArrivalDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT030_StockCard_GetData_Result">
+    <Property Type="DateTime" Name="TransactionDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PDSNo" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="TypeOfGoodsCode" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="InventoryUnit" Nullable="true" />
+    <Property Type="Decimal" Name="Stock_In" Nullable="false" Precision="2" Scale="2" />
+    <Property Type="Decimal" Name="Stock_Out" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="PurchasePrice" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="Balance" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="String" Name="SourceT" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="x" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT032_OrderBalance_GetData_Result">
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="PlanDate" Nullable="false" Precision="23" />
+    <Property Type="Decimal" Name="OnHandQty" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="AllocateQty" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="DateTime" Name="ShippingDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="PlanQty" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="PickQty" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="ShipQty" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="ShortageQty" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="UndeliveryQty" Nullable="true" Precision="38" Scale="6" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT_GET_TypeOfGood_By_Product_Result">
+    <Property Type="String" Name="TypeOfGoodsName" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT023_MovementReport_GetData_Result">
+    <Property Type="DateTime" Name="TransactionDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LotNo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="PalletNo" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" />
+    <Property Type="Decimal" Name="Stock" Nullable="true" Precision="38" Scale="7" />
+    <Property Type="Decimal" Name="In" Nullable="true" Precision="38" Scale="7" />
+    <Property Type="Decimal" Name="Out" Nullable="true" Precision="38" Scale="7" />
+    <Property Type="Decimal" Name="Balance" Nullable="true" Precision="38" Scale="7" />
+    <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="StockDay" Nullable="false" Precision="2" Scale="2" />
+    <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="PalletNoRef" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT011_TransportationChargeReport_GetData_Result">
+    <Property Type="DateTime" Name="TransportationDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="WarehouseCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="FinalDestinationLongName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="TransportTypeName" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="Trips" Nullable="true" />
+    <Property Type="Decimal" Name="Rate" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="TransportAmount" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="ShippingQty" Nullable="false" Precision="38" Scale="3" />
+    <Property Type="String" Name="UnitName" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT017_InventoryCheckingListByZone_GetData_Result">
+    <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+    <Property Type="DateTime" Name="TransactionDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ProductID" Nullable="true" />
+    <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ProductConditionName" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PalletNo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="UnitOfLevel" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="Qty" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Int32" Name="lvl" Nullable="false" />
+    <Property Type="Int32" Name="Floor" Nullable="true" />
+    <Property Type="Int32" Name="ZoneID" Nullable="true" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+    <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="PalletNoRef" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT019_ReceivingLabel_GetData_Result">
+    <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Qty" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PalletNoRef" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="ArrivalDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ProductConditionName" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="DetailRemark" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="OwnerCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ActualLotNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Issue_By" Nullable="true" MaxLength="102" />
+    <Property Type="DateTime" Name="Issue_date" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ExpiredDate" Nullable="true" />
+    <Property Type="DateTime" Name="ReceivedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="QRCode" Nullable="true" MaxLength="324" />
+    <Property Type="Decimal" Name="LabelCnt" Nullable="false" Precision="2" Scale="1" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT033_PartDeliverySheet_GetData_Result">
+    <Property Type="Int32" Name="ReportType" Nullable="false" />
+    <Property Type="Int64" Name="LineNo" Nullable="true" />
+    <Property Type="DateTime" Name="ArrivalDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="ArrivalTime" Nullable="false" />
+    <Property Type="DateTime" Name="CollectDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="CollectTime" Nullable="false" />
+    <Property Type="String" Name="SupplierLongName" Nullable="false" MaxLength="60" />
+    <Property Type="String" Name="SupplierCode" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="PONo" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="PDSNo" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="PartNo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="PartID" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="ProductGroup" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="QtyPack" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="QtyBox" Nullable="true" Precision="38" Scale="20" />
+    <Property Type="String" Name="UnitLv2" Nullable="false" MaxLength="100" />
+    <Property Type="Decimal" Name="QtyPCS" Nullable="false" Precision="18" Scale="3" />
+    <Property Type="String" Name="UnitLv3" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="PDSQRCode" Nullable="true" MaxLength="91" />
+    <Property Type="Decimal" Name="WeightMinimumOrder" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="M3MinimumOrder" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="PalletQty" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="ProductTypeName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT033_PartDeliverySheet_GetSubData_Result">
+    <Property Type="String" Name="PDSNo" Nullable="true" MaxLength="30" />
+    <Property Type="Decimal" Name="QtyPack" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="String" Name="UnitPact" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="QtyBox" Nullable="true" Precision="38" Scale="20" />
+    <Property Type="String" Name="UnitLv2" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="QtyPCS" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="String" Name="UnitLv3" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT032_RMTag_GetData_Result">
+    <Property Type="String" Name="PDSNo" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="PONo" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="SupplierNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SupplierCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SupplierLongName" Nullable="true" MaxLength="60" />
+    <Property Type="DateTime" Name="CollectDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="CollectTime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="RunningNo" Nullable="true" MaxLength="11" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT036_LoadingInstruction_GetData_Result">
+    <Property Type="Int32" Name="ROWNUM" Nullable="true" />
+    <Property Type="String" Name="ShipmentNo" Nullable="true" MaxLength="22" />
+    <Property Type="String" Name="ContainerNo" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="ShipmentDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="TransportDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="TotalWeight" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Int32" Name="TotalPallet" Nullable="true" />
+    <Property Type="String" Name="QRCode" Nullable="true" MaxLength="102" />
+    <Property Type="String" Name="PackingNo" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="QtyLevel2" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="String" Name="UnitLevel2" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="QtyLevel3" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="String" Name="UnitLevel3" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="BookingNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SealNo" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="HeaderRemark" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT043_PrivilegeFormat_GetData_Result">
+    <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="HSCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PVCode" Nullable="false" MaxLength="15" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT042_AdivceOfShipment_GetData_Result">
+    <Property Type="String" Name="ShipmentNo" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="Installment" Nullable="true" />
+    <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CustomerAddress" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CustomerPONo" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="InvoiceAmount" Nullable="true" Precision="38" Scale="5" />
+    <Property Type="String" Name="VesselName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="BookingNo" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="ShippingDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ETA" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ShippingPort" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Destination" Nullable="true" MaxLength="60" />
+    <Property Type="Int32" Name="CopyInvoice" Nullable="true" />
+    <Property Type="Int32" Name="CopyCustomerInvoice" Nullable="true" />
+    <Property Type="Int32" Name="CopyPackList" Nullable="true" />
+    <Property Type="Int32" Name="CopyCertificate" Nullable="true" />
+    <Property Type="Int32" Name="CopyM3" Nullable="true" />
+    <Property Type="Decimal" Name="TotalPCS" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Int32" Name="CopyCerOrigin" Nullable="true" />
+    <Property Type="Int32" Name="CopyBillLadingOrigin" Nullable="true" />
+    <Property Type="Int32" Name="CopyBillLading" Nullable="true" />
+    <Property Type="Int32" Name="CopyPolicyOrigin" Nullable="true" />
+    <Property Type="Int32" Name="CopyPolicy" Nullable="true" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="ContainerNo" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT034_PurchaseOrder_GetData_Result">
+    <Property Type="String" Name="PONo" Nullable="false" MaxLength="30" />
+    <Property Type="DateTime" Name="IssuedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="DeliveryDate" Nullable="true" MaxLength="4000" />
+    <Property Type="String" Name="SupplierName" Nullable="false" MaxLength="60" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PartCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="PartName" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="OrderQty" Nullable="false" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="UnitPrice" Nullable="false" Precision="18" Scale="3" />
+    <Property Type="String" Name="CurrencyCode" Nullable="false" MaxLength="10" />
+    <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="String" Name="CreditTerm" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DeliveryPlace" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Purpose" Nullable="true" MaxLength="1" />
+    <Property Type="Decimal" Name="VAT" Nullable="true" Precision="5" Scale="2" />
+    <Property Type="String" Name="Unit" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="ContactPerson" Nullable="true" MaxLength="303" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT044_PackingList_GetData_Result">
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="InvoiceIssuedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="FinalDestination" Nullable="false" MaxLength="111" />
+    <Property Type="String" Name="CustomerAddress" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="VesselName" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="ETD" Nullable="false" Precision="23" />
+    <Property Type="String" Name="PortOfLoadingName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="PortOfDischargeName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CustomerCode" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="PackingNo" Nullable="false" MaxLength="40" />
+    <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="Qty" Nullable="false" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="Weight" Nullable="false" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="NetWeight" Nullable="false" Precision="37" Scale="6" />
+    <Property Type="Decimal" Name="GrossWeight" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="M3" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="String" Name="ContainerNo" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT031_SlowMovement_GetData_Result">
+    <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="152" />
+    <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="stock" Nullable="true" Precision="28" Scale="10" />
+    <Property Type="DateTime" Name="TransactionDate" Nullable="true" />
+    <Property Type="String" Name="ProductGroupCode" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="ProductGroupName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ProductCategoryCode" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="ProductCategoryName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UnitName" Nullable="false" MaxLength="100" />
+    <Property Type="Decimal" Name="QtyPeriod1" Nullable="true" Precision="38" Scale="10" />
+    <Property Type="Decimal" Name="QtyPeriod2" Nullable="true" Precision="38" Scale="10" />
+    <Property Type="Decimal" Name="QtyPeriod3" Nullable="true" Precision="38" Scale="10" />
+    <Property Type="Decimal" Name="QtyPeriod4" Nullable="true" Precision="38" Scale="10" />
+    <Property Type="Decimal" Name="AmtEstimateValuePeriod1" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="AmtEstimateValuePeriod2" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="AmtEstimateValuePeriod3" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="AmtEstimateValuePeriod4" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="DateTime" Name="PeriodDateFrom" Nullable="true" />
+    <Property Type="DateTime" Name="PeriodDateTo" Nullable="true" />
+    <Property Type="Decimal" Name="StockAmt" Nullable="false" Precision="2" Scale="2" />
+    <Property Type="Int32" Name="ProductConditionID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT035_PackingInstruction_Material_GetData_Result">
+    <Property Type="String" Name="ProductShortCode" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="Usage" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT037_CaseMark_GetData_Result">
+    <Property Type="String" Name="CustomerCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="GrossWeight" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="is_special" Nullable="true" />
+    <Property Type="DateTime" Name="Packing_date" Nullable="true" />
+    <Property Type="String" Name="Special_Code" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT018_ReceivingInstruction_GetData_Result">
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="ReceivingLabel" Nullable="true" MaxLength="57" />
+    <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ArrivalDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="ArrivalTime" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="SupplierLongName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" />
+    <Property Type="String" Name="PONo" Nullable="true" />
+    <Property Type="String" Name="ContainerNo" Nullable="true" />
+    <Property Type="String" Name="TruckCompanyLongName" Nullable="true" />
+    <Property Type="String" Name="TransportTypeName" Nullable="true" />
+    <Property Type="String" Name="RegistrationNo" Nullable="true" />
+    <Property Type="Int32" Name="LineNo" Nullable="true" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PalletNoRef" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="Qty" Nullable="false" Precision="18" Scale="3" />
+    <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+    <Property Type="String" Name="DetailRemark" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="UnitName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="QtyLv2" Nullable="true" />
+    <Property Type="String" Name="PackingSize" Nullable="true" MaxLength="81" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT035_PackingInstruction_GetData_Result">
+    <Property Type="String" Name="ShipmentNo" Nullable="true" MaxLength="22" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="PackingNo" Nullable="false" MaxLength="40" />
+    <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="ShippingDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="PackingDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="PickingDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="QRCode" Nullable="true" MaxLength="94" />
+    <Property Type="String" Name="ShortCode" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="PartCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PartName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+    <Property Type="String" Name="PDSNo" Nullable="false" MaxLength="1" />
+    <Property Type="Decimal" Name="PlanQty" Nullable="true" Precision="28" Scale="10" />
+    <Property Type="Decimal" Name="NumberOfUnitLevel3" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="PickedQty" Nullable="true" Precision="28" Scale="10" />
+    <Property Type="Decimal" Name="RemainPicking" Nullable="true" Precision="29" Scale="10" />
+    <Property Type="Decimal" Name="PackedQty" Nullable="true" Precision="28" Scale="10" />
+    <Property Type="Decimal" Name="RemainPacking" Nullable="true" Precision="29" Scale="10" />
+    <Property Type="Decimal" Name="Weight" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="TotalBox" Nullable="true" Precision="38" Scale="16" />
+    <Property Type="Decimal" Name="PackingTime" Nullable="true" />
+    <Property Type="Decimal" Name="PrepareTime" Nullable="true" />
+    <Property Type="Decimal" Name="PalletizeTime" Nullable="true" />
+    <Property Type="Int32" Name="ProductTypeID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT045_LabelSticker_GetData_Result">
+    <Property Type="String" Name="Supplier" Nullable="true" MaxLength="73" />
+    <Property Type="String" Name="SupplierName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="PONo" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="SupBN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="QRCode" Nullable="true" MaxLength="202" />
+    <Property Type="String" Name="PartShortCode" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="RunningNo" Nullable="true" MaxLength="17" />
+    <Property Type="Decimal" Name="Qty" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="CustomerPONo" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="PackingDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CustomerCode" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT046_UserStickerLaber_GetData_Result">
+    <Property Type="String" Name="UserID" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

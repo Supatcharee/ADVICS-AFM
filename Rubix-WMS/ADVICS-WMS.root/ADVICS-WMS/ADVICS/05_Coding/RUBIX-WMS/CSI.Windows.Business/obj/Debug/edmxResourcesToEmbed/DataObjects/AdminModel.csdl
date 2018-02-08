@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="AdminModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="AdminModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tb_GroupMapping" EntityType="AdminModel.tb_GroupMapping" />
+    <EntitySet Name="tb_SecurityMatch" EntityType="AdminModel.tb_SecurityMatch" />
+    <EntitySet Name="tb_UserGroups" EntityType="AdminModel.tb_UserGroups" />
+    <AssociationSet Name="FK_tb_GroupMapping_tb_UserGroups" Association="AdminModel.FK_tb_GroupMapping_tb_UserGroups">
+      <End Role="tb_UserGroups" EntitySet="tb_UserGroups" />
+      <End Role="tb_GroupMapping" EntitySet="tb_GroupMapping" />
+    </AssociationSet>
+    <FunctionImport Name="sp_ADM020_LoadGroup" ReturnType="Collection(AdminModel.sp_ADM020_LoadGroup_Result)">
+      <Parameter Name="GroupID" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ADM020_LoadUserByGroup" ReturnType="Collection(AdminModel.sp_ADM020_LoadUserByGroup_Result)">
+      <Parameter Name="GroupID" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <EntitySet Name="tb_User" EntityType="AdminModel.tb_User" />
+    <EntitySet Name="tb_ScreensControl" EntityType="AdminModel.tb_ScreensControl" />
+    <FunctionImport Name="sp_ADM010_UserMaintenance_SearchAll" ReturnType="Collection(AdminModel.sp_ADM010_UserMaintenance_SearchAll_Result)" />
+  </EntityContainer>
+  <EntityType Name="tb_GroupMapping">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="GROUPID" />
+    </Key>
+    <Property Type="String" Name="USERID" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="GROUPID" Nullable="false" Precision="10" Scale="0" />
+    <NavigationProperty Name="tb_UserGroups" Relationship="AdminModel.FK_tb_GroupMapping_tb_UserGroups" FromRole="tb_GroupMapping" ToRole="tb_UserGroups" />
+  </EntityType>
+  <EntityType Name="tb_SecurityMatch">
+    <Key>
+      <PropertyRef Name="SECURITYID" />
+    </Key>
+    <Property Type="Decimal" Name="SECURITYID" Nullable="false" Precision="10" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="USERID" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="GROUPID" Precision="10" Scale="0" />
+    <Property Type="Decimal" Name="SCREENID" Precision="10" Scale="0" />
+    <Property Type="String" Name="PERMISSION" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CREATEDATE" Nullable="false" />
+    <Property Type="DateTime" Name="UPDATEDATE" />
+    <Property Type="String" Name="CREATEUSER" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UPDATEUSER" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_UserGroups">
+    <Key>
+      <PropertyRef Name="GROUPID" />
+    </Key>
+    <Property Type="Decimal" Name="GROUPID" Nullable="false" Precision="10" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="GROUPNAME" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCRIPTION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CREATEDATE" Nullable="false" />
+    <Property Type="String" Name="CREATEUSER" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="UPDATEDATE" />
+    <Property Type="String" Name="UPDATEUSER" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tb_GroupMapping" Relationship="AdminModel.FK_tb_GroupMapping_tb_UserGroups" FromRole="tb_UserGroups" ToRole="tb_GroupMapping" />
+  </EntityType>
+  <Association Name="FK_tb_GroupMapping_tb_UserGroups">
+    <End Type="AdminModel.tb_UserGroups" Role="tb_UserGroups" Multiplicity="1" />
+    <End Type="AdminModel.tb_GroupMapping" Role="tb_GroupMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_UserGroups">
+        <PropertyRef Name="GROUPID" />
+      </Principal>
+      <Dependent Role="tb_GroupMapping">
+        <PropertyRef Name="GROUPID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="sp_ADM020_LoadGroup_Result">
+    <Property Type="Decimal" Name="GroupID" Nullable="false" Precision="10" Scale="0" />
+    <Property Type="String" Name="GroupName" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="10" />
+    <Property Type="DateTime" Name="UpdateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="UpdateUser" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="sp_ADM020_LoadUserByGroup_Result">
+    <Property Type="String" Name="UserID" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Telephone" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Mobile" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <EntityType Name="tb_User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Type="Int32" Name="RunningID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="UserID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LastName" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tel" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Mobile" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="WarehouseID" />
+    <Property Type="Int32" Name="OwnerID" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+    <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UpdateUser" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="UpdateDate" />
+    <Property Type="Int32" Name="LoginType" />
+    <Property Type="String" Name="DomainIPAddress" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DomainName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="OwnerIDWeb" />
+  </EntityType>
+  <EntityType Name="tb_ScreensControl">
+    <Key>
+      <PropertyRef Name="ScreenID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="IPaddress" />
+    </Key>
+    <Property Type="String" Name="ScreenID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UserID" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IPaddress" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LastResponse" />
+  </EntityType>
+  <ComplexType Name="sp_ADM010_UserMaintenance_SearchAll_Result">
+    <Property Type="String" Name="UserID" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Telephone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Mobile" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="LoginType" Nullable="true" />
+    <Property Type="String" Name="LoginTypeName" Nullable="false" MaxLength="13" />
+    <Property Type="String" Name="DomainIPAddress" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DomainName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="WarehouseCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="OwnerCode" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="OwnerID" Nullable="true" />
+    <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="UpdateUser" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="UpdateDate" Nullable="true" Precision="23" />
+  </ComplexType>
+</Schema>

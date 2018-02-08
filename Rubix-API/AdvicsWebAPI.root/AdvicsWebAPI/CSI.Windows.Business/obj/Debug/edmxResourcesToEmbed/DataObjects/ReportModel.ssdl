@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ReportModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ReportModelStoreContainer" />
+  <Function Name="sp_RPT_GET_TypeOfGood_By_Product" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT001_ReceivingReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT001_ReceivingReport_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="ReceivingDate1" Type="date" Mode="In" />
+    <Parameter Name="ReceivingDate2" Type="date" Mode="In" />
+    <Parameter Name="ReceivingDateActual1" Type="date" Mode="In" />
+    <Parameter Name="ReceivingDateActual2" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT002_PutAwayReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+    <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="TransitDate1" Type="datetime" Mode="In" />
+    <Parameter Name="TransitDate2" Type="datetime" Mode="In" />
+    <Parameter Name="ZoneID" Type="int" Mode="In" />
+    <Parameter Name="TypeID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT003_OtherChargeReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="TransactionDateFrom" Type="date" Mode="In" />
+    <Parameter Name="TransactionDateTo" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT004_SummaryChargeReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="TransactionDateFrom" Type="datetime" Mode="In" />
+    <Parameter Name="TransactionDateTo" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT005_ReceivingTransportationChargeReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="FromDate" Type="datetime" Mode="In" />
+    <Parameter Name="ToDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT006_UnstaffingChargeReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="Date1" Type="datetime" Mode="In" />
+    <Parameter Name="Date2" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT007_IncomingChargeReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="Date1" Type="datetime" Mode="In" />
+    <Parameter Name="Date2" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT007_IncomingChargeReport_SubReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="Date1" Type="datetime" Mode="In" />
+    <Parameter Name="Date2" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT008_TransitChargeReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="DateStart" Type="datetime" Mode="In" />
+    <Parameter Name="DateEnd" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT008_TransitChargeReport_SubReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="DateStart" Type="datetime" Mode="In" />
+    <Parameter Name="DateEnd" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT009_PickingChargeReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="Date1" Type="datetime" Mode="In" />
+    <Parameter Name="Date2" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT010_OutgoingChargeReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="Date1" Type="datetime" Mode="In" />
+    <Parameter Name="Date2" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT010_OutgoingChargeReport_SubReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="Date1" Type="datetime" Mode="In" />
+    <Parameter Name="Date2" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT011_TransportationChargeReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="DateStart" Type="datetime" Mode="In" />
+    <Parameter Name="DateEnd" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT012_EstimatePriceReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="FromDate" Type="date" Mode="In" />
+    <Parameter Name="ToDate" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT013_ShippingDeliveryReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="DeliveryDateFrom" Type="date" Mode="In" />
+    <Parameter Name="DeliveryDateTo" Type="date" Mode="In" />
+    <Parameter Name="InvoiceNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT016_InventoryCheckingListByProduct_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+    <Parameter Name="Date" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT017_InventoryCheckingListByZone_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="Date" Type="datetime" Mode="In" />
+    <Parameter Name="ZoneID" Type="int" Mode="In" />
+    <Parameter Name="Floor" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT017_InventoryCheckingListByZone_SubReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="Date" Type="datetime" Mode="In" />
+    <Parameter Name="ZoneID" Type="int" Mode="In" />
+    <Parameter Name="Floor" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT018_ReceivingInstruction_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Installment" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT019_ReceivingLabel_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PalletNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="LocationID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+    <Parameter Name="LotNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProductConditionID" Type="int" Mode="In" />
+    <Parameter Name="Flag" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT020_ShipmentLabel_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT021_PickingList_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT022_DeliveryOrder_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT023_MovementReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+    <Parameter Name="DateFrom" Type="datetime" Mode="In" />
+    <Parameter Name="DateTo" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT023_MovementReport_SubReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+    <Parameter Name="DateFrom" Type="datetime" Mode="In" />
+    <Parameter Name="DateTo" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT024_MovementReport_Chart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+    <Parameter Name="DateFrom" Type="datetime" Mode="In" />
+    <Parameter Name="DateTo" Type="datetime" Mode="In" />
+    <Parameter Name="IsMonthly" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT025_InventoryUsageReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT025_InventoryUsageReport_GetData_Sub_Report" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT026_InventoryUsageReport_Chart_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT028_PalletReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+    <Parameter Name="DateFrom" Type="datetime" Mode="In" />
+    <Parameter Name="DateTo" Type="datetime" Mode="In" />
+    <Parameter Name="IsMonthly" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT029_ReceivePlanList_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="DateForm" Type="date" Mode="In" />
+    <Parameter Name="DateTo" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT029_ReceivePlanList_SubReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="DateForm" Type="datetime" Mode="In" />
+    <Parameter Name="DateTo" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT030_StockCard_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+    <Parameter Name="ProductGroupID" Type="int" Mode="In" />
+    <Parameter Name="DateForm" Type="datetime" Mode="In" />
+    <Parameter Name="DateTo" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT031_SlowMovement_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="Date" Type="date" Mode="In" />
+    <Parameter Name="Period1" Type="int" Mode="In" />
+    <Parameter Name="Period2" Type="int" Mode="In" />
+    <Parameter Name="Period3" Type="int" Mode="In" />
+    <Parameter Name="Period4" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT032_OrderBalance_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="DateForm" Type="date" Mode="In" />
+    <Parameter Name="DateTo" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT032_RMTag_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PONo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT033_PartDeliverySheet_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PONo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT033_PartDeliverySheet_GetSubData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PONo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT034_PurchaseOrder_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ReceivingNoXML" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT035_PackingInstruction_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PackingNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT035_PackingInstruction_Material_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PackingNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT036_LoadingInstruction_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Installment" Type="int" Mode="In" />
+    <Parameter Name="ContainNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PlanOut" Type="date" Mode="In" />
+    <Parameter Name="ActualOut" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT037_CaseMark_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PalletNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT042_AdivceOfShipment_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Installment" Type="int" Mode="In" />
+    <Parameter Name="ContainerNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT043_PrivilegeFormat_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="ContainerNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT044_PackingList_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Installment" Type="int" Mode="In" />
+    <Parameter Name="ContainerNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT045_LabelSticker_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PackingNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT045_LabelStickerByRMTag_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PackingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="RMTagStart" Type="varchar" Mode="In" />
+    <Parameter Name="RMTagEnd" Type="varchar" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT046_UserStickerLaber_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>

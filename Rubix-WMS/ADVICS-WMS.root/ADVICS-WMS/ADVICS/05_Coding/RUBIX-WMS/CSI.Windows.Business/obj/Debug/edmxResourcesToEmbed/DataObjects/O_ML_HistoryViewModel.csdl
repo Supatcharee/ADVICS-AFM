@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HistoryViewModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="O_ML_HistoryViewModel" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_MSTS010_HistoryView_Summary_Search" ReturnType="Collection(HistoryViewModel.sp_MSTS010_HistoryView_Summary_Search_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="TransFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="TransTo" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_LWPS010_ReceivingProgress_SearchAll" ReturnType="Collection(HistoryViewModel.sp_LWPS010_ReceivingProgress_SearchAll_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="SupplierID" Mode="In" Type="Int32" />
+      <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+      <Parameter Name="ArrivalDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ReceivingDate" Mode="In" Type="DateTime" />
+      <Parameter Name="StoringDate" Mode="In" Type="DateTime" />
+      <Parameter Name="TransitInstructionIssuedDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ReferenceNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_LWPS010_ReceivingProgress_SearchTotal" ReturnType="Collection(HistoryViewModel.sp_LWPS010_ReceivingProgress_SearchTotal_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="SupplierID" Mode="In" Type="Int32" />
+      <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+      <Parameter Name="ArrivalDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ReceivingDate" Mode="In" Type="DateTime" />
+      <Parameter Name="StoringDate" Mode="In" Type="DateTime" />
+      <Parameter Name="TransitInstructionIssuedDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ReferenceNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_LWPS020_ShippingProgress_SearchTotal" ReturnType="Collection(HistoryViewModel.sp_LWPS020_ShippingProgress_SearchTotal_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="PortOfDischargeID" Mode="In" Type="Int32" />
+      <Parameter Name="FinalDestinationID" Mode="In" Type="Int32" />
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+      <Parameter Name="ShippingAreaID" Mode="In" Type="Int32" />
+      <Parameter Name="TransportDate" Mode="In" Type="DateTime" />
+      <Parameter Name="PickingDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ShippingDate" Mode="In" Type="DateTime" />
+      <Parameter Name="FromETADate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToETADate" Mode="In" Type="DateTime" />
+      <Parameter Name="InvoiceNo" Mode="In" Type="String" />
+      <Parameter Name="CustomerID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_MSTS010_HistoryView_Search" ReturnType="Collection(HistoryViewModel.sp_MSTS010_HistoryView_Search_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="TransFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="TransTo" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_LWPS020_ShippingProgress_SearchAll" ReturnType="Collection(HistoryViewModel.sp_LWPS020_ShippingProgress_SearchAll_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="PortOfDischargeID" Mode="In" Type="Int32" />
+      <Parameter Name="FinalDestinationID" Mode="In" Type="Int32" />
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+      <Parameter Name="ShippingAreaID" Mode="In" Type="Int32" />
+      <Parameter Name="TransportDate" Mode="In" Type="DateTime" />
+      <Parameter Name="PickingDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ShippingDate" Mode="In" Type="DateTime" />
+      <Parameter Name="FromETADate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToETADate" Mode="In" Type="DateTime" />
+      <Parameter Name="InvoiceNo" Mode="In" Type="String" />
+      <Parameter Name="CustomerID" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_MSTS010_HistoryView_Summary_Search_Result">
+    <Property Type="Decimal" Name="ReceivingNoOfSlip" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="ReceivingWeight" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="ReceivingVolume" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="ReceivingQty" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="ReceivingNoOfProduct" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="ReceivingNoOfPallet" Nullable="true" Precision="38" Scale="17" />
+    <Property Type="Decimal" Name="TransitNoOfSlip" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="TransitWeight" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="TransitVolume" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="TransitQty" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="TransitNoOfProduct" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="TransitNoOfPallet" Nullable="true" Precision="38" Scale="17" />
+    <Property Type="Decimal" Name="PickingNoOfSlip" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="PickingWeight" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="PickingVolume" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="PickingQty" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="PickingNoOfProduct" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="PickingNoOfPallet" Nullable="true" Precision="38" Scale="17" />
+    <Property Type="Decimal" Name="ShippingNoOfSlip" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="ShippingWeight" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="ShippingVolume" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="ShippingQty" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="ShippingNoOfProduct" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="ShippingNoOfPallet" Nullable="true" Precision="38" Scale="17" />
+    <Property Type="Decimal" Name="InventoryWeight" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="InventoryVolume" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="InventoryQty" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Int32" Name="InventoryNoOfProduct" Nullable="true" />
+    <Property Type="Decimal" Name="InventoryNoOfPallet" Nullable="true" Precision="38" Scale="17" />
+    <Property Type="Int32" Name="ReceivingPalletQty" Nullable="true" />
+    <Property Type="Int32" Name="ShippingPalletQty" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_LWPS010_ReceivingProgress_SearchAll_Result">
+    <Property Type="DateTime" Name="ArrivalDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="SupplierCode" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="SupplierName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="ReferenceNo" Nullable="true" />
+    <Property Type="DateTime" Name="InstructionDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ReceivingDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="TransitDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Installment" Nullable="true" />
+    <Property Type="Boolean" Name="IsOrderCancelStatus" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_LWPS010_ReceivingProgress_SearchTotal_Result">
+    <Property Type="Int32" Name="TypeOrder" Nullable="true" />
+    <Property Type="String" Name="Type" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="Measurement" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="Weight" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Int32" Name="Order" Nullable="true" />
+    <Property Type="Int32" Name="Line" Nullable="true" />
+    <Property Type="Decimal" Name="Qty" Nullable="true" Precision="18" Scale="3" />
+  </ComplexType>
+  <ComplexType Name="sp_LWPS020_ShippingProgress_SearchTotal_Result">
+    <Property Type="Int32" Name="TypeOrder" Nullable="true" />
+    <Property Type="String" Name="Type" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="Measurement" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="Weight" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Int32" Name="Order" Nullable="true" />
+    <Property Type="Int32" Name="Line" Nullable="true" />
+    <Property Type="Decimal" Name="Qty" Nullable="true" Precision="18" Scale="3" />
+  </ComplexType>
+  <ComplexType Name="sp_MSTS010_HistoryView_Search_Result">
+    <Property Type="DateTime" Name="TransactionDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="WarehouseCode" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+    <Property Type="Decimal" Name="ReceivingNoOfSlip" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="ReceivingWeight" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="ReceivingVolume" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="ReceivingQty" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="ReceivingNoOfProduct" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="ReceivingNoOfPallet" Nullable="true" Precision="38" Scale="17" />
+    <Property Type="Decimal" Name="TransitNoOfSlip" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="TransitWeight" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="TransitVolume" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="TransitQty" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="TransitNoOfProduct" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="TransitNoOfPallet" Nullable="true" Precision="38" Scale="17" />
+    <Property Type="Decimal" Name="PickingNoOfSlip" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="PickingWeight" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="PickingVolume" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="PickingQty" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="PickingNoOfProduct" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="PickingNoOfPallet" Nullable="true" Precision="38" Scale="17" />
+    <Property Type="Decimal" Name="ShippingNoOfSlip" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="ShippingWeight" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="ShippingVolume" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="ShippingQty" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="ShippingNoOfProduct" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="ShippingNoOfPallet" Nullable="true" Precision="38" Scale="17" />
+    <Property Type="Decimal" Name="InventoryWeight" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="InventoryVolume" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="InventoryQty" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Int32" Name="InventoryNoOfProduct" Nullable="true" />
+    <Property Type="Decimal" Name="InventoryNoOfPallet" Nullable="true" Precision="38" Scale="17" />
+    <Property Type="Int32" Name="ReceivingPalletQty" Nullable="true" />
+    <Property Type="Int32" Name="ShippingPalletQty" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_LWPS020_ShippingProgress_SearchAll_Result">
+    <Property Type="DateTime" Name="PickingDatePlan" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="ShippingAreaCode" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="ShippingAreaName" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="InstructionDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="StockControlDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="PickingInstructionDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="PickingDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ShippingDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="TransportationDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsOrderCancelStatus" Nullable="true" />
+    <Property Type="Int32" Name="Installment" Nullable="true" />
+  </ComplexType>
+</Schema>

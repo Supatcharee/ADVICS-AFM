@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[Rubix.Screen.csproj]
+SCC_Aux_Path = "\\rubixsvr\SourceSafe"
+SCC_Project_Name = "$/ADVICS-AFM/Rubix-WMS/ADVICS-WMS.root/ADVICS-WMS/ADVICS/05_Coding/RUBIX-WMS/Rubix.Screen", CSXCAAAA

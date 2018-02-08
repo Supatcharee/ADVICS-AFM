@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="StockModel" />
+  <Alias Key="Target" Value="StockModel.Store" />
+  <EntityContainerMapping CdmEntityContainer="StockModelContainer" StorageEntityContainer="StockModelStoreContainer">
+    <FunctionImportMapping FunctionImportName="sp_ESTS000_InventoryStatusProcess" FunctionName="StockModel.Store.sp_ESTS000_InventoryStatusProcess">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StockModel.sp_ESTS000_InventoryStatusProcess_Result">
+          <ScalarProperty Name="TransitQuantity" ColumnName="TransitQuantity" />
+          <ScalarProperty Name="StockActualQuantity" ColumnName="StockActualQuantity" />
+          <ScalarProperty Name="StockHoldQuantity" ColumnName="StockHoldQuantity" />
+          <ScalarProperty Name="ShippingQuantity" ColumnName="ShippingQuantity" />
+          <ScalarProperty Name="TransitWeight" ColumnName="TransitWeight" />
+          <ScalarProperty Name="StockActualWeight" ColumnName="StockActualWeight" />
+          <ScalarProperty Name="StockHoldWeight" ColumnName="StockHoldWeight" />
+          <ScalarProperty Name="ShippingWeight" ColumnName="ShippingWeight" />
+          <ScalarProperty Name="TransitM3" ColumnName="TransitM3" />
+          <ScalarProperty Name="StockActualM3" ColumnName="StockActualM3" />
+          <ScalarProperty Name="StockHoldM3" ColumnName="StockHoldM3" />
+          <ScalarProperty Name="ShippingM3" ColumnName="ShippingM3" />
+          <ScalarProperty Name="TotalQuantity" ColumnName="TotalQuantity" />
+          <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+          <ScalarProperty Name="TotalM3" ColumnName="TotalM3" />
+          <ScalarProperty Name="AvailableQuantity" ColumnName="AvailableQuantity" />
+          <ScalarProperty Name="AvailableWeight" ColumnName="AvailableWeight" />
+          <ScalarProperty Name="AvailableActualM3" ColumnName="AvailableActualM3" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ESTS040_StockChecking_Get" FunctionName="StockModel.Store.sp_ESTS040_StockChecking_Get">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StockModel.sp_ESTS040_StockChecking_Get_Result">
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="DCCode" ColumnName="DCCode" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="CheckedDate" ColumnName="CheckedDate" />
+          <ScalarProperty Name="CheckedBy" ColumnName="CheckedBy" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="ProductConditionCode" ColumnName="ProductConditionCode" />
+          <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="InventoryQty" ColumnName="InventoryQty" />
+          <ScalarProperty Name="CheckedQty" ColumnName="CheckedQty" />
+          <ScalarProperty Name="TypeOfUnitInventory" ColumnName="TypeOfUnitInventory" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DiffFlag" ColumnName="DiffFlag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ESTS030_InquiryInventory_SearchAll" FunctionName="StockModel.Store.sp_ESTS030_InquiryInventory_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StockModel.sp_ESTS030_InquiryInventory_SearchAll_Result">
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="ZoneName" ColumnName="ZoneName" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemConditionName" ColumnName="ItemConditionName" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="Inventory" ColumnName="Inventory" />
+          <ScalarProperty Name="SafetyStock" ColumnName="SafetyStock" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="ExpiredDate" ColumnName="ExpiredDate" />
+          <ScalarProperty Name="LastMovement" ColumnName="LastMovement" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ESTS010_InventoryAdjustment_SearchAll" FunctionName="StockModel.Store.sp_ESTS010_InventoryAdjustment_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StockModel.sp_ESTS010_InventoryAdjustment_SearchAll_Result">
+          <ScalarProperty Name="Select" ColumnName="Select" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ZoneCode" ColumnName="ZoneCode" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+          <ScalarProperty Name="RackNo" ColumnName="RackNo" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="ProductConditionCode" ColumnName="ProductConditionCode" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="InventoryQtyL3" ColumnName="InventoryQtyL3" />
+          <ScalarProperty Name="InventoryQty" ColumnName="InventoryQty" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="FinalUpdateDate" ColumnName="FinalUpdateDate" />
+          <ScalarProperty Name="ExpiredDate" ColumnName="ExpiredDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ESTS020_ChangeLocation_SearchAll" FunctionName="StockModel.Store.sp_ESTS020_ChangeLocation_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StockModel.sp_ESTS020_ChangeLocation_SearchAll_Result">
+          <ScalarProperty Name="SELECT" ColumnName="SELECT" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="LastUpdateSince" ColumnName="LastUpdateSince" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="ProductConditionCode" ColumnName="ProductConditionCode" />
+          <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+          <ScalarProperty Name="ZoneCode" ColumnName="ZoneCode" />
+          <ScalarProperty Name="RackNo" ColumnName="RackNo" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+          <ScalarProperty Name="Inventory" ColumnName="Inventory" />
+          <ScalarProperty Name="InventoryBox" ColumnName="InventoryBox" />
+          <ScalarProperty Name="RatioConvertInventory" ColumnName="RatioConvertInventory" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="Level2UnitName" ColumnName="Level2UnitName" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+          <ScalarProperty Name="ToLocationID" ColumnName="ToLocationID" />
+          <ScalarProperty Name="LocationCodeTO" ColumnName="LocationCodeTO" />
+          <ScalarProperty Name="ToProductConditionID" ColumnName="ToProductConditionID" />
+          <ScalarProperty Name="ChangeQty" ColumnName="ChangeQty" />
+          <ScalarProperty Name="ChangeStatus" ColumnName="ChangeStatus" />
+          <ScalarProperty Name="ProductConditionNameTo" ColumnName="ProductConditionNameTo" />
+          <ScalarProperty Name="ChangeLocationID" ColumnName="ChangeLocationID" />
+          <ScalarProperty Name="FromProductConditionID" ColumnName="FromProductConditionID" />
+          <ScalarProperty Name="FromLocationID" ColumnName="FromLocationID" />
+          <ScalarProperty Name="FromFullCapacityFlag" ColumnName="FromFullCapacityFlag" />
+          <ScalarProperty Name="ToFullCapacityFlag" ColumnName="ToFullCapacityFlag" />
+          <ScalarProperty Name="ChangedDate" ColumnName="ChangedDate" />
+          <ScalarProperty Name="ChangedUser" ColumnName="ChangedUser" />
+          <ScalarProperty Name="RackNoAndLevel" ColumnName="RackNoAndLevel" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ESTS050_InquiryReceivingShippingHistory_SearchAll" FunctionName="StockModel.Store.sp_ESTS050_InquiryReceivingShippingHistory_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StockModel.sp_ESTS050_InquiryReceivingShippingHistory_SearchAll_Result">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="ShipmentNo_ReceivingNo" ColumnName="ShipmentNo/ReceivingNo" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="FinalDestination_SupplierCode" ColumnName="FinalDestination/SupplierCode" />
+          <ScalarProperty Name="FinalDestination_SupplierName" ColumnName="FinalDestination/SupplierName" />
+          <ScalarProperty Name="ConditionOfProductCode" ColumnName="ConditionOfProductCode" />
+          <ScalarProperty Name="ConditionOfProduct" ColumnName="ConditionOfProduct" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Incoming" ColumnName="Incoming" />
+          <ScalarProperty Name="Outgoing" ColumnName="Outgoing" />
+          <ScalarProperty Name="PortOfLoadingCode" ColumnName="PortOfLoadingCode" />
+          <ScalarProperty Name="PortOfLoadingName" ColumnName="PortOfLoadingName" />
+          <ScalarProperty Name="PortOfDischargeCode" ColumnName="PortOfDischargeCode" />
+          <ScalarProperty Name="PortOfDischargeName" ColumnName="PortOfDischargeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

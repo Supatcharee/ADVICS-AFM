@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="O_FGIJ_ShippingModel" />
+  <Alias Key="Target" Value="O_FGIJ_ShippingModel.Store" />
+  <EntityContainerMapping CdmEntityContainer="O_FGIJ_ShippingModelContainer" StorageEntityContainer="O_FGIJ_ShippingModelStoreContainer">
+    <FunctionImportMapping FunctionImportName="sp_FSES010_ShippingInstruction_LoadFinalDestinationInfo" FunctionName="O_FGIJ_ShippingModel.Store.sp_FSES010_ShippingInstruction_LoadFinalDestinationInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_FGIJ_ShippingModel.sp_FSES010_ShippingInstruction_LoadFinalDestinationInfo_Result">
+          <ScalarProperty Name="FinalDestinationAddress" ColumnName="FinalDestinationAddress" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_FSES010_ShippingInstruction_LoadProductUnitInfo" FunctionName="O_FGIJ_ShippingModel.Store.sp_FSES010_ShippingInstruction_LoadProductUnitInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_FGIJ_ShippingModel.sp_FSES010_ShippingInstruction_LoadProductUnitInfo_Result">
+          <ScalarProperty Name="TypeOfUnitLevel2" ColumnName="TypeOfUnitLevel2" />
+          <ScalarProperty Name="TypeOfUnitInventory" ColumnName="TypeOfUnitInventory" />
+          <ScalarProperty Name="NumberOfUnitLevel2" ColumnName="NumberOfUnitLevel2" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="VolumeOfUnitLevel1" ColumnName="VolumeOfUnitLevel1" />
+          <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+          <ScalarProperty Name="Inventory" ColumnName="Inventory" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="M3" ColumnName="M3" />
+          <ScalarProperty Name="TypeOfUnitLevel1" ColumnName="TypeOfUnitLevel1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_FSES012_TransportDetail_Search" FunctionName="O_FGIJ_ShippingModel.Store.sp_FSES012_TransportDetail_Search">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_FGIJ_ShippingModel.sp_FSES012_TransportDetail_Search_Result">
+          <ScalarProperty Name="TransportSeq" ColumnName="TransportSeq" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="TruckCompanyID" ColumnName="TruckCompanyID" />
+          <ScalarProperty Name="TransportTypeID" ColumnName="TransportTypeID" />
+          <ScalarProperty Name="TransportCharge" ColumnName="TransportCharge" />
+          <ScalarProperty Name="OutgoingCharge" ColumnName="OutgoingCharge" />
+          <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+          <ScalarProperty Name="ContainerNo" ColumnName="ContainerNo" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="PlanIn" ColumnName="PlanIn" />
+          <ScalarProperty Name="PlanOut" ColumnName="PlanOut" />
+          <ScalarProperty Name="ActualIn" ColumnName="ActualIn" />
+          <ScalarProperty Name="ActualOut" ColumnName="ActualOut" />
+          <ScalarProperty Name="TotalShipWeight" ColumnName="TotalShipWeight" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="TruckCompanyCode" ColumnName="TruckCompanyCode" />
+          <ScalarProperty Name="TruckCompanyName" ColumnName="TruckCompanyName" />
+          <ScalarProperty Name="TransportTypeCode" ColumnName="TransportTypeCode" />
+          <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_FSES012_ShippingOtherCharge_Other_Detail_Search" FunctionName="O_FGIJ_ShippingModel.Store.sp_FSES012_ShippingOtherCharge_Other_Detail_Search">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_FGIJ_ShippingModel.sp_FSES012_ShippingOtherCharge_Other_Detail_Search_Result">
+          <ScalarProperty Name="OtherChargeID" ColumnName="OtherChargeID" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="ChargeDate" ColumnName="ChargeDate" />
+          <ScalarProperty Name="OtherCharge" ColumnName="OtherCharge" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="RowStatus" ColumnName="RowStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_FSES021_TransferInstruction_ReceivingDetail_Add" FunctionName="O_FGIJ_ShippingModel.Store.sp_FSES021_TransferInstruction_ReceivingDetail_Add" />
+    <FunctionImportMapping FunctionImportName="sp_FSES010_LoadLotByProductCode" FunctionName="O_FGIJ_ShippingModel.Store.sp_FSES010_LoadLotByProductCode">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_FGIJ_ShippingModel.sp_FSES010_LoadLotByProductCode_Result">
+          <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+          <ScalarProperty Name="ReceiveQty" ColumnName="ReceiveQty" />
+          <ScalarProperty Name="Inventory" ColumnName="Inventory" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="LotKey" ColumnName="LotKey" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="RecInstallment" ColumnName="RecInstallment" />
+          <ScalarProperty Name="RecLineNo" ColumnName="RecLineNo" />
+          <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_FSES012_TransportDetail_TransportCharge_Search" FunctionName="O_FGIJ_ShippingModel.Store.sp_FSES012_TransportDetail_TransportCharge_Search">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_FGIJ_ShippingModel.sp_FSES012_TransportDetail_TransportCharge_Search_Result">
+          <ScalarProperty Name="TransportUnstaffingID" ColumnName="TransportUnstaffingID" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="TransportTypeID" ColumnName="TransportTypeID" />
+          <ScalarProperty Name="FinalDestinationID" ColumnName="FinalDestinationID" />
+          <ScalarProperty Name="TruckCompanyID" ColumnName="TruckCompanyID" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="Charge" ColumnName="Charge" />
+          <ScalarProperty Name="FuelPrice" ColumnName="FuelPrice" />
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_FSES013_ShippingByLot_Search" FunctionName="O_FGIJ_ShippingModel.Store.sp_FSES013_ShippingByLot_Search">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_FGIJ_ShippingModel.sp_FSES013_ShippingByLot_Search_Result">
+          <ScalarProperty Name="Select" ColumnName="Select" />
+          <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+          <ScalarProperty Name="ReceiveQty" ColumnName="ReceiveQty" />
+          <ScalarProperty Name="RcvUnitCode" ColumnName="RcvUnitCode" />
+          <ScalarProperty Name="RcvUnitID" ColumnName="RcvUnitID" />
+          <ScalarProperty Name="InventoryRcv" ColumnName="InventoryRcv" />
+          <ScalarProperty Name="ShippingQty" ColumnName="ShippingQty" />
+          <ScalarProperty Name="Inventory" ColumnName="Inventory" />
+          <ScalarProperty Name="AvalQty" ColumnName="AvalQty" />
+          <ScalarProperty Name="PlanQty" ColumnName="PlanQty" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+          <ScalarProperty Name="ProductConditionCode" ColumnName="ProductConditionCode" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="LotKey" ColumnName="LotKey" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="RecInstallment" ColumnName="RecInstallment" />
+          <ScalarProperty Name="RecLineNo" ColumnName="RecLineNo" />
+          <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ISHS060_PrintDeliveryOrder_SearchAll" FunctionName="O_FGIJ_ShippingModel.Store.sp_ISHS060_PrintDeliveryOrder_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_FGIJ_ShippingModel.sp_ISHS060_PrintDeliveryOrder_SearchAll_Result">
+          <ScalarProperty Name="Select" ColumnName="Select" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="PortOfLoading" ColumnName="PortOfLoading" />
+          <ScalarProperty Name="PortOfDischarge" ColumnName="PortOfDischarge" />
+          <ScalarProperty Name="FinalDestination" ColumnName="FinalDestination" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="DeliveryNo" ColumnName="DeliveryNo" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="NumberOfDetail" ColumnName="NumberOfDetail" />
+          <ScalarProperty Name="PickingDate" ColumnName="PickingDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ISHS060_PrintDeliveryOrder_EntryDO" FunctionName="O_FGIJ_ShippingModel.Store.sp_ISHS060_PrintDeliveryOrder_EntryDO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_FGIJ_ShippingModel.sp_ISHS060_PrintDeliveryOrder_EntryDO_Result">
+          <ScalarProperty Name="RESULT" ColumnName="RESULT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ISHS060_LoadPickingNo" FunctionName="O_FGIJ_ShippingModel.Store.sp_ISHS060_LoadPickingNo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_FGIJ_ShippingModel.sp_ISHS060_LoadPickingNo_Result">
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tbt_ShippingInstruction">
+      <EntityTypeMapping TypeName="O_FGIJ_ShippingModel.tbt_ShippingInstruction">
+        <MappingFragment StoreEntitySet="tbt_ShippingInstruction">
+          <ScalarProperty Name="ETDActual" ColumnName="ETDActual" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="InvoiceIssuedDate" ColumnName="InvoiceIssuedDate" />
+          <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+          <ScalarProperty Name="TransferType" ColumnName="TransferType" />
+          <ScalarProperty Name="ShipCompleteDate" ColumnName="ShipCompleteDate" />
+          <ScalarProperty Name="ShipCompleteFlag" ColumnName="ShipCompleteFlag" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="FinalDestinationID" ColumnName="FinalDestinationID" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="Freight" ColumnName="Freight" />
+          <ScalarProperty Name="PortOfDischargeID" ColumnName="PortOfDischargeID" />
+          <ScalarProperty Name="PortOfLoadingID" ColumnName="PortOfLoadingID" />
+          <ScalarProperty Name="AgentOwner" ColumnName="AgentOwner" />
+          <ScalarProperty Name="VesselName2" ColumnName="VesselName2" />
+          <ScalarProperty Name="VesselName1" ColumnName="VesselName1" />
+          <ScalarProperty Name="BookingNo" ColumnName="BookingNo" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="ETA" ColumnName="ETA" />
+          <ScalarProperty Name="ETD" ColumnName="ETD" />
+          <ScalarProperty Name="CutDate" ColumnName="CutDate" />
+          <ScalarProperty Name="SONo" ColumnName="SONo" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_JTRS010_InquiryTransportation_SearchAll" FunctionName="O_FGIJ_ShippingModel.Store.sp_JTRS010_InquiryTransportation_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_FGIJ_ShippingModel.sp_JTRS010_InquiryTransportation_SearchAll_Result">
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="PackingNo" ColumnName="PackingNo" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="FinalDestination" ColumnName="FinalDestination" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="FinalDestinationID" ColumnName="FinalDestinationID" />
+          <ScalarProperty Name="ShippingRemark" ColumnName="ShippingRemark" />
+          <ScalarProperty Name="TransportationData" ColumnName="TransportationData" />
+          <ScalarProperty Name="TruckCompanyLongName" ColumnName="TruckCompanyLongName" />
+          <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+          <ScalarProperty Name="TransportCharge" ColumnName="TransportCharge" />
+          <ScalarProperty Name="OutgoingCharge" ColumnName="OutgoingCharge" />
+          <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+          <ScalarProperty Name="ContainerNo" ColumnName="ContainerNo" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="PlanIn" ColumnName="PlanIn" />
+          <ScalarProperty Name="PlanOut" ColumnName="PlanOut" />
+          <ScalarProperty Name="ActualIn" ColumnName="ActualIn" />
+          <ScalarProperty Name="ActualOut" ColumnName="ActualOut" />
+          <ScalarProperty Name="TotalShipWeight" ColumnName="TotalShipWeight" />
+          <ScalarProperty Name="TransportRemark" ColumnName="TransportRemark" />
+          <ScalarProperty Name="TransportSeq" ColumnName="TransportSeq" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ISHS010_ExportDocument_SearchAll" FunctionName="O_FGIJ_ShippingModel.Store.sp_ISHS010_ExportDocument_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_FGIJ_ShippingModel.sp_ISHS010_ExportDocument_SearchAll_Result">
+          <ScalarProperty Name="ETD" ColumnName="ETD" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="SONo" ColumnName="SONo" />
+          <ScalarProperty Name="CustomerPONo" ColumnName="CustomerPONo" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="ContainerNo" ColumnName="ContainerNo" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ISHS010_ExportDocument_UpdatePrePrint" FunctionName="O_FGIJ_ShippingModel.Store.sp_ISHS010_ExportDocument_UpdatePrePrint" />
+    <FunctionImportMapping FunctionImportName="sp_FSES011_ShippingInstruction_SearchDetail" FunctionName="O_FGIJ_ShippingModel.Store.sp_FSES011_ShippingInstruction_SearchDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_FGIJ_ShippingModel.sp_FSES011_ShippingInstruction_SearchDetail_Result">
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="SortedLineNo" ColumnName="SortedLineNo" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="OrderQty" ColumnName="OrderQty" />
+          <ScalarProperty Name="ShipQty" ColumnName="ShipQty" />
+          <ScalarProperty Name="UnitOfQty" ColumnName="UnitOfQty" />
+          <ScalarProperty Name="Inventory" ColumnName="Inventory" />
+          <ScalarProperty Name="UnitOfInventory" ColumnName="UnitOfInventory" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="ProductConditionCode" ColumnName="ProductConditionCode" />
+          <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="TypeOfPackage" ColumnName="TypeOfPackage" />
+          <ScalarProperty Name="InPackage" ColumnName="InPackage" />
+          <ScalarProperty Name="UnitOfInPackage" ColumnName="UnitOfInPackage" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="Measurement" ColumnName="Measurement" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="M3" ColumnName="M3" />
+          <ScalarProperty Name="ReferenceNo" ColumnName="ReferenceNo" />
+          <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+          <ScalarProperty Name="DatasourceFlag" ColumnName="DatasourceFlag" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="RecInstallment" ColumnName="RecInstallment" />
+          <ScalarProperty Name="RecLineNo" ColumnName="RecLineNo" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ISHS070_ReturnPick_Get" FunctionName="O_FGIJ_ShippingModel.Store.sp_ISHS070_ReturnPick_Get">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_FGIJ_ShippingModel.sp_ISHS070_ReturnPick_Get_Result">
+          <ScalarProperty Name="ShippingDate" ColumnName="ShippingDate" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="SortedLineNo" ColumnName="SortedLineNo" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemCondition" ColumnName="ItemCondition" />
+          <ScalarProperty Name="Qty2" ColumnName="Qty2" />
+          <ScalarProperty Name="Qty3" ColumnName="Qty3" />
+          <ScalarProperty Name="Unit2" ColumnName="Unit2" />
+          <ScalarProperty Name="Unit3" ColumnName="Unit3" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ISHS071_ReturnPick_Get" FunctionName="O_FGIJ_ShippingModel.Store.sp_ISHS071_ReturnPick_Get">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_FGIJ_ShippingModel.sp_ISHS071_ReturnPick_Get_Result">
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="OrderQty" ColumnName="OrderQty" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="NumberOfUnitLevel4" ColumnName="NumberOfUnitLevel4" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_FSES010_ShippingInstruction_GetInfoWhereShipmentNo" FunctionName="O_FGIJ_ShippingModel.Store.sp_FSES010_ShippingInstruction_GetInfoWhereShipmentNo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_FGIJ_ShippingModel.sp_FSES010_ShippingInstruction_GetInfoWhereShipmentNo_Result">
+          <ScalarProperty Name="CutDate" ColumnName="CutDate" />
+          <ScalarProperty Name="ETD" ColumnName="ETD" />
+          <ScalarProperty Name="ETA" ColumnName="ETA" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="BookingNo" ColumnName="BookingNo" />
+          <ScalarProperty Name="VesselName1" ColumnName="VesselName1" />
+          <ScalarProperty Name="VesselName2" ColumnName="VesselName2" />
+          <ScalarProperty Name="AgentOwner" ColumnName="AgentOwner" />
+          <ScalarProperty Name="PortOfLoadingID" ColumnName="PortOfLoadingID" />
+          <ScalarProperty Name="PortOfDischargeID" ColumnName="PortOfDischargeID" />
+          <ScalarProperty Name="FinalDestinationID" ColumnName="FinalDestinationID" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ISHS030_ConfirmShipService_GetConfirmShip" FunctionName="O_FGIJ_ShippingModel.Store.sp_ISHS030_ConfirmShipService_GetConfirmShip">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_FGIJ_ShippingModel.sp_ISHS030_ConfirmShipService_GetConfirmShip_Result">
+          <ScalarProperty Name="SELECT" ColumnName="SELECT" />
+          <ScalarProperty Name="PickingDate" ColumnName="PickingDate" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="SortedLineNo" ColumnName="SortedLineNo" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemCondition" ColumnName="ItemCondition" />
+          <ScalarProperty Name="PickQty2" ColumnName="PickQty2" />
+          <ScalarProperty Name="PickQty3" ColumnName="PickQty3" />
+          <ScalarProperty Name="ShipQty" ColumnName="ShipQty" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="UnitOfOrderQty" ColumnName="UnitOfOrderQty" />
+          <ScalarProperty Name="Unit2" ColumnName="Unit2" />
+          <ScalarProperty Name="Unit3" ColumnName="Unit3" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="AllStatus" ColumnName="AllStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_FSES010_ShippingInstruction_SearchAll" FunctionName="O_FGIJ_ShippingModel.Store.sp_FSES010_ShippingInstruction_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_FGIJ_ShippingModel.sp_FSES010_ShippingInstruction_SearchAll_Result">
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="SONo" ColumnName="SONo" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="ShippingAreaID" ColumnName="ShippingAreaID" />
+          <ScalarProperty Name="ShippingAreaCode" ColumnName="ShippingAreaCode" />
+          <ScalarProperty Name="ShippingAreaName" ColumnName="ShippingAreaName" />
+          <ScalarProperty Name="PickingDate" ColumnName="PickingDate" />
+          <ScalarProperty Name="VanningDate" ColumnName="VanningDate" />
+          <ScalarProperty Name="TransportationDate" ColumnName="TransportationDate" />
+          <ScalarProperty Name="CutDate" ColumnName="CutDate" />
+          <ScalarProperty Name="ETD" ColumnName="ETD" />
+          <ScalarProperty Name="ETDActual" ColumnName="ETDActual" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="AgentSeal" ColumnName="AgentSeal" />
+          <ScalarProperty Name="InspectionSeal" ColumnName="InspectionSeal" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="BookingNo" ColumnName="BookingNo" />
+          <ScalarProperty Name="VesselName1" ColumnName="VesselName1" />
+          <ScalarProperty Name="VesselName2" ColumnName="VesselName2" />
+          <ScalarProperty Name="AgentOwner" ColumnName="AgentOwner" />
+          <ScalarProperty Name="PortOfLoadingID" ColumnName="PortOfLoadingID" />
+          <ScalarProperty Name="PortOfLoadingCode" ColumnName="PortOfLoadingCode" />
+          <ScalarProperty Name="PortOfLoadingName" ColumnName="PortOfLoadingName" />
+          <ScalarProperty Name="PortOfDischargeID" ColumnName="PortOfDischargeID" />
+          <ScalarProperty Name="PortOfDischargeCode" ColumnName="PortOfDischargeCode" />
+          <ScalarProperty Name="PortOfDischargeName" ColumnName="PortOfDischargeName" />
+          <ScalarProperty Name="FinalDestinationID" ColumnName="FinalDestinationID" />
+          <ScalarProperty Name="FinalDestinationCode" ColumnName="FinalDestinationCode" />
+          <ScalarProperty Name="FinalDestinationLongName" ColumnName="FinalDestinationLongName" />
+          <ScalarProperty Name="ShipCompleteFlag" ColumnName="ShipCompleteFlag" />
+          <ScalarProperty Name="NumberOfPallet" ColumnName="NumberOfPallet" />
+          <ScalarProperty Name="ShipCompleteDate" ColumnName="ShipCompleteDate" />
+          <ScalarProperty Name="Freight" ColumnName="Freight" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

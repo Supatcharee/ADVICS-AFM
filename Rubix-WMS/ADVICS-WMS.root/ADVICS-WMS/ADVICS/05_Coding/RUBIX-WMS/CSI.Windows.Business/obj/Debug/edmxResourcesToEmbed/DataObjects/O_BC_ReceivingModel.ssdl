@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ReceivingModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ReceivingModelStoreContainer">
+    <EntitySet Name="tbt_ReceivingInstructionDetail" EntityType="ReceivingModel.Store.tbt_ReceivingInstructionDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbt_ReceivingInstructionHeader" EntityType="ReceivingModel.Store.tbt_ReceivingInstructionHeader" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbt_ReceivingOtherCharge" EntityType="ReceivingModel.Store.tbt_ReceivingOtherCharge" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbt_ReceivingStatus" EntityType="ReceivingModel.Store.tbt_ReceivingStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbt_ReceivingTransportation" EntityType="ReceivingModel.Store.tbt_ReceivingTransportation" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_tbt_ReceivingInstructionDetail_tbt_ReceivingInstructionHeader" Association="ReceivingModel.Store.FK_tbt_ReceivingInstructionDetail_tbt_ReceivingInstructionHeader">
+      <End Role="tbt_ReceivingInstructionHeader" EntitySet="tbt_ReceivingInstructionHeader" />
+      <End Role="tbt_ReceivingInstructionDetail" EntitySet="tbt_ReceivingInstructionDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbt_ReceivingOtherCharge_tbt_ReceivingInstructionHeader" Association="ReceivingModel.Store.FK_tbt_ReceivingOtherCharge_tbt_ReceivingInstructionHeader">
+      <End Role="tbt_ReceivingInstructionHeader" EntitySet="tbt_ReceivingInstructionHeader" />
+      <End Role="tbt_ReceivingOtherCharge" EntitySet="tbt_ReceivingOtherCharge" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbt_ReceivingTransportation_tbt_ReceivingInstructionHeader" Association="ReceivingModel.Store.FK_tbt_ReceivingTransportation_tbt_ReceivingInstructionHeader">
+      <End Role="tbt_ReceivingInstructionHeader" EntitySet="tbt_ReceivingInstructionHeader" />
+      <End Role="tbt_ReceivingTransportation" EntitySet="tbt_ReceivingTransportation" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tbt_ReceivingInstructionDetail">
+    <Key>
+      <PropertyRef Name="ReceivingNo" />
+      <PropertyRef Name="Installment" />
+      <PropertyRef Name="LineNo" />
+    </Key>
+    <Property Name="OwnerID" Type="int" Nullable="false" />
+    <Property Name="ReceivingNo" Type="nvarchar" Nullable="false" MaxLength="22" />
+    <Property Name="Installment" Type="int" Nullable="false" />
+    <Property Name="LineNo" Type="int" Nullable="false" />
+    <Property Name="ReferenceNo" Type="nvarchar" MaxLength="30" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="PONo" Type="nvarchar" MaxLength="30" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="LotNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ActualLotNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="PalletNoRef" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="PalletNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="TypeOfPackageID" Type="int" Nullable="false" />
+    <Property Name="NetWeight" Type="numeric" Scale="3" />
+    <Property Name="UnitVolume" Type="numeric" Precision="19" Scale="5" />
+    <Property Name="InPackage" Type="numeric" Scale="3" />
+    <Property Name="InPackageUnitID" Type="int" />
+    <Property Name="ProductConditionID" Type="int" Nullable="false" />
+    <Property Name="ActualProductConditionID" Type="int" />
+    <Property Name="Qty" Type="numeric" Nullable="false" Scale="3" />
+    <Property Name="QtyUnitID" Type="int" Nullable="false" />
+    <Property Name="InstructionQty" Type="numeric" Scale="3" />
+    <Property Name="ReceiveQty" Type="numeric" Scale="3" />
+    <Property Name="DetailRemark" Type="nvarchar" MaxLength="100" />
+    <Property Name="DataSourceFlag" Type="int" Nullable="false" />
+    <Property Name="ExpiredDate" Type="date" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbt_ReceivingInstructionHeader">
+    <Key>
+      <PropertyRef Name="ReceivingNo" />
+      <PropertyRef Name="Installment" />
+    </Key>
+    <Property Name="OwnerID" Type="int" Nullable="false" />
+    <Property Name="ReceivingNo" Type="nvarchar" Nullable="false" MaxLength="22" />
+    <Property Name="Installment" Type="int" Nullable="false" />
+    <Property Name="WarehouseID" Type="int" Nullable="false" />
+    <Property Name="SupplierID" Type="int" Nullable="false" />
+    <Property Name="ArrivalDate" Type="datetime" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="255" />
+    <Property Name="SlipCompleteDate" Type="datetime" />
+    <Property Name="CancelSlipFlag" Type="bit" />
+    <Property Name="SlipNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="TransferDate" Type="date" />
+    <Property Name="TransferType" Type="int" />
+    <Property Name="PalletQty" Type="int" />
+    <Property Name="GenerateDiffDate" Type="datetime" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbt_ReceivingOtherCharge">
+    <Key>
+      <PropertyRef Name="OtherChargeID" />
+    </Key>
+    <Property Name="OtherChargeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ReceivingNo" Type="nvarchar" Nullable="false" MaxLength="22" />
+    <Property Name="Installment" Type="int" Nullable="false" />
+    <Property Name="ChargeDate" Type="date" Nullable="false" />
+    <Property Name="OtherCharge" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Remark" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tbt_ReceivingStatus">
+    <Key>
+      <PropertyRef Name="ReceivingNo" />
+      <PropertyRef Name="Installment" />
+      <PropertyRef Name="LineNo" />
+    </Key>
+    <Property Name="OwnerID" Type="int" Nullable="false" />
+    <Property Name="ReceivingNo" Type="nvarchar" Nullable="false" MaxLength="22" />
+    <Property Name="Installment" Type="int" Nullable="false" />
+    <Property Name="LineNo" Type="int" Nullable="false" />
+    <Property Name="InterfaceReceivedDate" Type="datetime" />
+    <Property Name="ReceivingEntryDate" Type="datetime" />
+    <Property Name="TransitInstructionIssuedDate" Type="datetime" />
+    <Property Name="ReceivingDate" Type="datetime" />
+    <Property Name="TransitDate" Type="datetime" />
+    <Property Name="CancelDate" Type="datetime" />
+    <Property Name="StatusID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbt_ReceivingTransportation">
+    <Key>
+      <PropertyRef Name="ReceivingTransportID" />
+    </Key>
+    <Property Name="ReceivingTransportID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ReceivingNo" Type="nvarchar" Nullable="false" MaxLength="22" />
+    <Property Name="Installment" Type="int" Nullable="false" />
+    <Property Name="OwnerID" Type="int" Nullable="false" />
+    <Property Name="TruckCompanyID" Type="int" Nullable="false" />
+    <Property Name="TransportTypeID" Type="int" Nullable="false" />
+    <Property Name="TransportCharge" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="UnstaffingCharge" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="RegistrationNo" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="ContainerNo" Type="nvarchar" MaxLength="30" />
+    <Property Name="DriverName" Type="nvarchar" MaxLength="30" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="255" />
+    <Property Name="PlanIn" Type="datetime" />
+    <Property Name="PlanOut" Type="datetime" />
+    <Property Name="ActualIn" Type="datetime" />
+    <Property Name="ActualOut" Type="datetime" />
+    <Property Name="TotalReceiveWeight" Type="decimal" Scale="3" />
+    <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateUser" Type="nvarchar" MaxLength="20" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_tbt_ReceivingInstructionDetail_tbt_ReceivingInstructionHeader">
+    <End Role="tbt_ReceivingInstructionHeader" Type="ReceivingModel.Store.tbt_ReceivingInstructionHeader" Multiplicity="1" />
+    <End Role="tbt_ReceivingInstructionDetail" Type="ReceivingModel.Store.tbt_ReceivingInstructionDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbt_ReceivingInstructionHeader">
+        <PropertyRef Name="ReceivingNo" />
+        <PropertyRef Name="Installment" />
+      </Principal>
+      <Dependent Role="tbt_ReceivingInstructionDetail">
+        <PropertyRef Name="ReceivingNo" />
+        <PropertyRef Name="Installment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbt_ReceivingOtherCharge_tbt_ReceivingInstructionHeader">
+    <End Role="tbt_ReceivingInstructionHeader" Type="ReceivingModel.Store.tbt_ReceivingInstructionHeader" Multiplicity="1" />
+    <End Role="tbt_ReceivingOtherCharge" Type="ReceivingModel.Store.tbt_ReceivingOtherCharge" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbt_ReceivingInstructionHeader">
+        <PropertyRef Name="ReceivingNo" />
+        <PropertyRef Name="Installment" />
+      </Principal>
+      <Dependent Role="tbt_ReceivingOtherCharge">
+        <PropertyRef Name="ReceivingNo" />
+        <PropertyRef Name="Installment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbt_ReceivingTransportation_tbt_ReceivingInstructionHeader">
+    <End Role="tbt_ReceivingInstructionHeader" Type="ReceivingModel.Store.tbt_ReceivingInstructionHeader" Multiplicity="1" />
+    <End Role="tbt_ReceivingTransportation" Type="ReceivingModel.Store.tbt_ReceivingTransportation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbt_ReceivingInstructionHeader">
+        <PropertyRef Name="ReceivingNo" />
+        <PropertyRef Name="Installment" />
+      </Principal>
+      <Dependent Role="tbt_ReceivingTransportation">
+        <PropertyRef Name="ReceivingNo" />
+        <PropertyRef Name="Installment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="sp_CRCS010_CollectionASN_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ArrivalDateFrom" Type="date" Mode="In" />
+    <Parameter Name="ArrivalDateTo" Type="date" Mode="In" />
+    <Parameter Name="SlipNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="TruckCompanyID" Type="int" Mode="In" />
+    <Parameter Name="SupplierID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_CRCS020_StoringInstruction_Pallet_Search" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_CRCS020_StoringInstruction_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ArrivalStatus" Type="int" Mode="In" />
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ArrivalDateFrom" Type="datetime" Mode="In" />
+    <Parameter Name="ArrivalDateTo" Type="datetime" Mode="In" />
+    <Parameter Name="SlipNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="TruckCompanyID" Type="int" Mode="In" />
+    <Parameter Name="SupplierID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+    <Parameter Name="LotNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_CRCS030_UnplanReceivingEntry_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+    <Parameter Name="ArrivalDateFrom" Type="date" Mode="In" />
+    <Parameter Name="ArrivalDateTo" Type="date" Mode="In" />
+    <Parameter Name="SupplierID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="InvoiceNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_CRCS050_ProductReceiveEntry_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="SupplierID" Type="int" Mode="In" />
+    <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="LineNo" Type="int" Mode="In" />
+    <Parameter Name="ReceivingCompleted" Type="int" Mode="In" />
+    <Parameter Name="ReceivedDateFrom" Type="date" Mode="In" />
+    <Parameter Name="ReceivedDateTo" Type="date" Mode="In" />
+    <Parameter Name="PDSNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PONo" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomerPONo" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomerPOIssueDateFrom" Type="date" Mode="In" />
+    <Parameter Name="CustomerPOIssueDateTo" Type="date" Mode="In" />
+    <Parameter Name="isAfterMarket" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_CRCS051_ConfirmReceivingDetail_Get" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Installment" Type="int" Mode="In" />
+    <Parameter Name="ReceivingDate" Type="datetime" Mode="InOut" />
+    <Parameter Name="NoOfPallet" Type="int" Mode="InOut" />
+  </Function>
+</Schema>

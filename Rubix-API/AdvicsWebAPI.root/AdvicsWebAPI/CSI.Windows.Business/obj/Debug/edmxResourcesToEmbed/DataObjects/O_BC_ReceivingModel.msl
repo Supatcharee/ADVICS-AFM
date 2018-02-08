@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="O_BC_ReceivingModel" />
+  <Alias Key="Target" Value="O_BC_ReceivingModel.Store" />
+  <EntityContainerMapping CdmEntityContainer="O_BC_ReceivingModelContainer" StorageEntityContainer="O_BC_ReceivingModelStoreContainer">
+    <FunctionImportMapping FunctionImportName="sp_CRCS020_StoringInstruction_Pallet_Search" FunctionName="O_BC_ReceivingModel.Store.sp_CRCS020_StoringInstruction_Pallet_Search">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_BC_ReceivingModel.sp_CRCS020_StoringInstruction_Pallet_Search_Result">
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tbt_ReceivingInstructionDetail">
+      <EntityTypeMapping TypeName="O_BC_ReceivingModel.tbt_ReceivingInstructionDetail">
+        <MappingFragment StoreEntitySet="tbt_ReceivingInstructionDetail">
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ExpiredDate" ColumnName="ExpiredDate" />
+          <ScalarProperty Name="DataSourceFlag" ColumnName="DataSourceFlag" />
+          <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+          <ScalarProperty Name="ReceiveQty" ColumnName="ReceiveQty" />
+          <ScalarProperty Name="InstructionQty" ColumnName="InstructionQty" />
+          <ScalarProperty Name="QtyUnitID" ColumnName="QtyUnitID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="ActualProductConditionID" ColumnName="ActualProductConditionID" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="InPackageUnitID" ColumnName="InPackageUnitID" />
+          <ScalarProperty Name="InPackage" ColumnName="InPackage" />
+          <ScalarProperty Name="UnitVolume" ColumnName="UnitVolume" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="TypeOfPackageID" ColumnName="TypeOfPackageID" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+          <ScalarProperty Name="ActualLotNo" ColumnName="ActualLotNo" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="ReferenceNo" ColumnName="ReferenceNo" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbt_ReceivingInstructionHeader">
+      <EntityTypeMapping TypeName="O_BC_ReceivingModel.tbt_ReceivingInstructionHeader">
+        <MappingFragment StoreEntitySet="tbt_ReceivingInstructionHeader">
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="GenerateDiffDate" ColumnName="GenerateDiffDate" />
+          <ScalarProperty Name="PalletQty" ColumnName="PalletQty" />
+          <ScalarProperty Name="TransferType" ColumnName="TransferType" />
+          <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+          <ScalarProperty Name="SlipNo" ColumnName="SlipNo" />
+          <ScalarProperty Name="CancelSlipFlag" ColumnName="CancelSlipFlag" />
+          <ScalarProperty Name="SlipCompleteDate" ColumnName="SlipCompleteDate" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbt_ReceivingStatus">
+      <EntityTypeMapping TypeName="O_BC_ReceivingModel.tbt_ReceivingStatus">
+        <MappingFragment StoreEntitySet="tbt_ReceivingStatus">
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="CancelDate" ColumnName="CancelDate" />
+          <ScalarProperty Name="TransitDate" ColumnName="TransitDate" />
+          <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+          <ScalarProperty Name="TransitInstructionIssuedDate" ColumnName="TransitInstructionIssuedDate" />
+          <ScalarProperty Name="ReceivingEntryDate" ColumnName="ReceivingEntryDate" />
+          <ScalarProperty Name="InterfaceReceivedDate" ColumnName="InterfaceReceivedDate" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbt_ReceivingOtherCharge">
+      <EntityTypeMapping TypeName="O_BC_ReceivingModel.tbt_ReceivingOtherCharge">
+        <MappingFragment StoreEntitySet="tbt_ReceivingOtherCharge">
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="OtherCharge" ColumnName="OtherCharge" />
+          <ScalarProperty Name="ChargeDate" ColumnName="ChargeDate" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="OtherChargeID" ColumnName="OtherChargeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbt_ReceivingTransportation">
+      <EntityTypeMapping TypeName="O_BC_ReceivingModel.tbt_ReceivingTransportation">
+        <MappingFragment StoreEntitySet="tbt_ReceivingTransportation">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="TotalReceiveWeight" ColumnName="TotalReceiveWeight" />
+          <ScalarProperty Name="ActualOut" ColumnName="ActualOut" />
+          <ScalarProperty Name="ActualIn" ColumnName="ActualIn" />
+          <ScalarProperty Name="PlanOut" ColumnName="PlanOut" />
+          <ScalarProperty Name="PlanIn" ColumnName="PlanIn" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="ContainerNo" ColumnName="ContainerNo" />
+          <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+          <ScalarProperty Name="UnstaffingCharge" ColumnName="UnstaffingCharge" />
+          <ScalarProperty Name="TransportCharge" ColumnName="TransportCharge" />
+          <ScalarProperty Name="TransportTypeID" ColumnName="TransportTypeID" />
+          <ScalarProperty Name="TruckCompanyID" ColumnName="TruckCompanyID" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="ReceivingTransportID" ColumnName="ReceivingTransportID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_CRCS030_UnplanReceivingEntry_SearchAll" FunctionName="O_BC_ReceivingModel.Store.sp_CRCS030_UnplanReceivingEntry_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_BC_ReceivingModel.sp_CRCS030_UnplanReceivingEntry_SearchAll_Result">
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+          <ScalarProperty Name="NumberOfPallet" ColumnName="NumberOfPallet" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_CRCS020_StoringInstruction_SearchAll" FunctionName="O_BC_ReceivingModel.Store.sp_CRCS020_StoringInstruction_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_BC_ReceivingModel.sp_CRCS020_StoringInstruction_SearchAll_Result">
+          <ScalarProperty Name="Select" ColumnName="Select" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="UnitVolumn" ColumnName="UnitVolumn" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="NoOfDetail" ColumnName="NoOfDetail" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_CRCS051_ConfirmReceivingDetail_Get" FunctionName="O_BC_ReceivingModel.Store.sp_CRCS051_ConfirmReceivingDetail_Get">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_BC_ReceivingModel.sp_CRCS051_ConfirmReceivingDetail_Get_Result">
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="ConditionOfItem" ColumnName="ConditionOfItem" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="BaseActualLotNo" ColumnName="BaseActualLotNo" />
+          <ScalarProperty Name="InstructionQty" ColumnName="InstructionQty" />
+          <ScalarProperty Name="RemainQty" ColumnName="RemainQty" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="ReceiveQty" ColumnName="ReceiveQty" />
+          <ScalarProperty Name="ActualLotNo" ColumnName="ActualLotNo" />
+          <ScalarProperty Name="ActualProductConditionID" ColumnName="ActualProductConditionID" />
+          <ScalarProperty Name="ExpiredDate" ColumnName="ExpiredDate" />
+          <ScalarProperty Name="IsDeletable" ColumnName="IsDeletable" />
+          <ScalarProperty Name="ItemExpiredTypeID" ColumnName="ItemExpiredTypeID" />
+          <ScalarProperty Name="ShelfLife" ColumnName="ShelfLife" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="NumberOfUnitLevel2" ColumnName="NumberOfUnitLevel2" />
+          <ScalarProperty Name="NumberOfUnitLevel3" ColumnName="NumberOfUnitLevel3" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_CRCS010_CollectionASN_SearchAll" FunctionName="O_BC_ReceivingModel.Store.sp_CRCS010_CollectionASN_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_BC_ReceivingModel.sp_CRCS010_CollectionASN_SearchAll_Result">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="QtyUnitID" ColumnName="QtyUnitID" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="TypeOfPackageID" ColumnName="TypeOfPackageID" />
+          <ScalarProperty Name="InPackage" ColumnName="InPackage" />
+          <ScalarProperty Name="InPackageUnitID" ColumnName="InPackageUnitID" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+          <ScalarProperty Name="SupplierLongName" ColumnName="SupplierLongName" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_CRCS050_ProductReceiveEntry_SearchAll" FunctionName="O_BC_ReceivingModel.Store.sp_CRCS050_ProductReceiveEntry_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="O_BC_ReceivingModel.sp_CRCS050_ProductReceiveEntry_SearchAll_Result">
+          <ScalarProperty Name="SELECT" ColumnName="SELECT" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="PDSNo" ColumnName="PDSNo" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="QtyLv2" ColumnName="QtyLv2" />
+          <ScalarProperty Name="QtyLv3" ColumnName="QtyLv3" />
+          <ScalarProperty Name="ReceivingPallet" ColumnName="ReceivingPallet" />
+          <ScalarProperty Name="ReceiveQtyLv2" ColumnName="ReceiveQtyLv2" />
+          <ScalarProperty Name="ReceiveQtyLv3" ColumnName="ReceiveQtyLv3" />
+          <ScalarProperty Name="BaseReceiveQtyLv2" ColumnName="BaseReceiveQtyLv2" />
+          <ScalarProperty Name="BaseReceiveQtyLv3" ColumnName="BaseReceiveQtyLv3" />
+          <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+          <ScalarProperty Name="ReceivedDate" ColumnName="ReceivedDate" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="NoOfPallet" ColumnName="NoOfPallet" />
+          <ScalarProperty Name="BaseNoOfPallet" ColumnName="BaseNoOfPallet" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="AllStatusID" ColumnName="AllStatusID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="QtyUnitLv2" ColumnName="QtyUnitLv2" />
+          <ScalarProperty Name="QtyUnitLv3" ColumnName="QtyUnitLv3" />
+          <ScalarProperty Name="ReceiveSeq" ColumnName="ReceiveSeq" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+          <ScalarProperty Name="SupplierLongName" ColumnName="SupplierLongName" />
+          <ScalarProperty Name="SortedLineNo" ColumnName="SortedLineNo" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

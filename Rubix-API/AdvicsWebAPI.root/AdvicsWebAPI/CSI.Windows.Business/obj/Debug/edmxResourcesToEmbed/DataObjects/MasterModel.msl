@@ -1,0 +1,756 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="MasterConnection">
+    <FunctionImportMapping FunctionImportName="sp_XMSS230_WorkMethod_SearchAll" FunctionName="Model.Store.sp_XMSS230_WorkMethod_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS230_WorkMethod_SearchAll_Result">
+          <ScalarProperty Name="WorkMethodID" ColumnName="WorkMethodID" />
+          <ScalarProperty Name="WorkMethodCode" ColumnName="WorkMethodCode" />
+          <ScalarProperty Name="WorkMethodName" ColumnName="WorkMethodName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS090_LoadPortClassification" FunctionName="Model.Store.sp_XMSS090_LoadPortClassification">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS090_LoadPortClassification_Result">
+          <ScalarProperty Name="PortClassificationID" ColumnName="PortClassificationID" />
+          <ScalarProperty Name="PortClassificationName" ColumnName="PortClassificationName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS021_TruckTransportTypeMapping_SearchAll" FunctionName="Model.Store.sp_XMSS021_TruckTransportTypeMapping_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS021_TruckTransportTypeMapping_SearchAll_Result">
+          <ScalarProperty Name="TruckCompanyID" ColumnName="TruckCompanyID" />
+          <ScalarProperty Name="TransportTypeID" ColumnName="TransportTypeID" />
+          <ScalarProperty Name="TransportTypeCode" ColumnName="TransportTypeCode" />
+          <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS280_SystemConfig_Search" FunctionName="Model.Store.sp_XMSS280_SystemConfig_Search">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS280_SystemConfig_Search_Result">
+          <ScalarProperty Name="ConfigID" ColumnName="ConfigID" />
+          <ScalarProperty Name="ConfigItem" ColumnName="ConfigItem" />
+          <ScalarProperty Name="ConfigValue" ColumnName="ConfigValue" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS240_Classification_SearchAll" FunctionName="Model.Store.sp_XMSS240_Classification_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS240_Classification_SearchAll_Result">
+          <ScalarProperty Name="ClassificationID" ColumnName="ClassificationID" />
+          <ScalarProperty Name="ClassificationCode" ColumnName="ClassificationCode" />
+          <ScalarProperty Name="ClassificationName" ColumnName="ClassificationName" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS220_TypeOfUnit_SearchAll" FunctionName="Model.Store.sp_XMSS220_TypeOfUnit_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS220_TypeOfUnit_SearchAll_Result">
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="IsSystem" ColumnName="IsSystem" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS040_Warehouse_SearchAll" FunctionName="Model.Store.sp_XMSS040_Warehouse_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS040_Warehouse_SearchAll_Result">
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Division" ColumnName="Division" />
+          <ScalarProperty Name="ContactName1" ColumnName="ContactName1" />
+          <ScalarProperty Name="ContactName2" ColumnName="ContactName2" />
+          <ScalarProperty Name="ContactName3" ColumnName="ContactName3" />
+          <ScalarProperty Name="MaxM3" ColumnName="MaxM3" />
+          <ScalarProperty Name="MaxM2" ColumnName="MaxM2" />
+          <ScalarProperty Name="MaxPallet" ColumnName="MaxPallet" />
+          <ScalarProperty Name="MaxCapacity" ColumnName="MaxCapacity" />
+          <ScalarProperty Name="NoOfForklift" ColumnName="NoOfForklift" />
+          <ScalarProperty Name="ManPower" ColumnName="ManPower" />
+          <ScalarProperty Name="InChargeEmail" ColumnName="InChargeEmail" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tbm_ProductCondition">
+      <EntityTypeMapping TypeName="Model.tbm_ProductCondition">
+        <MappingFragment StoreEntitySet="tbm_ProductCondition">
+          <ScalarProperty Name="IsSystem" ColumnName="IsSystem" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+          <ScalarProperty Name="ProductConditionCode" ColumnName="ProductConditionCode" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbm_TypeOfUnit">
+      <EntityTypeMapping TypeName="Model.tbm_TypeOfUnit">
+        <MappingFragment StoreEntitySet="tbm_TypeOfUnit">
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="IsSystem" ColumnName="IsSystem" />
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbm_TransportType">
+      <EntityTypeMapping TypeName="Model.tbm_TransportType">
+        <MappingFragment StoreEntitySet="tbm_TransportType">
+          <ScalarProperty Name="IsSystem" ColumnName="IsSystem" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="LGL" ColumnName="LGL" />
+          <ScalarProperty Name="MaxPallet" ColumnName="MaxPallet" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="ContainerWeight" ColumnName="ContainerWeight" />
+          <ScalarProperty Name="MaxM3" ColumnName="MaxM3" />
+          <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+          <ScalarProperty Name="TransportTypeCode" ColumnName="TransportTypeCode" />
+          <ScalarProperty Name="TransportTypeID" ColumnName="TransportTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbm_Warehouse">
+      <EntityTypeMapping TypeName="Model.tbm_Warehouse">
+        <MappingFragment StoreEntitySet="tbm_Warehouse">
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="InChargeEmail" ColumnName="InChargeEmail" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="NoOfForklift" ColumnName="NoOfForklift" />
+          <ScalarProperty Name="ManPower" ColumnName="ManPower" />
+          <ScalarProperty Name="MaxCapacity" ColumnName="MaxCapacity" />
+          <ScalarProperty Name="MaxPallet" ColumnName="MaxPallet" />
+          <ScalarProperty Name="ExternalDivisionFlag" ColumnName="ExternalDivisionFlag" />
+          <ScalarProperty Name="MaxM2" ColumnName="MaxM2" />
+          <ScalarProperty Name="MaxM3" ColumnName="MaxM3" />
+          <ScalarProperty Name="ContactName3" ColumnName="ContactName3" />
+          <ScalarProperty Name="ContactName2" ColumnName="ContactName2" />
+          <ScalarProperty Name="ContactName1" ColumnName="ContactName1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS260_Package_SearchAll" FunctionName="Model.Store.sp_XMSS260_Package_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS260_Package_SearchAll_Result">
+          <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+          <ScalarProperty Name="PackageCode" ColumnName="PackageCode" />
+          <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="M3" ColumnName="M3" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tbm_Owner">
+      <EntityTypeMapping TypeName="Model.tbm_Owner">
+        <MappingFragment StoreEntitySet="tbm_Owner">
+          <ScalarProperty Name="BankAccount" ColumnName="BankAccount" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="LimitCapacity" ColumnName="LimitCapacity" />
+          <ScalarProperty Name="DefaultReceivingDateType" ColumnName="DefaultReceivingDateType" />
+          <ScalarProperty Name="ContactName3" ColumnName="ContactName3" />
+          <ScalarProperty Name="ContactName2" ColumnName="ContactName2" />
+          <ScalarProperty Name="ContactName1" ColumnName="ContactName1" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="StateOrProvince" ColumnName="StateOrProvince" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="BusinessType" ColumnName="BusinessType" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS150_ShippingArea_SearchAll" FunctionName="Model.Store.sp_XMSS150_ShippingArea_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS150_ShippingArea_SearchAll_Result">
+          <ScalarProperty Name="ShippingAreaID" ColumnName="ShippingAreaID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="ShippingAreaCode" ColumnName="ShippingAreaCode" />
+          <ScalarProperty Name="ShippingAreaName" ColumnName="ShippingAreaName" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS190_TransportCharge_SearchAll" FunctionName="Model.Store.sp_XMSS190_TransportCharge_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS190_TransportCharge_SearchAll_Result">
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="TruckCompanyCode" ColumnName="TruckCompanyCode" />
+          <ScalarProperty Name="TruckCompanyName" ColumnName="TruckCompanyName" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="FuelPrice" ColumnName="FuelPrice" />
+          <ScalarProperty Name="TruckCompanyID" ColumnName="TruckCompanyID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS190_TransportCharge_SearchByCondition" FunctionName="Model.Store.sp_XMSS190_TransportCharge_SearchByCondition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS190_TransportCharge_SearchByCondition_Result">
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="TransportTypeID" ColumnName="TransportTypeID" />
+          <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+          <ScalarProperty Name="FinalDestinationID" ColumnName="FinalDestinationID" />
+          <ScalarProperty Name="FinalDestinationLongName" ColumnName="FinalDestinationLongName" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="TransportationCharge" ColumnName="TransportationCharge" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tbm_Customer">
+      <EntityTypeMapping TypeName="Model.tbm_Customer">
+        <MappingFragment StoreEntitySet="tbm_Customer">
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="TransportLeadTime" ColumnName="TransportLeadTime" />
+          <ScalarProperty Name="CopyPolicyOrigin" ColumnName="CopyPolicyOrigin" />
+          <ScalarProperty Name="CopyBillLadingOrigin" ColumnName="CopyBillLadingOrigin" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="PickingLeadTime" ColumnName="PickingLeadTime" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="CopyCertificate" ColumnName="CopyCertificate" />
+          <ScalarProperty Name="CopyCustomInvoice" ColumnName="CopyCustomInvoice" />
+          <ScalarProperty Name="CopyPolicy" ColumnName="CopyPolicy" />
+          <ScalarProperty Name="CopyBillLading" ColumnName="CopyBillLading" />
+          <ScalarProperty Name="CopyCerOrigin" ColumnName="CopyCerOrigin" />
+          <ScalarProperty Name="CopyM3" ColumnName="CopyM3" />
+          <ScalarProperty Name="CopyPackList" ColumnName="CopyPackList" />
+          <ScalarProperty Name="CopyInvoice" ColumnName="CopyInvoice" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+          <ScalarProperty Name="PackingLeadTime" ColumnName="PackingLeadTime" />
+          <ScalarProperty Name="PaymentTerm" ColumnName="PaymentTerm" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="IsCalVAT" ColumnName="IsCalVAT" />
+          <ScalarProperty Name="ContactName3" ColumnName="ContactName3" />
+          <ScalarProperty Name="ContactName2" ColumnName="ContactName2" />
+          <ScalarProperty Name="ContactName1" ColumnName="ContactName1" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="StateOrProvince" ColumnName="StateOrProvince" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="BusinessType" ColumnName="BusinessType" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS250_ProductGroup_SearchAll" FunctionName="Model.Store.sp_XMSS250_ProductGroup_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS250_ProductGroup_SearchAll_Result">
+          <ScalarProperty Name="ProductGroupID" ColumnName="ProductGroupID" />
+          <ScalarProperty Name="ProductGroupCode" ColumnName="ProductGroupCode" />
+          <ScalarProperty Name="ProductGroupName" ColumnName="ProductGroupName" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS250_ProductGroup_LoadProductCategory" FunctionName="Model.Store.sp_XMSS250_ProductGroup_LoadProductCategory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS250_ProductGroup_LoadProductCategory_Result">
+          <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+          <ScalarProperty Name="ProductCategoryCode" ColumnName="ProductCategoryCode" />
+          <ScalarProperty Name="ProductCategoryName" ColumnName="ProductCategoryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tbm_Package">
+      <EntityTypeMapping TypeName="Model.tbm_Package">
+        <MappingFragment StoreEntitySet="tbm_Package">
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="M3" ColumnName="M3" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+          <ScalarProperty Name="PackageCode" ColumnName="PackageCode" />
+          <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbm_Product">
+      <EntityTypeMapping TypeName="Model.tbm_Product">
+        <MappingFragment StoreEntitySet="tbm_Product">
+          <ScalarProperty Name="IsShowGrossWeight" ColumnName="IsShowGrossWeight" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="TypeOfUnit" ColumnName="TypeOfUnit" />
+          <ScalarProperty Name="MinOrder" ColumnName="MinOrder" />
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="UnitLevelReceivingLabel" ColumnName="UnitLevelReceivingLabel" />
+          <ScalarProperty Name="SafetyStock" ColumnName="SafetyStock" />
+          <ScalarProperty Name="ImageFile" ColumnName="ImageFile" />
+          <ScalarProperty Name="ShelfLife" ColumnName="ShelfLife" />
+          <ScalarProperty Name="ItemExpiredTypeID" ColumnName="ItemExpiredTypeID" />
+          <ScalarProperty Name="PalletTypeID" ColumnName="PalletTypeID" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+          <ScalarProperty Name="ProductGroupID" ColumnName="ProductGroupID" />
+          <ScalarProperty Name="EstimateValue" ColumnName="EstimateValue" />
+          <ScalarProperty Name="FreeOfCharge" ColumnName="FreeOfCharge" />
+          <ScalarProperty Name="KanbanControl" ColumnName="KanbanControl" />
+          <ScalarProperty Name="LotControl" ColumnName="LotControl" />
+          <ScalarProperty Name="ScanType" ColumnName="ScanType" />
+          <ScalarProperty Name="SerialLength" ColumnName="SerialLength" />
+          <ScalarProperty Name="SerialMask" ColumnName="SerialMask" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductMask" ColumnName="ProductMask" />
+          <ScalarProperty Name="ProductShortCode" ColumnName="ProductShortCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="ClassificationID" ColumnName="ClassificationID" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbm_ProductDefaultUnit">
+      <EntityTypeMapping TypeName="Model.tbm_ProductDefaultUnit">
+        <MappingFragment StoreEntitySet="tbm_ProductDefaultUnit">
+          <ScalarProperty Name="PalletID" ColumnName="PalletID" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="rptTypeOfUnitLevel4" ColumnName="rptTypeOfUnitLevel4" />
+          <ScalarProperty Name="rptTypeOfUnitLevel3" ColumnName="rptTypeOfUnitLevel3" />
+          <ScalarProperty Name="rptTypeOfUnitLevel2" ColumnName="rptTypeOfUnitLevel2" />
+          <ScalarProperty Name="rptTypeOfUnitLevel1" ColumnName="rptTypeOfUnitLevel1" />
+          <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="TypeOfUnitInventory" ColumnName="TypeOfUnitInventory" />
+          <ScalarProperty Name="TypeOfUnitLevel4" ColumnName="TypeOfUnitLevel4" />
+          <ScalarProperty Name="NumberOfUnitLevel4" ColumnName="NumberOfUnitLevel4" />
+          <ScalarProperty Name="TypeOfUnitLevel3" ColumnName="TypeOfUnitLevel3" />
+          <ScalarProperty Name="NumberOfUnitLevel3" ColumnName="NumberOfUnitLevel3" />
+          <ScalarProperty Name="TypeOfUnitLevel2" ColumnName="TypeOfUnitLevel2" />
+          <ScalarProperty Name="NumberOfUnitLevel2" ColumnName="NumberOfUnitLevel2" />
+          <ScalarProperty Name="TypeOfUnitLevel1" ColumnName="TypeOfUnitLevel1" />
+          <ScalarProperty Name="VolumeOfUnitLevel1" ColumnName="VolumeOfUnitLevel1" />
+          <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+          <ScalarProperty Name="CargoType" ColumnName="CargoType" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS110_ConditionOfProduct_SearchAll" FunctionName="Model.Store.sp_XMSS110_ConditionOfProduct_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS110_ConditionOfProduct_SearchAll_Result">
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="ProductConditionCode" ColumnName="ProductConditionCode" />
+          <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsSystem" ColumnName="IsSystem" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS020_TruckCompany_SearchAll" FunctionName="Model.Store.sp_XMSS020_TruckCompany_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS020_TruckCompany_SearchAll_Result">
+          <ScalarProperty Name="TruckCompanyID" ColumnName="TruckCompanyID" />
+          <ScalarProperty Name="TruckCompanyCode" ColumnName="TruckCompanyCode" />
+          <ScalarProperty Name="TruckCompanyName" ColumnName="TruckCompanyName" />
+          <ScalarProperty Name="TruckCompanyAddress" ColumnName="TruckCompanyAddress" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="ContactName1" ColumnName="ContactName1" />
+          <ScalarProperty Name="ContactName2" ColumnName="ContactName2" />
+          <ScalarProperty Name="ContactName3" ColumnName="ContactName3" />
+          <ScalarProperty Name="IsSystem" ColumnName="IsSystem" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS130_TransportType_SearchAll" FunctionName="Model.Store.sp_XMSS130_TransportType_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS130_TransportType_SearchAll_Result">
+          <ScalarProperty Name="TransportTypeID" ColumnName="TransportTypeID" />
+          <ScalarProperty Name="TransportTypeCode" ColumnName="TransportTypeCode" />
+          <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="MaxM3" ColumnName="MaxM3" />
+          <ScalarProperty Name="ContainerWeight" ColumnName="ContainerWeight" />
+          <ScalarProperty Name="MaxPallet" ColumnName="MaxPallet" />
+          <ScalarProperty Name="LGL" ColumnName="LGL" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsSystem" ColumnName="IsSystem" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS010_Owner_SearchAll" FunctionName="Model.Store.sp_XMSS010_Owner_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS010_Owner_SearchAll_Result">
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="BusinessType" ColumnName="BusinessType" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="StateOrProvince" ColumnName="StateOrProvince" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="ContactName1" ColumnName="ContactName1" />
+          <ScalarProperty Name="ContactName2" ColumnName="ContactName2" />
+          <ScalarProperty Name="ContactName3" ColumnName="ContactName3" />
+          <ScalarProperty Name="DefaultReceivingDateType" ColumnName="DefaultReceivingDateType" />
+          <ScalarProperty Name="DefaultReceivingDate" ColumnName="DefaultReceivingDate" />
+          <ScalarProperty Name="BankAccount" ColumnName="BankAccount" />
+          <ScalarProperty Name="LimitCapacity" ColumnName="LimitCapacity" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS120_Zone_SearchAll" FunctionName="Model.Store.sp_XMSS120_Zone_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS120_Zone_SearchAll_Result">
+          <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+          <ScalarProperty Name="ZoneCode" ColumnName="ZoneCode" />
+          <ScalarProperty Name="ZoneName" ColumnName="ZoneName" />
+          <ScalarProperty Name="ZoneType" ColumnName="ZoneType" />
+          <ScalarProperty Name="ZoneTypeName" ColumnName="ZoneTypeName" />
+          <ScalarProperty Name="ZoneColor" ColumnName="ZoneColor" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tbm_ProductDefaultZoneTransit">
+      <EntityTypeMapping TypeName="Model.tbm_ProductDefaultZoneTransit">
+        <MappingFragment StoreEntitySet="tbm_ProductDefaultZoneTransit">
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductDefaultID" ColumnName="ProductDefaultID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS030_Supplier_SearchAll" FunctionName="Model.Store.sp_XMSS030_Supplier_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS030_Supplier_SearchAll_Result">
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="SupplierAddress1" ColumnName="SupplierAddress1" />
+          <ScalarProperty Name="SupplierAddress2" ColumnName="SupplierAddress2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="StateOrProvince" ColumnName="StateOrProvince" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="KM" ColumnName="KM" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="ContactName1" ColumnName="ContactName1" />
+          <ScalarProperty Name="ContactName2" ColumnName="ContactName2" />
+          <ScalarProperty Name="ContactName3" ColumnName="ContactName3" />
+          <ScalarProperty Name="SupplierNo" ColumnName="SupplierNo" />
+          <ScalarProperty Name="ArrivalLeadTime" ColumnName="ArrivalLeadTime" />
+          <ScalarProperty Name="ArrivalTime" ColumnName="ArrivalTime" />
+          <ScalarProperty Name="CollectTime" ColumnName="CollectTime" />
+          <ScalarProperty Name="CreditTerm" ColumnName="CreditTerm" />
+          <ScalarProperty Name="DeliveryPlace" ColumnName="DeliveryPlace" />
+          <ScalarProperty Name="isCalVAT" ColumnName="isCalVAT" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="Monday" ColumnName="Monday" />
+          <ScalarProperty Name="Tuesday" ColumnName="Tuesday" />
+          <ScalarProperty Name="Wednesday" ColumnName="Wednesday" />
+          <ScalarProperty Name="Thursday" ColumnName="Thursday" />
+          <ScalarProperty Name="Friday" ColumnName="Friday" />
+          <ScalarProperty Name="Saturday" ColumnName="Saturday" />
+          <ScalarProperty Name="Sunday" ColumnName="Sunday" />
+          <ScalarProperty Name="AdvLeadTime" ColumnName="AdvLeadTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS070_FinalDestination_SearchAll" FunctionName="Model.Store.sp_XMSS070_FinalDestination_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS070_FinalDestination_SearchAll_Result">
+          <ScalarProperty Name="FinalDestinationID" ColumnName="FinalDestinationID" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="FinalDestinationCode" ColumnName="FinalDestinationCode" />
+          <ScalarProperty Name="FinalDestinationName" ColumnName="FinalDestinationName" />
+          <ScalarProperty Name="FinalDestinationAddress" ColumnName="FinalDestinationAddress" />
+          <ScalarProperty Name="FinalDestinationDetail" ColumnName="FinalDestinationDetail" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="StateOrProvince" ColumnName="StateOrProvince" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Distance" ColumnName="Distance" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="LeadTimeDays" ColumnName="LeadTimeDays" />
+          <ScalarProperty Name="LeadTimeHr" ColumnName="LeadTimeHr" />
+          <ScalarProperty Name="ContactName1" ColumnName="ContactName1" />
+          <ScalarProperty Name="ContactName2" ColumnName="ContactName2" />
+          <ScalarProperty Name="ContactName3" ColumnName="ContactName3" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="IsSystem" ColumnName="IsSystem" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="ImageFile" ColumnName="ImageFile" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS090_Port_SearchAll" FunctionName="Model.Store.sp_XMSS090_Port_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS090_Port_SearchAll_Result">
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="PortID" ColumnName="PortID" />
+          <ScalarProperty Name="PortCode" ColumnName="PortCode" />
+          <ScalarProperty Name="PortLongName" ColumnName="PortLongName" />
+          <ScalarProperty Name="PortClassification" ColumnName="PortClassification" />
+          <ScalarProperty Name="PortClassificationName" ColumnName="PortClassificationName" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="LeadTimeDays" ColumnName="LeadTimeDays" />
+          <ScalarProperty Name="LeadTimeHr" ColumnName="LeadTimeHr" />
+          <ScalarProperty Name="PortAddress" ColumnName="PortAddress" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Freight" ColumnName="Freight" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_XMSS270_Customer_SearchAll" FunctionName="Model.Store.sp_XMSS270_Customer_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_XMSS270_Customer_SearchAll_Result">
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="BusinessType" ColumnName="BusinessType" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Accountee" ColumnName="Accountee" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="StateOrProvince" ColumnName="StateOrProvince" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="ContactName1" ColumnName="ContactName1" />
+          <ScalarProperty Name="ContactName2" ColumnName="ContactName2" />
+          <ScalarProperty Name="ContactName3" ColumnName="ContactName3" />
+          <ScalarProperty Name="IsCalVAT" ColumnName="IsCalVAT" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="PaymentTerm" ColumnName="PaymentTerm" />
+          <ScalarProperty Name="PickingLeadTime" ColumnName="PickingLeadTime" />
+          <ScalarProperty Name="PackingLeadTime" ColumnName="PackingLeadTime" />
+          <ScalarProperty Name="TransportLeadTime" ColumnName="TransportLeadTime" />
+          <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CopyInvoice" ColumnName="CopyInvoice" />
+          <ScalarProperty Name="CopyPackList" ColumnName="CopyPackList" />
+          <ScalarProperty Name="CopyM3" ColumnName="CopyM3" />
+          <ScalarProperty Name="CopyCerOrigin" ColumnName="CopyCerOrigin" />
+          <ScalarProperty Name="CopyBillLadingOrigin" ColumnName="CopyBillLadingOrigin" />
+          <ScalarProperty Name="CopyBillLading" ColumnName="CopyBillLading" />
+          <ScalarProperty Name="CopyPolicyOrigin" ColumnName="CopyPolicyOrigin" />
+          <ScalarProperty Name="CopyPolicy" ColumnName="CopyPolicy" />
+          <ScalarProperty Name="CopyCustomInvoice" ColumnName="CopyCustomInvoice" />
+          <ScalarProperty Name="CopyCertificate" ColumnName="CopyCertificate" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="Insurance" ColumnName="Insurance" />
+          <ScalarProperty Name="Freight" ColumnName="Freight" />
+          <ScalarProperty Name="Is_Special" ColumnName="Is_Special" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

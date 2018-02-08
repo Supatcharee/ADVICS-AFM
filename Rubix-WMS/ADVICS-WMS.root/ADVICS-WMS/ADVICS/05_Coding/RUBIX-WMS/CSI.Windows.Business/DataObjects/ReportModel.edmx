@@ -1,0 +1,2366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ReportModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ReportModelStoreContainer" />
+        <Function Name="sp_RPT001_ReceivingReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT001_ReceivingReport_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="ReceivingDate1" Type="date" Mode="In" />
+          <Parameter Name="ReceivingDate2" Type="date" Mode="In" />
+          <Parameter Name="ReceivingDateActual1" Type="date" Mode="In" />
+          <Parameter Name="ReceivingDateActual2" Type="date" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT002_PutAwayReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ProductID" Type="int" Mode="In" />
+          <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="TransitDate1" Type="datetime" Mode="In" />
+          <Parameter Name="TransitDate2" Type="datetime" Mode="In" />
+          <Parameter Name="ZoneID" Type="int" Mode="In" />
+          <Parameter Name="TypeID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT003_OtherChargeReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="TransactionDateFrom" Type="date" Mode="In" />
+          <Parameter Name="TransactionDateTo" Type="date" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT004_SummaryChargeReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="TransactionDateFrom" Type="datetime" Mode="In" />
+          <Parameter Name="TransactionDateTo" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT005_ReceivingTransportationChargeReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="FromDate" Type="datetime" Mode="In" />
+          <Parameter Name="ToDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT006_UnstaffingChargeReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="Date1" Type="datetime" Mode="In" />
+          <Parameter Name="Date2" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT007_IncomingChargeReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="Date1" Type="datetime" Mode="In" />
+          <Parameter Name="Date2" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT007_IncomingChargeReport_SubReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="Date1" Type="datetime" Mode="In" />
+          <Parameter Name="Date2" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT008_TransitChargeReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="DateStart" Type="datetime" Mode="In" />
+          <Parameter Name="DateEnd" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT008_TransitChargeReport_SubReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="DateStart" Type="datetime" Mode="In" />
+          <Parameter Name="DateEnd" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT009_PickingChargeReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="Date1" Type="datetime" Mode="In" />
+          <Parameter Name="Date2" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT010_OutgoingChargeReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="Date1" Type="datetime" Mode="In" />
+          <Parameter Name="Date2" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT010_OutgoingChargeReport_SubReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="Date1" Type="datetime" Mode="In" />
+          <Parameter Name="Date2" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT011_TransportationChargeReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="DateStart" Type="datetime" Mode="In" />
+          <Parameter Name="DateEnd" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT012_EstimatePriceReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="FromDate" Type="date" Mode="In" />
+          <Parameter Name="ToDate" Type="date" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT013_ShippingDeliveryReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="DeliveryDateFrom" Type="date" Mode="In" />
+          <Parameter Name="DeliveryDateTo" Type="date" Mode="In" />
+          <Parameter Name="InvoiceNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="ProductID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT016_InventoryCheckingListByProduct_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ProductID" Type="int" Mode="In" />
+          <Parameter Name="Date" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT017_InventoryCheckingListByZone_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="Date" Type="datetime" Mode="In" />
+          <Parameter Name="ZoneID" Type="int" Mode="In" />
+          <Parameter Name="Floor" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT017_InventoryCheckingListByZone_SubReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="Date" Type="datetime" Mode="In" />
+          <Parameter Name="ZoneID" Type="int" Mode="In" />
+          <Parameter Name="Floor" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT018_ReceivingInstruction_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="Installment" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT019_ReceivingLabel_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PalletNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="LocationID" Type="int" Mode="In" />
+          <Parameter Name="ProductID" Type="int" Mode="In" />
+          <Parameter Name="LotNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="ProductConditionID" Type="int" Mode="In" />
+          <Parameter Name="Flag" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT020_ShipmentLabel_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT021_PickingList_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT022_DeliveryOrder_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT023_MovementReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ProductID" Type="int" Mode="In" />
+          <Parameter Name="DateFrom" Type="datetime" Mode="In" />
+          <Parameter Name="DateTo" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT023_MovementReport_SubReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ProductID" Type="int" Mode="In" />
+          <Parameter Name="DateFrom" Type="datetime" Mode="In" />
+          <Parameter Name="DateTo" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT024_MovementReport_Chart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ProductID" Type="int" Mode="In" />
+          <Parameter Name="DateFrom" Type="datetime" Mode="In" />
+          <Parameter Name="DateTo" Type="datetime" Mode="In" />
+          <Parameter Name="IsMonthly" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT025_InventoryUsageReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT025_InventoryUsageReport_GetData_Sub_Report" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT026_InventoryUsageReport_Chart_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT028_PalletReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ProductID" Type="int" Mode="In" />
+          <Parameter Name="DateFrom" Type="datetime" Mode="In" />
+          <Parameter Name="DateTo" Type="datetime" Mode="In" />
+          <Parameter Name="IsMonthly" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT029_ReceivePlanList_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="DateForm" Type="date" Mode="In" />
+          <Parameter Name="DateTo" Type="date" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT029_ReceivePlanList_SubReport_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="DateForm" Type="datetime" Mode="In" />
+          <Parameter Name="DateTo" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT030_StockCard_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ProductID" Type="int" Mode="In" />
+          <Parameter Name="ProductGroupID" Type="int" Mode="In" />
+          <Parameter Name="DateForm" Type="datetime" Mode="In" />
+          <Parameter Name="DateTo" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT031_SlowMovement_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="Date" Type="date" Mode="In" />
+          <Parameter Name="Period1" Type="int" Mode="In" />
+          <Parameter Name="Period2" Type="int" Mode="In" />
+          <Parameter Name="Period3" Type="int" Mode="In" />
+          <Parameter Name="Period4" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT032_OrderBalance_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="DateForm" Type="date" Mode="In" />
+          <Parameter Name="DateTo" Type="date" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT032_RMTag_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PONo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT033_PartDeliverySheet_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PONo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT033_PartDeliverySheet_GetSubData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PONo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT034_PurchaseOrder_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ReceivingNoXML" Type="xml" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT035_PackingInstruction_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PackingNo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT035_PackingInstruction_Material_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PackingNo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT036_LoadingInstruction_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="Installment" Type="int" Mode="In" />
+          <Parameter Name="ContainNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="PlanOut" Type="date" Mode="In" />
+          <Parameter Name="ActualOut" Type="date" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT037_CaseMark_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PalletNo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT042_AdivceOfShipment_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="Installment" Type="int" Mode="In" />
+          <Parameter Name="ContainerNo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT043_PrivilegeFormat_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="ContainerNo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT044_PackingList_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="Installment" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT045_LabelSticker_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PackingNo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_RPT046_UserStickerLaber_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ReportModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="ReportModelContainer" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="sp_RPT001_ReceivingReport_GetData" ReturnType="Collection(ReportModel.sp_RPT001_ReceivingReport_GetData_Result)">
+          <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT001_ReceivingReport_SearchAll" ReturnType="Collection(ReportModel.sp_RPT001_ReceivingReport_SearchAll_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+            <Parameter Name="ReceivingDate1" Mode="In" Type="DateTime" />
+            <Parameter Name="ReceivingDate2" Mode="In" Type="DateTime" />
+            <Parameter Name="ReceivingDateActual1" Mode="In" Type="DateTime" />
+            <Parameter Name="ReceivingDateActual2" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT002_PutAwayReport_GetData" ReturnType="Collection(ReportModel.sp_RPT002_PutAwayReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductID" Mode="In" Type="Int32" />
+            <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+            <Parameter Name="TransitDate1" Mode="In" Type="DateTime" />
+            <Parameter Name="TransitDate2" Mode="In" Type="DateTime" />
+            <Parameter Name="ZoneID" Mode="In" Type="Int32" />
+            <Parameter Name="TypeID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT003_OtherChargeReport_GetData" ReturnType="Collection(ReportModel.sp_RPT003_OtherChargeReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="TransactionDateFrom" Mode="In" Type="DateTime" />
+            <Parameter Name="TransactionDateTo" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT004_SummaryChargeReport_GetData" ReturnType="Collection(ReportModel.sp_RPT004_SummaryChargeReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="TransactionDateFrom" Mode="In" Type="DateTime" />
+            <Parameter Name="TransactionDateTo" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT005_ReceivingTransportationChargeReport_GetData" ReturnType="Collection(ReportModel.sp_RPT005_ReceivingTransportationChargeReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT006_UnstaffingChargeReport_GetData" ReturnType="Collection(ReportModel.sp_RPT006_UnstaffingChargeReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="Date1" Mode="In" Type="DateTime" />
+            <Parameter Name="Date2" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT007_IncomingChargeReport_GetData" ReturnType="Collection(ReportModel.sp_RPT007_IncomingChargeReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="Date1" Mode="In" Type="DateTime" />
+            <Parameter Name="Date2" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT007_IncomingChargeReport_SubReport_GetData" ReturnType="Collection(ReportModel.sp_RPT007_IncomingChargeReport_SubReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="Date1" Mode="In" Type="DateTime" />
+            <Parameter Name="Date2" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT008_TransitChargeReport_GetData" ReturnType="Collection(ReportModel.sp_RPT008_TransitChargeReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="DateStart" Mode="In" Type="DateTime" />
+            <Parameter Name="DateEnd" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT008_TransitChargeReport_SubReport_GetData" ReturnType="Collection(ReportModel.sp_RPT008_TransitChargeReport_SubReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="DateStart" Mode="In" Type="DateTime" />
+            <Parameter Name="DateEnd" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT009_PickingChargeReport_GetData" ReturnType="Collection(ReportModel.sp_RPT009_PickingChargeReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="Date1" Mode="In" Type="DateTime" />
+            <Parameter Name="Date2" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT010_OutgoingChargeReport_GetData" ReturnType="Collection(ReportModel.sp_RPT010_OutgoingChargeReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="Date1" Mode="In" Type="DateTime" />
+            <Parameter Name="Date2" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT010_OutgoingChargeReport_SubReport_GetData" ReturnType="Collection(ReportModel.sp_RPT010_OutgoingChargeReport_SubReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="Date1" Mode="In" Type="DateTime" />
+            <Parameter Name="Date2" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT012_EstimatePriceReport_GetData" ReturnType="Collection(ReportModel.sp_RPT012_EstimatePriceReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT013_ShippingDeliveryReport_GetData" ReturnType="Collection(ReportModel.sp_RPT013_ShippingDeliveryReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+            <Parameter Name="DeliveryDateFrom" Mode="In" Type="DateTime" />
+            <Parameter Name="DeliveryDateTo" Mode="In" Type="DateTime" />
+            <Parameter Name="InvoiceNo" Mode="In" Type="String" />
+            <Parameter Name="ProductID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT016_InventoryCheckingListByProduct_GetData" ReturnType="Collection(ReportModel.sp_RPT016_InventoryCheckingListByProduct_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductID" Mode="In" Type="Int32" />
+            <Parameter Name="Date" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT017_InventoryCheckingListByZone_SubReport_GetData" ReturnType="Collection(ReportModel.sp_RPT017_InventoryCheckingListByZone_SubReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="Date" Mode="In" Type="DateTime" />
+            <Parameter Name="ZoneID" Mode="In" Type="Int32" />
+            <Parameter Name="Floor" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT020_ShipmentLabel_GetData" ReturnType="Collection(ReportModel.sp_RPT020_ShipmentLabel_GetData_Result)">
+            <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+            <Parameter Name="PickingNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT021_PickingList_SubReport_GetData" ReturnType="Collection(ReportModel.sp_RPT021_PickingList_SubReport_GetData_Result)">
+            <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+            <Parameter Name="PickingNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT022_DeliveryOrder_GetData" ReturnType="Collection(ReportModel.sp_RPT022_DeliveryOrder_GetData_Result)">
+            <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+            <Parameter Name="PickingNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT022_DeliveryOrder_SubReport_GetData" ReturnType="Collection(ReportModel.sp_RPT022_DeliveryOrder_SubReport_GetData_Result)">
+          <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT023_MovementReport_SubReport_GetData" ReturnType="Collection(ReportModel.sp_RPT023_MovementReport_SubReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductID" Mode="In" Type="Int32" />
+            <Parameter Name="DateFrom" Mode="In" Type="DateTime" />
+            <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT024_MovementReport_Chart" ReturnType="Collection(ReportModel.sp_RPT024_MovementReport_Chart_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductID" Mode="In" Type="Int32" />
+            <Parameter Name="DateFrom" Mode="In" Type="DateTime" />
+            <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+            <Parameter Name="IsMonthly" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT025_InventoryUsageReport_GetData" ReturnType="Collection(ReportModel.sp_RPT025_InventoryUsageReport_GetData_Result)">
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT025_InventoryUsageReport_GetData_Sub_Report" ReturnType="Collection(ReportModel.sp_RPT025_InventoryUsageReport_GetData_Sub_Report_Result)">
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT026_InventoryUsageReport_Chart_GetData" ReturnType="Collection(ReportModel.sp_RPT026_InventoryUsageReport_Chart_GetData_Result)">
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT028_PalletReport_GetData" ReturnType="Collection(ReportModel.sp_RPT028_PalletReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductID" Mode="In" Type="Int32" />
+            <Parameter Name="DateFrom" Mode="In" Type="DateTime" />
+            <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+            <Parameter Name="IsMonthly" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT029_ReceivePlanList_GetData" ReturnType="Collection(ReportModel.sp_RPT029_ReceivePlanList_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="DateForm" Mode="In" Type="DateTime" />
+            <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT029_ReceivePlanList_SubReport_GetData" ReturnType="Collection(ReportModel.sp_RPT029_ReceivePlanList_SubReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="DateForm" Mode="In" Type="DateTime" />
+            <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT030_StockCard_GetData" ReturnType="Collection(ReportModel.sp_RPT030_StockCard_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductGroupID" Mode="In" Type="Int32" />
+            <Parameter Name="DateForm" Mode="In" Type="DateTime" />
+            <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT032_OrderBalance_GetData" ReturnType="Collection(ReportModel.sp_RPT032_OrderBalance_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="DateForm" Mode="In" Type="DateTime" />
+            <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT023_MovementReport_GetData" ReturnType="Collection(ReportModel.sp_RPT023_MovementReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductID" Mode="In" Type="Int32" />
+            <Parameter Name="DateFrom" Mode="In" Type="DateTime" />
+            <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT011_TransportationChargeReport_GetData" ReturnType="Collection(ReportModel.sp_RPT011_TransportationChargeReport_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="DateStart" Mode="In" Type="DateTime" />
+            <Parameter Name="DateEnd" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT017_InventoryCheckingListByZone_GetData" ReturnType="Collection(ReportModel.sp_RPT017_InventoryCheckingListByZone_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="Date" Mode="In" Type="DateTime" />
+            <Parameter Name="ZoneID" Mode="In" Type="Int32" />
+            <Parameter Name="Floor" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT019_ReceivingLabel_GetData" ReturnType="Collection(ReportModel.sp_RPT019_ReceivingLabel_GetData_Result)">
+            <Parameter Name="PalletNo" Mode="In" Type="String" />
+            <Parameter Name="LocationID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductID" Mode="In" Type="Int32" />
+            <Parameter Name="LotNo" Mode="In" Type="String" />
+            <Parameter Name="ProductConditionID" Mode="In" Type="Int32" />
+            <Parameter Name="Flag" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT021_PickingList_GetData" ReturnType="Collection(ReportModel.sp_RPT021_PickingList_GetData_Result)">
+            <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+            <Parameter Name="PickingNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT033_PartDeliverySheet_GetData" ReturnType="Collection(ReportModel.sp_RPT033_PartDeliverySheet_GetData_Result)">
+          <Parameter Name="PONo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT033_PartDeliverySheet_GetSubData" ReturnType="Collection(ReportModel.sp_RPT033_PartDeliverySheet_GetSubData_Result)">
+          <Parameter Name="PONo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT032_RMTag_GetData" ReturnType="Collection(ReportModel.sp_RPT032_RMTag_GetData_Result)">
+          <Parameter Name="PONo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT036_LoadingInstruction_GetData" ReturnType="Collection(ReportModel.sp_RPT036_LoadingInstruction_GetData_Result)">
+            <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+            <Parameter Name="Installment" Mode="In" Type="Int32" />
+            <Parameter Name="ContainNo" Mode="In" Type="String" />
+            <Parameter Name="PlanOut" Mode="In" Type="DateTime" />
+            <Parameter Name="ActualOut" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT043_PrivilegeFormat_GetData" ReturnType="Collection(ReportModel.sp_RPT043_PrivilegeFormat_GetData_Result)">
+            <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+            <Parameter Name="ContainerNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT042_AdivceOfShipment_GetData" ReturnType="Collection(ReportModel.sp_RPT042_AdivceOfShipment_GetData_Result)">
+            <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+            <Parameter Name="Installment" Mode="In" Type="Int32" />
+            <Parameter Name="ContainerNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT034_PurchaseOrder_GetData" ReturnType="Collection(ReportModel.sp_RPT034_PurchaseOrder_GetData_Result)">
+          <Parameter Name="ReceivingNoXML" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT044_PackingList_GetData" ReturnType="Collection(ReportModel.sp_RPT044_PackingList_GetData_Result)">
+            <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+            <Parameter Name="Installment" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT045_LabelSticker_GetData" ReturnType="Collection(ReportModel.sp_RPT045_LabelSticker_GetData_Result)">
+          <Parameter Name="PackingNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT031_SlowMovement_GetData" ReturnType="Collection(ReportModel.sp_RPT031_SlowMovement_GetData_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="Date" Mode="In" Type="DateTime" />
+            <Parameter Name="Period1" Mode="In" Type="Int32" />
+            <Parameter Name="Period2" Mode="In" Type="Int32" />
+            <Parameter Name="Period3" Mode="In" Type="Int32" />
+            <Parameter Name="Period4" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT035_PackingInstruction_Material_GetData" ReturnType="Collection(ReportModel.sp_RPT035_PackingInstruction_Material_GetData_Result)">
+          <Parameter Name="PackingNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT037_CaseMark_GetData" ReturnType="Collection(ReportModel.sp_RPT037_CaseMark_GetData_Result)">
+          <Parameter Name="PalletNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT018_ReceivingInstruction_GetData" ReturnType="Collection(ReportModel.sp_RPT018_ReceivingInstruction_GetData_Result)">
+            <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+            <Parameter Name="Installment" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT035_PackingInstruction_GetData" ReturnType="Collection(ReportModel.sp_RPT035_PackingInstruction_GetData_Result)">
+          <Parameter Name="PackingNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RPT046_UserStickerLaber_GetData" ReturnType="Collection(ReportModel.sp_RPT046_UserStickerLaber_GetData_Result)" />
+        </EntityContainer>
+        <ComplexType Name="sp_RPT001_ReceivingReport_GetData_Result">
+          <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+          <Property Type="String" Name="Attention" Nullable="false" MaxLength="1" />
+          <Property Type="Int32" Name="OwnerID" Nullable="true" />
+          <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="ReceivingDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="CusAddress" Nullable="true" MaxLength="369" />
+          <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="DCAddress" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="SupplierLongName" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="InvoiceNo" Nullable="true" />
+          <Property Type="String" Name="PONo" Nullable="true" />
+          <Property Type="String" Name="ContainerNo" Nullable="true" />
+          <Property Type="String" Name="TruckCompanyLongName" Nullable="true" />
+          <Property Type="String" Name="TransportTypeName" Nullable="true" />
+          <Property Type="String" Name="RegistrationNo" Nullable="true" />
+          <Property Type="Int32" Name="LineNo" Nullable="false" />
+          <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="SQty" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="String" Name="UnitName" Nullable="false" MaxLength="10" />
+          <Property Type="Decimal" Name="UnitVolume" Nullable="true" Precision="19" Scale="5" />
+          <Property Type="String" Name="ProductConditionCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="DetailRemark" Nullable="true" MaxLength="135" />
+          <Property Type="DateTime" Name="ExpiryDate" Nullable="true" />
+          <Property Type="String" Name="PackingSize" Nullable="true" MaxLength="81" />
+          <Property Type="String" Name="PalletNoRef" Nullable="false" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT001_ReceivingReport_SearchAll_Result">
+          <Property Type="Boolean" Name="select" Nullable="true" />
+          <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+          <Property Type="Int32" Name="OwnerID" Nullable="true" />
+          <Property Type="String" Name="OwnerCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="WarehouseCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="SupplierName" Nullable="true" MaxLength="60" />
+          <Property Type="DateTime" Name="ArrivalDate" Nullable="true" />
+          <Property Type="DateTime" Name="ReceivingDate" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT002_PutAwayReport_GetData_Result">
+          <Property Type="DateTime" Name="TransitDate" Nullable="true" />
+          <Property Type="DateTime" Name="ReceivingDate" Nullable="true" />
+          <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+          <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PalletNoRef" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="Qty" Nullable="false" Precision="38" Scale="7" />
+          <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+          <Property Type="Decimal" Name="StockActualQty" Nullable="false" Precision="38" Scale="6" />
+          <Property Type="String" Name="UnitName" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="DetailRemark" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="Flag" Nullable="false" />
+          <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ZoneName" Nullable="true" MaxLength="55" />
+          <Property Type="Int32" Name="lvl" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT003_OtherChargeReport_GetData_Result">
+          <Property Type="DateTime" Name="TransactionDate" Nullable="false" />
+          <Property Type="String" Name="SlipNo" Nullable="false" MaxLength="22" />
+          <Property Type="String" Name="ReceivingNo" Nullable="true" MaxLength="22" />
+          <Property Type="Decimal" Name="ReceivingAmount" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="ReceivingDescription" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="ShippingNo" Nullable="true" MaxLength="22" />
+          <Property Type="Decimal" Name="ShippingAmount" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="ShippingDescription" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT004_SummaryChargeReport_GetData_Result">
+          <Property Type="Decimal" Name="UnstaffingCharge" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="IncomingCharge" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="TransitCharge" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="PickingCharge" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OutgoingCharge" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="ReceiveCharge" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="TransportCharge" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OtherCharge" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="UnstaffingQty" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="IncomingQty" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="TransitQty" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="PickingQty" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OutgoingQty" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="ReceiveQty" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="TransportQty" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OtherQty" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="String" Name="UnstaffingUnit" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="IncomingUnit" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="TransitUnit" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="PickingUnit" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="OutgoingUnit" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="ReceiveUnit" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="TransportUnit" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="OtherUnit" Nullable="false" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT005_ReceivingTransportationChargeReport_GetData_Result">
+          <Property Type="DateTime" Name="TransportationDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="TransportTypeName" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="Trips" Nullable="true" />
+          <Property Type="Int32" Name="TotalContainer" Nullable="true" />
+          <Property Type="Decimal" Name="TransportAmount" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="String" Name="InvoiceNo" Nullable="true" />
+          <Property Type="String" Name="UnitName" Nullable="false" MaxLength="3" />
+          <Property Type="Decimal" Name="ReceiveQty" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT006_UnstaffingChargeReport_GetData_Result">
+          <Property Type="String" Name="TransactionDate" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="TransportTypeName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Qty" Nullable="true" />
+          <Property Type="Decimal" Name="Rate" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="String" Name="TaxInvoice" Nullable="false" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+          <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT007_IncomingChargeReport_GetData_Result">
+          <Property Type="DateTime" Name="ReceiveDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+          <Property Type="Decimal" Name="Qty" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="Volumn" Nullable="true" Precision="19" Scale="5" />
+          <Property Type="Decimal" Name="Rate" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="String" Name="RateUOM" Nullable="true" MaxLength="15" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="InvoiceNo" Nullable="true" />
+          <Property Type="String" Name="PalletNo" Nullable="false" MaxLength="1" />
+          <Property Type="Decimal" Name="InventoryQty" Nullable="true" Precision="38" Scale="7" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT007_IncomingChargeReport_SubReport_GetData_Result">
+          <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="Qty" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT008_TransitChargeReport_GetData_Result">
+          <Property Type="String" Name="TransactionDate" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="OpenningVolume" Nullable="true" Precision="19" Scale="5" />
+          <Property Type="String" Name="LotNo" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="ShippingDate" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="Balance" Nullable="true" Precision="38" Scale="7" />
+          <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="Rate" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="String" Name="RateUOM" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="StockDay" Nullable="true" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="PalletNo" Nullable="false" MaxLength="1" />
+          <Property Type="Int32" Name="ChargeByPallet" Nullable="true" />
+          <Property Type="DateTime" Name="ReceivingDate" Nullable="false" Precision="23" />
+          <Property Type="Decimal" Name="ShippingQty" Nullable="false" Precision="2" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT008_TransitChargeReport_SubReport_GetData_Result">
+          <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="Balance" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT009_PickingChargeReport_GetData_Result">
+          <Property Type="String" Name="TransactionDate" Nullable="true" MaxLength="30" />
+          <Property Type="Decimal" Name="PickingQty" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="Rate" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="RateUOM" Nullable="true" MaxLength="15" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="InvoiceNo1" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT010_OutgoingChargeReport_GetData_Result">
+          <Property Type="String" Name="TransactionDate" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="OutQty" Nullable="true" Precision="38" Scale="7" />
+          <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="Rate" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="String" Name="BathUOM" Nullable="true" MaxLength="15" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT010_OutgoingChargeReport_SubReport_GetData_Result">
+          <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="OutQty" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT012_EstimatePriceReport_GetData_Result">
+          <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+          <Property Type="Decimal" Name="Price" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+          <Property Type="Decimal" Name="Qty" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="Volume" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="String" Name="PackingSize" Nullable="true" MaxLength="41" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT013_ShippingDeliveryReport_GetData_Result">
+          <Property Type="Int64" Name="No" Nullable="true" />
+          <Property Type="String" Name="PalletNo" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="PalletNoRef" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="InvoiceNo" Nullable="true" />
+          <Property Type="String" Name="ShipmentNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ReceivingNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="100" />
+          <Property Type="DateTime" Name="ReceivingDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="DeliveryDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="ProductID" Nullable="false" />
+          <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="LotNo" Nullable="true" />
+          <Property Type="Int32" Name="Location" Nullable="true" />
+          <Property Type="Decimal" Name="BeginQty" Nullable="false" Precision="3" Scale="3" />
+          <Property Type="Decimal" Name="ReceivingQty" Nullable="true" Precision="38" Scale="7" />
+          <Property Type="Decimal" Name="ShippingQty" Nullable="true" Precision="38" Scale="7" />
+          <Property Type="Decimal" Name="BalanceQty" Nullable="true" Precision="38" Scale="7" />
+          <Property Type="Int32" Name="lvl" Nullable="false" />
+          <Property Type="String" Name="UOM" Nullable="false" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT016_InventoryCheckingListByProduct_GetData_Result">
+          <Property Type="String" Name="ZoneCode" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+          <Property Type="DateTime" Name="ExpiredDate" Nullable="true" />
+          <Property Type="String" Name="ProductConditionName" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="QtyLevel1" Nullable="false" Precision="38" Scale="6" />
+          <Property Type="String" Name="TypeOfUnitLevel1" Nullable="false" MaxLength="10" />
+          <Property Type="Decimal" Name="QtyLevel2" Nullable="false" Precision="38" Scale="6" />
+          <Property Type="String" Name="TypeOfUnitLevel2" Nullable="false" MaxLength="10" />
+          <Property Type="Decimal" Name="QtyLevel3" Nullable="false" Precision="38" Scale="6" />
+          <Property Type="String" Name="TypeOfUnitLevel3" Nullable="false" MaxLength="10" />
+          <Property Type="Decimal" Name="QtyLevel4" Nullable="false" Precision="38" Scale="6" />
+          <Property Type="String" Name="TypeOfUnitLevel4" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT017_InventoryCheckingListByZone_SubReport_GetData_Result">
+          <Property Type="String" Name="UnitOfLevel" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="QtyTotal" Nullable="true" Precision="38" Scale="7" />
+          <Property Type="Int32" Name="lvl" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT020_ShipmentLabel_GetData_Result">
+          <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="InvoiceNo" Nullable="true" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="255" />
+          <Property Type="DateTime" Name="TransportationDate" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="ProductID" Nullable="false" />
+          <Property Type="String" Name="ProductCodeLabel" Nullable="true" />
+          <Property Type="String" Name="ShipmentLabel" Nullable="true" MaxLength="48" />
+          <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="ShipQty" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="String" Name="PalletNoRef" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT021_PickingList_SubReport_GetData_Result">
+          <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="TotalInstructionQty" Nullable="true" Precision="38" Scale="3" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT022_DeliveryOrder_GetData_Result">
+          <Property Type="String" Name="DeliveryDate" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Address" Nullable="false" MaxLength="318" />
+          <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="242" />
+          <Property Type="String" Name="ShippingAreaCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PortOfLoading" Nullable="true" MaxLength="123" />
+          <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+          <Property Type="String" Name="PortOfDischarge" Nullable="true" MaxLength="123" />
+          <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="FinalCodeName" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="FinalAddress" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="BookingNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ContainerNo" Nullable="true" />
+          <Property Type="String" Name="DriverName" Nullable="true" />
+          <Property Type="String" Name="TruckCompanyLongName" Nullable="true" />
+          <Property Type="String" Name="TransportTypeName" Nullable="true" />
+          <Property Type="String" Name="RegistrationNo" Nullable="true" />
+          <Property Type="String" Name="PONo" Nullable="true" />
+          <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+          <Property Type="Int32" Name="LineNo" Nullable="false" />
+          <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+          <Property Type="Decimal" Name="ShipQty" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="Weight" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="M3" Nullable="true" Precision="19" Scale="5" />
+          <Property Type="String" Name="DetailRemark" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DOIssuedDate" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="ReferenceNo" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="PalletNoRef" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PackingSize" Nullable="true" MaxLength="81" />
+          <Property Type="String" Name="PackingSale" Nullable="true" />
+          <Property Type="Decimal" Name="SumPackingSale" Nullable="true" Precision="18" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT022_DeliveryOrder_SubReport_GetData_Result">
+          <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="TotalQty" Nullable="true" Precision="38" Scale="3" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT023_MovementReport_SubReport_GetData_Result">
+          <Property Type="Decimal" Name="Stock" Nullable="false" Precision="38" Scale="7" />
+          <Property Type="Decimal" Name="In" Nullable="false" Precision="38" Scale="7" />
+          <Property Type="Decimal" Name="Out" Nullable="false" Precision="38" Scale="7" />
+          <Property Type="Decimal" Name="Balance" Nullable="false" Precision="38" Scale="7" />
+          <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT024_MovementReport_Chart_Result">
+          <Property Type="DateTime" Name="TransactionDate" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="In" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="Decimal" Name="Out" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="Decimal" Name="Balance" Nullable="true" Precision="38" Scale="3" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT025_InventoryUsageReport_GetData_Result">
+          <Property Type="Decimal" Name="ActualUsage" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="Decimal" Name="ActualInPercent" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="TypeOfGoodsID" Nullable="false" />
+          <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+          <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+          <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="TypeOfGoodsCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="TypeOfGoodsName" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT025_InventoryUsageReport_GetData_Sub_Report_Result">
+          <Property Type="Int32" Name="WarehouseID" Nullable="true" />
+          <Property Type="Int32" Name="OwnerID" Nullable="true" />
+          <Property Type="Decimal" Name="ActualUsage" Nullable="true" Precision="12" Scale="2" />
+          <Property Type="Decimal" Name="AllInventoryUsage" Nullable="true" Precision="12" Scale="2" />
+          <Property Type="Decimal" Name="ActualUsageInPercent" Nullable="true" Precision="12" Scale="2" />
+          <Property Type="Decimal" Name="IdealUsage" Nullable="true" Precision="12" Scale="2" />
+          <Property Type="Decimal" Name="OverUsage" Nullable="true" Precision="12" Scale="2" />
+          <Property Type="Decimal" Name="OverUsageInPercent" Nullable="true" Precision="12" Scale="2" />
+          <Property Type="String" Name="WarehouseName" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT026_InventoryUsageReport_Chart_GetData_Result">
+          <Property Type="Decimal" Name="ActualUsage" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="Decimal" Name="ActualInPercent" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="Int32" Name="TypeOfGoodsID" Nullable="false" />
+          <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+          <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+          <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="TypeOfGoodsCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="TypeOfGoodsName" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT028_PalletReport_GetData_Result">
+          <Property Type="DateTime" Name="Period" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="OwnerID" Nullable="true" />
+          <Property Type="Int32" Name="WarehouseID" Nullable="true" />
+          <Property Type="String" Name="WarehouseCode" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="PalletCnt" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT029_ReceivePlanList_GetData_Result">
+          <Property Type="DateTime" Name="ArrivalDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ReceivingNo" Nullable="true" MaxLength="22" />
+          <Property Type="String" Name="SupplierLongName" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="InvoiceNo" Nullable="true" />
+          <Property Type="String" Name="TruckCompanyNameList" Nullable="true" />
+          <Property Type="String" Name="ContainerNoList" Nullable="true" />
+          <Property Type="Int64" Name="LineNo" Nullable="true" />
+          <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+          <Property Type="Decimal" Name="Qty" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="NetWeight" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="PackingSize" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="String" Name="PackingSizeUnit" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="101" />
+          <Property Type="Decimal" Name="InventoryQty" Nullable="true" Precision="38" Scale="7" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT029_ReceivePlanList_SubReport_GetData_Result">
+          <Property Type="String" Name="ContainerNoList" Nullable="true" />
+          <Property Type="DateTime" Name="ArrivalDate" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT030_StockCard_GetData_Result">
+          <Property Type="DateTime" Name="TransactionDate" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="ProductID" Nullable="false" />
+          <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PDSNo" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="TypeOfGoodsCode" Nullable="false" MaxLength="15" />
+          <Property Type="Int32" Name="InventoryUnit" Nullable="true" />
+          <Property Type="Decimal" Name="Stock_In" Nullable="false" Precision="2" Scale="2" />
+          <Property Type="Decimal" Name="Stock_Out" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="Decimal" Name="PurchasePrice" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="Decimal" Name="Balance" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="String" Name="SourceT" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="x" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT032_OrderBalance_GetData_Result">
+          <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+          <Property Type="Int32" Name="ProductID" Nullable="false" />
+          <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="PlanDate" Nullable="false" Precision="23" />
+          <Property Type="Decimal" Name="OnHandQty" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="Decimal" Name="AllocateQty" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="DateTime" Name="ShippingDate" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="PlanQty" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="Decimal" Name="PickQty" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="Decimal" Name="ShipQty" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="Decimal" Name="ShortageQty" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="Decimal" Name="UndeliveryQty" Nullable="true" Precision="38" Scale="6" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT023_MovementReport_GetData_Result">
+          <Property Type="DateTime" Name="TransactionDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="LotNo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="PalletNo" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+          <Property Type="String" Name="InvoiceNo" Nullable="true" />
+          <Property Type="Decimal" Name="Stock" Nullable="true" Precision="38" Scale="7" />
+          <Property Type="Decimal" Name="In" Nullable="true" Precision="38" Scale="7" />
+          <Property Type="Decimal" Name="Out" Nullable="true" Precision="38" Scale="7" />
+          <Property Type="Decimal" Name="Balance" Nullable="true" Precision="38" Scale="7" />
+          <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="StockDay" Nullable="false" Precision="2" Scale="2" />
+          <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="PalletNoRef" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT011_TransportationChargeReport_GetData_Result">
+          <Property Type="DateTime" Name="TransportationDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="WarehouseCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="FinalDestinationLongName" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="TransportTypeName" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="Trips" Nullable="true" />
+          <Property Type="Decimal" Name="Rate" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="TransportAmount" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="ShippingQty" Nullable="false" Precision="38" Scale="3" />
+          <Property Type="String" Name="UnitName" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT017_InventoryCheckingListByZone_GetData_Result">
+          <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+          <Property Type="DateTime" Name="TransactionDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ProductID" Nullable="true" />
+          <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ProductConditionName" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PalletNo" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="UnitOfLevel" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="Qty" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="Int32" Name="lvl" Nullable="false" />
+          <Property Type="Int32" Name="Floor" Nullable="true" />
+          <Property Type="Int32" Name="ZoneID" Nullable="true" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+          <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+          <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="PalletNoRef" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT019_ReceivingLabel_GetData_Result">
+          <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="ProductID" Nullable="false" />
+          <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Qty" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PalletNoRef" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="ArrivalDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ProductConditionName" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="DetailRemark" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="OwnerCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ActualLotNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Issue_By" Nullable="true" MaxLength="102" />
+          <Property Type="DateTime" Name="Issue_date" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ExpiredDate" Nullable="true" />
+          <Property Type="DateTime" Name="ReceivedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="QRCode" Nullable="true" MaxLength="324" />
+          <Property Type="Decimal" Name="LabelCnt" Nullable="false" Precision="2" Scale="1" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT021_PickingList_GetData_Result">
+          <Property Type="String" Name="OwnerCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="WarehouseCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="ShippingAreaCode" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="ETD" Nullable="false" Precision="23" />
+          <Property Type="String" Name="FinalCodeName" Nullable="true" MaxLength="83" />
+          <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="BookingNo" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="PickingDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="VanningDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="TransportationDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="PortOfLoading" Nullable="true" MaxLength="123" />
+          <Property Type="String" Name="PortOfDischarge" Nullable="true" MaxLength="123" />
+          <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="LineNo" Nullable="false" />
+          <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+          <Property Type="Decimal" Name="StockQty" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="String" Name="UOMInventory" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="AssignQty" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="String" Name="UnitCode" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="PONo" Nullable="true" />
+          <Property Type="String" Name="DetailRemark" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PickingLineNo" Nullable="true" MaxLength="53" />
+          <Property Type="String" Name="PalletNoRef" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ProductConditionCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+          <Property Type="String" Name="ProductConditionName" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="PalletQty" Nullable="true" />
+          <Property Type="Int32" Name="lvl" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT033_PartDeliverySheet_GetData_Result">
+          <Property Type="Int32" Name="ReportType" Nullable="false" />
+          <Property Type="Int64" Name="LineNo" Nullable="true" />
+          <Property Type="DateTime" Name="ArrivalDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="ArrivalTime" Nullable="false" />
+          <Property Type="DateTime" Name="CollectDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="CollectTime" Nullable="false" />
+          <Property Type="String" Name="SupplierLongName" Nullable="false" MaxLength="60" />
+          <Property Type="String" Name="SupplierCode" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="PONo" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="PDSNo" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="PartNo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="PartID" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="ProductGroup" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="QtyPack" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="QtyBox" Nullable="true" Precision="38" Scale="20" />
+          <Property Type="String" Name="UnitLv2" Nullable="false" MaxLength="100" />
+          <Property Type="Decimal" Name="QtyPCS" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="String" Name="UnitLv3" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="PDSQRCode" Nullable="true" MaxLength="91" />
+          <Property Type="Decimal" Name="WeightMinimumOrder" Nullable="true" Precision="18" Scale="4" />
+          <Property Type="Decimal" Name="M3MinimumOrder" Nullable="true" Precision="18" Scale="4" />
+          <Property Type="Decimal" Name="PalletQty" Nullable="true" Precision="18" Scale="4" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="400" />
+          <Property Type="String" Name="ProductTypeName" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT033_PartDeliverySheet_GetSubData_Result">
+          <Property Type="String" Name="PDSNo" Nullable="true" MaxLength="30" />
+          <Property Type="Decimal" Name="QtyPack" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="String" Name="UnitPact" Nullable="true" MaxLength="100" />
+          <Property Type="Decimal" Name="QtyBox" Nullable="true" Precision="38" Scale="20" />
+          <Property Type="String" Name="UnitLv2" Nullable="true" MaxLength="100" />
+          <Property Type="Decimal" Name="QtyPCS" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="String" Name="UnitLv3" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT032_RMTag_GetData_Result">
+          <Property Type="String" Name="PDSNo" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="PONo" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="SupplierNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SupplierCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="SupplierLongName" Nullable="true" MaxLength="60" />
+          <Property Type="DateTime" Name="CollectDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="CollectTime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="RunningNo" Nullable="true" MaxLength="11" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT036_LoadingInstruction_GetData_Result">
+          <Property Type="Int32" Name="ROWNUM" Nullable="true" />
+          <Property Type="String" Name="ShipmentNo" Nullable="true" MaxLength="22" />
+          <Property Type="String" Name="ContainerNo" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="ShipmentDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="TransportDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="100" />
+          <Property Type="Decimal" Name="TotalWeight" Nullable="true" Precision="38" Scale="4" />
+          <Property Type="Int32" Name="TotalPallet" Nullable="true" />
+          <Property Type="String" Name="QRCode" Nullable="true" MaxLength="102" />
+          <Property Type="String" Name="PackingNo" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="QtyLevel3" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="String" Name="UnitLevel3" Nullable="true" MaxLength="100" />
+          <Property Type="Decimal" Name="QtyLevel2" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="String" Name="UnitLevel2" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="BookingNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="SealNo" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="HeaderRemark" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT043_PrivilegeFormat_GetData_Result">
+          <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+          <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="HSCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PVCode" Nullable="false" MaxLength="15" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT042_AdivceOfShipment_GetData_Result">
+          <Property Type="String" Name="ShipmentNo" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="Installment" Nullable="true" />
+          <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="CustomerAddress" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="CustomerPONo" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="InvoiceAmount" Nullable="true" Precision="38" Scale="5" />
+          <Property Type="String" Name="VesselName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="BookingNo" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="ShippingDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ETA" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ShippingPort" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Destination" Nullable="true" MaxLength="60" />
+          <Property Type="Int32" Name="CopyInvoice" Nullable="true" />
+          <Property Type="Int32" Name="CopyCustomerInvoice" Nullable="true" />
+          <Property Type="Int32" Name="CopyPackList" Nullable="true" />
+          <Property Type="Int32" Name="CopyCertificate" Nullable="true" />
+          <Property Type="Int32" Name="CopyM3" Nullable="true" />
+          <Property Type="Decimal" Name="TotalPCS" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="Int32" Name="CopyCerOrigin" Nullable="true" />
+          <Property Type="Int32" Name="CopyBillLadingOrigin" Nullable="true" />
+          <Property Type="Int32" Name="CopyBillLading" Nullable="true" />
+          <Property Type="Int32" Name="CopyPolicyOrigin" Nullable="true" />
+          <Property Type="Int32" Name="CopyPolicy" Nullable="true" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="ContainerNo" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT034_PurchaseOrder_GetData_Result">
+          <Property Type="String" Name="PONo" Nullable="false" MaxLength="30" />
+          <Property Type="DateTime" Name="IssuedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="DeliveryDate" Nullable="true" MaxLength="4000" />
+          <Property Type="String" Name="SupplierName" Nullable="false" MaxLength="60" />
+          <Property Type="String" Name="Model" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PartCode" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="PartName" Nullable="true" MaxLength="100" />
+          <Property Type="Decimal" Name="OrderQty" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="UnitPrice" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="String" Name="CurrencyCode" Nullable="false" MaxLength="10" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="String" Name="CreditTerm" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DeliveryPlace" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Purpose" Nullable="true" MaxLength="1" />
+          <Property Type="Decimal" Name="VAT" Nullable="true" Precision="5" Scale="2" />
+          <Property Type="String" Name="Unit" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ContactPerson" Nullable="true" MaxLength="303" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="200" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT044_PackingList_GetData_Result">
+          <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+          <Property Type="Int32" Name="Installment" Nullable="false" />
+          <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="InvoiceIssuedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="FinalDestination" Nullable="false" MaxLength="111" />
+          <Property Type="String" Name="CustomerAddress" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="VesselName" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="ETD" Nullable="false" Precision="23" />
+          <Property Type="String" Name="PortOfLoadingName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PortOfDischargeName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="CustomerCode" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="PackingNo" Nullable="false" MaxLength="40" />
+          <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+          <Property Type="Decimal" Name="Qty" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="Weight" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="NetWeight" Nullable="false" Precision="37" Scale="6" />
+          <Property Type="Decimal" Name="GrossWeight" Nullable="true" Precision="18" Scale="4" />
+          <Property Type="Decimal" Name="M3" Nullable="true" Precision="18" Scale="4" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT045_LabelSticker_GetData_Result">
+          <Property Type="String" Name="Supplier" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="SupplierName" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="PONo" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="SupBN" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="QRCode" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="PartShortCode" Nullable="true" MaxLength="100" />
+          <Property Type="Decimal" Name="Qty" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="String" Name="UnitCode" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="CustomerPONo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="RunningNo" Nullable="false" MaxLength="10" />
+          <Property Type="DateTime" Name="PackingDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CustomerCode" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT031_SlowMovement_GetData_Result">
+          <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="152" />
+          <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="stock" Nullable="true" Precision="28" Scale="10" />
+          <Property Type="DateTime" Name="TransactionDate" Nullable="true" />
+          <Property Type="String" Name="ProductGroupCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="ProductGroupName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ProductCategoryCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="ProductCategoryName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="UnitName" Nullable="false" MaxLength="100" />
+          <Property Type="Decimal" Name="QtyPeriod1" Nullable="true" Precision="38" Scale="10" />
+          <Property Type="Decimal" Name="QtyPeriod2" Nullable="true" Precision="38" Scale="10" />
+          <Property Type="Decimal" Name="QtyPeriod3" Nullable="true" Precision="38" Scale="10" />
+          <Property Type="Decimal" Name="QtyPeriod4" Nullable="true" Precision="38" Scale="10" />
+          <Property Type="Decimal" Name="AmtEstimateValuePeriod1" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="Decimal" Name="AmtEstimateValuePeriod2" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="Decimal" Name="AmtEstimateValuePeriod3" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="Decimal" Name="AmtEstimateValuePeriod4" Nullable="true" Precision="38" Scale="6" />
+          <Property Type="DateTime" Name="PeriodDateFrom" Nullable="true" />
+          <Property Type="DateTime" Name="PeriodDateTo" Nullable="true" />
+          <Property Type="Decimal" Name="StockAmt" Nullable="false" Precision="2" Scale="2" />
+          <Property Type="Int32" Name="ProductConditionID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT035_PackingInstruction_Material_GetData_Result">
+          <Property Type="String" Name="ProductShortCode" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="Usage" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT037_CaseMark_GetData_Result">
+          <Property Type="String" Name="CustomerCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="GrossWeight" Nullable="true" Precision="18" Scale="4" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="is_special" Nullable="true" />
+          <Property Type="DateTime" Name="Packing_date" Nullable="true" />
+          <Property Type="String" Name="Special_Code" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT018_ReceivingInstruction_GetData_Result">
+          <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+          <Property Type="String" Name="ReceivingLabel" Nullable="true" MaxLength="57" />
+          <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ArrivalDate" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="ArrivalTime" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="SupplierLongName" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="InvoiceNo" Nullable="true" />
+          <Property Type="String" Name="PONo" Nullable="true" />
+          <Property Type="String" Name="ContainerNo" Nullable="true" />
+          <Property Type="String" Name="TruckCompanyLongName" Nullable="true" />
+          <Property Type="String" Name="TransportTypeName" Nullable="true" />
+          <Property Type="String" Name="RegistrationNo" Nullable="true" />
+          <Property Type="Int32" Name="LineNo" Nullable="true" />
+          <Property Type="Int32" Name="Installment" Nullable="false" />
+          <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PalletNoRef" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="Qty" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+          <Property Type="String" Name="DetailRemark" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="UnitName" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="QtyLv2" Nullable="true" />
+          <Property Type="String" Name="PackingSize" Nullable="true" MaxLength="81" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT035_PackingInstruction_GetData_Result">
+          <Property Type="String" Name="ShipmentNo" Nullable="true" MaxLength="22" />
+          <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+          <Property Type="String" Name="PackingNo" Nullable="false" MaxLength="40" />
+          <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="ShippingDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="PackingDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="PickingDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="QRCode" Nullable="true" MaxLength="94" />
+          <Property Type="String" Name="ShortCode" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="PartCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PartName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+          <Property Type="String" Name="PDSNo" Nullable="false" MaxLength="1" />
+          <Property Type="Decimal" Name="PlanQty" Nullable="true" Precision="28" Scale="10" />
+          <Property Type="Decimal" Name="NumberOfUnitLevel3" Nullable="true" Precision="18" Scale="4" />
+          <Property Type="Decimal" Name="PickedQty" Nullable="true" Precision="28" Scale="10" />
+          <Property Type="Decimal" Name="RemainPicking" Nullable="true" Precision="29" Scale="10" />
+          <Property Type="Decimal" Name="PackedQty" Nullable="true" Precision="28" Scale="10" />
+          <Property Type="Decimal" Name="RemainPacking" Nullable="true" Precision="29" Scale="10" />
+          <Property Type="Decimal" Name="Weight" Nullable="true" Precision="18" Scale="4" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="TotalBox" Nullable="true" Precision="38" Scale="16" />
+          <Property Type="Decimal" Name="PackingTime" Nullable="true" />
+          <Property Type="Decimal" Name="PrepareTime" Nullable="true" />
+          <Property Type="Decimal" Name="PalletizeTime" Nullable="true" />
+          <Property Type="Int32" Name="ProductTypeID" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_RPT046_UserStickerLaber_GetData_Result">
+          <Property Type="String" Name="UserID" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="LastName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Password" Nullable="true" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="ReportModel" />
+        <Alias Key="Target" Value="ReportModel.Store" />
+        <EntityContainerMapping CdmEntityContainer="ReportModelContainer" StorageEntityContainer="ReportModelStoreContainer">
+          <FunctionImportMapping FunctionImportName="sp_RPT001_ReceivingReport_GetData" FunctionName="ReportModel.Store.sp_RPT001_ReceivingReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT001_ReceivingReport_GetData_Result">
+                <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+                <ScalarProperty Name="Attention" ColumnName="Attention" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+                <ScalarProperty Name="CusAddress" ColumnName="CusAddress" />
+                <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+                <ScalarProperty Name="DCAddress" ColumnName="DCAddress" />
+                <ScalarProperty Name="SupplierLongName" ColumnName="SupplierLongName" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="PONo" ColumnName="PONo" />
+                <ScalarProperty Name="ContainerNo" ColumnName="ContainerNo" />
+                <ScalarProperty Name="TruckCompanyLongName" ColumnName="TruckCompanyLongName" />
+                <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+                <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+                <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="SQty" ColumnName="SQty" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="UnitVolume" ColumnName="UnitVolume" />
+                <ScalarProperty Name="ProductConditionCode" ColumnName="ProductConditionCode" />
+                <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="PackingSize" ColumnName="PackingSize" />
+                <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT001_ReceivingReport_SearchAll" FunctionName="ReportModel.Store.sp_RPT001_ReceivingReport_SearchAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT001_ReceivingReport_SearchAll_Result">
+                <ScalarProperty Name="select" ColumnName="select" />
+                <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+                <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+                <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+                <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT002_PutAwayReport_GetData" FunctionName="ReportModel.Store.sp_RPT002_PutAwayReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT002_PutAwayReport_GetData_Result">
+                <ScalarProperty Name="TransitDate" ColumnName="TransitDate" />
+                <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+                <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+                <ScalarProperty Name="StockActualQty" ColumnName="StockActualQty" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="ZoneName" ColumnName="ZoneName" />
+                <ScalarProperty Name="lvl" ColumnName="lvl" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT003_OtherChargeReport_GetData" FunctionName="ReportModel.Store.sp_RPT003_OtherChargeReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT003_OtherChargeReport_GetData_Result">
+                <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+                <ScalarProperty Name="SlipNo" ColumnName="SlipNo" />
+                <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+                <ScalarProperty Name="ReceivingAmount" ColumnName="ReceivingAmount" />
+                <ScalarProperty Name="ReceivingDescription" ColumnName="ReceivingDescription" />
+                <ScalarProperty Name="ShippingNo" ColumnName="ShippingNo" />
+                <ScalarProperty Name="ShippingAmount" ColumnName="ShippingAmount" />
+                <ScalarProperty Name="ShippingDescription" ColumnName="ShippingDescription" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT004_SummaryChargeReport_GetData" FunctionName="ReportModel.Store.sp_RPT004_SummaryChargeReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT004_SummaryChargeReport_GetData_Result">
+                <ScalarProperty Name="UnstaffingCharge" ColumnName="UnstaffingCharge" />
+                <ScalarProperty Name="IncomingCharge" ColumnName="IncomingCharge" />
+                <ScalarProperty Name="TransitCharge" ColumnName="TransitCharge" />
+                <ScalarProperty Name="PickingCharge" ColumnName="PickingCharge" />
+                <ScalarProperty Name="OutgoingCharge" ColumnName="OutgoingCharge" />
+                <ScalarProperty Name="ReceiveCharge" ColumnName="ReceiveCharge" />
+                <ScalarProperty Name="TransportCharge" ColumnName="TransportCharge" />
+                <ScalarProperty Name="OtherCharge" ColumnName="OtherCharge" />
+                <ScalarProperty Name="UnstaffingQty" ColumnName="UnstaffingQty" />
+                <ScalarProperty Name="IncomingQty" ColumnName="IncomingQty" />
+                <ScalarProperty Name="TransitQty" ColumnName="TransitQty" />
+                <ScalarProperty Name="PickingQty" ColumnName="PickingQty" />
+                <ScalarProperty Name="OutgoingQty" ColumnName="OutgoingQty" />
+                <ScalarProperty Name="ReceiveQty" ColumnName="ReceiveQty" />
+                <ScalarProperty Name="TransportQty" ColumnName="TransportQty" />
+                <ScalarProperty Name="OtherQty" ColumnName="OtherQty" />
+                <ScalarProperty Name="UnstaffingUnit" ColumnName="UnstaffingUnit" />
+                <ScalarProperty Name="IncomingUnit" ColumnName="IncomingUnit" />
+                <ScalarProperty Name="TransitUnit" ColumnName="TransitUnit" />
+                <ScalarProperty Name="PickingUnit" ColumnName="PickingUnit" />
+                <ScalarProperty Name="OutgoingUnit" ColumnName="OutgoingUnit" />
+                <ScalarProperty Name="ReceiveUnit" ColumnName="ReceiveUnit" />
+                <ScalarProperty Name="TransportUnit" ColumnName="TransportUnit" />
+                <ScalarProperty Name="OtherUnit" ColumnName="OtherUnit" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT005_ReceivingTransportationChargeReport_GetData" FunctionName="ReportModel.Store.sp_RPT005_ReceivingTransportationChargeReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT005_ReceivingTransportationChargeReport_GetData_Result">
+                <ScalarProperty Name="TransportationDate" ColumnName="TransportationDate" />
+                <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+                <ScalarProperty Name="Trips" ColumnName="Trips" />
+                <ScalarProperty Name="TotalContainer" ColumnName="TotalContainer" />
+                <ScalarProperty Name="TransportAmount" ColumnName="TransportAmount" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="ReceiveQty" ColumnName="ReceiveQty" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT006_UnstaffingChargeReport_GetData" FunctionName="ReportModel.Store.sp_RPT006_UnstaffingChargeReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT006_UnstaffingChargeReport_GetData_Result">
+                <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+                <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="TaxInvoice" ColumnName="TaxInvoice" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT007_IncomingChargeReport_GetData" FunctionName="ReportModel.Store.sp_RPT007_IncomingChargeReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT007_IncomingChargeReport_GetData_Result">
+                <ScalarProperty Name="ReceiveDate" ColumnName="ReceiveDate" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="Volumn" ColumnName="Volumn" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="RateUOM" ColumnName="RateUOM" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="InventoryQty" ColumnName="InventoryQty" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT007_IncomingChargeReport_SubReport_GetData" FunctionName="ReportModel.Store.sp_RPT007_IncomingChargeReport_SubReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT007_IncomingChargeReport_SubReport_GetData_Result">
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT008_TransitChargeReport_GetData" FunctionName="ReportModel.Store.sp_RPT008_TransitChargeReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT008_TransitChargeReport_GetData_Result">
+                <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="OpenningVolume" ColumnName="OpenningVolume" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="ShippingDate" ColumnName="ShippingDate" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="RateUOM" ColumnName="RateUOM" />
+                <ScalarProperty Name="StockDay" ColumnName="StockDay" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="ChargeByPallet" ColumnName="ChargeByPallet" />
+                <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+                <ScalarProperty Name="ShippingQty" ColumnName="ShippingQty" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT008_TransitChargeReport_SubReport_GetData" FunctionName="ReportModel.Store.sp_RPT008_TransitChargeReport_SubReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT008_TransitChargeReport_SubReport_GetData_Result">
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT009_PickingChargeReport_GetData" FunctionName="ReportModel.Store.sp_RPT009_PickingChargeReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT009_PickingChargeReport_GetData_Result">
+                <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+                <ScalarProperty Name="PickingQty" ColumnName="PickingQty" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="RateUOM" ColumnName="RateUOM" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="InvoiceNo1" ColumnName="InvoiceNo1" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT010_OutgoingChargeReport_GetData" FunctionName="ReportModel.Store.sp_RPT010_OutgoingChargeReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT010_OutgoingChargeReport_GetData_Result">
+                <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="OutQty" ColumnName="OutQty" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="BathUOM" ColumnName="BathUOM" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT010_OutgoingChargeReport_SubReport_GetData" FunctionName="ReportModel.Store.sp_RPT010_OutgoingChargeReport_SubReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT010_OutgoingChargeReport_SubReport_GetData_Result">
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="OutQty" ColumnName="OutQty" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT012_EstimatePriceReport_GetData" FunctionName="ReportModel.Store.sp_RPT012_EstimatePriceReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT012_EstimatePriceReport_GetData_Result">
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+                <ScalarProperty Name="Volume" ColumnName="Volume" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="PackingSize" ColumnName="PackingSize" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT013_ShippingDeliveryReport_GetData" FunctionName="ReportModel.Store.sp_RPT013_ShippingDeliveryReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT013_ShippingDeliveryReport_GetData_Result">
+                <ScalarProperty Name="No" ColumnName="No" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+                <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="BeginQty" ColumnName="BeginQty" />
+                <ScalarProperty Name="ReceivingQty" ColumnName="ReceivingQty" />
+                <ScalarProperty Name="ShippingQty" ColumnName="ShippingQty" />
+                <ScalarProperty Name="BalanceQty" ColumnName="BalanceQty" />
+                <ScalarProperty Name="lvl" ColumnName="lvl" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT016_InventoryCheckingListByProduct_GetData" FunctionName="ReportModel.Store.sp_RPT016_InventoryCheckingListByProduct_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT016_InventoryCheckingListByProduct_GetData_Result">
+                <ScalarProperty Name="ZoneCode" ColumnName="ZoneCode" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+                <ScalarProperty Name="ExpiredDate" ColumnName="ExpiredDate" />
+                <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+                <ScalarProperty Name="QtyLevel1" ColumnName="QtyLevel1" />
+                <ScalarProperty Name="TypeOfUnitLevel1" ColumnName="TypeOfUnitLevel1" />
+                <ScalarProperty Name="QtyLevel2" ColumnName="QtyLevel2" />
+                <ScalarProperty Name="TypeOfUnitLevel2" ColumnName="TypeOfUnitLevel2" />
+                <ScalarProperty Name="QtyLevel3" ColumnName="QtyLevel3" />
+                <ScalarProperty Name="TypeOfUnitLevel3" ColumnName="TypeOfUnitLevel3" />
+                <ScalarProperty Name="QtyLevel4" ColumnName="QtyLevel4" />
+                <ScalarProperty Name="TypeOfUnitLevel4" ColumnName="TypeOfUnitLevel4" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT017_InventoryCheckingListByZone_SubReport_GetData" FunctionName="ReportModel.Store.sp_RPT017_InventoryCheckingListByZone_SubReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT017_InventoryCheckingListByZone_SubReport_GetData_Result">
+                <ScalarProperty Name="UnitOfLevel" ColumnName="UnitOfLevel" />
+                <ScalarProperty Name="QtyTotal" ColumnName="QtyTotal" />
+                <ScalarProperty Name="lvl" ColumnName="lvl" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT020_ShipmentLabel_GetData" FunctionName="ReportModel.Store.sp_RPT020_ShipmentLabel_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT020_ShipmentLabel_GetData_Result">
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="TransportationDate" ColumnName="TransportationDate" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductCodeLabel" ColumnName="ProductCodeLabel" />
+                <ScalarProperty Name="ShipmentLabel" ColumnName="ShipmentLabel" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="ShipQty" ColumnName="ShipQty" />
+                <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT022_DeliveryOrder_GetData" FunctionName="ReportModel.Store.sp_RPT022_DeliveryOrder_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT022_DeliveryOrder_GetData_Result">
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+                <ScalarProperty Name="ShippingAreaCode" ColumnName="ShippingAreaCode" />
+                <ScalarProperty Name="PortOfLoading" ColumnName="PortOfLoading" />
+                <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+                <ScalarProperty Name="PortOfDischarge" ColumnName="PortOfDischarge" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="FinalCodeName" ColumnName="FinalCodeName" />
+                <ScalarProperty Name="FinalAddress" ColumnName="FinalAddress" />
+                <ScalarProperty Name="BookingNo" ColumnName="BookingNo" />
+                <ScalarProperty Name="ContainerNo" ColumnName="ContainerNo" />
+                <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+                <ScalarProperty Name="TruckCompanyLongName" ColumnName="TruckCompanyLongName" />
+                <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+                <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+                <ScalarProperty Name="PONo" ColumnName="PONo" />
+                <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+                <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="ShipQty" ColumnName="ShipQty" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="M3" ColumnName="M3" />
+                <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+                <ScalarProperty Name="DOIssuedDate" ColumnName="DOIssuedDate" />
+                <ScalarProperty Name="ReferenceNo" ColumnName="ReferenceNo" />
+                <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="PackingSize" ColumnName="PackingSize" />
+                <ScalarProperty Name="PackingSale" ColumnName="PackingSale" />
+                <ScalarProperty Name="SumPackingSale" ColumnName="SumPackingSale" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT023_MovementReport_SubReport_GetData" FunctionName="ReportModel.Store.sp_RPT023_MovementReport_SubReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT023_MovementReport_SubReport_GetData_Result">
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+                <ScalarProperty Name="In" ColumnName="In" />
+                <ScalarProperty Name="Out" ColumnName="Out" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT024_MovementReport_Chart" FunctionName="ReportModel.Store.sp_RPT024_MovementReport_Chart">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT024_MovementReport_Chart_Result">
+                <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+                <ScalarProperty Name="In" ColumnName="In" />
+                <ScalarProperty Name="Out" ColumnName="Out" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT025_InventoryUsageReport_GetData" FunctionName="ReportModel.Store.sp_RPT025_InventoryUsageReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT025_InventoryUsageReport_GetData_Result">
+                <ScalarProperty Name="ActualUsage" ColumnName="ActualUsage" />
+                <ScalarProperty Name="ActualInPercent" ColumnName="ActualInPercent" />
+                <ScalarProperty Name="TypeOfGoodsID" ColumnName="TypeOfGoodsID" />
+                <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+                <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="TypeOfGoodsCode" ColumnName="TypeOfGoodsCode" />
+                <ScalarProperty Name="TypeOfGoodsName" ColumnName="TypeOfGoodsName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT025_InventoryUsageReport_GetData_Sub_Report" FunctionName="ReportModel.Store.sp_RPT025_InventoryUsageReport_GetData_Sub_Report">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT025_InventoryUsageReport_GetData_Sub_Report_Result">
+                <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="ActualUsage" ColumnName="ActualUsage" />
+                <ScalarProperty Name="AllInventoryUsage" ColumnName="AllInventoryUsage" />
+                <ScalarProperty Name="ActualUsageInPercent" ColumnName="ActualUsageInPercent" />
+                <ScalarProperty Name="IdealUsage" ColumnName="IdealUsage" />
+                <ScalarProperty Name="OverUsage" ColumnName="OverUsage" />
+                <ScalarProperty Name="OverUsageInPercent" ColumnName="OverUsageInPercent" />
+                <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT026_InventoryUsageReport_Chart_GetData" FunctionName="ReportModel.Store.sp_RPT026_InventoryUsageReport_Chart_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT026_InventoryUsageReport_Chart_GetData_Result">
+                <ScalarProperty Name="ActualUsage" ColumnName="ActualUsage" />
+                <ScalarProperty Name="ActualInPercent" ColumnName="ActualInPercent" />
+                <ScalarProperty Name="TypeOfGoodsID" ColumnName="TypeOfGoodsID" />
+                <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+                <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="TypeOfGoodsCode" ColumnName="TypeOfGoodsCode" />
+                <ScalarProperty Name="TypeOfGoodsName" ColumnName="TypeOfGoodsName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT028_PalletReport_GetData" FunctionName="ReportModel.Store.sp_RPT028_PalletReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT028_PalletReport_GetData_Result">
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+                <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+                <ScalarProperty Name="PalletCnt" ColumnName="PalletCnt" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT029_ReceivePlanList_GetData" FunctionName="ReportModel.Store.sp_RPT029_ReceivePlanList_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT029_ReceivePlanList_GetData_Result">
+                <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+                <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+                <ScalarProperty Name="SupplierLongName" ColumnName="SupplierLongName" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="TruckCompanyNameList" ColumnName="TruckCompanyNameList" />
+                <ScalarProperty Name="ContainerNoList" ColumnName="ContainerNoList" />
+                <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+                <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+                <ScalarProperty Name="PackingSize" ColumnName="PackingSize" />
+                <ScalarProperty Name="PackingSizeUnit" ColumnName="PackingSizeUnit" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="InventoryQty" ColumnName="InventoryQty" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT029_ReceivePlanList_SubReport_GetData" FunctionName="ReportModel.Store.sp_RPT029_ReceivePlanList_SubReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT029_ReceivePlanList_SubReport_GetData_Result">
+                <ScalarProperty Name="ContainerNoList" ColumnName="ContainerNoList" />
+                <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT030_StockCard_GetData" FunctionName="ReportModel.Store.sp_RPT030_StockCard_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT030_StockCard_GetData_Result">
+                <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="PDSNo" ColumnName="PDSNo" />
+                <ScalarProperty Name="TypeOfGoodsCode" ColumnName="TypeOfGoodsCode" />
+                <ScalarProperty Name="InventoryUnit" ColumnName="InventoryUnit" />
+                <ScalarProperty Name="Stock_In" ColumnName="Stock_In" />
+                <ScalarProperty Name="Stock_Out" ColumnName="Stock_Out" />
+                <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="SourceT" ColumnName="SourceT" />
+                <ScalarProperty Name="x" ColumnName="x" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT032_OrderBalance_GetData" FunctionName="ReportModel.Store.sp_RPT032_OrderBalance_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT032_OrderBalance_GetData_Result">
+                <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="PlanDate" ColumnName="PlanDate" />
+                <ScalarProperty Name="OnHandQty" ColumnName="OnHandQty" />
+                <ScalarProperty Name="AllocateQty" ColumnName="AllocateQty" />
+                <ScalarProperty Name="ShippingDate" ColumnName="ShippingDate" />
+                <ScalarProperty Name="PlanQty" ColumnName="PlanQty" />
+                <ScalarProperty Name="PickQty" ColumnName="PickQty" />
+                <ScalarProperty Name="ShipQty" ColumnName="ShipQty" />
+                <ScalarProperty Name="ShortageQty" ColumnName="ShortageQty" />
+                <ScalarProperty Name="UndeliveryQty" ColumnName="UndeliveryQty" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT023_MovementReport_GetData" FunctionName="ReportModel.Store.sp_RPT023_MovementReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT023_MovementReport_GetData_Result">
+                <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+                <ScalarProperty Name="In" ColumnName="In" />
+                <ScalarProperty Name="Out" ColumnName="Out" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="StockDay" ColumnName="StockDay" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT011_TransportationChargeReport_GetData" FunctionName="ReportModel.Store.sp_RPT011_TransportationChargeReport_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT011_TransportationChargeReport_GetData_Result">
+                <ScalarProperty Name="TransportationDate" ColumnName="TransportationDate" />
+                <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+                <ScalarProperty Name="FinalDestinationLongName" ColumnName="FinalDestinationLongName" />
+                <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+                <ScalarProperty Name="Trips" ColumnName="Trips" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="TransportAmount" ColumnName="TransportAmount" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="ShippingQty" ColumnName="ShippingQty" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT017_InventoryCheckingListByZone_GetData" FunctionName="ReportModel.Store.sp_RPT017_InventoryCheckingListByZone_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT017_InventoryCheckingListByZone_GetData_Result">
+                <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+                <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="UnitOfLevel" ColumnName="UnitOfLevel" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="lvl" ColumnName="lvl" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT019_ReceivingLabel_GetData" FunctionName="ReportModel.Store.sp_RPT019_ReceivingLabel_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT019_ReceivingLabel_GetData_Result">
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+                <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+                <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+                <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+                <ScalarProperty Name="ActualLotNo" ColumnName="ActualLotNo" />
+                <ScalarProperty Name="Issue_By" ColumnName="Issue_By" />
+                <ScalarProperty Name="Issue_date" ColumnName="Issue_date" />
+                <ScalarProperty Name="ExpiredDate" ColumnName="ExpiredDate" />
+                <ScalarProperty Name="ReceivedDate" ColumnName="ReceivedDate" />
+                <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+                <ScalarProperty Name="LabelCnt" ColumnName="LabelCnt" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT021_PickingList_GetData" FunctionName="ReportModel.Store.sp_RPT021_PickingList_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT021_PickingList_GetData_Result">
+                <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+                <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+                <ScalarProperty Name="ShippingAreaCode" ColumnName="ShippingAreaCode" />
+                <ScalarProperty Name="ETD" ColumnName="ETD" />
+                <ScalarProperty Name="FinalCodeName" ColumnName="FinalCodeName" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="BookingNo" ColumnName="BookingNo" />
+                <ScalarProperty Name="PickingDate" ColumnName="PickingDate" />
+                <ScalarProperty Name="VanningDate" ColumnName="VanningDate" />
+                <ScalarProperty Name="TransportationDate" ColumnName="TransportationDate" />
+                <ScalarProperty Name="PortOfLoading" ColumnName="PortOfLoading" />
+                <ScalarProperty Name="PortOfDischarge" ColumnName="PortOfDischarge" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+                <ScalarProperty Name="StockQty" ColumnName="StockQty" />
+                <ScalarProperty Name="UOMInventory" ColumnName="UOMInventory" />
+                <ScalarProperty Name="AssignQty" ColumnName="AssignQty" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="PONo" ColumnName="PONo" />
+                <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+                <ScalarProperty Name="PickingLineNo" ColumnName="PickingLineNo" />
+                <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+                <ScalarProperty Name="ProductConditionCode" ColumnName="ProductConditionCode" />
+                <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+                <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+                <ScalarProperty Name="PalletQty" ColumnName="PalletQty" />
+                <ScalarProperty Name="lvl" ColumnName="lvl" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT033_PartDeliverySheet_GetData" FunctionName="ReportModel.Store.sp_RPT033_PartDeliverySheet_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT033_PartDeliverySheet_GetData_Result">
+                <ScalarProperty Name="ReportType" ColumnName="ReportType" />
+                <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+                <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+                <ScalarProperty Name="ArrivalTime" ColumnName="ArrivalTime" />
+                <ScalarProperty Name="CollectDate" ColumnName="CollectDate" />
+                <ScalarProperty Name="CollectTime" ColumnName="CollectTime" />
+                <ScalarProperty Name="SupplierLongName" ColumnName="SupplierLongName" />
+                <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+                <ScalarProperty Name="PONo" ColumnName="PONo" />
+                <ScalarProperty Name="PDSNo" ColumnName="PDSNo" />
+                <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+                <ScalarProperty Name="PartID" ColumnName="PartID" />
+                <ScalarProperty Name="ProductGroup" ColumnName="ProductGroup" />
+                <ScalarProperty Name="QtyPack" ColumnName="QtyPack" />
+                <ScalarProperty Name="QtyBox" ColumnName="QtyBox" />
+                <ScalarProperty Name="UnitLv2" ColumnName="UnitLv2" />
+                <ScalarProperty Name="QtyPCS" ColumnName="QtyPCS" />
+                <ScalarProperty Name="UnitLv3" ColumnName="UnitLv3" />
+                <ScalarProperty Name="PDSQRCode" ColumnName="PDSQRCode" />
+                <ScalarProperty Name="WeightMinimumOrder" ColumnName="WeightMinimumOrder" />
+                <ScalarProperty Name="M3MinimumOrder" ColumnName="M3MinimumOrder" />
+                <ScalarProperty Name="PalletQty" ColumnName="PDSQRCode" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="ProductTypeName" ColumnName="ProductTypeName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT033_PartDeliverySheet_GetSubData" FunctionName="ReportModel.Store.sp_RPT033_PartDeliverySheet_GetSubData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT033_PartDeliverySheet_GetSubData_Result">
+                <ScalarProperty Name="PDSNo" ColumnName="PDSNo" />
+                <ScalarProperty Name="QtyPack" ColumnName="QtyPack" />
+                <ScalarProperty Name="UnitPact" ColumnName="UnitPact" />
+                <ScalarProperty Name="QtyBox" ColumnName="QtyBox" />
+                <ScalarProperty Name="UnitLv2" ColumnName="UnitLv2" />
+                <ScalarProperty Name="QtyPCS" ColumnName="QtyPCS" />
+                <ScalarProperty Name="UnitLv3" ColumnName="UnitLv3" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT032_RMTag_GetData" FunctionName="ReportModel.Store.sp_RPT032_RMTag_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT032_RMTag_GetData_Result">
+                <ScalarProperty Name="PDSNo" ColumnName="PDSNo" />
+                <ScalarProperty Name="PONo" ColumnName="PONo" />
+                <ScalarProperty Name="SupplierNo" ColumnName="SupplierNo" />
+                <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+                <ScalarProperty Name="SupplierLongName" ColumnName="SupplierLongName" />
+                <ScalarProperty Name="CollectDate" ColumnName="CollectDate" />
+                <ScalarProperty Name="CollectTime" ColumnName="CollectTime" />
+                <ScalarProperty Name="RunningNo" ColumnName="RunningNo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT036_LoadingInstruction_GetData" FunctionName="ReportModel.Store.sp_RPT036_LoadingInstruction_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT036_LoadingInstruction_GetData_Result">
+                <ScalarProperty Name="ROWNUM" ColumnName="ROWNUM" />
+                <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+                <ScalarProperty Name="ContainerNo" ColumnName="ContainerNo" />
+                <ScalarProperty Name="ShipmentDate" ColumnName="ShipmentDate" />
+                <ScalarProperty Name="TransportDate" ColumnName="TransportDate" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+                <ScalarProperty Name="TotalPallet" ColumnName="TotalPallet" />
+                <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+                <ScalarProperty Name="PackingNo" ColumnName="PackingNo" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="QtyLevel3" ColumnName="QtyLevel3" />
+                <ScalarProperty Name="UnitLevel3" ColumnName="UnitLevel3" />
+                <ScalarProperty Name="QtyLevel2" ColumnName="QtyLevel2" />
+                <ScalarProperty Name="UnitLevel2" ColumnName="UnitLevel2" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="BookingNo" ColumnName="BookingNo" />
+                <ScalarProperty Name="SealNo" ColumnName="SealNo" />
+                <ScalarProperty Name="HeaderRemark" ColumnName="HeaderRemark" />
+                <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT043_PrivilegeFormat_GetData" FunctionName="ReportModel.Store.sp_RPT043_PrivilegeFormat_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT043_PrivilegeFormat_GetData_Result">
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="HSCode" ColumnName="HSCode" />
+                <ScalarProperty Name="PVCode" ColumnName="PVCode" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT042_AdivceOfShipment_GetData" FunctionName="ReportModel.Store.sp_RPT042_AdivceOfShipment_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT042_AdivceOfShipment_GetData_Result">
+                <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+                <ScalarProperty Name="Installment" ColumnName="Installment" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+                <ScalarProperty Name="CustomerPONo" ColumnName="CustomerPONo" />
+                <ScalarProperty Name="InvoiceAmount" ColumnName="InvoiceAmount" />
+                <ScalarProperty Name="VesselName" ColumnName="VesselName" />
+                <ScalarProperty Name="BookingNo" ColumnName="BookingNo" />
+                <ScalarProperty Name="ShippingDate" ColumnName="ShippingDate" />
+                <ScalarProperty Name="ETA" ColumnName="ETA" />
+                <ScalarProperty Name="ShippingPort" ColumnName="ShippingPort" />
+                <ScalarProperty Name="Destination" ColumnName="Destination" />
+                <ScalarProperty Name="CopyInvoice" ColumnName="CopyInvoice" />
+                <ScalarProperty Name="CopyCustomerInvoice" ColumnName="CopyCustomerInvoice" />
+                <ScalarProperty Name="CopyPackList" ColumnName="CopyPackList" />
+                <ScalarProperty Name="CopyCertificate" ColumnName="CopyCertificate" />
+                <ScalarProperty Name="CopyM3" ColumnName="CopyM3" />
+                <ScalarProperty Name="TotalPCS" ColumnName="TotalPCS" />
+                <ScalarProperty Name="CopyCerOrigin" ColumnName="CopyCerOrigin" />
+                <ScalarProperty Name="CopyBillLadingOrigin" ColumnName="CopyBillLadingOrigin" />
+                <ScalarProperty Name="CopyBillLading" ColumnName="CopyBillLading" />
+                <ScalarProperty Name="CopyPolicyOrigin" ColumnName="CopyPolicyOrigin" />
+                <ScalarProperty Name="CopyPolicy" ColumnName="CopyPolicy" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="ContainerNo" ColumnName="ContainerNo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT034_PurchaseOrder_GetData" FunctionName="ReportModel.Store.sp_RPT034_PurchaseOrder_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT034_PurchaseOrder_GetData_Result">
+                <ScalarProperty Name="PONo" ColumnName="PONo" />
+                <ScalarProperty Name="IssuedDate" ColumnName="IssuedDate" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="PartCode" ColumnName="PartCode" />
+                <ScalarProperty Name="PartName" ColumnName="PartName" />
+                <ScalarProperty Name="OrderQty" ColumnName="OrderQty" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="CreditTerm" ColumnName="CreditTerm" />
+                <ScalarProperty Name="DeliveryPlace" ColumnName="DeliveryPlace" />
+                <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+                <ScalarProperty Name="VAT" ColumnName="VAT" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT044_PackingList_GetData" FunctionName="ReportModel.Store.sp_RPT044_PackingList_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT044_PackingList_GetData_Result">
+                <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+                <ScalarProperty Name="Installment" ColumnName="Installment" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="InvoiceIssuedDate" ColumnName="InvoiceIssuedDate" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="FinalDestination" ColumnName="FinalDestination" />
+                <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+                <ScalarProperty Name="VesselName" ColumnName="VesselName" />
+                <ScalarProperty Name="ETD" ColumnName="ETD" />
+                <ScalarProperty Name="PortOfLoadingName" ColumnName="PortOfLoadingName" />
+                <ScalarProperty Name="PortOfDischargeName" ColumnName="PortOfDischargeName" />
+                <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+                <ScalarProperty Name="PackingNo" ColumnName="PackingNo" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+                <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+                <ScalarProperty Name="M3" ColumnName="M3" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT045_LabelSticker_GetData" FunctionName="ReportModel.Store.sp_RPT045_LabelSticker_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT045_LabelSticker_GetData_Result">
+                <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+                <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+                <ScalarProperty Name="PONo" ColumnName="PONo" />
+                <ScalarProperty Name="SupBN" ColumnName="SupBN" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+                <ScalarProperty Name="PartShortCode" ColumnName="PartShortCode" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+                <ScalarProperty Name="CustomerPONo" ColumnName="CustomerPONo" />
+                <ScalarProperty Name="PackingDate" ColumnName="PackingDate" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT031_SlowMovement_GetData" FunctionName="ReportModel.Store.sp_RPT031_SlowMovement_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT031_SlowMovement_GetData_Result">
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="stock" ColumnName="stock" />
+                <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+                <ScalarProperty Name="ProductGroupCode" ColumnName="ProductGroupCode" />
+                <ScalarProperty Name="ProductGroupName" ColumnName="ProductGroupName" />
+                <ScalarProperty Name="ProductCategoryCode" ColumnName="ProductCategoryCode" />
+                <ScalarProperty Name="ProductCategoryName" ColumnName="ProductCategoryName" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="QtyPeriod1" ColumnName="QtyPeriod1" />
+                <ScalarProperty Name="QtyPeriod2" ColumnName="QtyPeriod2" />
+                <ScalarProperty Name="QtyPeriod3" ColumnName="QtyPeriod3" />
+                <ScalarProperty Name="QtyPeriod4" ColumnName="QtyPeriod4" />
+                <ScalarProperty Name="AmtEstimateValuePeriod1" ColumnName="AmtEstimateValuePeriod1" />
+                <ScalarProperty Name="AmtEstimateValuePeriod2" ColumnName="AmtEstimateValuePeriod2" />
+                <ScalarProperty Name="AmtEstimateValuePeriod3" ColumnName="AmtEstimateValuePeriod3" />
+                <ScalarProperty Name="AmtEstimateValuePeriod4" ColumnName="AmtEstimateValuePeriod4" />
+                <ScalarProperty Name="PeriodDateFrom" ColumnName="PeriodDateFrom" />
+                <ScalarProperty Name="PeriodDateTo" ColumnName="PeriodDateTo" />
+                <ScalarProperty Name="StockAmt" ColumnName="StockAmt" />
+                <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT035_PackingInstruction_Material_GetData" FunctionName="ReportModel.Store.sp_RPT035_PackingInstruction_Material_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT035_PackingInstruction_Material_GetData_Result">
+                <ScalarProperty Name="ProductShortCode" ColumnName="ProductShortCode" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="Usage" ColumnName="Usage" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT037_CaseMark_GetData" FunctionName="ReportModel.Store.sp_RPT037_CaseMark_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT037_CaseMark_GetData_Result">
+                <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="is_special" ColumnName="is_special" />
+                <ScalarProperty Name="Packing_date" ColumnName="Packing_date" />
+                <ScalarProperty Name="Special_Code" ColumnName="Special_Code" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT018_ReceivingInstruction_GetData" FunctionName="ReportModel.Store.sp_RPT018_ReceivingInstruction_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT018_ReceivingInstruction_GetData_Result">
+                <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+                <ScalarProperty Name="ReceivingLabel" ColumnName="ReceivingLabel" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+                <ScalarProperty Name="ArrivalTime" ColumnName="ArrivalTime" />
+                <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+                <ScalarProperty Name="SupplierLongName" ColumnName="SupplierLongName" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="PONo" ColumnName="PONo" />
+                <ScalarProperty Name="ContainerNo" ColumnName="ContainerNo" />
+                <ScalarProperty Name="TruckCompanyLongName" ColumnName="TruckCompanyLongName" />
+                <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+                <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+                <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+                <ScalarProperty Name="Installment" ColumnName="Installment" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+                <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="QtyLv2" ColumnName="QtyLv2" />
+                <ScalarProperty Name="PackingSize" ColumnName="PackingSize" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT035_PackingInstruction_GetData" FunctionName="ReportModel.Store.sp_RPT035_PackingInstruction_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT035_PackingInstruction_GetData_Result">
+                <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+                <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+                <ScalarProperty Name="PackingNo" ColumnName="PackingNo" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="ShippingDate" ColumnName="ShippingDate" />
+                <ScalarProperty Name="PackingDate" ColumnName="PackingDate" />
+                <ScalarProperty Name="PickingDate" ColumnName="PickingDate" />
+                <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+                <ScalarProperty Name="ShortCode" ColumnName="ShortCode" />
+                <ScalarProperty Name="PartCode" ColumnName="PartCode" />
+                <ScalarProperty Name="PartName" ColumnName="PartName" />
+                <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+                <ScalarProperty Name="PDSNo" ColumnName="PDSNo" />
+                <ScalarProperty Name="PlanQty" ColumnName="PlanQty" />
+                <ScalarProperty Name="NumberOfUnitLevel3" ColumnName="NumberOfUnitLevel3" />
+                <ScalarProperty Name="PickedQty" ColumnName="PickedQty" />
+                <ScalarProperty Name="RemainPicking" ColumnName="RemainPicking" />
+                <ScalarProperty Name="PackedQty" ColumnName="PackedQty" />
+                <ScalarProperty Name="RemainPacking" ColumnName="RemainPacking" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="TotalBox" ColumnName="TotalBox" />
+                <ScalarProperty Name="PackingTime" ColumnName="PackingTime" />
+                <ScalarProperty Name="PrepareTime" ColumnName="PrepareTime" />
+                <ScalarProperty Name="PalletizeTime" ColumnName="PalletizeTime" />
+                <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RPT046_UserStickerLaber_GetData" FunctionName="ReportModel.Store.sp_RPT046_UserStickerLaber_GetData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReportModel.sp_RPT046_UserStickerLaber_GetData_Result">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="ReportModel" />
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

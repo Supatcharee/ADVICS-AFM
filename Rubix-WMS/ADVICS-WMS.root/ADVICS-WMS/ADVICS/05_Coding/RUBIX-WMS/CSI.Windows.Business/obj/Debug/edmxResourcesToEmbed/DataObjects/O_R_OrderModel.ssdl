@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OrderModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="OrderModelStoreContainer" />
+  <Function Name="sp_ROMS010_OrderRefresh_SearchAll_Receiving" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_ROMS010_OrderRefresh_SearchAll_Shipping" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ROMS011_OrderRefresh_SearchReceivingDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ROMS012_OrderRefresh_SearchShippingDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ROMS020_OrderCancel_SearchAll_Receiving" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ReceiveNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_ROMS020_OrderCancel_SearchAll_Shipping" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+  </Function>
+</Schema>

@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{32E29853-DDA6-462B-9007-8DCEF234317B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rubix.Control</RootNamespace>
+    <AssemblyName>Rubix.Control</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v11.2.Core, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\DevExpress.XtraBars.v11.2\11.2.5.0__b88d1754d700e49a\DevExpress.XtraBars.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttentionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AttentionControl.Designer.cs">
+      <DependentUpon>AttentionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LocationControl.Designer.cs">
+      <DependentUpon>LocationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemPriceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemPriceControl.Designer.cs">
+      <DependentUpon>ItemPriceControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PackingControl.Designer.cs">
+      <DependentUpon>PackingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemClassificationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemClassificationControl.Designer.cs">
+      <DependentUpon>ItemClassificationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualLane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VirtualLane.Designer.cs">
+      <DependentUpon>VirtualLane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotByLocationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LotByLocationControl.Designer.cs">
+      <DependentUpon>LotByLocationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReceivingControl.Designer.cs">
+      <DependentUpon>ReceivingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemCategoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemCategoryControl.Designer.cs">
+      <DependentUpon>ItemCategoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PalletControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PalletControl.Designer.cs">
+      <DependentUpon>PalletControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerControl.Designer.cs">
+      <DependentUpon>CustomerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInfoControl.Designer.cs">
+      <DependentUpon>UserInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OwnerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OwnerControl.Designer.cs">
+      <DependentUpon>OwnerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDestinationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FinalDestinationControl.Designer.cs">
+      <DependentUpon>FinalDestinationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LotControl.Designer.cs">
+      <DependentUpon>LotControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PickingControl.Designer.cs">
+      <DependentUpon>PickingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PortControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PortControl.Designer.cs">
+      <DependentUpon>PortControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PortOfDischarge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PortOfDischarge.Designer.cs">
+      <DependentUpon>PortOfDischarge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PortOfLoading.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PortOfLoading.Designer.cs">
+      <DependentUpon>PortOfLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemConditionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemConditionControl.Designer.cs">
+      <DependentUpon>ItemConditionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemControl.Designer.cs">
+      <DependentUpon>ItemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShipmentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShipmentControl.Designer.cs">
+      <DependentUpon>ShipmentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShippingAreaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShippingAreaControl.Designer.cs">
+      <DependentUpon>ShippingAreaControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SupplierControl.Designer.cs">
+      <DependentUpon>SupplierControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransportTypeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransportTypeControl.Designer.cs">
+      <DependentUpon>TransportTypeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruckCompanyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TruckCompanyControl.Designer.cs">
+      <DependentUpon>TruckCompanyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemGroupControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemGroupControl.Designer.cs">
+      <DependentUpon>ItemGroupControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RequireField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RequireField.Designer.cs">
+      <DependentUpon>RequireField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WarehouseControl.Designer.cs">
+      <DependentUpon>WarehouseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZoneControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZoneControl.Designer.cs">
+      <DependentUpon>ZoneControl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AttentionControl.resx">
+      <DependentUpon>AttentionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocationControl.resx">
+      <DependentUpon>LocationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemPriceControl.resx">
+      <DependentUpon>ItemPriceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackingControl.resx">
+      <DependentUpon>PackingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemClassificationControl.resx">
+      <DependentUpon>ItemClassificationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VirtualLane.resx">
+      <DependentUpon>VirtualLane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotByLocationControl.resx">
+      <DependentUpon>LotByLocationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceivingControl.resx">
+      <DependentUpon>ReceivingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemCategoryControl.resx">
+      <DependentUpon>ItemCategoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PalletControl.resx">
+      <DependentUpon>PalletControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OwnerControl.resx">
+      <DependentUpon>OwnerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalDestinationControl.resx">
+      <DependentUpon>FinalDestinationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotControl.resx">
+      <DependentUpon>LotControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickingControl.resx">
+      <DependentUpon>PickingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PortControl.resx">
+      <DependentUpon>PortControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PortOfDischarge.resx">
+      <DependentUpon>PortOfDischarge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PortOfLoading.resx">
+      <DependentUpon>PortOfLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemConditionControl.resx">
+      <DependentUpon>ItemConditionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemControl.resx">
+      <DependentUpon>ItemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="RequireField.resx">
+      <DependentUpon>RequireField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipmentControl.resx">
+      <DependentUpon>ShipmentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShippingAreaControl.resx">
+      <DependentUpon>ShippingAreaControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerControl.resx">
+      <DependentUpon>CustomerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierControl.resx">
+      <DependentUpon>SupplierControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportTypeControl.resx">
+      <DependentUpon>TransportTypeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruckCompanyControl.resx">
+      <DependentUpon>TruckCompanyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemGroupControl.resx">
+      <DependentUpon>ItemGroupControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfoControl.resx">
+      <DependentUpon>UserInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseControl.resx">
+      <DependentUpon>WarehouseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZoneControl.resx">
+      <DependentUpon>ZoneControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSI.Windows.Business\CSI.Business.csproj">
+      <Project>{33BCD130-D84E-49C0-BD18-51DE5885C333}</Project>
+      <Name>CSI.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rubix.Framework\Rubix.Framework.csproj">
+      <Project>{0A356D2B-DE8A-40D9-BA52-83B4BB60D3BB}</Project>
+      <Name>Rubix.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

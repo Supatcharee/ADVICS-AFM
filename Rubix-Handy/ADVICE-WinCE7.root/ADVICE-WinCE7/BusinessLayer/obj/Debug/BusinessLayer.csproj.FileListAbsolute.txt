@@ -1,0 +1,10 @@
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\BusinessLayer\bin\Debug\Advics.Framework.dll
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\BusinessLayer\bin\Debug\Newtonsoft.Json.Compact.dll
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\BusinessLayer\bin\Debug\Advics.Framework.pdb
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\BusinessLayer\obj\Debug\BusinessLayer.Properties.Resources.resources
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\BusinessLayer\obj\Debug\BusinessLayer.csproj.GenerateResource.Cache
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\BusinessLayer\obj\Debug\BusinessLayer.pdb

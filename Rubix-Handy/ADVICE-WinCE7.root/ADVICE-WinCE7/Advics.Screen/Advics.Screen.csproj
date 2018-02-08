@@ -1,0 +1,368 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{892385D8-F412-46B5-B38F-80557321A64B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Advics.Screen</RootNamespace>
+    <AssemblyName>Advics.Screen</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>Advics.Screen</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1.Receiving\frmZHRC010_ReceivingEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1.Receiving\frmZHRC010_ReceivingEntry.Designer.cs">
+      <DependentUpon>frmZHRC010_ReceivingEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1.Receiving\frmZHRC020_ReceivingConfirmationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1.Receiving\frmZHRC020_ReceivingConfirmationList.Designer.cs">
+      <DependentUpon>frmZHRC020_ReceivingConfirmationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1.Receiving\frmZHRC030_ReceivingConfirmationDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1.Receiving\frmZHRC030_ReceivingConfirmationDetail.Designer.cs">
+      <DependentUpon>frmZHRC030_ReceivingConfirmationDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2.Transit\frmZHTS010_TransitEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2.Transit\frmZHTS010_TransitEntry.Designer.cs">
+      <DependentUpon>frmZHTS010_TransitEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2.Transit\frmZHTS020_TransitConfirmationDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2.Transit\frmZHTS020_TransitConfirmationDetail.Designer.cs">
+      <DependentUpon>frmZHTS020_TransitConfirmationDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3.Picking\frmZHPK010_PickingEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3.Picking\frmZHPK010_PickingEntry.Designer.cs">
+      <DependentUpon>frmZHPK010_PickingEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3.Picking\frmZHPK020_PickingConfirmationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3.Picking\frmZHPK020_PickingConfirmationList.Designer.cs">
+      <DependentUpon>frmZHPK020_PickingConfirmationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3.Picking\frmZHPK030_PickingConfirmationDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3.Picking\frmZHPK030_PickingConfirmationDetail.Designer.cs">
+      <DependentUpon>frmZHPK030_PickingConfirmationDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3.Picking\frmZHPK040_PickingPackingMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3.Picking\frmZHPK040_PickingPackingMaterial.Designer.cs">
+      <DependentUpon>frmZHPK040_PickingPackingMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4.Packing\frmZHPA010_PackingEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4.Packing\frmZHPA010_PackingEntry.Designer.cs">
+      <DependentUpon>frmZHPA010_PackingEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4.Packing\frmZHPA020_PackingConfirmationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4.Packing\frmZHPA020_PackingConfirmationList.Designer.cs">
+      <DependentUpon>frmZHPA020_PackingConfirmationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4.Packing\frmZHPA040_PackagingMaterialConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4.Packing\frmZHPA040_PackagingMaterialConfirmation.Designer.cs">
+      <DependentUpon>frmZHPA040_PackagingMaterialConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4.Packing\frmZHPA030_PackingConfirmaionDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4.Packing\frmZHPA030_PackingConfirmaionDetail.Designer.cs">
+      <DependentUpon>frmZHPA030_PackingConfirmaionDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="5.Tracking\frmZHTK010_TrackingEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5.Tracking\frmZHTK010_TrackingEntry.Designer.cs">
+      <DependentUpon>frmZHTK010_TrackingEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="5.Tracking\frmZHTK026_DetailsCaseMark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5.Tracking\frmZHTK026_DetailsCaseMark.Designer.cs">
+      <DependentUpon>frmZHTK026_DetailsCaseMark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="6.TransitAfterPack\frmZHTP010_TransitAfterPackEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="6.TransitAfterPack\frmZHTP010_TransitAfterPackEntry.Designer.cs">
+      <DependentUpon>frmZHTP010_TransitAfterPackEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="6.TransitAfterPack\frmZHTP020_TransitafterPackEntryScanLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="6.TransitAfterPack\frmZHTP020_TransitafterPackEntryScanLocation.Designer.cs">
+      <DependentUpon>frmZHTP020_TransitafterPackEntryScanLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="7.PickForShip\frmZHPS010_PickForShipEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="7.PickForShip\frmZHPS010_PickForShipEntry.Designer.cs">
+      <DependentUpon>frmZHPS010_PickForShipEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="7.PickForShip\frmZHPS020_PickForShipEntryScanPallet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="7.PickForShip\frmZHPS020_PickForShipEntryScanPallet.Designer.cs">
+      <DependentUpon>frmZHPS020_PickForShipEntryScanPallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="8.PickMaterial\frmZHPM010_PickMaterialEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="8.PickMaterial\frmZHPM010_PickMaterialEntry.Designer.cs">
+      <DependentUpon>frmZHPM010_PickMaterialEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formBase.Designer.cs">
+      <DependentUpon>formBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="5.Tracking\frmZHTK020_DetailsTagStatus0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5.Tracking\frmZHTK020_DetailsTagStatus0.Designer.cs">
+      <DependentUpon>frmZHTK020_DetailsTagStatus0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="5.Tracking\frmZHTK021_DetailsTagStatus1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5.Tracking\frmZHTK021_DetailsTagStatus1.Designer.cs">
+      <DependentUpon>frmZHTK021_DetailsTagStatus1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="5.Tracking\frmZHTK022_DetailsTagStatus2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5.Tracking\frmZHTK022_DetailsTagStatus2.Designer.cs">
+      <DependentUpon>frmZHTK022_DetailsTagStatus2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="5.Tracking\frmZHTK023_DetailsTagStatus3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5.Tracking\frmZHTK023_DetailsTagStatus3.Designer.cs">
+      <DependentUpon>frmZHTK023_DetailsTagStatus3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="5.Tracking\frmZHTK024_DetailsTagStatus4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5.Tracking\frmZHTK024_DetailsTagStatus4.Designer.cs">
+      <DependentUpon>frmZHTK024_DetailsTagStatus4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="5.Tracking\frmZHTK025_DetailsTagOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5.Tracking\frmZHTK025_DetailsTagOut.Designer.cs">
+      <DependentUpon>frmZHTK025_DetailsTagOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="1.Receiving\frmZHRC010_ReceivingEntry.resx">
+      <DependentUpon>frmZHRC010_ReceivingEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1.Receiving\frmZHRC020_ReceivingConfirmationList.resx">
+      <DependentUpon>frmZHRC020_ReceivingConfirmationList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1.Receiving\frmZHRC030_ReceivingConfirmationDetail.resx">
+      <DependentUpon>frmZHRC030_ReceivingConfirmationDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2.Transit\frmZHTS010_TransitEntry.resx">
+      <DependentUpon>frmZHTS010_TransitEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2.Transit\frmZHTS020_TransitConfirmationDetail.resx">
+      <DependentUpon>frmZHTS020_TransitConfirmationDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3.Picking\frmZHPK010_PickingEntry.resx">
+      <DependentUpon>frmZHPK010_PickingEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3.Picking\frmZHPK020_PickingConfirmationList.resx">
+      <DependentUpon>frmZHPK020_PickingConfirmationList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3.Picking\frmZHPK030_PickingConfirmationDetail.resx">
+      <DependentUpon>frmZHPK030_PickingConfirmationDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3.Picking\frmZHPK040_PickingPackingMaterial.resx">
+      <DependentUpon>frmZHPK040_PickingPackingMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4.Packing\frmZHPA010_PackingEntry.resx">
+      <DependentUpon>frmZHPA010_PackingEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4.Packing\frmZHPA020_PackingConfirmationList.resx">
+      <DependentUpon>frmZHPA020_PackingConfirmationList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4.Packing\frmZHPA030_PackingConfirmaionDetail.resx">
+      <DependentUpon>frmZHPA030_PackingConfirmaionDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4.Packing\frmZHPA040_PackagingMaterialConfirmation.resx">
+      <DependentUpon>frmZHPA040_PackagingMaterialConfirmation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5.Tracking\frmZHTK010_TrackingEntry.resx">
+      <DependentUpon>frmZHTK010_TrackingEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5.Tracking\frmZHTK026_DetailsCaseMark.resx">
+      <DependentUpon>frmZHTK026_DetailsCaseMark.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="6.TransitAfterPack\frmZHTP010_TransitAfterPackEntry.resx">
+      <DependentUpon>frmZHTP010_TransitAfterPackEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="6.TransitAfterPack\frmZHTP020_TransitafterPackEntryScanLocation.resx">
+      <DependentUpon>frmZHTP020_TransitafterPackEntryScanLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="7.PickForShip\frmZHPS010_PickForShipEntry.resx">
+      <DependentUpon>frmZHPS010_PickForShipEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="7.PickForShip\frmZHPS020_PickForShipEntryScanPallet.resx">
+      <DependentUpon>frmZHPS020_PickForShipEntryScanPallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="8.PickMaterial\frmZHPM010_PickMaterialEntry.resx">
+      <DependentUpon>frmZHPM010_PickMaterialEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formBase.resx">
+      <DependentUpon>formBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5.Tracking\frmZHTK020_DetailsTagStatus0.resx">
+      <DependentUpon>frmZHTK020_DetailsTagStatus0.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5.Tracking\frmZHTK021_DetailsTagStatus1.resx">
+      <DependentUpon>frmZHTK021_DetailsTagStatus1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5.Tracking\frmZHTK022_DetailsTagStatus2.resx">
+      <DependentUpon>frmZHTK022_DetailsTagStatus2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5.Tracking\frmZHTK023_DetailsTagStatus3.resx">
+      <DependentUpon>frmZHTK023_DetailsTagStatus3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5.Tracking\frmZHTK024_DetailsTagStatus4.resx">
+      <DependentUpon>frmZHTK024_DetailsTagStatus4.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5.Tracking\frmZHTK025_DetailsTagOut.resx">
+      <DependentUpon>frmZHTK025_DetailsTagOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Advics.Framework\Advics.Framework.csproj">
+      <Project>{6EDF73F8-2DAE-4604-8873-E4CCDE81F363}</Project>
+      <Name>Advics.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{7E5E60AE-7A17-48AB-8DD0-BC58D0AA25EE}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

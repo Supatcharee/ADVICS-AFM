@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HistoryViewModelStoreContainer" CdmEntityContainer="O_ML_HistoryViewModel">
+    <FunctionImportMapping FunctionImportName="sp_MSTS010_HistoryView_Summary_Search" FunctionName="HistoryViewModel.Store.sp_MSTS010_HistoryView_Summary_Search">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HistoryViewModel.sp_MSTS010_HistoryView_Summary_Search_Result">
+          <ScalarProperty Name="ReceivingNoOfSlip" ColumnName="ReceivingNoOfSlip" />
+          <ScalarProperty Name="ReceivingWeight" ColumnName="ReceivingWeight" />
+          <ScalarProperty Name="ReceivingVolume" ColumnName="ReceivingVolume" />
+          <ScalarProperty Name="ReceivingQty" ColumnName="ReceivingQty" />
+          <ScalarProperty Name="ReceivingNoOfProduct" ColumnName="ReceivingNoOfProduct" />
+          <ScalarProperty Name="ReceivingNoOfPallet" ColumnName="ReceivingNoOfPallet" />
+          <ScalarProperty Name="TransitNoOfSlip" ColumnName="TransitNoOfSlip" />
+          <ScalarProperty Name="TransitWeight" ColumnName="TransitWeight" />
+          <ScalarProperty Name="TransitVolume" ColumnName="TransitVolume" />
+          <ScalarProperty Name="TransitQty" ColumnName="TransitQty" />
+          <ScalarProperty Name="TransitNoOfProduct" ColumnName="TransitNoOfProduct" />
+          <ScalarProperty Name="TransitNoOfPallet" ColumnName="TransitNoOfPallet" />
+          <ScalarProperty Name="PickingNoOfSlip" ColumnName="PickingNoOfSlip" />
+          <ScalarProperty Name="PickingWeight" ColumnName="PickingWeight" />
+          <ScalarProperty Name="PickingVolume" ColumnName="PickingVolume" />
+          <ScalarProperty Name="PickingQty" ColumnName="PickingQty" />
+          <ScalarProperty Name="PickingNoOfProduct" ColumnName="PickingNoOfProduct" />
+          <ScalarProperty Name="PickingNoOfPallet" ColumnName="PickingNoOfPallet" />
+          <ScalarProperty Name="ShippingNoOfSlip" ColumnName="ShippingNoOfSlip" />
+          <ScalarProperty Name="ShippingWeight" ColumnName="ShippingWeight" />
+          <ScalarProperty Name="ShippingVolume" ColumnName="ShippingVolume" />
+          <ScalarProperty Name="ShippingQty" ColumnName="ShippingQty" />
+          <ScalarProperty Name="ShippingNoOfProduct" ColumnName="ShippingNoOfProduct" />
+          <ScalarProperty Name="ShippingNoOfPallet" ColumnName="ShippingNoOfPallet" />
+          <ScalarProperty Name="InventoryWeight" ColumnName="InventoryWeight" />
+          <ScalarProperty Name="InventoryVolume" ColumnName="InventoryVolume" />
+          <ScalarProperty Name="InventoryQty" ColumnName="InventoryQty" />
+          <ScalarProperty Name="InventoryNoOfProduct" ColumnName="InventoryNoOfProduct" />
+          <ScalarProperty Name="InventoryNoOfPallet" ColumnName="InventoryNoOfPallet" />
+          <ScalarProperty Name="ReceivingPalletQty" ColumnName="ReceivingPalletQty" />
+          <ScalarProperty Name="ShippingPalletQty" ColumnName="ShippingPalletQty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_LWPS010_ReceivingProgress_SearchAll" FunctionName="HistoryViewModel.Store.sp_LWPS010_ReceivingProgress_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HistoryViewModel.sp_LWPS010_ReceivingProgress_SearchAll_Result">
+          <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="ReferenceNo" ColumnName="ReferenceNo" />
+          <ScalarProperty Name="InstructionDate" ColumnName="InstructionDate" />
+          <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+          <ScalarProperty Name="TransitDate" ColumnName="TransitDate" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="IsOrderCancelStatus" ColumnName="IsOrderCancelStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_LWPS010_ReceivingProgress_SearchTotal" FunctionName="HistoryViewModel.Store.sp_LWPS010_ReceivingProgress_SearchTotal">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HistoryViewModel.sp_LWPS010_ReceivingProgress_SearchTotal_Result">
+          <ScalarProperty Name="TypeOrder" ColumnName="TypeOrder" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Measurement" ColumnName="Measurement" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Line" ColumnName="Line" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_LWPS020_ShippingProgress_SearchTotal" FunctionName="HistoryViewModel.Store.sp_LWPS020_ShippingProgress_SearchTotal">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HistoryViewModel.sp_LWPS020_ShippingProgress_SearchTotal_Result">
+          <ScalarProperty Name="TypeOrder" ColumnName="TypeOrder" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Measurement" ColumnName="Measurement" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Line" ColumnName="Line" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_MSTS010_HistoryView_Search" FunctionName="HistoryViewModel.Store.sp_MSTS010_HistoryView_Search">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HistoryViewModel.sp_MSTS010_HistoryView_Search_Result">
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="ReceivingNoOfSlip" ColumnName="ReceivingNoOfSlip" />
+          <ScalarProperty Name="ReceivingWeight" ColumnName="ReceivingWeight" />
+          <ScalarProperty Name="ReceivingVolume" ColumnName="ReceivingVolume" />
+          <ScalarProperty Name="ReceivingQty" ColumnName="ReceivingQty" />
+          <ScalarProperty Name="ReceivingNoOfProduct" ColumnName="ReceivingNoOfProduct" />
+          <ScalarProperty Name="ReceivingNoOfPallet" ColumnName="ReceivingNoOfPallet" />
+          <ScalarProperty Name="TransitNoOfSlip" ColumnName="TransitNoOfSlip" />
+          <ScalarProperty Name="TransitWeight" ColumnName="TransitWeight" />
+          <ScalarProperty Name="TransitVolume" ColumnName="TransitVolume" />
+          <ScalarProperty Name="TransitQty" ColumnName="TransitQty" />
+          <ScalarProperty Name="TransitNoOfProduct" ColumnName="TransitNoOfProduct" />
+          <ScalarProperty Name="TransitNoOfPallet" ColumnName="TransitNoOfPallet" />
+          <ScalarProperty Name="PickingNoOfSlip" ColumnName="PickingNoOfSlip" />
+          <ScalarProperty Name="PickingWeight" ColumnName="PickingWeight" />
+          <ScalarProperty Name="PickingVolume" ColumnName="PickingVolume" />
+          <ScalarProperty Name="PickingQty" ColumnName="PickingQty" />
+          <ScalarProperty Name="PickingNoOfProduct" ColumnName="PickingNoOfProduct" />
+          <ScalarProperty Name="PickingNoOfPallet" ColumnName="PickingNoOfPallet" />
+          <ScalarProperty Name="ShippingNoOfSlip" ColumnName="ShippingNoOfSlip" />
+          <ScalarProperty Name="ShippingWeight" ColumnName="ShippingWeight" />
+          <ScalarProperty Name="ShippingVolume" ColumnName="ShippingVolume" />
+          <ScalarProperty Name="ShippingQty" ColumnName="ShippingQty" />
+          <ScalarProperty Name="ShippingNoOfProduct" ColumnName="ShippingNoOfProduct" />
+          <ScalarProperty Name="ShippingNoOfPallet" ColumnName="ShippingNoOfPallet" />
+          <ScalarProperty Name="InventoryWeight" ColumnName="InventoryWeight" />
+          <ScalarProperty Name="InventoryVolume" ColumnName="InventoryVolume" />
+          <ScalarProperty Name="InventoryQty" ColumnName="InventoryQty" />
+          <ScalarProperty Name="InventoryNoOfProduct" ColumnName="InventoryNoOfProduct" />
+          <ScalarProperty Name="InventoryNoOfPallet" ColumnName="InventoryNoOfPallet" />
+          <ScalarProperty Name="ReceivingPalletQty" ColumnName="ReceivingPalletQty" />
+          <ScalarProperty Name="ShippingPalletQty" ColumnName="ShippingPalletQty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_LWPS020_ShippingProgress_SearchAll" FunctionName="HistoryViewModel.Store.sp_LWPS020_ShippingProgress_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HistoryViewModel.sp_LWPS020_ShippingProgress_SearchAll_Result">
+          <ScalarProperty Name="PickingDatePlan" ColumnName="PickingDatePlan" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="ShippingAreaCode" ColumnName="ShippingAreaCode" />
+          <ScalarProperty Name="ShippingAreaName" ColumnName="ShippingAreaName" />
+          <ScalarProperty Name="InstructionDate" ColumnName="InstructionDate" />
+          <ScalarProperty Name="StockControlDate" ColumnName="StockControlDate" />
+          <ScalarProperty Name="PickingInstructionDate" ColumnName="PickingInstructionDate" />
+          <ScalarProperty Name="PickingDate" ColumnName="PickingDate" />
+          <ScalarProperty Name="ShippingDate" ColumnName="ShippingDate" />
+          <ScalarProperty Name="TransportationDate" ColumnName="TransportationDate" />
+          <ScalarProperty Name="IsOrderCancelStatus" ColumnName="IsOrderCancelStatus" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,8 @@
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\Advics.Framework\bin\Debug\Advics.Framework.dll
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\Advics.Framework\bin\Debug\Advics.Framework.pdb
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\Advics.Framework\obj\Debug\ResolveAssemblyReference.cache
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\Advics.Framework\obj\Debug\Advics.Framework.MessageForm.resources
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\Advics.Framework\obj\Debug\Advics.Framework.Properties.Resources.resources
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\Advics.Framework\obj\Debug\Advics.Framework.csproj.GenerateResource.Cache
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\Advics.Framework\obj\Debug\Advics.Framework.dll
+D:\Rubix\ADVICS-AFM\Rubix-Handy\ADVICE-WinCE7.root\ADVICE-WinCE7\Advics.Framework\obj\Debug\Advics.Framework.pdb

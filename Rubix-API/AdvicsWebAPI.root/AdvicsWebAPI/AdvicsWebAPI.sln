@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RubixWebAPI", "RubixWebAPI\RubixWebAPI.csproj", "{8015F0FA-9D1C-45A0-A794-77C868152FFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSI.Business", "CSI.Windows.Business\CSI.Business.csproj", "{33BCD130-D84E-49C0-BD18-51DE5885C333}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rubix.Framework", "IMS.Framework\Rubix.Framework.csproj", "{0A356D2B-DE8A-40D9-BA52-83B4BB60D3BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RubixAuthentication", "RubixAuthentication\RubixAuthentication.csproj", "{4726AE8F-AEC4-4990-8AF7-16D147E73E5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RubixAutoUpdate", "RubixAutoUpdate\RubixAutoUpdate.csproj", "{D4F5B67D-9315-4157-AE52-185D4DAD4357}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 6
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CSI.Windows.Business\\CSI.Business.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = CSI.Windows.Business\\
+		SccProjectUniqueName2 = IMS.Framework\\Rubix.Framework.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = IMS.Framework\\
+		SccProjectUniqueName3 = RubixAuthentication\\RubixAuthentication.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = RubixAuthentication\\
+		SccProjectUniqueName4 = RubixAutoUpdate\\RubixAutoUpdate.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = RubixAutoUpdate\\
+		SccProjectUniqueName5 = RubixWebAPI\\RubixWebAPI.csproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = RubixWebAPI\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8015F0FA-9D1C-45A0-A794-77C868152FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8015F0FA-9D1C-45A0-A794-77C868152FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8015F0FA-9D1C-45A0-A794-77C868152FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8015F0FA-9D1C-45A0-A794-77C868152FFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33BCD130-D84E-49C0-BD18-51DE5885C333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33BCD130-D84E-49C0-BD18-51DE5885C333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33BCD130-D84E-49C0-BD18-51DE5885C333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33BCD130-D84E-49C0-BD18-51DE5885C333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A356D2B-DE8A-40D9-BA52-83B4BB60D3BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A356D2B-DE8A-40D9-BA52-83B4BB60D3BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A356D2B-DE8A-40D9-BA52-83B4BB60D3BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A356D2B-DE8A-40D9-BA52-83B4BB60D3BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4726AE8F-AEC4-4990-8AF7-16D147E73E5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4726AE8F-AEC4-4990-8AF7-16D147E73E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4726AE8F-AEC4-4990-8AF7-16D147E73E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4726AE8F-AEC4-4990-8AF7-16D147E73E5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4F5B67D-9315-4157-AE52-185D4DAD4357}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4F5B67D-9315-4157-AE52-185D4DAD4357}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4F5B67D-9315-4157-AE52-185D4DAD4357}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4F5B67D-9315-4157-AE52-185D4DAD4357}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

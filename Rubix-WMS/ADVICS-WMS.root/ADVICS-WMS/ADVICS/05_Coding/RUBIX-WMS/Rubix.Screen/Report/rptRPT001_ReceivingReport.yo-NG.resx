@@ -1,0 +1,1214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xrTable1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
+  </data>
+  <data name="xrTableCell2.Text" xml:space="preserve">
+    <value>xrTableCell2</value>
+  </data>
+  <assembly alias="DevExpress.Data.v11.2" name="DevExpress.Data.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xrTableCell2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>MiddleCenter</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v11.2" name="DevExpress.Utils.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xrBarCode2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>1.000007, 20.7499828</value>
+  </data>
+  <data name="xrBarCode2.Text" xml:space="preserve">
+    <value>xrBarCode2</value>
+  </data>
+  <data name="xrLabel25.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
+  </data>
+  <data name="xrLabel25.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>1, 4.999987</value>
+  </data>
+  <data name="xrLabel25.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>91.12838, 15.7499924</value>
+  </data>
+  <data name="xrLabel25.Text" xml:space="preserve">
+    <value>xrLabel25</value>
+  </data>
+  <data name="xrLabel25.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrTableCell4.Text" xml:space="preserve">
+    <value>Product Code</value>
+  </data>
+  <data name="xrTableCell4.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrTableCell5.Text" xml:space="preserve">
+    <value>xrTableCell5</value>
+  </data>
+  <data name="xrTableCell6.Text" xml:space="preserve">
+    <value>xrTableCell6</value>
+  </data>
+  <data name="xrTableCell7.Text" xml:space="preserve">
+    <value>xrTableCell7</value>
+  </data>
+  <data name="xrTableCell8.Text" xml:space="preserve">
+    <value>xrTableCell8</value>
+  </data>
+  <data name="xrTableCell9.Text" xml:space="preserve">
+    <value>xrTableCell9</value>
+  </data>
+  <data name="xrTableCell10.Text" xml:space="preserve">
+    <value>xrTableCell10</value>
+  </data>
+  <data name="xrTableCell11.Text" xml:space="preserve">
+    <value>xrTableCell11</value>
+  </data>
+  <data name="xrTableCell13.Text" xml:space="preserve">
+    <value>xrTableCell13</value>
+  </data>
+  <data name="xrTable1.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>704.4164, 44.79167</value>
+  </data>
+  <data name="xrTable1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>MiddleCenter</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Detail.HeightF" type="System.Single, mscorlib">
+    <value>44.79167</value>
+  </data>
+  <data name="TopMargin.HeightF" type="System.Single, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="xrLabel67.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel67.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>563.6669, 182.291641</value>
+  </data>
+  <data name="xrLabel67.Text" xml:space="preserve">
+    <value>xrLabel67</value>
+  </data>
+  <data name="xrLabel67.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel66.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel66.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>489.499725, 182.291626</value>
+  </data>
+  <data name="xrLabel66.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>237.8317, 21.99997</value>
+  </data>
+  <data name="xrLabel66.Text" xml:space="preserve">
+    <value>Receiving Date : __________________________</value>
+  </data>
+  <data name="xrLabel66.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel65.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel65.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>395.249847, 348.083282</value>
+  </data>
+  <data name="xrLabel65.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>72.66678, 24.0833435</value>
+  </data>
+  <data name="xrLabel65.Text" xml:space="preserve">
+    <value>Invoice No. :</value>
+  </data>
+  <data name="xrLabel65.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel64.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel64.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>467.916565, 348.083282</value>
+  </data>
+  <data name="xrLabel64.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>225.126373, 19</value>
+  </data>
+  <data name="xrLabel64.Text" xml:space="preserve">
+    <value>xrLabel64</value>
+  </data>
+  <data name="xrLabel64.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel63.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel63.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>467.916565, 348.083252</value>
+  </data>
+  <data name="xrLabel63.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>259.414856, 24.0833435</value>
+  </data>
+  <data name="xrLabel63.Text" xml:space="preserve">
+    <value>___________________________________________</value>
+  </data>
+  <data name="xrLabel63.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel62.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel62.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>1.99972212, 348.083344</value>
+  </data>
+  <data name="xrLabel62.Text" xml:space="preserve">
+    <value>PO No. :</value>
+  </data>
+  <data name="xrLabel62.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel61.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel61.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>100.334747, 348.083344</value>
+  </data>
+  <data name="xrLabel61.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>295.125122, 19</value>
+  </data>
+  <data name="xrLabel61.Text" xml:space="preserve">
+    <value>xrLabel61</value>
+  </data>
+  <data name="xrLabel61.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel56.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel56.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>99.9163742, 348.083344</value>
+  </data>
+  <data name="xrLabel56.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>295.333466, 24.0833282</value>
+  </data>
+  <data name="xrLabel56.Text" xml:space="preserve">
+    <value>___________________________________________________</value>
+  </data>
+  <data name="xrLabel56.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel38.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel38.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>1.99972212, 324</value>
+  </data>
+  <data name="xrLabel38.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>62.4583244, 24.0833282</value>
+  </data>
+  <data name="xrLabel38.Text" xml:space="preserve">
+    <value>Supplier :</value>
+  </data>
+  <data name="xrLabel38.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel30.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel30.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>99.498, 324</value>
+  </data>
+  <data name="xrLabel30.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>295.333466, 24.0833282</value>
+  </data>
+  <data name="xrLabel30.Text" xml:space="preserve">
+    <value>___________________________________________________</value>
+  </data>
+  <data name="xrLabel30.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel26.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel26.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>99.9163742, 324</value>
+  </data>
+  <data name="xrLabel26.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>295.125122, 19</value>
+  </data>
+  <data name="xrLabel26.Text" xml:space="preserve">
+    <value>xrLabel26</value>
+  </data>
+  <data name="xrLabel26.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel22.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>99.7063446, 299.083374</value>
+  </data>
+  <data name="xrLabel22.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>295.125122, 19</value>
+  </data>
+  <data name="xrLabel22.Text" xml:space="preserve">
+    <value>xrLabel22</value>
+  </data>
+  <data name="xrLabel22.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel21.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>100.334747, 299.083282</value>
+  </data>
+  <data name="xrLabel21.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>626.9967, 24.083313</value>
+  </data>
+  <data name="xrLabel21.Text" xml:space="preserve">
+    <value>___________________________________________________________________________________________________________</value>
+  </data>
+  <data name="xrLabel20.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>1.99972212, 299.083282</value>
+  </data>
+  <data name="xrLabel20.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>101.875, 24.0833282</value>
+  </data>
+  <data name="xrLabel20.Text" xml:space="preserve">
+    <value>Address :</value>
+  </data>
+  <data name="xrLabel19.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>100.126396, 200</value>
+  </data>
+  <data name="xrLabel19.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>295.333466, 24.0833282</value>
+  </data>
+  <data name="xrLabel19.Text" xml:space="preserve">
+    <value>___________________________________________________</value>
+  </data>
+  <data name="xrLabel18.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>99.91646, 199.499985</value>
+  </data>
+  <data name="xrLabel18.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>295.125122, 19</value>
+  </data>
+  <data name="xrLabel18.Text" xml:space="preserve">
+    <value>xrLabel58</value>
+  </data>
+  <data name="xrLabel18.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel17.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>1.99972785, 200</value>
+  </data>
+  <data name="xrLabel17.Text" xml:space="preserve">
+    <value>At :</value>
+  </data>
+  <data name="xrLabel39.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel39.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>624.124634, 423.041656</value>
+  </data>
+  <data name="xrLabel39.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>68.333374, 19</value>
+  </data>
+  <data name="xrLabel39.Text" xml:space="preserve">
+    <value>xrLabel39</value>
+  </data>
+  <data name="xrLabel39.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel37.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel37.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>467.916565, 423.041656</value>
+  </data>
+  <data name="xrLabel37.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>74.54199, 19</value>
+  </data>
+  <data name="xrLabel37.Text" xml:space="preserve">
+    <value>xrLabel37</value>
+  </data>
+  <data name="xrLabel37.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel36.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel36.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>285.666534, 423.041656</value>
+  </data>
+  <data name="xrLabel36.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>90.12515, 19</value>
+  </data>
+  <data name="xrLabel36.Text" xml:space="preserve">
+    <value>xrLabel36</value>
+  </data>
+  <data name="xrLabel36.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel31.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel31.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>99.91646, 424.000031</value>
+  </data>
+  <data name="xrLabel31.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>147.416763, 19</value>
+  </data>
+  <data name="xrLabel31.Text" xml:space="preserve">
+    <value>xrLabel31</value>
+  </data>
+  <data name="xrLabel31.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel60.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel60.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>100.334747, 273.083374</value>
+  </data>
+  <data name="xrLabel60.Text" xml:space="preserve">
+    <value>xrLabel60</value>
+  </data>
+  <data name="xrLabel60.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel59.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel59.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>99.70639, 249.083344</value>
+  </data>
+  <data name="xrLabel59.Text" xml:space="preserve">
+    <value>xrLabel59</value>
+  </data>
+  <data name="xrLabel59.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel58.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel58.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>99.708046, 225</value>
+  </data>
+  <data name="xrLabel58.Text" xml:space="preserve">
+    <value>xrLabel58</value>
+  </data>
+  <data name="xrLabel58.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel57.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel57.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>530.958069, 160.291641</value>
+  </data>
+  <data name="xrLabel57.Text" xml:space="preserve">
+    <value>xrLabel57</value>
+  </data>
+  <data name="xrLabel57.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrTable3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
+  </data>
+  <data name="xrTable3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>0, 156.976761</value>
+  </data>
+  <data name="xrTableCell19.Text" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="xrTableCell19.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell20.Text" xml:space="preserve">
+    <value>Product Code</value>
+  </data>
+  <data name="xrTableCell21.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="xrTableCell22.Text" xml:space="preserve">
+    <value>Lot No.</value>
+  </data>
+  <data name="xrTableCell23.Text" xml:space="preserve">
+    <value>Pallet No.(Ref.)</value>
+  </data>
+  <data name="xrTableCell1.Text" xml:space="preserve">
+    <value>Qty</value>
+  </data>
+  <data name="xrTableCell25.Text" xml:space="preserve">
+    <value>Kgs</value>
+  </data>
+  <data name="xrTableCell26.Text" xml:space="preserve">
+    <value>M3</value>
+  </data>
+  <data name="xrTableCell3.Text" xml:space="preserve">
+    <value>Condition</value>
+  </data>
+  <data name="xrTableCell27.Text" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="xrTable3.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>704.4164, 44.79167</value>
+  </data>
+  <data name="xrTable3.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel40.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel40.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>0, 145.3934</value>
+  </data>
+  <data name="xrLabel40.Text" xml:space="preserve">
+    <value>Cargo Detail:</value>
+  </data>
+  <data name="xrLabel40.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel33.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel33.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>467.916565, 423.041656</value>
+  </data>
+  <data name="xrLabel33.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>74.50015, 24.083313</value>
+  </data>
+  <data name="xrLabel33.Text" xml:space="preserve">
+    <value>____________</value>
+  </data>
+  <data name="xrLabel33.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel35.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel35.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>542.4166, 423.041656</value>
+  </data>
+  <data name="xrLabel35.Text" xml:space="preserve">
+    <value>Container No.  :</value>
+  </data>
+  <data name="xrLabel35.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel34.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel34.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>624.1249, 423.041656</value>
+  </data>
+  <data name="xrLabel34.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>103.206482, 24.083313</value>
+  </data>
+  <data name="xrLabel34.Text" xml:space="preserve">
+    <value>_______________</value>
+  </data>
+  <data name="xrLabel34.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel32.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel32.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>375.791748, 423.041656</value>
+  </data>
+  <data name="xrLabel32.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>92.12488, 24.083313</value>
+  </data>
+  <data name="xrLabel32.Text" xml:space="preserve">
+    <value>Registration No. :</value>
+  </data>
+  <data name="xrLabel32.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel29.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel29.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>285.666534, 423.041656</value>
+  </data>
+  <data name="xrLabel29.Text" xml:space="preserve">
+    <value>_______________</value>
+  </data>
+  <data name="xrLabel29.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel28.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel28.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>247.3332, 423.041656</value>
+  </data>
+  <data name="xrLabel28.Text" xml:space="preserve">
+    <value>Type :</value>
+  </data>
+  <data name="xrLabel28.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel27.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel27.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>99.708046, 423.041656</value>
+  </data>
+  <data name="xrLabel27.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>147.41684, 24.083313</value>
+  </data>
+  <data name="xrLabel27.Text" xml:space="preserve">
+    <value>_________________________</value>
+  </data>
+  <data name="xrLabel27.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel24.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel24.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>1.99972785, 424.000031</value>
+  </data>
+  <data name="xrLabel24.Text" xml:space="preserve">
+    <value>Transport Company :</value>
+  </data>
+  <data name="xrLabel24.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel23.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>1.99972785, 398.958344</value>
+  </data>
+  <data name="xrLabel12.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>99.70639, 274.083252</value>
+  </data>
+  <data name="xrLabel11.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>1.99972212, 273.083374</value>
+  </data>
+  <data name="xrLabel11.Text" xml:space="preserve">
+    <value>Distribution Center :</value>
+  </data>
+  <data name="xrLabel9.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>99.70817, 249.083344</value>
+  </data>
+  <data name="xrLabel9.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>627.623169, 24.083313</value>
+  </data>
+  <data name="xrLabel9.Text" xml:space="preserve">
+    <value>___________________________________________________________________________________________________________</value>
+  </data>
+  <data name="xrLabel10.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>1.99972212, 249.083344</value>
+  </data>
+  <data name="xrLabel10.Text" xml:space="preserve">
+    <value>Address :</value>
+  </data>
+  <data name="xrLabel8.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>99.708046, 225</value>
+  </data>
+  <data name="xrLabel7.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>1.99972785, 225</value>
+  </data>
+  <data name="xrLabel6.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>452.874664, 160.291641</value>
+  </data>
+  <data name="xrLabel6.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>274.456818, 22</value>
+  </data>
+  <data name="xrLabel6.Text" xml:space="preserve">
+    <value>Receiving No. : _________________________________</value>
+  </data>
+  <data name="xrLine2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>1.99972212, 94.49999</value>
+  </data>
+  <data name="xrLine2.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>703.0003, 23</value>
+  </data>
+  <data name="xrLabel5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>209.54129, 117.499985</value>
+  </data>
+  <data name="xrLabel5.Text" xml:space="preserve">
+    <value>Receiving Report</value>
+  </data>
+  <data name="xrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>188.6663, 80.9583359</value>
+  </data>
+  <data name="xrLabel15.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>588.374939, 35.0000038</value>
+  </data>
+  <data name="xrLabel16.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>639.2499, 35.0000038</value>
+  </data>
+  <data name="xrLabel14.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>672.124939, 10.0000076</value>
+  </data>
+  <data name="xrLabel13.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>639.2499, 10.0000076</value>
+  </data>
+  <data name="xrLabel1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>100.166481, 67.4166641</value>
+  </data>
+  <data name="xrLabel2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>205.3749, 67.4166641</value>
+  </data>
+  <data name="xrLabel3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>99.498024, 45.41668</value>
+  </data>
+  <data name="xrPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwg
+        JC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIy
+        MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAA9AQcDASIAAhEBAxEB/8QA
+        HwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIh
+        MUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVW
+        V1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+        x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
+        BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAV
+        YnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
+        hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq
+        8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiqeq6tYaJpsuoalcpbWkQG+V+gycD9aaTbsgLlFcenxS8G
+        Sf6vWkk/3IZG/ktWk8f+HJf9Xdzt9LOY/wDslaewqr7L+4nnj3OmorHg8T6bckCL7WwPc2coA/Na0ba6
+        julLRCTA/vxsv8xUOEluh3RPRSMwRSzEAAZJJrn7vxfZ2m7dbXBA75Rc847sDikot7ClJRV2dDRWVoOt
+        rr1o91FayQwB9qO7q3mY6kbSeK1aQ001dBRRRQMKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiii
+        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
+</value>
+  </data>
+  <data name="xrPictureBox1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>1.99972785, 45.41667</value>
+  </data>
+  <data name="xrLabel50.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel50.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>382.750122, 103.499985</value>
+  </data>
+  <data name="xrLabel50.Text" xml:space="preserve">
+    <value>_____________________________</value>
+  </data>
+  <data name="xrLabel50.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel51.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel51.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>320.250122, 103.499855</value>
+  </data>
+  <data name="xrLabel51.Text" xml:space="preserve">
+    <value>Checked by</value>
+  </data>
+  <data name="xrLabel51.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel49.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel49.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>62.4583244, 102.458321</value>
+  </data>
+  <data name="xrLabel49.Text" xml:space="preserve">
+    <value>_____________________________</value>
+  </data>
+  <data name="xrLabel49.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel48.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel48.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>0, 103.499985</value>
+  </data>
+  <data name="xrLabel48.Text" xml:space="preserve">
+    <value>Received by</value>
+  </data>
+  <data name="xrLabel48.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel47.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 6.75pt</value>
+  </data>
+  <data name="xrLabel47.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>631.2083, 159.375</value>
+  </data>
+  <data name="xrLabel47.Text" xml:space="preserve">
+    <value>xxxxxxxxxxxx</value>
+  </data>
+  <data name="xrLabel46.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 6.75pt</value>
+  </data>
+  <data name="xrLabel46.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>606.3749, 159.375</value>
+  </data>
+  <data name="xrLabel46.Text" xml:space="preserve">
+    <value>ISO:</value>
+  </data>
+  <data name="xrLabel45.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel45.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>362.458282, 45.95833</value>
+  </data>
+  <data name="xrLabel45.Text" xml:space="preserve">
+    <value>___รถขนส่งสินค้ามาตามกำหนดนัดหมาย</value>
+  </data>
+  <data name="xrLabel45.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel44.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel44.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>362.458282, 70.95833</value>
+  </data>
+  <data name="xrLabel44.Text" xml:space="preserve">
+    <value>___จำนวนครบถ้วนตามเอกสารแจ้งสินค้าเข้า</value>
+  </data>
+  <data name="xrLabel44.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel43.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel43.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>0, 68.99999</value>
+  </data>
+  <data name="xrLabel43.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>204.124985, 23.0416451</value>
+  </data>
+  <data name="xrLabel43.Text" xml:space="preserve">
+    <value>___บรรจุภัณฑ์ ไม่มีรอบยุบหรือฉีกขาดหัก</value>
+  </data>
+  <data name="xrLabel43.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel42.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel42.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>0, 45.95833</value>
+  </data>
+  <data name="xrLabel42.Text" xml:space="preserve">
+    <value>___Pallet สินค้าสะอาด ไม่มีการแตกหัก</value>
+  </data>
+  <data name="xrLabel42.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel41.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel41.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>0, 22.916666</value>
+  </data>
+  <data name="xrLabel41.Text" xml:space="preserve">
+    <value>การตรวจรับสินค้า</value>
+  </data>
+  <data name="xrLabel41.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="BottomMargin.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="BottomMargin.HeightF" type="System.Single, mscorlib">
+    <value>215</value>
+  </data>
+  <data name="xrTable4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>383.088, 0</value>
+  </data>
+  <data name="xrTableCell15.Text" xml:space="preserve">
+    <value>xrTableCell15</value>
+  </data>
+  <data name="xrTableCell16.Text" xml:space="preserve">
+    <value>xrTableCell16</value>
+  </data>
+  <data name="xrTableCell17.Text" xml:space="preserve">
+    <value>xrTableCell17</value>
+  </data>
+  <data name="xrTable4.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>141.486267, 25</value>
+  </data>
+  <data name="GroupFooter1.HeightF" type="System.Single, mscorlib">
+    <value>62.5</value>
+  </data>
+  <data name="xrTable2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
+  </data>
+  <data name="xrTable2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>0, 484.910767</value>
+  </data>
+  <data name="xrTableCell12.Text" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="xrTableCell12.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell14.Text" xml:space="preserve">
+    <value>Product Code</value>
+  </data>
+  <data name="xrTableCell18.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="xrTableCell24.Text" xml:space="preserve">
+    <value>Lot No.</value>
+  </data>
+  <data name="xrTableCell28.Text" xml:space="preserve">
+    <value>Pallet No.(Ref.)</value>
+  </data>
+  <data name="xrTableCell29.Text" xml:space="preserve">
+    <value>Qty</value>
+  </data>
+  <data name="xrTableCell30.Text" xml:space="preserve">
+    <value>Kgs</value>
+  </data>
+  <data name="xrTableCell31.Text" xml:space="preserve">
+    <value>M3</value>
+  </data>
+  <data name="xrTableCell32.Text" xml:space="preserve">
+    <value>Condition</value>
+  </data>
+  <data name="xrTableCell33.Text" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="xrTable2.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>704.4164, 44.791687</value>
+  </data>
+  <data name="xrTable2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel72.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel72.Text" xml:space="preserve">
+    <value>Cargo Detail:</value>
+  </data>
+  <data name="xrLabel72.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="ReportHeader.HeightF" type="System.Single, mscorlib">
+    <value>529.702454</value>
+  </data>
+  <data name="xrLabel68.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel68.Text" xml:space="preserve">
+    <value>Page:</value>
+  </data>
+  <data name="xrLabel55.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel55.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>676.1663, 13.6627827</value>
+  </data>
+  <data name="xrLabel55.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>32.87506, 13.54167</value>
+  </data>
+  <data name="xrLabel55.Text" xml:space="preserve">
+    <value>x/y</value>
+  </data>
+  <data name="xrLabel69.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel69.Text" xml:space="preserve">
+    <value> Global XD Center:</value>
+  </data>
+  <data name="xrLabel71.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9.75pt</value>
+  </data>
+  <data name="xrLabel71.Text" xml:space="preserve">
+    <value> Trancy Logistics (Thailand) Co., Ltd.</value>
+  </data>
+  <data name="xrLabel71.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v11.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel70.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel70.Text" xml:space="preserve">
+    <value>7/149 Moo 4, Amata City Industrial Estate, Tambol Mabyangporn, Amphur Pluagdaeng, </value>
+  </data>
+  <data name="xrPictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwg
+        JC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIy
+        MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAA9AQcDASIAAhEBAxEB/8QA
+        HwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIh
+        MUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVW
+        V1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+        x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
+        BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAV
+        YnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
+        hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq
+        8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiqeq6tYaJpsuoalcpbWkQG+V+gycD9aaTbsgLlFcenxS8G
+        Sf6vWkk/3IZG/ktWk8f+HJf9Xdzt9LOY/wDslaewqr7L+4nnj3OmorHg8T6bckCL7WwPc2coA/Na0ba6
+        julLRCTA/vxsv8xUOEluh3RPRSMwRSzEAAZJJrn7vxfZ2m7dbXBA75Rc847sDikot7ClJRV2dDRWVoOt
+        rr1o91FayQwB9qO7q3mY6kbSeK1aQ001dBRRRQMKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiii
+        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
+</value>
+  </data>
+  <data name="xrLine1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>1.41614, 100.24617</value>
+  </data>
+  <data name="xrLine1.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>703.0003, 23</value>
+  </data>
+  <data name="xrLabel52.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel52.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>200.334717, 86.70448</value>
+  </data>
+  <data name="xrLabel52.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>255.2083, 13.54167</value>
+  </data>
+  <data name="xrLabel52.Text" xml:space="preserve">
+    <value>Rayong 21140  TEL: 038-650365-6 FAX: 038-650367</value>
+  </data>
+  <data name="xrLabel54.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel54.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>638.6663, 38.6627579</value>
+  </data>
+  <data name="xrLabel54.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>65.75012, 13.54167</value>
+  </data>
+  <data name="xrLabel54.Text" xml:space="preserve">
+    <value>dd/mm/yyyy</value>
+  </data>
+  <data name="xrLabel53.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 8.25pt</value>
+  </data>
+  <data name="xrLabel53.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v11.2">
+    <value>588.66626, 38.6627579</value>
+  </data>
+  <data name="xrLabel53.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>50.87506, 13.54167</value>
+  </data>
+  <data name="xrLabel53.Text" xml:space="preserve">
+    <value>Print Date:</value>
+  </data>
+  <data name="PageHeader.HeightF" type="System.Single, mscorlib">
+    <value>201.768433</value>
+  </data>
+</root>

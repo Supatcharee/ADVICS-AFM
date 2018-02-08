@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TransitModelStoreContainer" CdmEntityContainer="O_D_TransitModel">
+    <FunctionImportMapping FunctionImportName="sp_DSRS010_ConfirmProductStoring_LoadSuggest" FunctionName="TransitModel.Store.sp_DSRS010_ConfirmProductStoring_LoadSuggest">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransitModel.sp_DSRS010_ConfirmProductStoring_LoadSuggest_Result">
+          <ScalarProperty Name="TransitSeq" ColumnName="TransitSeq" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="TotalCapacity" ColumnName="TotalCapacity" />
+          <ScalarProperty Name="CurrentCapacity" ColumnName="CurrentCapacity" />
+          <ScalarProperty Name="StockActualQty" ColumnName="StockActualQty" />
+          <ScalarProperty Name="FullCapacityFlag" ColumnName="FullCapacityFlag" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="LocationTypeID" ColumnName="LocationTypeID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DSRS010_ConfirmProductStoring_SearchAll" FunctionName="TransitModel.Store.sp_DSRS010_ConfirmProductStoring_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransitModel.sp_DSRS010_ConfirmProductStoring_SearchAll_Result">
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="Select" ColumnName="Select" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="SortedLineNo" ColumnName="SortedLineNo" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="ReceiveQty" ColumnName="ReceiveQty" />
+          <ScalarProperty Name="TransitQty" ColumnName="TransitQty" />
+          <ScalarProperty Name="TransitStatus" ColumnName="TransitStatus" />
+          <ScalarProperty Name="TransitCompleteFlag" ColumnName="TransitCompleteFlag" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="TransitDate" ColumnName="TransitDate" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="ReceiveSeq" ColumnName="ReceiveSeq" />
+          <ScalarProperty Name="TransitSeq" ColumnName="TransitSeq" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="FullFlag" ColumnName="FullFlag" />
+          <ScalarProperty Name="AllStatus" ColumnName="AllStatus" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tbt_TransitConfirmed">
+      <EntityTypeMapping TypeName="TransitModel.tbt_TransitConfirmed">
+        <MappingFragment StoreEntitySet="tbt_TransitConfirmed">
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="StockActualQty" ColumnName="StockActualQty" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="ConfirmFlag" ColumnName="ConfirmFlag" />
+          <ScalarProperty Name="TransitQty" ColumnName="TransitQty" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="TransitSeq" ColumnName="TransitSeq" />
+          <ScalarProperty Name="ReceiveSeq" ColumnName="ReceiveSeq" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbt_TransitInstructionItems">
+      <EntityTypeMapping TypeName="TransitModel.tbt_TransitInstructionItems">
+        <MappingFragment StoreEntitySet="tbt_TransitInstructionItems">
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ConfirmTransitDraftNo" ColumnName="ConfirmTransitDraftNo" />
+          <ScalarProperty Name="ConfirmTransitDraftTime" ColumnName="ConfirmTransitDraftTime" />
+          <ScalarProperty Name="TransitInstructQty" ColumnName="TransitInstructQty" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_DSRS010_ConfirmProductStoring_LoadTransitConfirm" FunctionName="TransitModel.Store.sp_DSRS010_ConfirmProductStoring_LoadTransitConfirm">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransitModel.sp_DSRS010_ConfirmProductStoring_LoadTransitConfirm_Result">
+          <ScalarProperty Name="TransitSeq" ColumnName="TransitSeq" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="TotalCapacity" ColumnName="TotalCapacity" />
+          <ScalarProperty Name="CurrentCapacity" ColumnName="CurrentCapacity" />
+          <ScalarProperty Name="StockActualQty" ColumnName="StockActualQty" />
+          <ScalarProperty Name="FullCapacityFlag" ColumnName="FullCapacityFlag" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="LocationTypeID" ColumnName="LocationTypeID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DSRS010_ConfirmProductStoring_LoadStockByLocation" FunctionName="TransitModel.Store.sp_DSRS010_ConfirmProductStoring_LoadStockByLocation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransitModel.sp_DSRS010_ConfirmProductStoring_LoadStockByLocation_Result">
+          <ScalarProperty Name="TransitSeq" ColumnName="TransitSeq" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="TotalCapacity" ColumnName="TotalCapacity" />
+          <ScalarProperty Name="CurrentCapacity" ColumnName="CurrentCapacity" />
+          <ScalarProperty Name="StockActualQty" ColumnName="StockActualQty" />
+          <ScalarProperty Name="FullCapacityFlag" ColumnName="FullCapacityFlag" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

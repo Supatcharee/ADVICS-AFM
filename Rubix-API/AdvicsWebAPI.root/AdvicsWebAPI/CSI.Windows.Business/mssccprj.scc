@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[CSI.Business.csproj]
+SCC_Aux_Path = "\\rubixsvr\SourceSafe"
+SCC_Project_Name = "$/ADVICS-AFM/Rubix-API/AdvicsWebAPI.root/AdvicsWebAPI/CSI.Windows.Business", GNWCAAAA

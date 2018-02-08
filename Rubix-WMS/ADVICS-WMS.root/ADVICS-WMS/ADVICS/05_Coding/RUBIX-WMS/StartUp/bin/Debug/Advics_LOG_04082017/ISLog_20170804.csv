@@ -1,0 +1,815 @@
+Method,Status,CurrentDate,Parameter
+"dlgKPK021_ConfirmPacking_ScanDetail/txtQRCode_KeyPress(object sender, KeyPressEventArgs e)","START ROUND 1","04/08/17 18:36:20 PM","QRCode = HBT-17-07-01:1-HBT-1707-036:00101-00120:HBT:46500-0K010:014:1.0000:2017/07/13"
+"dlgKPK021_ConfirmPacking_ScanDetail/txtQRCode_KeyPress(object sender, KeyPressEventArgs e)","END ROND 1",""
+"","","","","",""
+"dlgKPK021_ConfirmPacking_ScanDetail/txtQRCode_KeyPress(object sender, KeyPressEventArgs e)","START ROUND 1","04/08/17 18:36:21 PM","QRCode = HBT-17-07-01:1-HBT-1707-036:00101-00120:HBT:46500-0K010:014:1.0000:2017/07/13"
+"dlgKPK021_ConfirmPacking_ScanDetail/txtQRCode_KeyPress(object sender, KeyPressEventArgs e)","START ROUND 2","04/08/17 18:36:21 PM","QRCode = HBT-17-07-01:1-HBT-1707-036:00041-00060:HBT:46500-0K010:014:1.0000:2017/07/13"
+"ConfirmPackingSearchRMTagDetail(string PDSNo, string RunningNo, string ProductCode, string ShipmentNo, string PackingNo)","start","04/08/17 18:36:21 PM","PDSNo = 1-HBT-1707-036RunningNo00041ProductCode46500-0K010ShipmentNoADVICS-SH170731010PackingNoIGP-TTTC-PACK170713054"
+"ConfirmPackingSearchRMTagDetail(string PDSNo, string RunningNo, string ProductCode, string ShipmentNo, string PackingNo)","END","04/08/17 18:36:21 PM"
+"LoadImage(int ProductID)","start","04/08/17 18:36:21 PM","ProductID = 201"
+"LoadImage(int ProductID)","END","04/08/17 18:36:21 PM"
+"ConvertByteToImage(byte[] byteImage)","start","04/08/17 18:36:21 PM","byte[] byteImage is not null"
+"ConvertByteToImage(byte[] byteImage)","END","04/08/17 18:36:21 PM"
+"UpdateSummaryRMTagQty()","start","04/08/17 18:36:22 PM","RMTagSum = 20"
+"UpdateSummaryRMTagQty()","END","04/08/17 18:36:22 PM"
+"ConfirmData()","start","04/08/17 18:36:22 PM",""
+"ConfirmPackingConfirmData(string PackingNo, string RMTagXML)","start","04/08/17 18:36:22 PM","PackingNo =IGP-TTTC-PACK170713054"
+"ConfirmPackingConfirmData(string PackingNo, string RMTagXML)","END","04/08/17 18:36:22 PM"
+"ConfirmData()","END","04/08/17 18:36:22 PM"
+"PrintStickLabel(string RMTagStart, string RMTagEnd, int ProductID)","start","04/08/17 18:36:22 PM","PackingNo = IGP-TTTC-PACK170713054; RMTagXML = <PackingDataSet>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00041</RunningNo>
+    <RunningForOutTag>OUT-00041</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00042</RunningNo>
+    <RunningForOutTag>OUT-00042</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00043</RunningNo>
+    <RunningForOutTag>OUT-00043</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00044</RunningNo>
+    <RunningForOutTag>OUT-00044</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00045</RunningNo>
+    <RunningForOutTag>OUT-00045</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00046</RunningNo>
+    <RunningForOutTag>OUT-00046</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00047</RunningNo>
+    <RunningForOutTag>OUT-00047</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00048</RunningNo>
+    <RunningForOutTag>OUT-00048</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00049</RunningNo>
+    <RunningForOutTag>OUT-00049</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00050</RunningNo>
+    <RunningForOutTag>OUT-00050</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00051</RunningNo>
+    <RunningForOutTag>OUT-00051</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00052</RunningNo>
+    <RunningForOutTag>OUT-00052</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00053</RunningNo>
+    <RunningForOutTag>OUT-00053</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00054</RunningNo>
+    <RunningForOutTag>OUT-00054</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00055</RunningNo>
+    <RunningForOutTag>OUT-00055</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00056</RunningNo>
+    <RunningForOutTag>OUT-00056</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00057</RunningNo>
+    <RunningForOutTag>OUT-00057</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00058</RunningNo>
+    <RunningForOutTag>OUT-00058</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00059</RunningNo>
+    <RunningForOutTag>OUT-00059</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00060</RunningNo>
+    <RunningForOutTag>OUT-00060</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713054</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713734</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+</PackingDataSet>; API/BusinessFactory/PackingInstruction/ConfirmPackingConfirmData"
+"GetDataByRMTagReport(string PackingNo, string RMTagStart, string RMTagEnd, int ProductID)","start","04/08/17 18:36:22 PM","PackingNo = IGP-TTTC-PACK170713054; RMTagStart= 00041; RMTagEnd = 00060; ProductID = 201;API/LabelStickerReport/GetDataByRMTagReport"
+"GetDataByRMTagReport(string PackingNo, string RMTagStart, string RMTagEnd, int ProductID)","END","04/08/17 18:36:22 PM"
+"rpt.Print()","start","04/08/17 18:36:23 PM","lstreport = System.Collections.Generic.List`1[CSI.Business.DataObjects.sp_RPT045_LabelSticker_GetData_Result]"
+"rpt.Print()","END","04/08/17 18:36:25 PM"
+"PrintStickLabel(string RMTagStart, string RMTagEnd, int ProductID)","END","04/08/17 18:36:25 PM"
+"dlgKPK021_ConfirmPacking_ScanDetail/txtQRCode_KeyPress(object sender, KeyPressEventArgs e)","END ROUND 2","04/08/17 18:36:25 PM"
+"dlgKPK021_ConfirmPacking_ScanDetail/txtQRCode_KeyPress(object sender, KeyPressEventArgs e)","END ROND 1","04/08/17 18:36:25 PM"
+"","","","","",""
+"dlgKPK021_ConfirmPacking_ScanDetail/txtQRCode_KeyPress(object sender, KeyPressEventArgs e)","START ROUND 1","04/08/17 18:44:20 PM",""
+"dlgKPK021_ConfirmPacking_ScanDetail/txtQRCode_KeyPress(object sender, KeyPressEventArgs e)","END ROUND 1",""
+"","","","","",""
+"dlgKPK021_ConfirmPacking_ScanDetail/txtQRCode_KeyPress(object sender, KeyPressEventArgs e)","START ROUND 1","04/08/17 18:44:21 PM",""
+"dlgKPK021_ConfirmPacking_ScanDetail/txtQRCode_KeyPress(object sender, KeyPressEventArgs e)","START ROUND 2","04/08/17 18:44:21 PM","QRCode = HBT-17-07-01:1-HBT-1707-036:00121-00140:HBT:46500-0K010:014:1.0000:2017/07/13"
+"ConfirmPackingSearchRMTagDetail(string PDSNo, string RunningNo, string ProductCode, string ShipmentNo, string PackingNo)","start","04/08/17 18:44:21 PM","PDSNo = 1-HBT-1707-036RunningNo00121ProductCode46500-0K010ShipmentNoADVICS-SH170731010PackingNoIGP-TTTC-PACK170713055"
+"ConfirmPackingSearchRMTagDetail(string PDSNo, string RunningNo, string ProductCode, string ShipmentNo, string PackingNo)","END","04/08/17 18:44:21 PM"
+"LoadImage(int ProductID)","START","04/08/17 18:44:21 PM","ProductID = 201"
+"LoadImage(int ProductID)","END","04/08/17 18:44:22 PM"
+"ConvertByteToImage(byte[] byteImage)","start","04/08/17 18:44:22 PM","byte[] byteImage is not null"
+"ConvertByteToImage(byte[] byteImage)","END","04/08/17 18:44:22 PM"
+"UpdateSummaryRMTagQty()","START","04/08/17 18:44:22 PM","RMTagSum = 20"
+"UpdateSummaryRMTagQty()","END","04/08/17 18:44:22 PM"
+"ConfirmData()","START","04/08/17 18:44:22 PM",""
+"ConfirmPackingConfirmData(string PackingNo, string RMTagXML)","start","04/08/17 18:44:22 PM","PackingNo =IGP-TTTC-PACK170713055"
+"ConfirmPackingConfirmData(string PackingNo, string RMTagXML)","END","04/08/17 18:44:22 PM"
+"ConfirmData()","END","04/08/17 18:44:22 PM"
+"PrintStickLabel(string RMTagStart, string RMTagEnd, int ProductID)","START","04/08/17 18:44:22 PM","PackingNo = IGP-TTTC-PACK170713055; RMTagXML = <PackingDataSet>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00121</RunningNo>
+    <RunningForOutTag>OUT-00121</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00122</RunningNo>
+    <RunningForOutTag>OUT-00122</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00123</RunningNo>
+    <RunningForOutTag>OUT-00123</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00124</RunningNo>
+    <RunningForOutTag>OUT-00124</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00125</RunningNo>
+    <RunningForOutTag>OUT-00125</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00126</RunningNo>
+    <RunningForOutTag>OUT-00126</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00127</RunningNo>
+    <RunningForOutTag>OUT-00127</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00128</RunningNo>
+    <RunningForOutTag>OUT-00128</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00129</RunningNo>
+    <RunningForOutTag>OUT-00129</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00130</RunningNo>
+    <RunningForOutTag>OUT-00130</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00131</RunningNo>
+    <RunningForOutTag>OUT-00131</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00132</RunningNo>
+    <RunningForOutTag>OUT-00132</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00133</RunningNo>
+    <RunningForOutTag>OUT-00133</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00134</RunningNo>
+    <RunningForOutTag>OUT-00134</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00135</RunningNo>
+    <RunningForOutTag>OUT-00135</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00136</RunningNo>
+    <RunningForOutTag>OUT-00136</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00137</RunningNo>
+    <RunningForOutTag>OUT-00137</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00138</RunningNo>
+    <RunningForOutTag>OUT-00138</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00139</RunningNo>
+    <RunningForOutTag>OUT-00139</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+  <PackingDataTable>
+    <PDSNo>1-HBT-1707-036</PDSNo>
+    <RunningNo>00140</RunningNo>
+    <RunningForOutTag>OUT-00140</RunningForOutTag>
+    <PackingNo>IGP-TTTC-PACK170713055</PackingNo>
+    <LineNo>1</LineNo>
+    <ShipmentNo>ADVICS-SH170731010</ShipmentNo>
+    <PickingNo>ADVICS-PK170713735</PickingNo>
+    <PackQty>1</PackQty>
+    <UnitOfPackQty>10</UnitOfPackQty>
+    <Installment>1</Installment>
+    <ProductID>201</ProductID>
+    <PartName>BRAKE ASSY, PARKING W/CABLR, RH</PartName>
+    <PartCode>46500-0K010</PartCode>
+    <PlanPackQty>20</PlanPackQty>
+    <RMTagQty>1</RMTagQty>
+    <SumRMQty>20</SumRMQty>
+    <PackedQty>0</PackedQty>
+  </PackingDataTable>
+</PackingDataSet>; API/BusinessFactory/PackingInstruction/ConfirmPackingConfirmData"
+"GetDataByRMTagReport(string PackingNo, string RMTagStart, string RMTagEnd, int ProductID)","START","04/08/17 18:44:22 PM","PackingNo = IGP-TTTC-PACK170713055; RMTagStart= 00121; RMTagEnd = 00140; ProductID = 201;API/LabelStickerReport/GetDataByRMTagReport"
+"GetDataByRMTagReport(string PackingNo, string RMTagStart, string RMTagEnd, int ProductID)","END","04/08/17 18:44:23 PM"
+"rpt.Print()","START","04/08/17 18:44:23 PM","lstreport = System.Collections.Generic.List`1[CSI.Business.DataObjects.sp_RPT045_LabelSticker_GetData_Result]"
+"rpt.Print()","END","04/08/17 18:44:25 PM"
+"PrintStickLabel(string RMTagStart, string RMTagEnd, int ProductID)","END","04/08/17 18:44:25 PM"
+"dlgKPK021_ConfirmPacking_ScanDetail/txtQRCode_KeyPress(object sender, KeyPressEventArgs e)","END ROUND 2","04/08/17 18:44:25 PM"
+"dlgKPK021_ConfirmPacking_ScanDetail/txtQRCode_KeyPress(object sender, KeyPressEventArgs e)","END ROUND 1","04/08/17 18:44:25 PM"
+"","","","","",""

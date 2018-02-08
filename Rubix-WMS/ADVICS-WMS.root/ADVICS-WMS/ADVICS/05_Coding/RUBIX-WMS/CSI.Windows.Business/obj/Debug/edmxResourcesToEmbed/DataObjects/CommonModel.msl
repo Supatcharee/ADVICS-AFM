@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="CommonModel" />
+  <Alias Key="Target" Value="CommonModel.Store" />
+  <EntityContainerMapping CdmEntityContainer="CommonModelContainer" StorageEntityContainer="CommonModelStoreContainer">
+    <EntitySetMapping Name="tbs_SystemConfig">
+      <EntityTypeMapping TypeName="CommonModel.tbs_SystemConfig">
+        <MappingFragment StoreEntitySet="tbs_SystemConfig">
+          <ScalarProperty Name="IsSystem" ColumnName="IsSystem" />
+          <ScalarProperty Name="OrderRow" ColumnName="OrderRow" />
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ConfigValue" ColumnName="ConfigValue" />
+          <ScalarProperty Name="ConfigItem" ColumnName="ConfigItem" />
+          <ScalarProperty Name="ConfigID" ColumnName="ConfigID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadAttention" FunctionName="CommonModel.Store.sp_common_LoadAttention">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadAttention_Result">
+          <ScalarProperty Name="attention" ColumnName="attention" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadByLocationType" FunctionName="CommonModel.Store.sp_common_LoadByLocationType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadByLocationType_Result">
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="LayoutID" ColumnName="LayoutID" />
+          <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+          <ScalarProperty Name="RackNo" ColumnName="RackNo" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="MaxM3" ColumnName="MaxM3" />
+          <ScalarProperty Name="MaxM2" ColumnName="MaxM2" />
+          <ScalarProperty Name="PickingPriority" ColumnName="PickingPriority" />
+          <ScalarProperty Name="MaxCapacity" ColumnName="MaxCapacity" />
+          <ScalarProperty Name="CapacityUnitID" ColumnName="CapacityUnitID" />
+          <ScalarProperty Name="MaxUnit" ColumnName="MaxUnit" />
+          <ScalarProperty Name="NoOfPallet" ColumnName="NoOfPallet" />
+          <ScalarProperty Name="FullCapacityFlag" ColumnName="FullCapacityFlag" />
+          <ScalarProperty Name="LocationTypeID" ColumnName="LocationTypeID" />
+          <ScalarProperty Name="Stack" ColumnName="Stack" />
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadClassification" FunctionName="CommonModel.Store.sp_common_LoadClassification">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadClassification_Result">
+          <ScalarProperty Name="ClassificationID" ColumnName="ClassificationID" />
+          <ScalarProperty Name="ClassificationCode" ColumnName="ClassificationCode" />
+          <ScalarProperty Name="ClassificationName" ColumnName="ClassificationName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadCondition" FunctionName="CommonModel.Store.sp_common_LoadCondition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadCondition_Result">
+          <ScalarProperty Name="ConditionID" ColumnName="ConditionID" />
+          <ScalarProperty Name="ConditionCode" ColumnName="ConditionCode" />
+          <ScalarProperty Name="ConditionName" ColumnName="ConditionName" />
+          <ScalarProperty Name="ConditionDisplay" ColumnName="ConditionDisplay" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadFinalDestination" FunctionName="CommonModel.Store.sp_common_LoadFinalDestination">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadFinalDestination_Result">
+          <ScalarProperty Name="FinalDestinationID" ColumnName="FinalDestinationID" />
+          <ScalarProperty Name="FinalDestinationCode" ColumnName="FinalDestinationCode" />
+          <ScalarProperty Name="FinalDestinationLongName" ColumnName="FinalDestinationLongName" />
+          <ScalarProperty Name="FinalDestinationAddress" ColumnName="FinalDestinationAddress" />
+          <ScalarProperty Name="DisplayMember" ColumnName="DisplayMember" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadFloor" FunctionName="CommonModel.Store.sp_common_LoadFloor">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadFloor_Result">
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadLocation" FunctionName="CommonModel.Store.sp_common_LoadLocation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadLocation_Result">
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="LayoutID" ColumnName="LayoutID" />
+          <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+          <ScalarProperty Name="RackNo" ColumnName="RackNo" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="MaxM3" ColumnName="MaxM3" />
+          <ScalarProperty Name="MaxM2" ColumnName="MaxM2" />
+          <ScalarProperty Name="PickingPriority" ColumnName="PickingPriority" />
+          <ScalarProperty Name="MaxCapacity" ColumnName="MaxCapacity" />
+          <ScalarProperty Name="CapacityUnitID" ColumnName="CapacityUnitID" />
+          <ScalarProperty Name="MaxUnit" ColumnName="MaxUnit" />
+          <ScalarProperty Name="NoOfPallet" ColumnName="NoOfPallet" />
+          <ScalarProperty Name="FullCapacityFlag" ColumnName="FullCapacityFlag" />
+          <ScalarProperty Name="LocationTypeID" ColumnName="LocationTypeID" />
+          <ScalarProperty Name="Stack" ColumnName="Stack" />
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="LocationDisplay" ColumnName="LocationDisplay" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadLocationType" FunctionName="CommonModel.Store.sp_common_LoadLocationType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadLocationType_Result">
+          <ScalarProperty Name="LocationTypeID" ColumnName="LocationTypeID" />
+          <ScalarProperty Name="LocationTypeName" ColumnName="LocationTypeName" />
+          <ScalarProperty Name="AlwaysShow" ColumnName="AlwaysShow" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadOwner" FunctionName="CommonModel.Store.sp_common_LoadOwner">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadOwner_Result">
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="DisplayMember" ColumnName="DisplayMember" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadPackaging" FunctionName="CommonModel.Store.sp_common_LoadPackaging">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadPackaging_Result">
+          <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+          <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadPickingNo" FunctionName="CommonModel.Store.sp_common_LoadPickingNo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadPickingNo_Result">
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadProduct" FunctionName="CommonModel.Store.sp_common_LoadProduct">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadProduct_Result">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="DisplayMember" ColumnName="DisplayMember" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadProductCondition" FunctionName="CommonModel.Store.sp_common_LoadProductCondition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadProductCondition_Result">
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="ProductConditionCode" ColumnName="ProductConditionCode" />
+          <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+          <ScalarProperty Name="DisplayMember" ColumnName="DisplayMember" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadRack" FunctionName="CommonModel.Store.sp_common_LoadRack">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadRack_Result">
+          <ScalarProperty Name="RackNo" ColumnName="RackNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadSalePrice" FunctionName="CommonModel.Store.sp_common_LoadSalePrice">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadSalePrice_Result">
+          <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadScanType" FunctionName="CommonModel.Store.sp_common_LoadScanType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadScanType_Result">
+          <ScalarProperty Name="ScanTypeID" ColumnName="ScanTypeID" />
+          <ScalarProperty Name="ScanTypeName" ColumnName="ScanTypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadSupplier" FunctionName="CommonModel.Store.sp_common_LoadSupplier">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadSupplier_Result">
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+          <ScalarProperty Name="SupplierLongName" ColumnName="SupplierLongName" />
+          <ScalarProperty Name="SupplierAddress1" ColumnName="SupplierAddress1" />
+          <ScalarProperty Name="SupplierAddress2" ColumnName="SupplierAddress2" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="DisplayMember" ColumnName="DisplayMember" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadTransportType" FunctionName="CommonModel.Store.sp_common_LoadTransportType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadTransportType_Result">
+          <ScalarProperty Name="TransportTypeID" ColumnName="TransportTypeID" />
+          <ScalarProperty Name="TransportTypeCode" ColumnName="TransportTypeCode" />
+          <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadTruckCompany" FunctionName="CommonModel.Store.sp_common_LoadTruckCompany">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadTruckCompany_Result">
+          <ScalarProperty Name="TruckCompanyID" ColumnName="TruckCompanyID" />
+          <ScalarProperty Name="TruckCompanyCode" ColumnName="TruckCompanyCode" />
+          <ScalarProperty Name="TruckCompanyLongName" ColumnName="TruckCompanyLongName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadUser" FunctionName="CommonModel.Store.sp_common_LoadUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadUser_Result">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadWarehouse" FunctionName="CommonModel.Store.sp_common_LoadWarehouse">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadWarehouse_Result">
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="DisplayMember" ColumnName="DisplayMember" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadZone" FunctionName="CommonModel.Store.sp_common_LoadZone">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadZone_Result">
+          <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+          <ScalarProperty Name="ZoneCode" ColumnName="ZoneCode" />
+          <ScalarProperty Name="ZoneName" ColumnName="ZoneName" />
+          <ScalarProperty Name="ZoneDisplayName" ColumnName="ZoneDisplayName" />
+          <ScalarProperty Name="ZoneColor" ColumnName="ZoneColor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Common_ProductUnit" FunctionName="CommonModel.Store.sp_Common_ProductUnit">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_Common_ProductUnit_Result">
+          <ScalarProperty Name="VolumeOfUnitLevel1" ColumnName="VolumeOfUnitLevel1" />
+          <ScalarProperty Name="TypeOfUnitLevel1" ColumnName="TypeOfUnitLevel1" />
+          <ScalarProperty Name="QtyLvl1" ColumnName="QtyLvl1" />
+          <ScalarProperty Name="UnitRatioToLvl1" ColumnName="UnitRatioToLvl1" />
+          <ScalarProperty Name="UnitCode1" ColumnName="UnitCode1" />
+          <ScalarProperty Name="QtyLvl2" ColumnName="QtyLvl2" />
+          <ScalarProperty Name="UnitRatioToLvl2" ColumnName="UnitRatioToLvl2" />
+          <ScalarProperty Name="TypeOfUnitLevel2" ColumnName="TypeOfUnitLevel2" />
+          <ScalarProperty Name="UnitCode2" ColumnName="UnitCode2" />
+          <ScalarProperty Name="QtyLvl3" ColumnName="QtyLvl3" />
+          <ScalarProperty Name="UnitRatioToLvl3" ColumnName="UnitRatioToLvl3" />
+          <ScalarProperty Name="TypeOfUnitLevel3" ColumnName="TypeOfUnitLevel3" />
+          <ScalarProperty Name="UnitCode3" ColumnName="UnitCode3" />
+          <ScalarProperty Name="QtyLvl4" ColumnName="QtyLvl4" />
+          <ScalarProperty Name="UnitRatioToLvl4" ColumnName="UnitRatioToLvl4" />
+          <ScalarProperty Name="TypeOfUnitLevel4" ColumnName="TypeOfUnitLevel4" />
+          <ScalarProperty Name="UnitCode4" ColumnName="UnitCode4" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadCustomer" FunctionName="CommonModel.Store.sp_common_LoadCustomer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadCustomer_Result">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="DisplayMember" ColumnName="DisplayMember" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadLot" FunctionName="CommonModel.Store.sp_common_LoadLot">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadLot_Result">
+          <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+          <ScalarProperty Name="ReceiveQty" ColumnName="ReceiveQty" />
+          <ScalarProperty Name="Inventory" ColumnName="Inventory" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="LotKey" ColumnName="LotKey" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="RecInstallment" ColumnName="RecInstallment" />
+          <ScalarProperty Name="RecLineNo" ColumnName="RecLineNo" />
+          <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="AvalQty" ColumnName="AvalQty" />
+          <ScalarProperty Name="ShipPlanQty" ColumnName="ShipPlanQty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadReceiving" FunctionName="CommonModel.Store.sp_common_LoadReceiving">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadReceiving_Result">
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadPallet" FunctionName="CommonModel.Store.sp_common_LoadPallet">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadPallet_Result">
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadShipmentArea" FunctionName="CommonModel.Store.sp_common_LoadShipmentArea">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadShipmentArea_Result">
+          <ScalarProperty Name="ShippingAreaID" ColumnName="ShippingAreaID" />
+          <ScalarProperty Name="ShippingAreaCode" ColumnName="ShippingAreaCode" />
+          <ScalarProperty Name="ShippingAreaName" ColumnName="ShippingAreaName" />
+          <ScalarProperty Name="DisplayMember" ColumnName="DisplayMember" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadProductGroup" FunctionName="CommonModel.Store.sp_common_LoadProductGroup">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadProductGroup_Result">
+          <ScalarProperty Name="ProductGroupID" ColumnName="ProductGroupID" />
+          <ScalarProperty Name="ProductGroupCode" ColumnName="ProductGroupCode" />
+          <ScalarProperty Name="ProductGroupName" ColumnName="ProductGroupName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadProductCategory" FunctionName="CommonModel.Store.sp_common_LoadProductCategory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadProductCategory_Result">
+          <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+          <ScalarProperty Name="ProductCategoryCode" ColumnName="ProductCategoryCode" />
+          <ScalarProperty Name="ProductCategoryName" ColumnName="ProductCategoryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadPackingNo" FunctionName="CommonModel.Store.sp_common_LoadPackingNo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadPackingNo_Result">
+          <ScalarProperty Name="PackingNo" ColumnName="PackingNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadShippingNo" FunctionName="CommonModel.Store.sp_common_LoadShippingNo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadShippingNo_Result">
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadPort" FunctionName="CommonModel.Store.sp_common_LoadPort">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadPort_Result">
+          <ScalarProperty Name="PortID" ColumnName="PortID" />
+          <ScalarProperty Name="PortCode" ColumnName="PortCode" />
+          <ScalarProperty Name="PortLongName" ColumnName="PortLongName" />
+          <ScalarProperty Name="Freight" ColumnName="Freight" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadPortOfDischarge" FunctionName="CommonModel.Store.sp_common_LoadPortOfDischarge">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadPortOfDischarge_Result">
+          <ScalarProperty Name="PortID" ColumnName="PortID" />
+          <ScalarProperty Name="PortCode" ColumnName="PortCode" />
+          <ScalarProperty Name="PortLongName" ColumnName="PortLongName" />
+          <ScalarProperty Name="PortAddress" ColumnName="PortAddress" />
+          <ScalarProperty Name="DisplayMember" ColumnName="DisplayMember" />
+          <ScalarProperty Name="Freight" ColumnName="Freight" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadPortOfLoading" FunctionName="CommonModel.Store.sp_common_LoadPortOfLoading">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadPortOfLoading_Result">
+          <ScalarProperty Name="PortID" ColumnName="PortID" />
+          <ScalarProperty Name="PortCode" ColumnName="PortCode" />
+          <ScalarProperty Name="PortLongName" ColumnName="PortLongName" />
+          <ScalarProperty Name="PortAddress" ColumnName="PortAddress" />
+          <ScalarProperty Name="Freight" ColumnName="Freight" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_common_LoadProductPrice" FunctionName="CommonModel.Store.sp_common_LoadProductPrice">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CommonModel.sp_common_LoadProductPrice_Result">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="DisplayMember" ColumnName="DisplayMember" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="UnitPrice2" ColumnName="UnitPrice2" />
+          <ScalarProperty Name="EffectiveDate2" ColumnName="EffectiveDate2" />
+          <ScalarProperty Name="CurrencyID2" ColumnName="CurrencyID2" />
+          <ScalarProperty Name="CurrencyCode2" ColumnName="CurrencyCode2" />
+          <ScalarProperty Name="CurrencyName2" ColumnName="CurrencyName2" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

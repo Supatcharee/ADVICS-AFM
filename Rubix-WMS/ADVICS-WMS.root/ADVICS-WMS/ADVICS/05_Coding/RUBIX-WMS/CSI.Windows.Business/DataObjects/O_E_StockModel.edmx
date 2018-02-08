@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="StockModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="StockModelStoreContainer" />
+        <Function Name="sp_ESTS000_InventoryStatusProcess" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ProductID" Type="int" Mode="In" />
+          <Parameter Name="ProductConditionID" Type="int" Mode="In" />
+          <Parameter Name="ProductCode" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_ESTS010_InventoryAdjustment_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="ProductID" Type="int" Mode="In" />
+          <Parameter Name="PalletNo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_ESTS020_ChangeLocation_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="Floor" Type="int" Mode="In" />
+          <Parameter Name="ZoneID" Type="int" Mode="In" />
+          <Parameter Name="ProductID" Type="int" Mode="In" />
+          <Parameter Name="ConditionofProductID" Type="int" Mode="In" />
+          <Parameter Name="PalletNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="PalletNoRef" Type="nvarchar" Mode="In" />
+          <Parameter Name="LotNo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_ESTS030_InquiryInventory_ByItem_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ZoneID" Type="int" Mode="In" />
+          <Parameter Name="ProductID" Type="int" Mode="In" />
+          <Parameter Name="ConditionOfProductID" Type="int" Mode="In" />
+          <Parameter Name="LastMovementFrom" Type="date" Mode="In" />
+          <Parameter Name="LastMovementTo" Type="date" Mode="In" />
+        </Function>
+        <Function Name="sp_ESTS030_InquiryInventory_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ZoneID" Type="int" Mode="In" />
+          <Parameter Name="ProductID" Type="int" Mode="In" />
+          <Parameter Name="ProductConditionID" Type="int" Mode="In" />
+          <Parameter Name="Location" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_ESTS040_StockChecking_Get" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ProductID" Type="int" Mode="In" />
+          <Parameter Name="DateFrom" Type="datetime" Mode="In" />
+          <Parameter Name="DateTo" Type="datetime" Mode="In" />
+          <Parameter Name="DiffFlag" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="sp_ESTS050_InquiryReceivingShippingHistory_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ProductID" Type="int" Mode="In" />
+          <Parameter Name="ConditionOfProductID" Type="int" Mode="In" />
+          <Parameter Name="DateFrom" Type="date" Mode="In" />
+          <Parameter Name="DateTo" Type="date" Mode="In" />
+          <Parameter Name="Location" Type="nvarchar" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="StockModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="StockModelContainer" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="sp_ESTS010_InventoryAdjustment_CheckExistPalletNo">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="LocationID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductConditionID" Mode="In" Type="Int32" />
+            <Parameter Name="PalletNo" Mode="In" Type="String" />
+            <Parameter Name="LotNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ESTS000_InventoryStatusProcess" ReturnType="Collection(StockModel.sp_ESTS000_InventoryStatusProcess_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductConditionID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductCode" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ESTS040_StockChecking_Get" ReturnType="Collection(StockModel.sp_ESTS040_StockChecking_Get_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductID" Mode="In" Type="Int32" />
+            <Parameter Name="DateFrom" Mode="In" Type="DateTime" />
+            <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+            <Parameter Name="DiffFlag" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ESTS030_InquiryInventory_SearchAll" ReturnType="Collection(StockModel.sp_ESTS030_InquiryInventory_SearchAll_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ZoneID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductConditionID" Mode="In" Type="Int32" />
+            <Parameter Name="Location" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ESTS010_InventoryAdjustment_SearchAll" ReturnType="Collection(StockModel.sp_ESTS010_InventoryAdjustment_SearchAll_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+            <Parameter Name="ProductID" Mode="In" Type="Int32" />
+            <Parameter Name="PalletNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ESTS020_ChangeLocation_SearchAll" ReturnType="Collection(StockModel.sp_ESTS020_ChangeLocation_SearchAll_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="Floor" Mode="In" Type="Int32" />
+            <Parameter Name="ZoneID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductID" Mode="In" Type="Int32" />
+            <Parameter Name="ConditionofProductID" Mode="In" Type="Int32" />
+            <Parameter Name="PalletNo" Mode="In" Type="String" />
+            <Parameter Name="PalletNoRef" Mode="In" Type="String" />
+            <Parameter Name="LotNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ESTS050_InquiryReceivingShippingHistory_SearchAll" ReturnType="Collection(StockModel.sp_ESTS050_InquiryReceivingShippingHistory_SearchAll_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ProductID" Mode="In" Type="Int32" />
+            <Parameter Name="ConditionOfProductID" Mode="In" Type="Int32" />
+            <Parameter Name="DateFrom" Mode="In" Type="DateTime" />
+            <Parameter Name="DateTo" Mode="In" Type="DateTime" />
+            <Parameter Name="Location" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="sp_ESTS000_InventoryStatusProcess_Result">
+          <Property Type="Decimal" Name="TransitQuantity" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="StockActualQuantity" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="StockHoldQuantity" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="ShippingQuantity" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="TransitWeight" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="StockActualWeight" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="StockHoldWeight" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="ShippingWeight" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="TransitM3" Nullable="false" Precision="18" Scale="5" />
+          <Property Type="Decimal" Name="StockActualM3" Nullable="false" Precision="18" Scale="5" />
+          <Property Type="Decimal" Name="StockHoldM3" Nullable="false" Precision="18" Scale="5" />
+          <Property Type="Decimal" Name="ShippingM3" Nullable="false" Precision="18" Scale="5" />
+          <Property Type="Decimal" Name="TotalQuantity" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="TotalWeight" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="TotalM3" Nullable="false" Precision="18" Scale="5" />
+          <Property Type="Decimal" Name="AvailableQuantity" Nullable="true" Precision="19" Scale="3" />
+          <Property Type="Decimal" Name="AvailableWeight" Nullable="true" Precision="19" Scale="3" />
+          <Property Type="Decimal" Name="AvailableActualM3" Nullable="true" Precision="19" Scale="5" />
+        </ComplexType>
+        <ComplexType Name="sp_ESTS040_StockChecking_Get_Result">
+          <Property Type="Int32" Name="OwnerID" Nullable="true" />
+          <Property Type="Int32" Name="WarehouseID" Nullable="true" />
+          <Property Type="String" Name="DCCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="CheckedDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="CheckedBy" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="ProductID" Nullable="true" />
+          <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="ProductConditionID" Nullable="true" />
+          <Property Type="String" Name="ProductConditionCode" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="ProductConditionName" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="LocationID" Nullable="false" />
+          <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+          <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="InventoryQty" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="CheckedQty" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="Int32" Name="TypeOfUnitInventory" Nullable="true" />
+          <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="UnitName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="1000" />
+          <Property Type="Int32" Name="DiffFlag" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_ESTS030_InquiryInventory_SearchAll_Result">
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+          <Property Type="Int32" Name="LocationID" Nullable="false" />
+          <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+          <Property Type="String" Name="WarehouseCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ZoneName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+          <Property Type="Int32" Name="ProductConditionID" Nullable="false" />
+          <Property Type="Int32" Name="ProductID" Nullable="false" />
+          <Property Type="String" Name="ItemCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ItemName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ItemConditionName" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="LotNo" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Inventory" Nullable="true" Precision="38" Scale="7" />
+          <Property Type="Decimal" Name="SafetyStock" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="String" Name="UOM" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="ExpiredDate" Nullable="true" />
+          <Property Type="DateTime" Name="LastMovement" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="sp_ESTS010_InventoryAdjustment_SearchAll_Result">
+          <Property Type="Boolean" Name="Select" Nullable="true" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+          <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+          <Property Type="Int32" Name="LocationID" Nullable="false" />
+          <Property Type="Int32" Name="ProductConditionID" Nullable="false" />
+          <Property Type="Int32" Name="ProductID" Nullable="false" />
+          <Property Type="String" Name="ZoneCode" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="Floor" Nullable="true" />
+          <Property Type="String" Name="RackNo" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="ReceivingNo" Nullable="true" MaxLength="22" />
+          <Property Type="String" Name="ProductConditionCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="OwnerCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="WarehouseCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ProductConditionName" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="LotNo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="PalletNoRef" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PalletNo" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+          <Property Type="String" Name="LocationName" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="InventoryQtyL3" Nullable="true" Precision="38" Scale="7" />
+          <Property Type="Decimal" Name="InventoryQty" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="String" Name="UnitName" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="FinalUpdateDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ExpiredDate" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_ESTS020_ChangeLocation_SearchAll_Result">
+          <Property Type="Boolean" Name="SELECT" Nullable="true" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+          <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+          <Property Type="Int32" Name="LocationID" Nullable="false" />
+          <Property Type="String" Name="PalletNo" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="ProductConditionID" Nullable="false" />
+          <Property Type="Int32" Name="ProductID" Nullable="false" />
+          <Property Type="DateTime" Name="LastUpdateSince" Nullable="false" Precision="23" />
+          <Property Type="String" Name="OwnerCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="WarehouseCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ProductConditionCode" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="ZoneID" Nullable="true" />
+          <Property Type="String" Name="ZoneCode" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="RackNo" Nullable="true" MaxLength="5" />
+          <Property Type="Int32" Name="Floor" Nullable="true" />
+          <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+          <Property Type="String" Name="ProductConditionName" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="Inventory" Nullable="true" Precision="38" Scale="7" />
+          <Property Type="Decimal" Name="InventoryBox" Nullable="true" Precision="38" Scale="7" />
+          <Property Type="Decimal" Name="RatioConvertInventory" Nullable="true" Precision="27" Scale="12" />
+          <Property Type="String" Name="UnitName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Level2UnitName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="LotNo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="PalletNoRef" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="ToLocationID" Nullable="true" />
+          <Property Type="String" Name="LocationCodeTO" Nullable="true" MaxLength="17" />
+          <Property Type="Int32" Name="ToProductConditionID" Nullable="true" />
+          <Property Type="Decimal" Name="ChangeQty" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="String" Name="ChangeStatus" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ProductConditionNameTo" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="ChangeLocationID" Nullable="true" />
+          <Property Type="Int32" Name="FromProductConditionID" Nullable="true" />
+          <Property Type="Int32" Name="FromLocationID" Nullable="true" />
+          <Property Type="Boolean" Name="FromFullCapacityFlag" Nullable="true" />
+          <Property Type="Boolean" Name="ToFullCapacityFlag" Nullable="true" />
+          <Property Type="DateTime" Name="ChangedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ChangedUser" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="RackNoAndLevel" Nullable="true" MaxLength="8" />
+          <Property Type="DateTime" Name="ExpiryDate" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_ESTS050_InquiryReceivingShippingHistory_SearchAll_Result">
+          <Property Type="String" Name="Date" Nullable="true" MaxLength="36" />
+          <Property Type="String" Name="Time" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="WarehouseCode" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ShipmentNo_ReceivingNo" Nullable="true" MaxLength="22" />
+          <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+          <Property Type="Int32" Name="LineNo" Nullable="false" />
+          <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FinalDestination_SupplierCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="FinalDestination_SupplierName" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="ConditionOfProductCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ConditionOfProduct" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="Qty" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="Decimal" Name="Incoming" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="Decimal" Name="Outgoing" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="String" Name="PortOfLoadingCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PortOfLoadingName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PortOfDischargeCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PortOfDischargeName" Nullable="true" MaxLength="100" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="StockModel" />
+        <Alias Key="Target" Value="StockModel.Store" />
+        <EntityContainerMapping CdmEntityContainer="StockModelContainer" StorageEntityContainer="StockModelStoreContainer">
+          <FunctionImportMapping FunctionImportName="sp_ESTS000_InventoryStatusProcess" FunctionName="StockModel.Store.sp_ESTS000_InventoryStatusProcess">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="StockModel.sp_ESTS000_InventoryStatusProcess_Result">
+                <ScalarProperty Name="TransitQuantity" ColumnName="TransitQuantity" />
+                <ScalarProperty Name="StockActualQuantity" ColumnName="StockActualQuantity" />
+                <ScalarProperty Name="StockHoldQuantity" ColumnName="StockHoldQuantity" />
+                <ScalarProperty Name="ShippingQuantity" ColumnName="ShippingQuantity" />
+                <ScalarProperty Name="TransitWeight" ColumnName="TransitWeight" />
+                <ScalarProperty Name="StockActualWeight" ColumnName="StockActualWeight" />
+                <ScalarProperty Name="StockHoldWeight" ColumnName="StockHoldWeight" />
+                <ScalarProperty Name="ShippingWeight" ColumnName="ShippingWeight" />
+                <ScalarProperty Name="TransitM3" ColumnName="TransitM3" />
+                <ScalarProperty Name="StockActualM3" ColumnName="StockActualM3" />
+                <ScalarProperty Name="StockHoldM3" ColumnName="StockHoldM3" />
+                <ScalarProperty Name="ShippingM3" ColumnName="ShippingM3" />
+                <ScalarProperty Name="TotalQuantity" ColumnName="TotalQuantity" />
+                <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+                <ScalarProperty Name="TotalM3" ColumnName="TotalM3" />
+                <ScalarProperty Name="AvailableQuantity" ColumnName="AvailableQuantity" />
+                <ScalarProperty Name="AvailableWeight" ColumnName="AvailableWeight" />
+                <ScalarProperty Name="AvailableActualM3" ColumnName="AvailableActualM3" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ESTS040_StockChecking_Get" FunctionName="StockModel.Store.sp_ESTS040_StockChecking_Get">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="StockModel.sp_ESTS040_StockChecking_Get_Result">
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+                <ScalarProperty Name="DCCode" ColumnName="DCCode" />
+                <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+                <ScalarProperty Name="CheckedDate" ColumnName="CheckedDate" />
+                <ScalarProperty Name="CheckedBy" ColumnName="CheckedBy" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+                <ScalarProperty Name="ProductConditionCode" ColumnName="ProductConditionCode" />
+                <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="InventoryQty" ColumnName="InventoryQty" />
+                <ScalarProperty Name="CheckedQty" ColumnName="CheckedQty" />
+                <ScalarProperty Name="TypeOfUnitInventory" ColumnName="TypeOfUnitInventory" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="DiffFlag" ColumnName="DiffFlag" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ESTS030_InquiryInventory_SearchAll" FunctionName="StockModel.Store.sp_ESTS030_InquiryInventory_SearchAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="StockModel.sp_ESTS030_InquiryInventory_SearchAll_Result">
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+                <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+                <ScalarProperty Name="ZoneName" ColumnName="ZoneName" />
+                <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+                <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="ItemConditionName" ColumnName="ItemConditionName" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="Inventory" ColumnName="Inventory" />
+                <ScalarProperty Name="SafetyStock" ColumnName="SafetyStock" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="ExpiredDate" ColumnName="ExpiredDate" />
+                <ScalarProperty Name="LastMovement" ColumnName="LastMovement" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ESTS010_InventoryAdjustment_SearchAll" FunctionName="StockModel.Store.sp_ESTS010_InventoryAdjustment_SearchAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="StockModel.sp_ESTS010_InventoryAdjustment_SearchAll_Result">
+                <ScalarProperty Name="Select" ColumnName="Select" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ZoneCode" ColumnName="ZoneCode" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="RackNo" ColumnName="RackNo" />
+                <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+                <ScalarProperty Name="ProductConditionCode" ColumnName="ProductConditionCode" />
+                <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+                <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+                <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+                <ScalarProperty Name="InventoryQtyL3" ColumnName="InventoryQtyL3" />
+                <ScalarProperty Name="InventoryQty" ColumnName="InventoryQty" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="FinalUpdateDate" ColumnName="FinalUpdateDate" />
+                <ScalarProperty Name="ExpiredDate" ColumnName="ExpiredDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ESTS020_ChangeLocation_SearchAll" FunctionName="StockModel.Store.sp_ESTS020_ChangeLocation_SearchAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="StockModel.sp_ESTS020_ChangeLocation_SearchAll_Result">
+                <ScalarProperty Name="SELECT" ColumnName="SELECT" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="LastUpdateSince" ColumnName="LastUpdateSince" />
+                <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+                <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+                <ScalarProperty Name="ProductConditionCode" ColumnName="ProductConditionCode" />
+                <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+                <ScalarProperty Name="ZoneCode" ColumnName="ZoneCode" />
+                <ScalarProperty Name="RackNo" ColumnName="RackNo" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+                <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+                <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+                <ScalarProperty Name="Inventory" ColumnName="Inventory" />
+                <ScalarProperty Name="InventoryBox" ColumnName="InventoryBox" />
+                <ScalarProperty Name="RatioConvertInventory" ColumnName="RatioConvertInventory" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="Level2UnitName" ColumnName="Level2UnitName" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+                <ScalarProperty Name="ToLocationID" ColumnName="ToLocationID" />
+                <ScalarProperty Name="LocationCodeTO" ColumnName="LocationCodeTO" />
+                <ScalarProperty Name="ToProductConditionID" ColumnName="ToProductConditionID" />
+                <ScalarProperty Name="ChangeQty" ColumnName="ChangeQty" />
+                <ScalarProperty Name="ChangeStatus" ColumnName="ChangeStatus" />
+                <ScalarProperty Name="ProductConditionNameTo" ColumnName="ProductConditionNameTo" />
+                <ScalarProperty Name="ChangeLocationID" ColumnName="ChangeLocationID" />
+                <ScalarProperty Name="FromProductConditionID" ColumnName="FromProductConditionID" />
+                <ScalarProperty Name="FromLocationID" ColumnName="FromLocationID" />
+                <ScalarProperty Name="FromFullCapacityFlag" ColumnName="FromFullCapacityFlag" />
+                <ScalarProperty Name="ToFullCapacityFlag" ColumnName="ToFullCapacityFlag" />
+                <ScalarProperty Name="ChangedDate" ColumnName="ChangedDate" />
+                <ScalarProperty Name="ChangedUser" ColumnName="ChangedUser" />
+                <ScalarProperty Name="RackNoAndLevel" ColumnName="RackNoAndLevel" />
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ESTS050_InquiryReceivingShippingHistory_SearchAll" FunctionName="StockModel.Store.sp_ESTS050_InquiryReceivingShippingHistory_SearchAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="StockModel.sp_ESTS050_InquiryReceivingShippingHistory_SearchAll_Result">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+                <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+                <ScalarProperty Name="ShipmentNo_ReceivingNo" ColumnName="ShipmentNo/ReceivingNo" />
+                <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+                <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="FinalDestination_SupplierCode" ColumnName="FinalDestination/SupplierCode" />
+                <ScalarProperty Name="FinalDestination_SupplierName" ColumnName="FinalDestination/SupplierName" />
+                <ScalarProperty Name="ConditionOfProductCode" ColumnName="ConditionOfProductCode" />
+                <ScalarProperty Name="ConditionOfProduct" ColumnName="ConditionOfProduct" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Incoming" ColumnName="Incoming" />
+                <ScalarProperty Name="Outgoing" ColumnName="Outgoing" />
+                <ScalarProperty Name="PortOfLoadingCode" ColumnName="PortOfLoadingCode" />
+                <ScalarProperty Name="PortOfLoadingName" ColumnName="PortOfLoadingName" />
+                <ScalarProperty Name="PortOfDischargeCode" ColumnName="PortOfDischargeCode" />
+                <ScalarProperty Name="PortOfDischargeName" ColumnName="PortOfDischargeName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="StockModel" >
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

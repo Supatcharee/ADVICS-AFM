@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="O_FGIJ_ShippingModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="O_FGIJ_ShippingModelStoreContainer">
+    <EntitySet Name="tbt_ShippingInstruction" EntityType="O_FGIJ_ShippingModel.Store.tbt_ShippingInstruction" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="tbt_ShippingInstruction">
+    <Key>
+      <PropertyRef Name="ShipmentNo" />
+      <PropertyRef Name="Installment" />
+    </Key>
+    <Property Name="ShipmentNo" Type="nvarchar" Nullable="false" MaxLength="22" />
+    <Property Name="Installment" Type="int" Nullable="false" />
+    <Property Name="OwnerID" Type="int" Nullable="false" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="SONo" Type="nvarchar" MaxLength="30" />
+    <Property Name="CutDate" Type="datetime" />
+    <Property Name="ETD" Type="datetime" Nullable="false" />
+    <Property Name="ETDActual" Type="datetime" />
+    <Property Name="ETA" Type="datetime" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="BookingNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="VesselName1" Type="nvarchar" MaxLength="100" />
+    <Property Name="VesselName2" Type="nvarchar" MaxLength="100" />
+    <Property Name="AgentOwner" Type="nvarchar" MaxLength="100" />
+    <Property Name="PortOfLoadingID" Type="int" />
+    <Property Name="PortOfDischargeID" Type="int" />
+    <Property Name="Freight" Type="decimal" Scale="3" />
+    <Property Name="CurrencyID" Type="int" />
+    <Property Name="FinalDestinationID" Type="int" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="255" />
+    <Property Name="ShipCompleteFlag" Type="bit" />
+    <Property Name="ShipCompleteDate" Type="datetime" />
+    <Property Name="TransferType" Type="int" />
+    <Property Name="TransferDate" Type="datetime" />
+    <Property Name="InvoiceIssuedDate" Type="datetime" />
+    <Property Name="PaymentType" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Function Name="sp_FSES010_LoadLotByProductCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_FSES010_ShippingInstruction_GetInfoWhereShipmentNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShippingNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_FSES010_ShippingInstruction_LoadFinalDestinationInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FinalDestinationID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_FSES010_ShippingInstruction_LoadProductUnitInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_FSES010_ShippingInstruction_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="IsShowAllStatus" Type="int" Mode="In" />
+    <Parameter Name="isActual" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_FSES011_ShippingInstruction_SearchDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_FSES012_ShippingOtherCharge_Other_Detail_Search" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_FSES012_TransportDetail_Search" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Installment" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_FSES012_TransportDetail_TransportCharge_Search" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="TransportTypeID" Type="int" Mode="In" />
+    <Parameter Name="FinalDestinationID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_FSES013_ShippingByLot_Search" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_FSES021_TransferInstruction_ReceivingDetail_Add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="XMLData" Type="xml" Mode="In" />
+    <Parameter Name="CreateUser" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_ISHS010_ExportDocument_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ShippingDateFrom" Type="varchar" Mode="In" />
+    <Parameter Name="ShippingDateTo" Type="varchar" Mode="In" />
+    <Parameter Name="CustomerPONo" Type="nvarchar" Mode="In" />
+    <Parameter Name="SONo" Type="nvarchar" Mode="In" />
+    <Parameter Name="ContainerNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_ISHS010_ExportDocument_UpdatePrePrint" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Installment" Type="int" Mode="In" />
+    <Parameter Name="ContainerNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_ISHS030_ConfirmShipService_GetConfirmShip" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="ShippingAreaID" Type="int" Mode="In" />
+    <Parameter Name="PickDateFrom" Type="date" Mode="In" />
+    <Parameter Name="PickDateTo" Type="date" Mode="In" />
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+    <Parameter Name="DeliveryDateFrom" Type="date" Mode="In" />
+    <Parameter Name="DeliveryDateTo" Type="date" Mode="In" />
+    <Parameter Name="ShippingComplete" Type="int" Mode="In" />
+    <Parameter Name="InvoiceNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_ISHS060_LoadPickingNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ISHS060_PrintDeliveryOrder_EntryDO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Installment" Type="int" Mode="In" />
+    <Parameter Name="User" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_ISHS060_PrintDeliveryOrder_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PickDateFrom" Type="date" Mode="In" />
+    <Parameter Name="PickDateTo" Type="date" Mode="In" />
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ISHS070_ReturnPick_Get" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="ShipFrom" Type="date" Mode="In" />
+    <Parameter Name="ShipTo" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_ISHS071_ReturnPick_Get" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PickingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="ItemID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_JTRS010_InquiryTransportation_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="DeliveryDateFrom" Type="date" Mode="In" />
+    <Parameter Name="DeliveryDateTo" Type="date" Mode="In" />
+    <Parameter Name="FinalDestinationID" Type="int" Mode="In" />
+    <Parameter Name="PortID" Type="int" Mode="In" />
+    <Parameter Name="TruckCompanyID" Type="int" Mode="In" />
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+    <Parameter Name="NoTransportData" Type="int" Mode="In" />
+    <Parameter Name="ContainerNo" Type="varchar" Mode="In" />
+    <Parameter Name="TransportDateFrom" Type="date" Mode="In" />
+    <Parameter Name="TransportDateTo" Type="date" Mode="In" />
+  </Function>
+</Schema>

@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8015F0FA-9D1C-45A0-A794-77C868152FFC}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RubixWebAPI</RootNamespace>
+    <AssemblyName>RubixWebAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\Admin\UserWebMaintenanceController.cs" />
+    <Compile Include="Controllers\Admin\MultiLangController.cs" />
+    <Compile Include="Controllers\Admin\ScreenControlController.cs" />
+    <Compile Include="Controllers\Admin\SecurityMappingController.cs" />
+    <Compile Include="Controllers\Admin\UserGroupController.cs" />
+    <Compile Include="Controllers\Admin\UserMaintenanceController.cs" />
+    <Compile Include="Controllers\APIAuthorizeAttribute.cs" />
+    <Compile Include="Controllers\Common\CommonController.cs" />
+    <Compile Include="Controllers\Common\IdleValidatorController.cs" />
+    <Compile Include="Controllers\HandyTerminal\HandyTerminalController.cs" />
+    <Compile Include="Controllers\Master\ClassificationController.cs" />
+    <Compile Include="Controllers\Master\ConditionController.cs" />
+    <Compile Include="Controllers\Master\CalendarCompanyController.cs" />
+    <Compile Include="Controllers\Master\CalendarShippingController.cs" />
+    <Compile Include="Controllers\Master\CurrencyController.cs" />
+    <Compile Include="Controllers\Master\OwnerController.cs" />
+    <Compile Include="Controllers\Master\DeadStockController.cs" />
+    <Compile Include="Controllers\Master\FinalDestinationController.cs" />
+    <Compile Include="Controllers\Master\LocationController.cs" />
+    <Compile Include="Controllers\Master\PackageController.cs" />
+    <Compile Include="Controllers\Master\PalletController.cs" />
+    <Compile Include="Controllers\Master\PortInformationController.cs" />
+    <Compile Include="Controllers\Master\PrivilegeController.cs" />
+    <Compile Include="Controllers\Master\ProductController.cs" />
+    <Compile Include="Controllers\Master\PurchasePriceController.cs" />
+    <Compile Include="Controllers\Master\SalePriceController.cs" />
+    <Compile Include="Controllers\Master\ShippingAreaController.cs" />
+    <Compile Include="Controllers\Master\CustomerController.cs" />
+    <Compile Include="Controllers\Master\SupplierController.cs" />
+    <Compile Include="Controllers\Master\SystemConfigController.cs" />
+    <Compile Include="Controllers\Master\TransportChargeController.cs" />
+    <Compile Include="Controllers\Master\TransportTypeController.cs" />
+    <Compile Include="Controllers\Master\TruckCompanyController.cs" />
+    <Compile Include="Controllers\Master\ProductGroupController.cs" />
+    <Compile Include="Controllers\Master\TypeOfUnitController.cs" />
+    <Compile Include="Controllers\Master\WarehouseController.cs" />
+    <Compile Include="Controllers\Master\WorkMethodController.cs" />
+    <Compile Include="Controllers\Master\ZoneController.cs" />
+    <Compile Include="Controllers\Operation\Base\BaseReceivingController.cs" />
+    <Compile Include="Controllers\Operation\ChangeLocationController.cs" />
+    <Compile Include="Controllers\Operation\CollectionASNController.cs" />
+    <Compile Include="Controllers\Operation\ConfirmPickingController.cs" />
+    <Compile Include="Controllers\Operation\ConfirmProductStoringController.cs" />
+    <Compile Include="Controllers\Operation\ConfirmReturnController.cs" />
+    <Compile Include="Controllers\Operation\ConfirmShippingEntryController.cs" />
+    <Compile Include="Controllers\Operation\ExportDocumentController.cs" />
+    <Compile Include="Controllers\Operation\PackingInstructionController.cs" />
+    <Compile Include="Controllers\Operation\CorrectInventoryController.cs" />
+    <Compile Include="Controllers\Operation\InquiryInventoryController.cs" />
+    <Compile Include="Controllers\Operation\InquiryTransportationController.cs" />
+    <Compile Include="Controllers\Operation\OrderCancelController.cs" />
+    <Compile Include="Controllers\Operation\OrderRefreshController.cs" />
+    <Compile Include="Controllers\Operation\PickingInstructionController.cs" />
+    <Compile Include="Controllers\Operation\PrintPCIDriverController.cs" />
+    <Compile Include="Controllers\Operation\ProcessConfigController.cs" />
+    <Compile Include="Controllers\Operation\ProductReceiveEntryController.cs" />
+    <Compile Include="Controllers\Operation\ReceivingEntryController.cs" />
+    <Compile Include="Controllers\Operation\ReceivingProgressController.cs" />
+    <Compile Include="Controllers\Operation\ReceivingShippingHistController.cs" />
+    <Compile Include="Controllers\Operation\SalePurchaseOrderController.cs" />
+    <Compile Include="Controllers\Operation\ShippingInstructionController.cs" />
+    <Compile Include="Controllers\Operation\ShippingProgressController.cs" />
+    <Compile Include="Controllers\Operation\SqlServerAgentController.cs" />
+    <Compile Include="Controllers\Operation\StatManageController.cs" />
+    <Compile Include="Controllers\Operation\StockCheckingController.cs" />
+    <Compile Include="Controllers\Operation\StockControlController.cs" />
+    <Compile Include="Controllers\Operation\StoringInstructionController.cs" />
+    <Compile Include="Controllers\Operation\WarehouseUtilizationController.cs" />
+    <Compile Include="Controllers\Report\Base\BaseReportController.cs" />
+    <Compile Include="Controllers\Report\AdviceOfShipmentReportController.cs" />
+    <Compile Include="Controllers\Report\LabelStickerReportController.cs" />
+    <Compile Include="Controllers\Report\PackingListReportController.cs" />
+    <Compile Include="Controllers\Report\ShippingInstructionReportController.cs" />
+    <Compile Include="Controllers\Report\DomesticInvoiceReportController.cs" />
+    <Compile Include="Controllers\Report\ExportInvoiceReportController.cs" />
+    <Compile Include="Controllers\Report\LoadingInstructionReportController.cs" />
+    <Compile Include="Controllers\Report\PackingInstructionReportController.cs" />
+    <Compile Include="Controllers\Report\PartDeliverySheetReportController.cs" />
+    <Compile Include="Controllers\Report\DeliveryOrderReportController.cs" />
+    <Compile Include="Controllers\Report\EstimatePriceReportController.cs" />
+    <Compile Include="Controllers\Report\InventoryCheckingListReportController.cs" />
+    <Compile Include="Controllers\Report\InventoryUsageReportController.cs" />
+    <Compile Include="Controllers\Report\MovementReportController.cs" />
+    <Compile Include="Controllers\Report\OrderBalanceReportController.cs" />
+    <Compile Include="Controllers\Report\PalletReportController.cs" />
+    <Compile Include="Controllers\Report\PickingChargeReportController.cs" />
+    <Compile Include="Controllers\Report\PickingListReportController.cs" />
+    <Compile Include="Controllers\Report\PrivilegeFormatReportController.cs" />
+    <Compile Include="Controllers\Report\PurchaseOrderReportController.cs" />
+    <Compile Include="Controllers\Report\PutAwayReportController.cs" />
+    <Compile Include="Controllers\Report\RawMaterialTagReportController.cs" />
+    <Compile Include="Controllers\Report\ReceivePlanListReportController.cs" />
+    <Compile Include="Controllers\Report\ReceivingInstructionController.cs" />
+    <Compile Include="Controllers\Report\ReceivingReportController.cs" />
+    <Compile Include="Controllers\Report\ShippingDeliveryReportController.cs" />
+    <Compile Include="Controllers\Report\SlowMovementReportController.cs" />
+    <Compile Include="Controllers\Report\StockCardReportController.cs" />
+    <Compile Include="DailyProcess.aspx.cs">
+      <DependentUpon>DailyProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DailyProcess.aspx.designer.cs">
+      <DependentUpon>DailyProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MonthlyProcess.aspx.cs">
+      <DependentUpon>MonthlyProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MonthlyProcess.aspx.designer.cs">
+      <DependentUpon>MonthlyProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="DailyProcess.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="DLL\Net40\Newtonsoft.Json.dll" />
+    <Content Include="DLL\Net40\Newtonsoft.Json.pdb" />
+    <Content Include="DLL\Net40\Newtonsoft.Json.xml" />
+    <Content Include="DLL\System.Net.Http.Formatting.dll" />
+    <Content Include="DLL\System.Web.Http.dll" />
+    <Content Include="DLL\System.Web.Http.WebHost.dll" />
+    <Content Include="Global.asax" />
+    <Content Include="MonthlyProcess.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="Rubix.png" />
+    <Content Include="RubixMainMenu.png" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CSI.Windows.Business\CSI.Business.csproj">
+      <Project>{33BCD130-D84E-49C0-BD18-51DE5885C333}</Project>
+      <Name>CSI.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IMS.Framework\Rubix.Framework.csproj">
+      <Project>{0A356D2B-DE8A-40D9-BA52-83B4BB60D3BB}</Project>
+      <Name>Rubix.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57475</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/AdvicsWebAPI</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://localhost/RubixWebAPI</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

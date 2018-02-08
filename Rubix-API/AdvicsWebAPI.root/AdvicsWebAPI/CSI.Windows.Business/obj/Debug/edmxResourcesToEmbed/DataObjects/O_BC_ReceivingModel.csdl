@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="O_BC_ReceivingModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="O_BC_ReceivingModelContainer" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_CRCS020_StoringInstruction_Pallet_Search" ReturnType="Collection(O_BC_ReceivingModel.sp_CRCS020_StoringInstruction_Pallet_Search_Result)">
+      <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbt_ReceivingInstructionDetail" EntityType="O_BC_ReceivingModel.tbt_ReceivingInstructionDetail" />
+    <EntitySet Name="tbt_ReceivingInstructionHeader" EntityType="O_BC_ReceivingModel.tbt_ReceivingInstructionHeader" />
+    <EntitySet Name="tbt_ReceivingStatus" EntityType="O_BC_ReceivingModel.tbt_ReceivingStatus" />
+    <AssociationSet Name="FK_tbt_ReceivingInstructionDetail_tbt_ReceivingInstructionHeader" Association="O_BC_ReceivingModel.FK_tbt_ReceivingInstructionDetail_tbt_ReceivingInstructionHeader">
+      <End Role="tbt_ReceivingInstructionHeader" EntitySet="tbt_ReceivingInstructionHeader" />
+      <End Role="tbt_ReceivingInstructionDetail" EntitySet="tbt_ReceivingInstructionDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbt_ReceivingStatus_tbt_ReceivingInstructionDetail" Association="O_BC_ReceivingModel.FK_tbt_ReceivingStatus_tbt_ReceivingInstructionDetail">
+      <End Role="tbt_ReceivingInstructionDetail" EntitySet="tbt_ReceivingInstructionDetail" />
+      <End Role="tbt_ReceivingStatus" EntitySet="tbt_ReceivingStatus" />
+    </AssociationSet>
+    <EntitySet Name="tbt_ReceivingOtherCharge" EntityType="O_BC_ReceivingModel.tbt_ReceivingOtherCharge" />
+    <EntitySet Name="tbt_ReceivingTransportation" EntityType="O_BC_ReceivingModel.tbt_ReceivingTransportation" />
+    <AssociationSet Name="FK_tbt_ReceivingOtherCharge_tbt_ReceivingInstructionHeader" Association="O_BC_ReceivingModel.FK_tbt_ReceivingOtherCharge_tbt_ReceivingInstructionHeader">
+      <End Role="tbt_ReceivingInstructionHeader" EntitySet="tbt_ReceivingInstructionHeader" />
+      <End Role="tbt_ReceivingOtherCharge" EntitySet="tbt_ReceivingOtherCharge" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbt_ReceivingTransportation_tbt_ReceivingInstructionHeader" Association="O_BC_ReceivingModel.FK_tbt_ReceivingTransportation_tbt_ReceivingInstructionHeader">
+      <End Role="tbt_ReceivingInstructionHeader" EntitySet="tbt_ReceivingInstructionHeader" />
+      <End Role="tbt_ReceivingTransportation" EntitySet="tbt_ReceivingTransportation" />
+    </AssociationSet>
+    <FunctionImport Name="sp_CRCS030_UnplanReceivingEntry_SearchAll" ReturnType="Collection(O_BC_ReceivingModel.sp_CRCS030_UnplanReceivingEntry_SearchAll_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+      <Parameter Name="ArrivalDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="ArrivalDateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="SupplierID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="InvoiceNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_CRCS020_StoringInstruction_SearchAll" ReturnType="Collection(O_BC_ReceivingModel.sp_CRCS020_StoringInstruction_SearchAll_Result)">
+      <Parameter Name="ArrivalStatus" Mode="In" Type="Int32" />
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ArrivalDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="ArrivalDateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="SlipNo" Mode="In" Type="String" />
+      <Parameter Name="TruckCompanyID" Mode="In" Type="Int32" />
+      <Parameter Name="SupplierID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+      <Parameter Name="LotNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_CRCS051_ConfirmReceivingDetail_Get" ReturnType="Collection(O_BC_ReceivingModel.sp_CRCS051_ConfirmReceivingDetail_Get_Result)">
+      <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+      <Parameter Name="Installment" Mode="In" Type="Int32" />
+      <Parameter Name="ReceivingDate" Mode="InOut" Type="DateTime" />
+      <Parameter Name="NoOfPallet" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_CRCS010_CollectionASN_SearchAll" ReturnType="Collection(O_BC_ReceivingModel.sp_CRCS010_CollectionASN_SearchAll_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ArrivalDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="ArrivalDateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="SlipNo" Mode="In" Type="String" />
+      <Parameter Name="TruckCompanyID" Mode="In" Type="Int32" />
+      <Parameter Name="SupplierID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_CRCS050_ProductReceiveEntry_SearchAll" ReturnType="Collection(O_BC_ReceivingModel.sp_CRCS050_ProductReceiveEntry_SearchAll_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="SupplierID" Mode="In" Type="Int32" />
+      <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+      <Parameter Name="LineNo" Mode="In" Type="Int32" />
+      <Parameter Name="ReceivingCompleted" Mode="In" Type="Int32" />
+      <Parameter Name="ReceivedDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="ReceivedDateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="PDSNo" Mode="In" Type="String" />
+      <Parameter Name="PONo" Mode="In" Type="String" />
+      <Parameter Name="CustomerPONo" Mode="In" Type="String" />
+      <Parameter Name="CustomerPOIssueDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="CustomerPOIssueDateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="isAfterMarket" Mode="In" Type="Int32" />
+      <Parameter Name="isPackingMaterial" Mode="In" Type="Int32" />
+      <Parameter Name="isPart" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_CRCS020_StoringInstruction_Pallet_Search_Result">
+    <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <EntityType Name="tbt_ReceivingInstructionDetail">
+    <Key>
+      <PropertyRef Name="ReceivingNo" />
+      <PropertyRef Name="Installment" />
+      <PropertyRef Name="LineNo" />
+    </Key>
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="String" Name="ReferenceNo" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="InvoiceNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PONo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="String" Name="LotNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ActualLotNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PalletNoRef" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PalletNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="TypeOfPackageID" Nullable="false" />
+    <Property Type="Decimal" Name="NetWeight" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="UnitVolume" Precision="19" Scale="5" />
+    <Property Type="Decimal" Name="InPackage" Precision="18" Scale="3" />
+    <Property Type="Int32" Name="InPackageUnitID" />
+    <Property Type="Int32" Name="ProductConditionID" Nullable="false" />
+    <Property Type="Int32" Name="ActualProductConditionID" />
+    <Property Type="Decimal" Name="Qty" Nullable="false" Precision="18" Scale="3" />
+    <Property Type="Int32" Name="QtyUnitID" Nullable="false" />
+    <Property Type="Decimal" Name="InstructionQty" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="ReceiveQty" Precision="18" Scale="3" />
+    <Property Type="String" Name="DetailRemark" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DataSourceFlag" Nullable="false" />
+    <Property Type="DateTime" Name="ExpiredDate" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="UpdateDate" />
+    <Property Type="String" Name="UpdateUser" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbt_ReceivingInstructionHeader" Relationship="O_BC_ReceivingModel.FK_tbt_ReceivingInstructionDetail_tbt_ReceivingInstructionHeader" FromRole="tbt_ReceivingInstructionDetail" ToRole="tbt_ReceivingInstructionHeader" />
+    <NavigationProperty Name="tbt_ReceivingStatus" Relationship="O_BC_ReceivingModel.FK_tbt_ReceivingStatus_tbt_ReceivingInstructionDetail" FromRole="tbt_ReceivingInstructionDetail" ToRole="tbt_ReceivingStatus" />
+  </EntityType>
+  <EntityType Name="tbt_ReceivingInstructionHeader">
+    <Key>
+      <PropertyRef Name="ReceivingNo" />
+      <PropertyRef Name="Installment" />
+    </Key>
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+    <Property Type="Int32" Name="SupplierID" Nullable="false" />
+    <Property Type="DateTime" Name="ArrivalDate" Nullable="false" />
+    <Property Type="String" Name="Remark" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="SlipCompleteDate" />
+    <Property Type="Boolean" Name="CancelSlipFlag" />
+    <Property Type="String" Name="SlipNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="TransferDate" />
+    <Property Type="Int32" Name="TransferType" />
+    <Property Type="Int32" Name="PalletQty" />
+    <Property Type="DateTime" Name="GenerateDiffDate" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="UpdateDate" />
+    <Property Type="String" Name="UpdateUser" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbt_ReceivingInstructionDetail" Relationship="O_BC_ReceivingModel.FK_tbt_ReceivingInstructionDetail_tbt_ReceivingInstructionHeader" FromRole="tbt_ReceivingInstructionHeader" ToRole="tbt_ReceivingInstructionDetail" />
+    <NavigationProperty Name="tbt_ReceivingOtherCharge" Relationship="O_BC_ReceivingModel.FK_tbt_ReceivingOtherCharge_tbt_ReceivingInstructionHeader" FromRole="tbt_ReceivingInstructionHeader" ToRole="tbt_ReceivingOtherCharge" />
+    <NavigationProperty Name="tbt_ReceivingTransportation" Relationship="O_BC_ReceivingModel.FK_tbt_ReceivingTransportation_tbt_ReceivingInstructionHeader" FromRole="tbt_ReceivingInstructionHeader" ToRole="tbt_ReceivingTransportation" />
+  </EntityType>
+  <EntityType Name="tbt_ReceivingStatus">
+    <Key>
+      <PropertyRef Name="ReceivingNo" />
+      <PropertyRef Name="Installment" />
+      <PropertyRef Name="LineNo" />
+    </Key>
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="DateTime" Name="InterfaceReceivedDate" />
+    <Property Type="DateTime" Name="ReceivingEntryDate" />
+    <Property Type="DateTime" Name="TransitInstructionIssuedDate" />
+    <Property Type="DateTime" Name="ReceivingDate" />
+    <Property Type="DateTime" Name="TransitDate" />
+    <Property Type="DateTime" Name="CancelDate" />
+    <Property Type="Int32" Name="StatusID" Nullable="false" />
+    <NavigationProperty Name="tbt_ReceivingInstructionDetail" Relationship="O_BC_ReceivingModel.FK_tbt_ReceivingStatus_tbt_ReceivingInstructionDetail" FromRole="tbt_ReceivingStatus" ToRole="tbt_ReceivingInstructionDetail" />
+  </EntityType>
+  <Association Name="FK_tbt_ReceivingInstructionDetail_tbt_ReceivingInstructionHeader">
+    <End Type="O_BC_ReceivingModel.tbt_ReceivingInstructionHeader" Role="tbt_ReceivingInstructionHeader" Multiplicity="1" />
+    <End Type="O_BC_ReceivingModel.tbt_ReceivingInstructionDetail" Role="tbt_ReceivingInstructionDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbt_ReceivingInstructionHeader">
+        <PropertyRef Name="ReceivingNo" />
+        <PropertyRef Name="Installment" />
+      </Principal>
+      <Dependent Role="tbt_ReceivingInstructionDetail">
+        <PropertyRef Name="ReceivingNo" />
+        <PropertyRef Name="Installment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbt_ReceivingStatus_tbt_ReceivingInstructionDetail">
+    <End Type="O_BC_ReceivingModel.tbt_ReceivingInstructionDetail" Role="tbt_ReceivingInstructionDetail" Multiplicity="1" />
+    <End Type="O_BC_ReceivingModel.tbt_ReceivingStatus" Role="tbt_ReceivingStatus" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tbt_ReceivingInstructionDetail">
+        <PropertyRef Name="ReceivingNo" />
+        <PropertyRef Name="Installment" />
+        <PropertyRef Name="LineNo" />
+      </Principal>
+      <Dependent Role="tbt_ReceivingStatus">
+        <PropertyRef Name="ReceivingNo" />
+        <PropertyRef Name="Installment" />
+        <PropertyRef Name="LineNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbt_ReceivingOtherCharge">
+    <Key>
+      <PropertyRef Name="OtherChargeID" />
+    </Key>
+    <Property Type="Int32" Name="OtherChargeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="DateTime" Name="ChargeDate" Nullable="false" />
+    <Property Type="Decimal" Name="OtherCharge" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="String" Name="Remark" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+    <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="UpdateDate" />
+    <Property Type="String" Name="UpdateUser" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbt_ReceivingInstructionHeader" Relationship="O_BC_ReceivingModel.FK_tbt_ReceivingOtherCharge_tbt_ReceivingInstructionHeader" FromRole="tbt_ReceivingOtherCharge" ToRole="tbt_ReceivingInstructionHeader" />
+  </EntityType>
+  <EntityType Name="tbt_ReceivingTransportation">
+    <Key>
+      <PropertyRef Name="ReceivingTransportID" />
+    </Key>
+    <Property Type="Int32" Name="ReceivingTransportID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="Int32" Name="TruckCompanyID" Nullable="false" />
+    <Property Type="Int32" Name="TransportTypeID" Nullable="false" />
+    <Property Type="Decimal" Name="TransportCharge" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="UnstaffingCharge" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="String" Name="RegistrationNo" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContainerNo" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DriverName" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remark" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="PlanIn" />
+    <Property Type="DateTime" Name="PlanOut" />
+    <Property Type="DateTime" Name="ActualIn" />
+    <Property Type="DateTime" Name="ActualOut" />
+    <Property Type="Decimal" Name="TotalReceiveWeight" Precision="18" Scale="3" />
+    <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+    <Property Type="String" Name="UpdateUser" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="UpdateDate" />
+    <NavigationProperty Name="tbt_ReceivingInstructionHeader" Relationship="O_BC_ReceivingModel.FK_tbt_ReceivingTransportation_tbt_ReceivingInstructionHeader" FromRole="tbt_ReceivingTransportation" ToRole="tbt_ReceivingInstructionHeader" />
+  </EntityType>
+  <Association Name="FK_tbt_ReceivingOtherCharge_tbt_ReceivingInstructionHeader">
+    <End Type="O_BC_ReceivingModel.tbt_ReceivingInstructionHeader" Role="tbt_ReceivingInstructionHeader" Multiplicity="1" />
+    <End Type="O_BC_ReceivingModel.tbt_ReceivingOtherCharge" Role="tbt_ReceivingOtherCharge" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbt_ReceivingInstructionHeader">
+        <PropertyRef Name="ReceivingNo" />
+        <PropertyRef Name="Installment" />
+      </Principal>
+      <Dependent Role="tbt_ReceivingOtherCharge">
+        <PropertyRef Name="ReceivingNo" />
+        <PropertyRef Name="Installment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbt_ReceivingTransportation_tbt_ReceivingInstructionHeader">
+    <End Type="O_BC_ReceivingModel.tbt_ReceivingInstructionHeader" Role="tbt_ReceivingInstructionHeader" Multiplicity="1" />
+    <End Type="O_BC_ReceivingModel.tbt_ReceivingTransportation" Role="tbt_ReceivingTransportation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbt_ReceivingInstructionHeader">
+        <PropertyRef Name="ReceivingNo" />
+        <PropertyRef Name="Installment" />
+      </Principal>
+      <Dependent Role="tbt_ReceivingTransportation">
+        <PropertyRef Name="ReceivingNo" />
+        <PropertyRef Name="Installment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="sp_CRCS030_UnplanReceivingEntry_SearchAll_Result">
+    <Property Type="String" Name="StatusName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="String" Name="OwnerCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="OwnerName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="WarehouseCode" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="SupplierCode" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="SupplierName" Nullable="true" MaxLength="60" />
+    <Property Type="DateTime" Name="ArrivalDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="NumberOfPallet" Nullable="true" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CreateUser" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="UpdateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="UpdateUser" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_CRCS020_StoringInstruction_SearchAll_Result">
+    <Property Type="Boolean" Name="Select" Nullable="true" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="OwnerID" Nullable="true" />
+    <Property Type="Int32" Name="WarehouseID" Nullable="true" />
+    <Property Type="Int32" Name="SupplierID" Nullable="true" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="Qty" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="NetWeight" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="UnitVolumn" Nullable="true" Precision="38" Scale="5" />
+    <Property Type="Int32" Name="Installment" Nullable="true" />
+    <Property Type="Int32" Name="NoOfDetail" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_CRCS051_ConfirmReceivingDetail_Get_Result">
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="String" Name="ItemCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ItemName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="ProductConditionID" Nullable="false" />
+    <Property Type="String" Name="ConditionOfItem" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BaseActualLotNo" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="InstructionQty" Nullable="true" Precision="28" Scale="10" />
+    <Property Type="Decimal" Name="RemainQty" Nullable="true" Precision="29" Scale="10" />
+    <Property Type="String" Name="UnitName" Nullable="false" MaxLength="100" />
+    <Property Type="Decimal" Name="ReceiveQty" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="String" Name="ActualLotNo" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ActualProductConditionID" Nullable="false" />
+    <Property Type="DateTime" Name="ExpiredDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="IsDeletable" Nullable="false" />
+    <Property Type="Int32" Name="ItemExpiredTypeID" Nullable="true" />
+    <Property Type="Int32" Name="ShelfLife" Nullable="false" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="Decimal" Name="NumberOfUnitLevel2" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Decimal" Name="NumberOfUnitLevel3" Nullable="true" Precision="18" Scale="3" />
+  </ComplexType>
+  <ComplexType Name="sp_CRCS010_CollectionASN_SearchAll_Result">
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="DateTime" Name="ArrivalDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PalletNoRef" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="Qty" Nullable="false" Precision="18" Scale="3" />
+    <Property Type="Int32" Name="QtyUnitID" Nullable="false" />
+    <Property Type="Decimal" Name="NetWeight" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Int32" Name="TypeOfPackageID" Nullable="false" />
+    <Property Type="Decimal" Name="InPackage" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Int32" Name="InPackageUnitID" Nullable="true" />
+    <Property Type="Int32" Name="ProductConditionID" Nullable="false" />
+    <Property Type="String" Name="SupplierCode" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="SupplierLongName" Nullable="false" MaxLength="60" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_CRCS050_ProductReceiveEntry_SearchAll_Result">
+    <Property Type="Boolean" Name="SELECT" Nullable="true" />
+    <Property Type="String" Name="PONo" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="PDSNo" Nullable="false" MaxLength="30" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="Decimal" Name="QtyLv2" Nullable="true" Precision="28" Scale="10" />
+    <Property Type="Decimal" Name="QtyLv3" Nullable="true" Precision="28" Scale="10" />
+    <Property Type="Decimal" Name="ReceivingPallet" Nullable="true" Precision="28" Scale="10" />
+    <Property Type="Decimal" Name="ReceiveQtyLv2" Nullable="true" Precision="28" Scale="10" />
+    <Property Type="Decimal" Name="ReceiveQtyLv3" Nullable="true" Precision="28" Scale="10" />
+    <Property Type="Decimal" Name="BaseReceiveQtyLv2" Nullable="true" Precision="28" Scale="10" />
+    <Property Type="Decimal" Name="BaseReceiveQtyLv3" Nullable="true" Precision="28" Scale="10" />
+    <Property Type="DateTime" Name="ArrivalDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="ReceivedDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+    <Property Type="Int32" Name="NoOfPallet" Nullable="true" />
+    <Property Type="Int32" Name="BaseNoOfPallet" Nullable="true" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="AllStatusID" Nullable="true" />
+    <Property Type="Int32" Name="StatusID" Nullable="false" />
+    <Property Type="String" Name="QtyUnitLv2" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="QtyUnitLv3" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="ReceiveSeq" Nullable="false" />
+    <Property Type="Int32" Name="ProductConditionID" Nullable="false" />
+    <Property Type="DateTime" Name="UpdateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="SupplierCode" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="SupplierLongName" Nullable="false" MaxLength="60" />
+    <Property Type="Int32" Name="SortedLineNo" Nullable="true" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="10" />
+  </ComplexType>
+</Schema>

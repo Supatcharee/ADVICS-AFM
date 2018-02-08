@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="O_D_TransitModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="O_D_TransitModelStoreContainer">
+          <EntitySet Name="tbt_TransitConfirmed" EntityType="O_D_TransitModel.Store.tbt_TransitConfirmed" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbt_TransitInstructionItems" EntityType="O_D_TransitModel.Store.tbt_TransitInstructionItems" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="tbt_TransitConfirmed">
+          <Key>
+            <PropertyRef Name="ReceivingNo" />
+            <PropertyRef Name="Installment" />
+            <PropertyRef Name="LineNo" />
+            <PropertyRef Name="ReceiveSeq" />
+            <PropertyRef Name="TransitSeq" />
+          </Key>
+          <Property Name="OwnerID" Type="int" Nullable="false" />
+          <Property Name="ReceivingNo" Type="nvarchar" Nullable="false" MaxLength="22" />
+          <Property Name="Installment" Type="int" Nullable="false" />
+          <Property Name="LineNo" Type="int" Nullable="false" />
+          <Property Name="ReceiveSeq" Type="int" Nullable="false" />
+          <Property Name="TransitSeq" Type="int" Nullable="false" />
+          <Property Name="LocationID" Type="int" Nullable="false" />
+          <Property Name="TransitQty" Type="numeric" Nullable="false" Scale="3" />
+          <Property Name="ConfirmFlag" Type="bit" Nullable="false" />
+          <Property Name="LastUpdate" Type="datetime" />
+          <Property Name="StockActualQty" Type="numeric" Scale="3" />
+          <Property Name="CreateUser" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbt_TransitInstructionItems">
+          <Key>
+            <PropertyRef Name="ReceivingNo" />
+            <PropertyRef Name="Installment" />
+            <PropertyRef Name="LineNo" />
+          </Key>
+          <Property Name="OwnerID" Type="int" Nullable="false" />
+          <Property Name="ReceivingNo" Type="nvarchar" Nullable="false" MaxLength="22" />
+          <Property Name="Installment" Type="int" Nullable="false" />
+          <Property Name="LineNo" Type="int" Nullable="false" />
+          <Property Name="PalletNo" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="ProductConditionID" Type="int" Nullable="false" />
+          <Property Name="TransitInstructQty" Type="numeric" Nullable="false" Scale="3" />
+          <Property Name="ConfirmTransitDraftTime" Type="datetime" />
+          <Property Name="ConfirmTransitDraftNo" Type="nvarchar" MaxLength="25" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="UpdateUser" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Function Name="sp_DSRS010_ConfirmProductStoring_LoadStockByLocation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LocationID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_DSRS010_ConfirmProductStoring_LoadSuggest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="LineNo" Type="int" Mode="In" />
+          <Parameter Name="ReceiveSeq" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_DSRS010_ConfirmProductStoring_LoadTransitConfirm" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="Installment" Type="int" Mode="In" />
+          <Parameter Name="LineNo" Type="int" Mode="In" />
+          <Parameter Name="ReceiveSeq" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_DSRS010_ConfirmProductStoring_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="WarehouseID" Type="int" Mode="In" />
+          <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="LineNo" Type="int" Mode="In" />
+          <Parameter Name="SupplierID" Type="int" Mode="In" />
+          <Parameter Name="ShowConfirm" Type="int" Mode="In" />
+          <Parameter Name="isAfterMarket" Type="int" Mode="In" />
+          <Parameter Name="TransitDateFrom" Type="datetime" Mode="In" />
+          <Parameter Name="TransitDateTo" Type="datetime" Mode="In" />
+          <Parameter Name="isPackingMaterial" Type="int" Mode="In" />
+          <Parameter Name="isPart" Type="int" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="O_D_TransitModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="O_D_TransitModelContainer" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="sp_DSRS010_ConfirmProductStoring_LoadStockByLocation" ReturnType="Collection(O_D_TransitModel.sp_DSRS010_ConfirmProductStoring_LoadStockByLocation_Result)">
+          <Parameter Name="LocationID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="tbt_TransitConfirmed" EntityType="O_D_TransitModel.tbt_TransitConfirmed" />
+          <EntitySet Name="tbt_TransitInstructionItems" EntityType="O_D_TransitModel.tbt_TransitInstructionItems" />
+          <FunctionImport Name="sp_DSRS010_ConfirmProductStoring_SearchAll" ReturnType="Collection(O_D_TransitModel.sp_DSRS010_ConfirmProductStoring_SearchAll_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+            <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+            <Parameter Name="LineNo" Mode="In" Type="Int32" />
+            <Parameter Name="SupplierID" Mode="In" Type="Int32" />
+            <Parameter Name="ShowConfirm" Mode="In" Type="Int32" />
+            <Parameter Name="isAfterMarket" Mode="In" Type="Int32" />
+            <Parameter Name="TransitDateFrom" Mode="In" Type="DateTime" />
+            <Parameter Name="TransitDateTo" Mode="In" Type="DateTime" />
+            <Parameter Name="isPackingMaterial" Mode="In" Type="Int32" />
+            <Parameter Name="isPart" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_DSRS010_ConfirmProductStoring_LoadTransitConfirm" ReturnType="Collection(O_D_TransitModel.sp_DSRS010_ConfirmProductStoring_LoadTransitConfirm_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+            <Parameter Name="Installment" Mode="In" Type="Int32" />
+            <Parameter Name="LineNo" Mode="In" Type="Int32" />
+            <Parameter Name="ReceiveSeq" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_DSRS010_ConfirmProductStoring_LoadSuggest" ReturnType="Collection(O_D_TransitModel.sp_DSRS010_ConfirmProductStoring_LoadSuggest_Result)">
+            <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+            <Parameter Name="LineNo" Mode="In" Type="Int32" />
+            <Parameter Name="ReceiveSeq" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="sp_DSRS010_ConfirmProductStoring_LoadStockByLocation_Result">
+          <Property Type="Int32" Name="TransitSeq" Nullable="false" />
+          <Property Type="Int32" Name="LocationID" Nullable="false" />
+          <Property Type="Decimal" Name="TotalCapacity" Nullable="true" Precision="19" Scale="5" />
+          <Property Type="Decimal" Name="CurrentCapacity" Nullable="false" Precision="38" Scale="3" />
+          <Property Type="Decimal" Name="StockActualQty" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="Boolean" Name="FullCapacityFlag" Nullable="true" />
+          <Property Type="String" Name="UnitCode" Nullable="false" MaxLength="10" />
+        </ComplexType>
+        <EntityType Name="tbt_TransitConfirmed">
+          <Key>
+            <PropertyRef Name="ReceivingNo" />
+            <PropertyRef Name="Installment" />
+            <PropertyRef Name="LineNo" />
+            <PropertyRef Name="ReceiveSeq" />
+            <PropertyRef Name="TransitSeq" />
+          </Key>
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+          <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Installment" Nullable="false" />
+          <Property Type="Int32" Name="LineNo" Nullable="false" />
+          <Property Type="Int32" Name="ReceiveSeq" Nullable="false" />
+          <Property Type="Int32" Name="TransitSeq" Nullable="false" />
+          <Property Type="Int32" Name="LocationID" Nullable="false" />
+          <Property Type="Decimal" Name="TransitQty" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="Boolean" Name="ConfirmFlag" Nullable="false" />
+          <Property Type="DateTime" Name="LastUpdate" />
+          <Property Type="Decimal" Name="StockActualQty" Precision="18" Scale="3" />
+          <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbt_TransitInstructionItems">
+          <Key>
+            <PropertyRef Name="ReceivingNo" />
+            <PropertyRef Name="Installment" />
+            <PropertyRef Name="LineNo" />
+          </Key>
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+          <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Installment" Nullable="false" />
+          <Property Type="Int32" Name="LineNo" Nullable="false" />
+          <Property Type="String" Name="PalletNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ProductID" Nullable="false" />
+          <Property Type="Int32" Name="ProductConditionID" Nullable="false" />
+          <Property Type="Decimal" Name="TransitInstructQty" Nullable="false" Precision="18" Scale="3" />
+          <Property Type="DateTime" Name="ConfirmTransitDraftTime" />
+          <Property Type="String" Name="ConfirmTransitDraftNo" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+          <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="UpdateDate" />
+          <Property Type="String" Name="UpdateUser" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <ComplexType Name="sp_DSRS010_ConfirmProductStoring_SearchAll_Result">
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+          <Property Type="Boolean" Name="Select" Nullable="true" />
+          <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+          <Property Type="Int32" Name="SortedLineNo" Nullable="true" />
+          <Property Type="Int32" Name="ProductID" Nullable="false" />
+          <Property Type="Int32" Name="ProductConditionID" Nullable="false" />
+          <Property Type="Decimal" Name="Qty" Nullable="true" Precision="38" Scale="7" />
+          <Property Type="Decimal" Name="ReceiveQty" Nullable="true" Precision="38" Scale="7" />
+          <Property Type="Decimal" Name="TransitQty" Nullable="true" Precision="1" Scale="1" />
+          <Property Type="String" Name="TransitStatus" Nullable="false" MaxLength="13" />
+          <Property Type="Boolean" Name="TransitCompleteFlag" Nullable="false" />
+          <Property Type="Int32" Name="LocationID" Nullable="true" />
+          <Property Type="DateTime" Name="TransitDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+          <Property Type="Int32" Name="ReceiveSeq" Nullable="false" />
+          <Property Type="Int32" Name="TransitSeq" Nullable="true" />
+          <Property Type="Int32" Name="StatusID" Nullable="false" />
+          <Property Type="Int32" Name="Installment" Nullable="false" />
+          <Property Type="Int32" Name="LineNo" Nullable="false" />
+          <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="FullFlag" Nullable="true" />
+          <Property Type="Int32" Name="AllStatus" Nullable="true" />
+          <Property Type="String" Name="UnitCode" Nullable="false" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="sp_DSRS010_ConfirmProductStoring_LoadTransitConfirm_Result">
+          <Property Type="Int32" Name="TransitSeq" Nullable="false" />
+          <Property Type="Int32" Name="LocationID" Nullable="true" />
+          <Property Type="Decimal" Name="TotalCapacity" Nullable="true" Precision="19" Scale="5" />
+          <Property Type="Decimal" Name="CurrentCapacity" Nullable="true" Precision="38" Scale="7" />
+          <Property Type="Decimal" Name="StockActualQty" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="Boolean" Name="FullCapacityFlag" Nullable="true" />
+          <Property Type="String" Name="UnitCode" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="LocationTypeID" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_DSRS010_ConfirmProductStoring_LoadSuggest_Result">
+          <Property Type="Int32" Name="TransitSeq" Nullable="false" />
+          <Property Type="Int32" Name="LocationID" Nullable="true" />
+          <Property Type="Decimal" Name="TotalCapacity" Nullable="true" Precision="19" Scale="5" />
+          <Property Type="Decimal" Name="CurrentCapacity" Nullable="true" Precision="38" Scale="3" />
+          <Property Type="Decimal" Name="StockActualQty" Nullable="true" Precision="38" Scale="7" />
+          <Property Type="Boolean" Name="FullCapacityFlag" Nullable="true" />
+          <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="LocationTypeID" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="O_D_TransitModel" />
+        <Alias Key="Target" Value="O_D_TransitModel.Store" />
+        <EntityContainerMapping CdmEntityContainer="O_D_TransitModelContainer" StorageEntityContainer="O_D_TransitModelStoreContainer">
+          <FunctionImportMapping FunctionImportName="sp_DSRS010_ConfirmProductStoring_LoadStockByLocation" FunctionName="O_D_TransitModel.Store.sp_DSRS010_ConfirmProductStoring_LoadStockByLocation">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="O_D_TransitModel.sp_DSRS010_ConfirmProductStoring_LoadStockByLocation_Result">
+                <ScalarProperty Name="TransitSeq" ColumnName="TransitSeq" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="TotalCapacity" ColumnName="TotalCapacity" />
+                <ScalarProperty Name="CurrentCapacity" ColumnName="CurrentCapacity" />
+                <ScalarProperty Name="StockActualQty" ColumnName="StockActualQty" />
+                <ScalarProperty Name="FullCapacityFlag" ColumnName="FullCapacityFlag" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="tbt_TransitConfirmed">
+            <EntityTypeMapping TypeName="O_D_TransitModel.tbt_TransitConfirmed">
+              <MappingFragment StoreEntitySet="tbt_TransitConfirmed">
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="StockActualQty" ColumnName="StockActualQty" />
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="ConfirmFlag" ColumnName="ConfirmFlag" />
+                <ScalarProperty Name="TransitQty" ColumnName="TransitQty" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="TransitSeq" ColumnName="TransitSeq" />
+                <ScalarProperty Name="ReceiveSeq" ColumnName="ReceiveSeq" />
+                <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+                <ScalarProperty Name="Installment" ColumnName="Installment" />
+                <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbt_TransitInstructionItems">
+            <EntityTypeMapping TypeName="O_D_TransitModel.tbt_TransitInstructionItems">
+              <MappingFragment StoreEntitySet="tbt_TransitInstructionItems">
+                <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="ConfirmTransitDraftNo" ColumnName="ConfirmTransitDraftNo" />
+                <ScalarProperty Name="ConfirmTransitDraftTime" ColumnName="ConfirmTransitDraftTime" />
+                <ScalarProperty Name="TransitInstructQty" ColumnName="TransitInstructQty" />
+                <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+                <ScalarProperty Name="Installment" ColumnName="Installment" />
+                <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_DSRS010_ConfirmProductStoring_SearchAll" FunctionName="O_D_TransitModel.Store.sp_DSRS010_ConfirmProductStoring_SearchAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="O_D_TransitModel.sp_DSRS010_ConfirmProductStoring_SearchAll_Result">
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="Select" ColumnName="Select" />
+                <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+                <ScalarProperty Name="SortedLineNo" ColumnName="SortedLineNo" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="ReceiveQty" ColumnName="ReceiveQty" />
+                <ScalarProperty Name="TransitQty" ColumnName="TransitQty" />
+                <ScalarProperty Name="TransitStatus" ColumnName="TransitStatus" />
+                <ScalarProperty Name="TransitCompleteFlag" ColumnName="TransitCompleteFlag" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="TransitDate" ColumnName="TransitDate" />
+                <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+                <ScalarProperty Name="ReceiveSeq" ColumnName="ReceiveSeq" />
+                <ScalarProperty Name="TransitSeq" ColumnName="TransitSeq" />
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+                <ScalarProperty Name="Installment" ColumnName="Installment" />
+                <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+                <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+                <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+                <ScalarProperty Name="FullFlag" ColumnName="FullFlag" />
+                <ScalarProperty Name="AllStatus" ColumnName="AllStatus" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_DSRS010_ConfirmProductStoring_LoadTransitConfirm" FunctionName="O_D_TransitModel.Store.sp_DSRS010_ConfirmProductStoring_LoadTransitConfirm">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="O_D_TransitModel.sp_DSRS010_ConfirmProductStoring_LoadTransitConfirm_Result">
+                <ScalarProperty Name="TransitSeq" ColumnName="TransitSeq" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="TotalCapacity" ColumnName="TotalCapacity" />
+                <ScalarProperty Name="CurrentCapacity" ColumnName="CurrentCapacity" />
+                <ScalarProperty Name="StockActualQty" ColumnName="StockActualQty" />
+                <ScalarProperty Name="FullCapacityFlag" ColumnName="FullCapacityFlag" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+                <ScalarProperty Name="LocationTypeID" ColumnName="LocationTypeID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_DSRS010_ConfirmProductStoring_LoadSuggest" FunctionName="O_D_TransitModel.Store.sp_DSRS010_ConfirmProductStoring_LoadSuggest">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="O_D_TransitModel.sp_DSRS010_ConfirmProductStoring_LoadSuggest_Result">
+                <ScalarProperty Name="TransitSeq" ColumnName="TransitSeq" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="TotalCapacity" ColumnName="TotalCapacity" />
+                <ScalarProperty Name="CurrentCapacity" ColumnName="CurrentCapacity" />
+                <ScalarProperty Name="StockActualQty" ColumnName="StockActualQty" />
+                <ScalarProperty Name="FullCapacityFlag" ColumnName="FullCapacityFlag" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+                <ScalarProperty Name="LocationTypeID" ColumnName="LocationTypeID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="O_D_TransitModel" ZoomLevel="98" >
+        <EntityTypeShape EntityType="O_D_TransitModel.tbt_TransitConfirmed" Width="1.5" PointX="0.75" PointY="0.75" Height="3.3263964843749996" />
+        <EntityTypeShape EntityType="O_D_TransitModel.tbt_TransitInstructionItems" Width="1.5" PointX="2.75" PointY="0.75" Height="3.7109993489583335" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TransitModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TransitModelStoreContainer">
+    <EntitySet Name="tbt_TransitConfirmed" EntityType="TransitModel.Store.tbt_TransitConfirmed" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbt_TransitInstructionItems" EntityType="TransitModel.Store.tbt_TransitInstructionItems" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="tbt_TransitConfirmed">
+    <Key>
+      <PropertyRef Name="ReceivingNo" />
+      <PropertyRef Name="Installment" />
+      <PropertyRef Name="LineNo" />
+      <PropertyRef Name="ReceiveSeq" />
+      <PropertyRef Name="TransitSeq" />
+    </Key>
+    <Property Name="OwnerID" Type="int" Nullable="false" />
+    <Property Name="ReceivingNo" Type="nvarchar" Nullable="false" MaxLength="22" />
+    <Property Name="Installment" Type="int" Nullable="false" />
+    <Property Name="LineNo" Type="int" Nullable="false" />
+    <Property Name="ReceiveSeq" Type="int" Nullable="false" />
+    <Property Name="TransitSeq" Type="int" Nullable="false" />
+    <Property Name="LocationID" Type="int" Nullable="false" />
+    <Property Name="TransitQty" Type="numeric" Nullable="false" Scale="3" />
+    <Property Name="ConfirmFlag" Type="bit" Nullable="false" />
+    <Property Name="LastUpdate" Type="datetime" />
+    <Property Name="StockActualQty" Type="numeric" Scale="3" />
+    <Property Name="CreateUser" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbt_TransitInstructionItems">
+    <Key>
+      <PropertyRef Name="ReceivingNo" />
+      <PropertyRef Name="Installment" />
+      <PropertyRef Name="LineNo" />
+    </Key>
+    <Property Name="OwnerID" Type="int" Nullable="false" />
+    <Property Name="ReceivingNo" Type="nvarchar" Nullable="false" MaxLength="22" />
+    <Property Name="Installment" Type="int" Nullable="false" />
+    <Property Name="LineNo" Type="int" Nullable="false" />
+    <Property Name="PalletNo" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="ProductConditionID" Type="int" Nullable="false" />
+    <Property Name="TransitInstructQty" Type="numeric" Nullable="false" Scale="3" />
+    <Property Name="ConfirmTransitDraftTime" Type="datetime" />
+    <Property Name="ConfirmTransitDraftNo" Type="nvarchar" MaxLength="25" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Function Name="sp_DSRS010_ConfirmProductStoring_LoadStockByLocation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LocationID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DSRS010_ConfirmProductStoring_LoadSuggest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="LineNo" Type="int" Mode="In" />
+    <Parameter Name="ReceiveSeq" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DSRS010_ConfirmProductStoring_LoadTransitConfirm" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Installment" Type="int" Mode="In" />
+    <Parameter Name="LineNo" Type="int" Mode="In" />
+    <Parameter Name="ReceiveSeq" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DSRS010_ConfirmProductStoring_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="LineNo" Type="int" Mode="In" />
+    <Parameter Name="SupplierID" Type="int" Mode="In" />
+    <Parameter Name="ShowConfirm" Type="int" Mode="In" />
+  </Function>
+</Schema>

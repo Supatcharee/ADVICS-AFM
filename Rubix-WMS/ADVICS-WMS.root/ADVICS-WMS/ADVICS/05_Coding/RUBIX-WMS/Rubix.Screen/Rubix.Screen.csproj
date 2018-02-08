@@ -1,0 +1,2425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1D0268D2-1210-4953-B30D-36C2BD2BB312}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rubix.Screen</RootNamespace>
+    <AssemblyName>Rubix.Screen</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>2012.0717.1523.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>RUBIX.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a" />
+    <Reference Include="DevExpress.Charts.v11.2.Core, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Win.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v11.2.Core, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.2.Core, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v11.2.Core, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v11.2.UI, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v11.2.Core, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>DLL\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common.cs" />
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\Dialog\dlgADM060_UserWebMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\Dialog\dlgADM060_UserWebMaintenance.Designer.cs">
+      <DependentUpon>dlgADM060_UserWebMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmADM060_UserWebMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\frmADM060_UserWebMaintenance.Designer.cs">
+      <DependentUpon>frmADM060_UserWebMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\Dialog\dlgADM010_UserMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\Dialog\dlgADM010_UserMaintenance.Designer.cs">
+      <DependentUpon>dlgADM010_UserMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\Dialog\dlgADM020_UserGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\Dialog\dlgADM020_UserGroup.Designer.cs">
+      <DependentUpon>dlgADM020_UserGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\Dialog\dlgADM030_ScreenMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\Dialog\dlgADM030_ScreenMaintenance.Designer.cs">
+      <DependentUpon>dlgADM030_ScreenMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\Dialog\dlgADM040_SecurityMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\Dialog\dlgADM040_SecurityMapping.Designer.cs">
+      <DependentUpon>dlgADM040_SecurityMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\Dialog\dlgADM050_MultiLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\Dialog\dlgADM050_MultiLanguage.Designer.cs">
+      <DependentUpon>dlgADM050_MultiLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmADM010_UserMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\frmADM010_UserMaintenance.Designer.cs">
+      <DependentUpon>frmADM010_UserMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmADM020_UserGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\frmADM020_UserGroup.Designer.cs">
+      <DependentUpon>frmADM020_UserGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmADM040_SecurityMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\frmADM040_SecurityMapping.Designer.cs">
+      <DependentUpon>frmADM040_SecurityMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmADM050_MultiLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\frmADM050_MultiLanguage.Designer.cs">
+      <DependentUpon>frmADM050_MultiLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Handheld\frmHHD010_Receiving.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Handheld\frmHHD010_Receiving.Designer.cs">
+      <DependentUpon>frmHHD010_Receiving.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Handheld\frmHHD020_Transit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Handheld\frmHHD020_Transit.Designer.cs">
+      <DependentUpon>frmHHD020_Transit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Handheld\frmHHD030_Picking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Handheld\frmHHD030_Picking.Designer.cs">
+      <DependentUpon>frmHHD030_Picking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Handheld\frmHHD040_Tracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Handheld\frmHHD040_Tracking.Designer.cs">
+      <DependentUpon>frmHHD040_Tracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Handheld\frmHHD050_TransitAfterPack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Handheld\frmHHD050_TransitAfterPack.Designer.cs">
+      <DependentUpon>frmHHD050_TransitAfterPack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Handheld\frmHHD060_PickForShip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Handheld\frmHHD060_PickForShip.Designer.cs">
+      <DependentUpon>frmHHD060_PickForShip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Handheld\frmHHD070_PickMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Handheld\frmHHD070_PickMaterial.Designer.cs">
+      <DependentUpon>frmHHD070_PickMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Handheld\frmHHD080_PickingPackingMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Handheld\frmHHD080_PickingPackingMaterial.Designer.cs">
+      <DependentUpon>frmHHD080_PickingPackingMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS051_Item_SalePerchasePrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS051_Item_SalePerchasePrice.Designer.cs">
+      <DependentUpon>dlgXMSS051_Item_SalePerchasePrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS052_Item_SearchPallet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS052_Item_SearchPallet.Designer.cs">
+      <DependentUpon>dlgXMSS052_Item_SearchPallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS320_SalePrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS320_SalePrice.Designer.cs">
+      <DependentUpon>dlgXMSS320_SalePrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS330_PurchasePrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS330_PurchasePrice.Designer.cs">
+      <DependentUpon>dlgXMSS330_PurchasePrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS360_ShippingCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS360_ShippingCalendar.Designer.cs">
+      <DependentUpon>frmXMSS360_ShippingCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS330_PurchasePrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS330_PurchasePrice.Designer.cs">
+      <DependentUpon>frmXMSS330_PurchasePrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS220_UnitType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS220_UnitType.designer.cs">
+      <DependentUpon>dlgXMSS220_UnitType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS280_SystemConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS280_SystemConfig.Designer.cs">
+      <DependentUpon>dlgXMSS280_SystemConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS070_FinalDestinationPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS070_FinalDestinationPicture.Designer.cs">
+      <DependentUpon>dlgXMSS070_FinalDestinationPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS260_Package.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS260_Package.Designer.cs">
+      <DependentUpon>dlgXMSS260_Package.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS010_Owner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS010_Owner.Designer.cs">
+      <DependentUpon>dlgXMSS010_Owner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS020_TruckCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS020_TruckCompany.Designer.cs">
+      <DependentUpon>dlgXMSS020_TruckCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS030_Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS030_Supplier.Designer.cs">
+      <DependentUpon>dlgXMSS030_Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS070_FinalDestination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS070_FinalDestination.Designer.cs">
+      <DependentUpon>dlgXMSS070_FinalDestination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS090_Port.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS090_Port.Designer.cs">
+      <DependentUpon>dlgXMSS090_Port.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS110_ItemCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS110_ItemCondition.Designer.cs">
+      <DependentUpon>dlgXMSS110_ItemCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS120_Zone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS120_Zone.Designer.cs">
+      <DependentUpon>dlgXMSS120_Zone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS130_ContainerType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS130_ContainerType.Designer.cs">
+      <DependentUpon>dlgXMSS130_ContainerType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS150_ShippingArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS150_ShippingArea.Designer.cs">
+      <DependentUpon>dlgXMSS150_ShippingArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS190_TransportUnstuffing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS190_TransportUnstuffing.Designer.cs">
+      <DependentUpon>dlgXMSS190_TransportUnstuffing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS230_WorkMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS230_WorkMethod.Designer.cs">
+      <DependentUpon>dlgXMSS230_WorkMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS240_ItemClassification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS240_ItemClassification.Designer.cs">
+      <DependentUpon>dlgXMSS240_ItemClassification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS250_ItemGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS250_ItemGroup.Designer.cs">
+      <DependentUpon>dlgXMSS250_ItemGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS270_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS270_Customer.Designer.cs">
+      <DependentUpon>dlgXMSS270_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS301_Pallet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS301_Pallet.Designer.cs">
+      <DependentUpon>dlgXMSS301_Pallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS010_Owner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS010_Owner.Designer.cs">
+      <DependentUpon>frmXMSS010_Owner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS150_ShippingArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS150_ShippingArea.Designer.cs">
+      <DependentUpon>frmXMSS150_ShippingArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS020_TruckCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS020_TruckCompany.Designer.cs">
+      <DependentUpon>frmXMSS020_TruckCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS030_Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS030_Supplier.Designer.cs">
+      <DependentUpon>frmXMSS030_Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS070_FinalDestination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS070_FinalDestination.Designer.cs">
+      <DependentUpon>frmXMSS070_FinalDestination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS090_PortInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS090_PortInfo.Designer.cs">
+      <DependentUpon>frmXMSS090_PortInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS110_ItemCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS110_ItemCondition.Designer.cs">
+      <DependentUpon>frmXMSS110_ItemCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS120_Zone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS120_Zone.Designer.cs">
+      <DependentUpon>frmXMSS120_Zone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS130_ContainerType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS130_ContainerType.Designer.cs">
+      <DependentUpon>frmXMSS130_ContainerType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS140_DeadStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS140_DeadStock.Designer.cs">
+      <DependentUpon>frmXMSS140_DeadStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS170_Location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS170_Location.Designer.cs">
+      <DependentUpon>frmXMSS170_Location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS190_TransportUnstuffing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS190_TransportUnstuffing.Designer.cs">
+      <DependentUpon>frmXMSS190_TransportUnstuffing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS220_TypeOfUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS220_TypeOfUnit.Designer.cs">
+      <DependentUpon>frmXMSS220_TypeOfUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS230_WorkMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS230_WorkMethod.Designer.cs">
+      <DependentUpon>frmXMSS230_WorkMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS240_ItemClassification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS240_ItemClassification.Designer.cs">
+      <DependentUpon>frmXMSS240_ItemClassification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS250_ItemGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS250_ItemGroup.Designer.cs">
+      <DependentUpon>frmXMSS250_ItemGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS050_Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS050_Item.Designer.cs">
+      <DependentUpon>dlgXMSS050_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS040_Warehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\Dialog\dlgXMSS040_Warehouse.Designer.cs">
+      <DependentUpon>dlgXMSS040_Warehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS040_Warehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS040_Warehouse.Designer.cs">
+      <DependentUpon>frmXMSS040_Warehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS050_Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS050_Item.Designer.cs">
+      <DependentUpon>frmXMSS050_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS260_Package.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS260_Package.Designer.cs">
+      <DependentUpon>frmXMSS260_Package.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS270_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS270_Customer.Designer.cs">
+      <DependentUpon>frmXMSS270_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS280_SystemConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS280_SystemConfig.Designer.cs">
+      <DependentUpon>frmXMSS280_SystemConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS290_ForceRunProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS290_ForceRunProcess.Designer.cs">
+      <DependentUpon>frmXMSS290_ForceRunProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS300_Pallet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS300_Pallet.Designer.cs">
+      <DependentUpon>frmXMSS300_Pallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS310_CompanyCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS310_CompanyCalendar.Designer.cs">
+      <DependentUpon>frmXMSS310_CompanyCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS320_SalePrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS320_SalePrice.Designer.cs">
+      <DependentUpon>frmXMSS320_SalePrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS340_Currency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS340_Currency.Designer.cs">
+      <DependentUpon>frmXMSS340_Currency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS350_Privilege.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Master\frmXMSS350_Privilege.Designer.cs">
+      <DependentUpon>frmXMSS350_Privilege.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\Dialog\dlgASO071_SaleOrderAfterMarket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\Dialog\dlgASO071_SaleOrderAfterMarket.Designer.cs">
+      <DependentUpon>dlgASO071_SaleOrderAfterMarket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\Dialog\dlgASO061_PurchaseOrderAfterMarket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\Dialog\dlgASO061_PurchaseOrderAfterMarket.Designer.cs">
+      <DependentUpon>dlgASO061_PurchaseOrderAfterMarket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\frmASO070_SaleOrderAfterMarket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\frmASO070_SaleOrderAfterMarket.Designer.cs">
+      <DependentUpon>frmASO070_SaleOrderAfterMarket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\frmASO060_PurchaseOrderAfterMarket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\frmASO060_PurchaseOrderAfterMarket.Designer.cs">
+      <DependentUpon>frmASO060_PurchaseOrderAfterMarket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\Dialog\dlgASO011_SaleOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\Dialog\dlgASO011_SaleOrder.Designer.cs">
+      <DependentUpon>dlgASO011_SaleOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\Dialog\dlgASO021_SaleOrderPreConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\Dialog\dlgASO021_SaleOrderPreConfirm.Designer.cs">
+      <DependentUpon>dlgASO021_SaleOrderPreConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\Dialog\dlgASO041_PurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\Dialog\dlgASO041_PurchaseOrder.Designer.cs">
+      <DependentUpon>dlgASO041_PurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\Dialog\dlgASO042_PurchaseOrderSearchSaleOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\Dialog\dlgASO042_PurchaseOrderSearchSaleOrder.Designer.cs">
+      <DependentUpon>dlgASO042_PurchaseOrderSearchSaleOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\Dialog\dlgASO031_SaleOrderByContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\Dialog\dlgASO031_SaleOrderByContainer.Designer.cs">
+      <DependentUpon>dlgASO031_SaleOrderByContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\frmASO010_SaleOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\frmASO010_SaleOrder.Designer.cs">
+      <DependentUpon>frmASO010_SaleOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\frmASO040_PurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\frmASO040_PurchaseOrder.Designer.cs">
+      <DependentUpon>frmASO040_PurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\frmASO030_CheckingSaleOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\frmASO030_CheckingSaleOrder.Designer.cs">
+      <DependentUpon>frmASO030_CheckingSaleOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\frmASO020_SaleOrderConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\frmASO020_SaleOrderConfirm.Designer.cs">
+      <DependentUpon>frmASO020_SaleOrderConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\frmASO050_PurchaseOrderConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\A_Order\frmASO050_PurchaseOrderConfirm.Designer.cs">
+      <DependentUpon>frmASO050_PurchaseOrderConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\B_ReceivingEntry\Dialog\dlgBRES010_ReceivingEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\B_ReceivingEntry\Dialog\dlgBRES010_ReceivingEntry.designer.cs">
+      <DependentUpon>dlgBRES010_ReceivingEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\B_ReceivingEntry\Dialog\dlgBRES011_TransportDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\B_ReceivingEntry\Dialog\dlgBRES011_TransportDetail.Designer.cs">
+      <DependentUpon>dlgBRES011_TransportDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\B_ReceivingEntry\Dialog\dlgBRES012_OtherCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\B_ReceivingEntry\Dialog\dlgBRES012_OtherCharge.Designer.cs">
+      <DependentUpon>dlgBRES012_OtherCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\B_ReceivingEntry\Dialog\dlgBRES013_ReceivingEntry_SearchByPONo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\B_ReceivingEntry\Dialog\dlgBRES013_ReceivingEntry_SearchByPONo.Designer.cs">
+      <DependentUpon>dlgBRES013_ReceivingEntry_SearchByPONo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\B_ReceivingEntry\frmBRES010_ReceivingEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\B_ReceivingEntry\frmBRES010_ReceivingEntry.Designer.cs">
+      <DependentUpon>frmBRES010_ReceivingEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\C_Receiving\Dialog\frmCRCS051_ConfirmReceiveDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\C_Receiving\Dialog\frmCRCS051_ConfirmReceiveDetail.Designer.cs">
+      <DependentUpon>frmCRCS051_ConfirmReceiveDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\C_Receiving\Dialog\dlgCRCS031_UnplanReceivingEntryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\C_Receiving\Dialog\dlgCRCS031_UnplanReceivingEntryDialog.designer.cs">
+      <DependentUpon>dlgCRCS031_UnplanReceivingEntryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\C_Receiving\frmCRCS030_UnplanReceivingEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\C_Receiving\frmCRCS030_UnplanReceivingEntry.Designer.cs">
+      <DependentUpon>frmCRCS030_UnplanReceivingEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\C_Receiving\frmCRCS010_CollectionASN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\C_Receiving\frmCRCS010_CollectionASN.Designer.cs">
+      <DependentUpon>frmCRCS010_CollectionASN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\C_Receiving\frmCRCS020_StoringInstruction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\C_Receiving\frmCRCS020_StoringInstruction.Designer.cs">
+      <DependentUpon>frmCRCS020_StoringInstruction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\C_Receiving\frmCRCS050_ProductReceiveEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\C_Receiving\frmCRCS050_ProductReceiveEntry.Designer.cs">
+      <DependentUpon>frmCRCS050_ProductReceiveEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\C_Receiving\frmCRCS060_QCCheckingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\C_Receiving\frmCRCS060_QCCheckingList.Designer.cs">
+      <DependentUpon>frmCRCS060_QCCheckingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\D_Storing\Dialog\dlgDSRS011_ConfirmProdStoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\D_Storing\Dialog\dlgDSRS011_ConfirmProdStoring.Designer.cs">
+      <DependentUpon>dlgDSRS011_ConfirmProdStoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\D_Storing\Dialog\dlgDSRS012_ReprintReceivingLabelDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\D_Storing\Dialog\dlgDSRS012_ReprintReceivingLabelDialog.Designer.cs">
+      <DependentUpon>dlgDSRS012_ReprintReceivingLabelDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\D_Storing\Dialog\dlgDSRS013_COADownloadDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\D_Storing\Dialog\dlgDSRS013_COADownloadDialog.Designer.cs">
+      <DependentUpon>dlgDSRS013_COADownloadDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\D_Storing\frmDSRS010_ConfirmProductStoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\D_Storing\frmDSRS010_ConfirmProductStoring.Designer.cs">
+      <DependentUpon>frmDSRS010_ConfirmProductStoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\E_Stocktaking\Dialog\dlgESTS010_CorrectInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\E_Stocktaking\Dialog\dlgESTS010_CorrectInventory.Designer.cs">
+      <DependentUpon>dlgESTS010_CorrectInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\E_Stocktaking\Dialog\dlgESTS060_SpaceUtilization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\E_Stocktaking\Dialog\dlgESTS060_SpaceUtilization.Designer.cs">
+      <DependentUpon>dlgESTS060_SpaceUtilization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\E_Stocktaking\frmESTS010_CorrectInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\E_Stocktaking\frmESTS010_CorrectInventory.Designer.cs">
+      <DependentUpon>frmESTS010_CorrectInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\E_Stocktaking\frmESTS040_StockChecking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\E_Stocktaking\frmESTS040_StockChecking.Designer.cs">
+      <DependentUpon>frmESTS040_StockChecking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\E_Stocktaking\Dialog\dlgESTS020_ChangeLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\E_Stocktaking\Dialog\dlgESTS020_ChangeLocation.Designer.cs">
+      <DependentUpon>dlgESTS020_ChangeLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\E_Stocktaking\frmESTS020_ChangeLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\E_Stocktaking\frmESTS020_ChangeLocation.Designer.cs">
+      <DependentUpon>frmESTS020_ChangeLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\E_Stocktaking\frmESTS030_InquiryInventory .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\E_Stocktaking\frmESTS030_InquiryInventory .Designer.cs">
+      <DependentUpon>frmESTS030_InquiryInventory .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\E_Stocktaking\frmESTS050_ReceivingShippingHist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\E_Stocktaking\frmESTS050_ReceivingShippingHist.Designer.cs">
+      <DependentUpon>frmESTS050_ReceivingShippingHist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\E_Stocktaking\frmESTS060_SpaceUtilization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\E_Stocktaking\frmESTS060_SpaceUtilization.Designer.cs">
+      <DependentUpon>frmESTS060_SpaceUtilization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\F_ShippingEntry\Dialog\dlgFSES021_TransferInstructionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\F_ShippingEntry\Dialog\dlgFSES021_TransferInstructionDialog.Designer.cs">
+      <DependentUpon>dlgFSES021_TransferInstructionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\F_ShippingEntry\frmFSES020_TransferInstruction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\F_ShippingEntry\frmFSES020_TransferInstruction.Designer.cs">
+      <DependentUpon>frmFSES020_TransferInstruction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\F_ShippingEntry\Dialog\dlgFSES013_OtherCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\F_ShippingEntry\Dialog\dlgFSES013_OtherCharge.Designer.cs">
+      <DependentUpon>dlgFSES013_OtherCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\F_ShippingEntry\Dialog\dlgFSES011_ShippingInstruction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\F_ShippingEntry\Dialog\dlgFSES011_ShippingInstruction.Designer.cs">
+      <DependentUpon>dlgFSES011_ShippingInstruction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\F_ShippingEntry\Dialog\dlgFSES012_TransportDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\F_ShippingEntry\Dialog\dlgFSES012_TransportDetail.Designer.cs">
+      <DependentUpon>dlgFSES012_TransportDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\F_ShippingEntry\Dialog\dlgFSES014_ShippingByLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\F_ShippingEntry\Dialog\dlgFSES014_ShippingByLot.Designer.cs">
+      <DependentUpon>dlgFSES014_ShippingByLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\F_ShippingEntry\frmFSES010_ShippingInstruction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\F_ShippingEntry\frmFSES010_ShippingInstruction.Designer.cs">
+      <DependentUpon>frmFSES010_ShippingInstruction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\H_Picking\Dialog\dlgHPCS022_ConfirmPickingDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\H_Picking\Dialog\dlgHPCS022_ConfirmPickingDetail.Designer.cs">
+      <DependentUpon>dlgHPCS022_ConfirmPickingDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\H_Picking\frmHPCS040_PickingPlanList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\H_Picking\frmHPCS040_PickingPlanList.Designer.cs">
+      <DependentUpon>frmHPCS040_PickingPlanList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\G_StockControl\Dialog\dlgGSCS012_StockControlDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\G_StockControl\Dialog\dlgGSCS012_StockControlDetail.Designer.cs">
+      <DependentUpon>dlgGSCS012_StockControlDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\G_StockControl\frmGSCS010_StockControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\G_StockControl\frmGSCS010_StockControl.Designer.cs">
+      <DependentUpon>frmGSCS010_StockControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\H_Picking\Dialog\dlgHPCS031_UnplanPickingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\H_Picking\Dialog\dlgHPCS031_UnplanPickingDialog.Designer.cs">
+      <DependentUpon>dlgHPCS031_UnplanPickingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\H_Picking\Dialog\dlgHPCS011_ReprintPickingListDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\H_Picking\Dialog\dlgHPCS011_ReprintPickingListDialog.Designer.cs">
+      <DependentUpon>dlgHPCS011_ReprintPickingListDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\H_Picking\Dialog\dlgHPCS021_ConfirmPicking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\H_Picking\Dialog\dlgHPCS021_ConfirmPicking.Designer.cs">
+      <DependentUpon>dlgHPCS021_ConfirmPicking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\H_Picking\frmHPCS030_UnplanPicking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\H_Picking\frmHPCS030_UnplanPicking.Designer.cs">
+      <DependentUpon>frmHPCS030_UnplanPicking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\H_Picking\frmHPCS010_PickingInstruction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\H_Picking\frmHPCS010_PickingInstruction.Designer.cs">
+      <DependentUpon>frmHPCS010_PickingInstruction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\H_Picking\frmHPCS020_ConfirmPicking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\H_Picking\frmHPCS020_ConfirmPicking.Designer.cs">
+      <DependentUpon>frmHPCS020_ConfirmPicking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\I_Shipping\Dialog\dlgISHS071_ConfirmReturnShipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\I_Shipping\Dialog\dlgISHS071_ConfirmReturnShipping.designer.cs">
+      <DependentUpon>dlgISHS071_ConfirmReturnShipping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\I_Shipping\Dialog\dlgISHS011_ExportDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\I_Shipping\Dialog\dlgISHS011_ExportDocument.Designer.cs">
+      <DependentUpon>dlgISHS011_ExportDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\I_Shipping\Dialog\frmISHS062_DownloadAttachFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\I_Shipping\Dialog\frmISHS062_DownloadAttachFileDialog.designer.cs">
+      <DependentUpon>frmISHS062_DownloadAttachFileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\I_Shipping\frmISHS010_ExportDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\I_Shipping\frmISHS010_ExportDocument.Designer.cs">
+      <DependentUpon>frmISHS010_ExportDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\I_Shipping\frmISHS030_confirmShippingEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\I_Shipping\frmISHS030_confirmShippingEntry.designer.cs">
+      <DependentUpon>frmISHS030_confirmShippingEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\I_Shipping\frmISHS060_PrintPCIDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\I_Shipping\frmISHS060_PrintPCIDriver.designer.cs">
+      <DependentUpon>frmISHS060_PrintPCIDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\I_Shipping\frmISHS070_ConfirmReturnShipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\I_Shipping\frmISHS070_ConfirmReturnShipping.designer.cs">
+      <DependentUpon>frmISHS070_ConfirmReturnShipping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\J_Transportation\Dialog\dlgJTRS021_ContainerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\J_Transportation\Dialog\dlgJTRS021_ContainerManagement.Designer.cs">
+      <DependentUpon>dlgJTRS021_ContainerManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\J_Transportation\Dialog\dlgJTRS010_InquiryTransportation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\J_Transportation\Dialog\dlgJTRS010_InquiryTransportation.Designer.cs">
+      <DependentUpon>dlgJTRS010_InquiryTransportation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\J_Transportation\frmJTRS020_ContainerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\J_Transportation\frmJTRS020_ContainerManagement.Designer.cs">
+      <DependentUpon>frmJTRS020_ContainerManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\J_Transportation\frmJTRS010_InquiryTransportation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\J_Transportation\frmJTRS010_InquiryTransportation.Designer.cs">
+      <DependentUpon>frmJTRS010_InquiryTransportation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\K_Packing\Dialog\dlgKPK011_PackingArragement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\K_Packing\Dialog\dlgKPK011_PackingArragement.Designer.cs">
+      <DependentUpon>dlgKPK011_PackingArragement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\K_Packing\Dialog\dlgKPK012_PackingManagementDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\K_Packing\Dialog\dlgKPK012_PackingManagementDialog.Designer.cs">
+      <DependentUpon>dlgKPK012_PackingManagementDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\K_Packing\Dialog\dlgKPK021_ConfirmPacking_ScanDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\K_Packing\Dialog\dlgKPK021_ConfirmPacking_ScanDetail.Designer.cs">
+      <DependentUpon>dlgKPK021_ConfirmPacking_ScanDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\K_Packing\Dialog\dlgKPK022_PackingAppearance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\K_Packing\Dialog\dlgKPK022_PackingAppearance.Designer.cs">
+      <DependentUpon>dlgKPK022_PackingAppearance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\K_Packing\Dialog\dlgKPK023_Confirmpacking_loginUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\K_Packing\Dialog\dlgKPK023_Confirmpacking_loginUser.Designer.cs">
+      <DependentUpon>dlgKPK023_Confirmpacking_loginUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\K_Packing\frmKPK010_PackingArrangement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\K_Packing\frmKPK010_PackingArrangement.Designer.cs">
+      <DependentUpon>frmKPK010_PackingArrangement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\K_Packing\frmKPK020_ConfirmPacking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\K_Packing\frmKPK020_ConfirmPacking.Designer.cs">
+      <DependentUpon>frmKPK020_ConfirmPacking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\L_WorkProgress\frmLWPS010_StoringProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\L_WorkProgress\frmLWPS010_StoringProgress.Designer.cs">
+      <DependentUpon>frmLWPS010_StoringProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\L_WorkProgress\frmLWPS020_ShippingProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\L_WorkProgress\frmLWPS020_ShippingProgress.Designer.cs">
+      <DependentUpon>frmLWPS020_ShippingProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\M_StatisticalManagement\frmMSTS010_ StatManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\M_StatisticalManagement\frmMSTS010_ StatManage.Designer.cs">
+      <DependentUpon>frmMSTS010_ StatManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\N_PackingMaterial\Dialog\dlgNPM011_PackingMaterialAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\N_PackingMaterial\Dialog\dlgNPM011_PackingMaterialAdjustment.Designer.cs">
+      <DependentUpon>dlgNPM011_PackingMaterialAdjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\N_PackingMaterial\Dialog\dlgNPM012_PackingMaterialSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\N_PackingMaterial\Dialog\dlgNPM012_PackingMaterialSummary.Designer.cs">
+      <DependentUpon>dlgNPM012_PackingMaterialSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\N_PackingMaterial\frmNPM010_PackingMaterialConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\N_PackingMaterial\frmNPM010_PackingMaterialConfirmation.Designer.cs">
+      <DependentUpon>frmNPM010_PackingMaterialConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\R_OrderMaintenance\frmROMS010_OrderRefresh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\R_OrderMaintenance\frmROMS010_OrderRefresh.Designer.cs">
+      <DependentUpon>frmROMS010_OrderRefresh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Operation\R_OrderMaintenance\frmROMS020_OrderCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Operation\R_OrderMaintenance\frmROMS020_OrderCancel.Designer.cs">
+      <DependentUpon>frmROMS020_OrderCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS180_HandyTerminalCommandReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS180_HandyTerminalCommandReport.Designer.cs">
+      <DependentUpon>frmRPS180_HandyTerminalCommandReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\Dialog\dlgRPS010_ReceivingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\Dialog\dlgRPS010_ReceivingReport.Designer.cs">
+      <DependentUpon>dlgRPS010_ReceivingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS110_InventoryCheckingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS110_InventoryCheckingList.Designer.cs">
+      <DependentUpon>frmRPS110_InventoryCheckingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS120_EstimatePriceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS120_EstimatePriceReport.designer.cs">
+      <DependentUpon>frmRPS120_EstimatePriceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS140_StockCardReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS140_StockCardReport.Designer.cs">
+      <DependentUpon>frmRPS140_StockCardReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS150_ReceivePlanListReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS150_ReceivePlanListReport.Designer.cs">
+      <DependentUpon>frmRPS150_ReceivePlanListReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS160_SlowMovementReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS160_SlowMovementReport.Designer.cs">
+      <DependentUpon>frmRPS160_SlowMovementReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS170_OrderBalanceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS170_OrderBalanceReport.Designer.cs">
+      <DependentUpon>frmRPS170_OrderBalanceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandheldScreen.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DialogBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBase.Designer.cs">
+      <DependentUpon>DialogBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS010_ReceivingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS010_ReceivingReport.Designer.cs">
+      <DependentUpon>frmRPS010_ReceivingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS020_PutAwayReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS020_PutAwayReport.Designer.cs">
+      <DependentUpon>frmRPS020_PutAwayReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS050_MovementReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS050_MovementReport.Designer.cs">
+      <DependentUpon>frmRPS050_MovementReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS070_ChargeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS070_ChargeReport.Designer.cs">
+      <DependentUpon>frmRPS070_ChargeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS090_ShippingDeliveryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS090_ShippingDeliveryReport.Designer.cs">
+      <DependentUpon>frmRPS090_ShippingDeliveryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS100_InventoryUsageReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRPS100_InventoryUsageReport.Designer.cs">
+      <DependentUpon>frmRPS100_InventoryUsageReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Base\BaseReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT032_RawMaterialTag_Service_Part.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT032_RawMaterialTag_Service_Part.Designer.cs">
+      <DependentUpon>rptRPT032_RawMaterialTag_Service_Part.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT037_CaseMark_AdditionPage1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT037_CaseMark_AdditionPage1.Designer.cs">
+      <DependentUpon>rptRPT037_CaseMark_AdditionPage1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT046_UserStickerLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT046_UserStickerLabel.Designer.cs">
+      <DependentUpon>rptRPT046_UserStickerLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT035_PackingInstructionMaterial.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT035_PackingInstructionMaterial.Designer.cs">
+      <DependentUpon>rptRPT035_PackingInstructionMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT046_PackingCommandInstruction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT046_PackingCommandInstruction.Designer.cs">
+      <DependentUpon>rptRPT046_PackingCommandInstruction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT032_RawMaterialTag.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT032_RawMaterialTag.Designer.cs">
+      <DependentUpon>rptRPT032_RawMaterialTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT033_PartDeliverySheet_SubReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT033_PartDeliverySheet_SubReport.Designer.cs">
+      <DependentUpon>rptRPT033_PartDeliverySheet_SubReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT031_HandyTerminalCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT031_HandyTerminalCommand.Designer.cs">
+      <DependentUpon>rptRPT031_HandyTerminalCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT030_QRLocationSmallLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT030_QRLocationSmallLabel.Designer.cs">
+      <DependentUpon>rptRPT030_QRLocationSmallLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT025_InventoryUsageReport_Sub_Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT025_InventoryUsageReport_Sub_Report.Designer.cs">
+      <DependentUpon>rptRPT025_InventoryUsageReport_Sub_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT029_ReceivePlanListReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT029_ReceivePlanListReport.Designer.cs">
+      <DependentUpon>rptRPT029_ReceivePlanListReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT015_StockCardReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT015_StockCardReport.Designer.cs">
+      <DependentUpon>rptRPT015_StockCardReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT014_OrderBalanceReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT014_OrderBalanceReport.Designer.cs">
+      <DependentUpon>rptRPT014_OrderBalanceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT026_InventoryUsageReport_Chart.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT026_InventoryUsageReport_Chart.Designer.cs">
+      <DependentUpon>rptRPT026_InventoryUsageReport_Chart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT025_InventoryUsageReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT025_InventoryUsageReport.Designer.cs">
+      <DependentUpon>rptRPT025_InventoryUsageReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT005_ReceivingTransportationChargeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT005_ReceivingTransportationChargeReport.Designer.cs">
+      <DependentUpon>rptRPT005_ReceivingTransportationChargeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT024_MovementReport_Chart.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT024_MovementReport_Chart.Designer.cs">
+      <DependentUpon>rptRPT024_MovementReport_Chart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT023_MovementReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT023_MovementReport.Designer.cs">
+      <DependentUpon>rptRPT023_MovementReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT017_InventoryCheckListByZoneReport_SubReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT017_InventoryCheckListByZoneReport_SubReport.Designer.cs">
+      <DependentUpon>rptRPT017_InventoryCheckListByZoneReport_SubReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT012_EstimatePriceReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT012_EstimatePriceReport.Designer.cs">
+      <DependentUpon>rptRPT012_EstimatePriceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT003_OtherChargeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT003_OtherChargeReport.Designer.cs">
+      <DependentUpon>rptRPT003_OtherChargeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT016_InventoryCheckListByProductReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT016_InventoryCheckListByProductReport.Designer.cs">
+      <DependentUpon>rptRPT016_InventoryCheckListByProductReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT017_InventoryCheckListByZoneReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT017_InventoryCheckListByZoneReport.Designer.cs">
+      <DependentUpon>rptRPT017_InventoryCheckListByZoneReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT011_TransportationChargeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT011_TransportationChargeReport.Designer.cs">
+      <DependentUpon>rptRPT011_TransportationChargeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT010_OutgoingChargeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT010_OutgoingChargeReport.Designer.cs">
+      <DependentUpon>rptRPT010_OutgoingChargeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT009_PickingChargeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT009_PickingChargeReport.Designer.cs">
+      <DependentUpon>rptRPT009_PickingChargeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT006_UnstaffingChargeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT006_UnstaffingChargeReport.Designer.cs">
+      <DependentUpon>rptRPT006_UnstaffingChargeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT013_ShippingDeliveryReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT013_ShippingDeliveryReport.Designer.cs">
+      <DependentUpon>rptRPT013_ShippingDeliveryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT018_ReceivingInstruction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT018_ReceivingInstruction.Designer.cs">
+      <DependentUpon>rptRPT018_ReceivingInstruction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT022_DeliveryOrder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT022_DeliveryOrder.designer.cs">
+      <DependentUpon>rptRPT022_DeliveryOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT021_PickingList_SubReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT021_PickingList_SubReport.Designer.cs">
+      <DependentUpon>rptRPT021_PickingList_SubReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT002_PutAwayReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT002_PutAwayReport.Designer.cs">
+      <DependentUpon>rptRPT002_PutAwayReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT001_ReceivingReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT001_ReceivingReport.Designer.cs">
+      <DependentUpon>rptRPT001_ReceivingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT020_ShipmentQRCode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT020_ShipmentQRCode.Designer.cs">
+      <DependentUpon>rptRPT020_ShipmentQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT007_IncomingChargeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT007_IncomingChargeReport.Designer.cs">
+      <DependentUpon>rptRPT007_IncomingChargeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT008_TransitServiceChargeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT008_TransitServiceChargeReport.Designer.cs">
+      <DependentUpon>rptRPT008_TransitServiceChargeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT019_ReceivingQRCode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT019_ReceivingQRCode.Designer.cs">
+      <DependentUpon>rptRPT019_ReceivingQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT021_PickingList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT021_PickingList.Designer.cs">
+      <DependentUpon>rptRPT021_PickingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT004_SummaryChargeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT004_SummaryChargeReport.Designer.cs">
+      <DependentUpon>rptRPT004_SummaryChargeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT027_SlowMovementReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT027_SlowMovementReport.Designer.cs">
+      <DependentUpon>rptRPT027_SlowMovementReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT030_QRLocatinoLargeLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT030_QRLocatinoLargeLabel.Designer.cs">
+      <DependentUpon>rptRPT030_QRLocatinoLargeLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT033_PartDeliverySheetReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT033_PartDeliverySheetReport.Designer.cs">
+      <DependentUpon>rptRPT033_PartDeliverySheetReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT034_PurchaseOrderReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT034_PurchaseOrderReport.Designer.cs">
+      <DependentUpon>rptRPT034_PurchaseOrderReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT035_PackingInstruction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT035_PackingInstruction.Designer.cs">
+      <DependentUpon>rptRPT035_PackingInstruction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT036_LoadingInstruction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT036_LoadingInstruction.Designer.cs">
+      <DependentUpon>rptRPT036_LoadingInstruction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT037_CaseMark.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT037_CaseMark.Designer.cs">
+      <DependentUpon>rptRPT037_CaseMark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT038_ExportInvoiceReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT038_ExportInvoiceReport.Designer.cs">
+      <DependentUpon>rptRPT038_ExportInvoiceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT039_DomesticInvoiceReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT039_DomesticInvoiceReport.Designer.cs">
+      <DependentUpon>rptRPT039_DomesticInvoiceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT042_AdviceOfShipment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT042_AdviceOfShipment.Designer.cs">
+      <DependentUpon>rptRPT042_AdviceOfShipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT043_PrivilegeFormatReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT043_PrivilegeFormatReport.Designer.cs">
+      <DependentUpon>rptRPT043_PrivilegeFormatReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT040_ShippingInstructionCoverReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT040_ShippingInstructionCoverReport.Designer.cs">
+      <DependentUpon>rptRPT040_ShippingInstructionCoverReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT041_ShippingInstructionListReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT041_ShippingInstructionListReport.Designer.cs">
+      <DependentUpon>rptRPT041_ShippingInstructionListReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT044_PackingList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT044_PackingList.Designer.cs">
+      <DependentUpon>rptRPT044_PackingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT045_LabelSticker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT045_LabelSticker.Designer.cs">
+      <DependentUpon>rptRPT045_LabelSticker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptRPT390_DomesticInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptRPT390_DomesticInvoice.Designer.cs">
+      <DependentUpon>rptRPT390_DomesticInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Schema\dsRPT032_RMTagReport.cs">
+      <DependentUpon>dsRPT032_RMTagReport.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Schema\dsRPT032_RMTagReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRPT032_RMTagReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Schema\dsRPT038_ExportInvoiceReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRPT038_ExportInvoiceReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Schema\dsRPT039_DomesticInvoiceReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRPT039_DomesticInvoiceReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Schema\dsRPT040_ShippingInstructionCoverReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRPT040_ShippingInstructionCoverReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Schema\dsRPT041_ShippingInstructionListReport.cs">
+      <DependentUpon>dsRPT041_ShippingInstructionListReport.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Schema\dsRPT041_ShippingInstructionListReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRPT041_ShippingInstructionListReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SubDialogBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubDialogBase.Designer.cs">
+      <DependentUpon>SubDialogBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitFormBase.Designer.cs">
+      <DependentUpon>WaitFormBase.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DialogBase.resx">
+      <DependentUpon>DialogBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\Dialog\dlgADM060_UserWebMaintenance.resx">
+      <DependentUpon>dlgADM060_UserWebMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmADM060_UserWebMaintenance.resx">
+      <DependentUpon>frmADM060_UserWebMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\Dialog\dlgADM010_UserMaintenance.resx">
+      <DependentUpon>dlgADM010_UserMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\Dialog\dlgADM020_UserGroup.resx">
+      <DependentUpon>dlgADM020_UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\Dialog\dlgADM050_MultiLanguage.resx">
+      <DependentUpon>dlgADM050_MultiLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmADM010_UserMaintenance.resx">
+      <DependentUpon>frmADM010_UserMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmADM020_UserGroup.resx">
+      <DependentUpon>frmADM020_UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmADM040_SecurityMapping.resx">
+      <DependentUpon>frmADM040_SecurityMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmADM050_MultiLanguage.resx">
+      <DependentUpon>frmADM050_MultiLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS051_Item_SalePerchasePrice.resx">
+      <DependentUpon>dlgXMSS051_Item_SalePerchasePrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS052_Item_SearchPallet.resx">
+      <DependentUpon>dlgXMSS052_Item_SearchPallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS320_SalePrice.resx">
+      <DependentUpon>dlgXMSS320_SalePrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS330_PurchasePrice.resx">
+      <DependentUpon>dlgXMSS330_PurchasePrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS360_ShippingCalendar.resx">
+      <DependentUpon>frmXMSS360_ShippingCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS330_PurchasePrice.resx">
+      <DependentUpon>frmXMSS330_PurchasePrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS220_UnitType.resx">
+      <DependentUpon>dlgXMSS220_UnitType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS280_SystemConfig.resx">
+      <DependentUpon>dlgXMSS280_SystemConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS070_FinalDestinationPicture.resx">
+      <DependentUpon>dlgXMSS070_FinalDestinationPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS260_Package.resx">
+      <DependentUpon>dlgXMSS260_Package.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS010_Owner.resx">
+      <DependentUpon>dlgXMSS010_Owner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS020_TruckCompany.resx">
+      <DependentUpon>dlgXMSS020_TruckCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS030_Supplier.resx">
+      <DependentUpon>dlgXMSS030_Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS070_FinalDestination.resx">
+      <DependentUpon>dlgXMSS070_FinalDestination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS090_Port.resx">
+      <DependentUpon>dlgXMSS090_Port.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS110_ItemCondition.resx">
+      <DependentUpon>dlgXMSS110_ItemCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS120_Zone.resx">
+      <DependentUpon>dlgXMSS120_Zone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS130_ContainerType.resx">
+      <DependentUpon>dlgXMSS130_ContainerType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS150_ShippingArea.resx">
+      <DependentUpon>dlgXMSS150_ShippingArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS190_TransportUnstuffing.resx">
+      <DependentUpon>dlgXMSS190_TransportUnstuffing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS230_WorkMethod.resx">
+      <DependentUpon>dlgXMSS230_WorkMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS240_ItemClassification.resx">
+      <DependentUpon>dlgXMSS240_ItemClassification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS250_ItemGroup.resx">
+      <DependentUpon>dlgXMSS250_ItemGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS270_Customer.resx">
+      <DependentUpon>dlgXMSS270_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS301_Pallet.resx">
+      <DependentUpon>dlgXMSS301_Pallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS010_Owner.resx">
+      <DependentUpon>frmXMSS010_Owner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS020_TruckCompany.resx">
+      <DependentUpon>frmXMSS020_TruckCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS030_Supplier.resx">
+      <DependentUpon>frmXMSS030_Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS070_FinalDestination.resx">
+      <DependentUpon>frmXMSS070_FinalDestination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS090_PortInfo.resx">
+      <DependentUpon>frmXMSS090_PortInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS110_ItemCondition.resx">
+      <DependentUpon>frmXMSS110_ItemCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS120_Zone.resx">
+      <DependentUpon>frmXMSS120_Zone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS130_ContainerType.resx">
+      <DependentUpon>frmXMSS130_ContainerType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS140_DeadStock.resx">
+      <DependentUpon>frmXMSS140_DeadStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS150_ShippingArea.resx">
+      <DependentUpon>frmXMSS150_ShippingArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS170_Location.resx">
+      <DependentUpon>frmXMSS170_Location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS190_TransportUnstuffing.resx">
+      <DependentUpon>frmXMSS190_TransportUnstuffing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS220_TypeOfUnit.resx">
+      <DependentUpon>frmXMSS220_TypeOfUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS230_WorkMethod.resx">
+      <DependentUpon>frmXMSS230_WorkMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS240_ItemClassification.resx">
+      <DependentUpon>frmXMSS240_ItemClassification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS250_ItemGroup.resx">
+      <DependentUpon>frmXMSS250_ItemGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS040_Warehouse.resx">
+      <DependentUpon>dlgXMSS040_Warehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\Dialog\dlgXMSS050_Item.resx">
+      <DependentUpon>dlgXMSS050_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS040_Warehouse.resx">
+      <DependentUpon>frmXMSS040_Warehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS050_Item.resx">
+      <DependentUpon>frmXMSS050_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS260_Package.resx">
+      <DependentUpon>frmXMSS260_Package.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS270_Customer.resx">
+      <DependentUpon>frmXMSS270_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS280_SystemConfig.resx">
+      <DependentUpon>frmXMSS280_SystemConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS290_ForceRunProcess.resx">
+      <DependentUpon>frmXMSS290_ForceRunProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS300_Pallet.resx">
+      <DependentUpon>frmXMSS300_Pallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS310_CompanyCalendar.resx">
+      <DependentUpon>frmXMSS310_CompanyCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS320_SalePrice.resx">
+      <DependentUpon>frmXMSS320_SalePrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS340_Currency.resx">
+      <DependentUpon>frmXMSS340_Currency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Master\frmXMSS350_Privilege.resx">
+      <DependentUpon>frmXMSS350_Privilege.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\A_Order\Dialog\dlgASO071_SaleOrderAfterMarket.resx">
+      <DependentUpon>dlgASO071_SaleOrderAfterMarket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\A_Order\Dialog\dlgASO061_PurchaseOrderAfterMarket.resx">
+      <DependentUpon>dlgASO061_PurchaseOrderAfterMarket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\A_Order\frmASO070_SaleOrderAfterMarket.resx">
+      <DependentUpon>frmASO070_SaleOrderAfterMarket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\A_Order\frmASO060_PurchaseOrderAfterMarket.resx">
+      <DependentUpon>frmASO060_PurchaseOrderAfterMarket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\A_Order\Dialog\dlgASO011_SaleOrder.resx">
+      <DependentUpon>dlgASO011_SaleOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\A_Order\Dialog\dlgASO021_SaleOrderPreConfirm.resx">
+      <DependentUpon>dlgASO021_SaleOrderPreConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\A_Order\Dialog\dlgASO041_PurchaseOrder.resx">
+      <DependentUpon>dlgASO041_PurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\A_Order\Dialog\dlgASO042_PurchaseOrderSearchSaleOrder.resx">
+      <DependentUpon>dlgASO042_PurchaseOrderSearchSaleOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\A_Order\Dialog\dlgASO031_SaleOrderByContainer.resx">
+      <DependentUpon>dlgASO031_SaleOrderByContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\A_Order\frmASO010_SaleOrder.resx">
+      <DependentUpon>frmASO010_SaleOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\A_Order\frmASO040_PurchaseOrder.resx">
+      <DependentUpon>frmASO040_PurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\A_Order\frmASO030_CheckingSaleOrder.resx">
+      <DependentUpon>frmASO030_CheckingSaleOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\A_Order\frmASO020_SaleOrderConfirm.resx">
+      <DependentUpon>frmASO020_SaleOrderConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\A_Order\frmASO050_PurchaseOrderConfirm.resx">
+      <DependentUpon>frmASO050_PurchaseOrderConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\B_ReceivingEntry\Dialog\dlgBRES010_ReceivingEntry.resx">
+      <DependentUpon>dlgBRES010_ReceivingEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\B_ReceivingEntry\Dialog\dlgBRES011_TransportDetail.resx">
+      <DependentUpon>dlgBRES011_TransportDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\B_ReceivingEntry\Dialog\dlgBRES012_OtherCharge.resx">
+      <DependentUpon>dlgBRES012_OtherCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\B_ReceivingEntry\Dialog\dlgBRES013_ReceivingEntry_SearchByPONo.resx">
+      <DependentUpon>dlgBRES013_ReceivingEntry_SearchByPONo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\B_ReceivingEntry\frmBRES010_ReceivingEntry.resx">
+      <DependentUpon>frmBRES010_ReceivingEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\C_Receiving\Dialog\frmCRCS051_ConfirmReceiveDetail.resx">
+      <DependentUpon>frmCRCS051_ConfirmReceiveDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\C_Receiving\Dialog\dlgCRCS031_UnplanReceivingEntryDialog.resx">
+      <DependentUpon>dlgCRCS031_UnplanReceivingEntryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\C_Receiving\frmCRCS030_UnplanReceivingEntry.resx">
+      <DependentUpon>frmCRCS030_UnplanReceivingEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\C_Receiving\frmCRCS010_CollectionASN.resx">
+      <DependentUpon>frmCRCS010_CollectionASN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\C_Receiving\frmCRCS020_StoringInstruction.resx">
+      <DependentUpon>frmCRCS020_StoringInstruction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\C_Receiving\frmCRCS050_ProductReceiveEntry.resx">
+      <DependentUpon>frmCRCS050_ProductReceiveEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\C_Receiving\frmCRCS060_QCCheckingList.resx">
+      <DependentUpon>frmCRCS060_QCCheckingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\D_Storing\Dialog\dlgDSRS011_ConfirmProdStoring.resx">
+      <DependentUpon>dlgDSRS011_ConfirmProdStoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\D_Storing\Dialog\dlgDSRS012_ReprintReceivingLabelDialog.resx">
+      <DependentUpon>dlgDSRS012_ReprintReceivingLabelDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\D_Storing\Dialog\dlgDSRS013_COADownloadDialog.resx">
+      <DependentUpon>dlgDSRS013_COADownloadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\D_Storing\frmDSRS010_ConfirmProductStoring.resx">
+      <DependentUpon>frmDSRS010_ConfirmProductStoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\E_Stocktaking\Dialog\dlgESTS010_CorrectInventory.resx">
+      <DependentUpon>dlgESTS010_CorrectInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\E_Stocktaking\Dialog\dlgESTS060_SpaceUtilization.resx">
+      <DependentUpon>dlgESTS060_SpaceUtilization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\E_Stocktaking\Dialog\dlgESTS020_ChangeLocation.resx">
+      <DependentUpon>dlgESTS020_ChangeLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\E_Stocktaking\frmESTS010_CorrectInventory.resx">
+      <DependentUpon>frmESTS010_CorrectInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\E_Stocktaking\frmESTS020_ChangeLocation.resx">
+      <DependentUpon>frmESTS020_ChangeLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\E_Stocktaking\frmESTS030_InquiryInventory .resx">
+      <DependentUpon>frmESTS030_InquiryInventory .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\E_Stocktaking\frmESTS040_StockChecking.resx">
+      <DependentUpon>frmESTS040_StockChecking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\E_Stocktaking\frmESTS050_ReceivingShippingHist.resx">
+      <DependentUpon>frmESTS050_ReceivingShippingHist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\E_Stocktaking\frmESTS060_SpaceUtilization.resx">
+      <DependentUpon>frmESTS060_SpaceUtilization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\F_ShippingEntry\Dialog\dlgFSES021_TransferInstructionDialog.resx">
+      <DependentUpon>dlgFSES021_TransferInstructionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\F_ShippingEntry\frmFSES020_TransferInstruction.resx">
+      <DependentUpon>frmFSES020_TransferInstruction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\F_ShippingEntry\Dialog\dlgFSES013_OtherCharge.resx">
+      <DependentUpon>dlgFSES013_OtherCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\F_ShippingEntry\Dialog\dlgFSES011_ShippingInstruction.resx">
+      <DependentUpon>dlgFSES011_ShippingInstruction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\F_ShippingEntry\Dialog\dlgFSES012_TransportDetail.resx">
+      <DependentUpon>dlgFSES012_TransportDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\F_ShippingEntry\Dialog\dlgFSES014_ShippingByLot.resx">
+      <DependentUpon>dlgFSES014_ShippingByLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\F_ShippingEntry\frmFSES010_ShippingInstruction.resx">
+      <DependentUpon>frmFSES010_ShippingInstruction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\H_Picking\Dialog\dlgHPCS022_ConfirmPickingDetail.resx">
+      <DependentUpon>dlgHPCS022_ConfirmPickingDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\H_Picking\frmHPCS040_PickingPlanList.resx">
+      <DependentUpon>frmHPCS040_PickingPlanList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\G_StockControl\Dialog\dlgGSCS012_StockControlDetail.resx">
+      <DependentUpon>dlgGSCS012_StockControlDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\G_StockControl\frmGSCS010_StockControl.resx">
+      <DependentUpon>frmGSCS010_StockControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\H_Picking\Dialog\dlgHPCS031_UnplanPickingDialog.resx">
+      <DependentUpon>dlgHPCS031_UnplanPickingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\H_Picking\Dialog\dlgHPCS011_ReprintPickingListDialog.resx">
+      <DependentUpon>dlgHPCS011_ReprintPickingListDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\H_Picking\Dialog\dlgHPCS021_ConfirmPicking.resx">
+      <DependentUpon>dlgHPCS021_ConfirmPicking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\H_Picking\frmHPCS030_UnplanPicking.resx">
+      <DependentUpon>frmHPCS030_UnplanPicking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\H_Picking\frmHPCS010_PickingInstruction.resx">
+      <DependentUpon>frmHPCS010_PickingInstruction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\H_Picking\frmHPCS020_ConfirmPicking.resx">
+      <DependentUpon>frmHPCS020_ConfirmPicking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\I_Shipping\Dialog\dlgISHS071_ConfirmReturnShipping.resx">
+      <DependentUpon>dlgISHS071_ConfirmReturnShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\I_Shipping\Dialog\dlgISHS011_ExportDocument.resx">
+      <DependentUpon>dlgISHS011_ExportDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\I_Shipping\Dialog\frmISHS062_DownloadAttachFileDialog.resx">
+      <DependentUpon>frmISHS062_DownloadAttachFileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\I_Shipping\frmISHS010_ExportDocument.resx">
+      <DependentUpon>frmISHS010_ExportDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\I_Shipping\frmISHS030_confirmShippingEntry.resx">
+      <DependentUpon>frmISHS030_confirmShippingEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\I_Shipping\frmISHS060_PrintPCIDriver.resx">
+      <DependentUpon>frmISHS060_PrintPCIDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\I_Shipping\frmISHS070_ConfirmReturnShipping.resx">
+      <DependentUpon>frmISHS070_ConfirmReturnShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\J_Transportation\Dialog\dlgJTRS021_ContainerManagement.resx">
+      <DependentUpon>dlgJTRS021_ContainerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\J_Transportation\Dialog\dlgJTRS010_InquiryTransportation.resx">
+      <DependentUpon>dlgJTRS010_InquiryTransportation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\J_Transportation\frmJTRS020_ContainerManagement.resx">
+      <DependentUpon>frmJTRS020_ContainerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\J_Transportation\frmJTRS010_InquiryTransportation.resx">
+      <DependentUpon>frmJTRS010_InquiryTransportation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\K_Packing\Dialog\dlgKPK011_PackingArragement.resx">
+      <DependentUpon>dlgKPK011_PackingArragement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\K_Packing\Dialog\dlgKPK012_PackingManagementDialog.resx">
+      <DependentUpon>dlgKPK012_PackingManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\K_Packing\Dialog\dlgKPK021_ConfirmPacking_ScanDetail.resx">
+      <DependentUpon>dlgKPK021_ConfirmPacking_ScanDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\K_Packing\Dialog\dlgKPK022_PackingAppearance.resx">
+      <DependentUpon>dlgKPK022_PackingAppearance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\K_Packing\Dialog\dlgKPK023_Confirmpacking_loginUser.resx">
+      <DependentUpon>dlgKPK023_Confirmpacking_loginUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\K_Packing\frmKPK010_PackingArrangement.resx">
+      <DependentUpon>frmKPK010_PackingArrangement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\K_Packing\frmKPK020_ConfirmPacking.resx">
+      <DependentUpon>frmKPK020_ConfirmPacking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\L_WorkProgress\frmLWPS010_StoringProgress.resx">
+      <DependentUpon>frmLWPS010_StoringProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\L_WorkProgress\frmLWPS020_ShippingProgress.resx">
+      <DependentUpon>frmLWPS020_ShippingProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\M_StatisticalManagement\frmMSTS010_ StatManage.resx">
+      <DependentUpon>frmMSTS010_ StatManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\N_PackingMaterial\Dialog\dlgNPM011_PackingMaterialAdjustment.resx">
+      <DependentUpon>dlgNPM011_PackingMaterialAdjustment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\N_PackingMaterial\Dialog\dlgNPM012_PackingMaterialSummary.resx">
+      <DependentUpon>dlgNPM012_PackingMaterialSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\N_PackingMaterial\frmNPM010_PackingMaterialConfirmation.resx">
+      <DependentUpon>frmNPM010_PackingMaterialConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\R_OrderMaintenance\frmROMS010_OrderRefresh.resx">
+      <DependentUpon>frmROMS010_OrderRefresh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Operation\R_OrderMaintenance\frmROMS020_OrderCancel.resx">
+      <DependentUpon>frmROMS020_OrderCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRPS180_HandyTerminalCommandReport.resx">
+      <DependentUpon>frmRPS180_HandyTerminalCommandReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\Dialog\dlgRPS010_ReceivingReport.resx">
+      <DependentUpon>dlgRPS010_ReceivingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRPS010_ReceivingReport.resx">
+      <DependentUpon>frmRPS010_ReceivingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRPS020_PutAwayReport.resx">
+      <DependentUpon>frmRPS020_PutAwayReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRPS050_MovementReport.resx">
+      <DependentUpon>frmRPS050_MovementReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRPS070_ChargeReport.resx">
+      <DependentUpon>frmRPS070_ChargeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRPS090_ShippingDeliveryReport.resx">
+      <DependentUpon>frmRPS090_ShippingDeliveryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRPS100_InventoryUsageReport.resx">
+      <DependentUpon>frmRPS100_InventoryUsageReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRPS110_InventoryCheckingList.resx">
+      <DependentUpon>frmRPS110_InventoryCheckingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRPS120_EstimatePriceReport.resx">
+      <DependentUpon>frmRPS120_EstimatePriceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRPS140_StockCardReport.resx">
+      <DependentUpon>frmRPS140_StockCardReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRPS150_ReceivePlanListReport.resx">
+      <DependentUpon>frmRPS150_ReceivePlanListReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRPS160_SlowMovementReport.resx">
+      <DependentUpon>frmRPS160_SlowMovementReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRPS170_OrderBalanceReport.resx">
+      <DependentUpon>frmRPS170_OrderBalanceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Base\BaseReport.resx">
+      <DependentUpon>BaseReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT032_RawMaterialTag_Service_Part.resx">
+      <DependentUpon>rptRPT032_RawMaterialTag_Service_Part.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT037_CaseMark_AdditionPage1.resx">
+      <DependentUpon>rptRPT037_CaseMark_AdditionPage1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT046_UserStickerLabel.resx">
+      <DependentUpon>rptRPT046_UserStickerLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT035_PackingInstructionMaterial.resx">
+      <DependentUpon>rptRPT035_PackingInstructionMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT046_PackingCommandInstruction.resx">
+      <DependentUpon>rptRPT046_PackingCommandInstruction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT032_RawMaterialTag.resx">
+      <DependentUpon>rptRPT032_RawMaterialTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT033_PartDeliverySheet_SubReport.resx">
+      <DependentUpon>rptRPT033_PartDeliverySheet_SubReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT031_HandyTerminalCommand.resx">
+      <DependentUpon>rptRPT031_HandyTerminalCommand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT030_QRLocationSmallLabel.resx">
+      <DependentUpon>rptRPT030_QRLocationSmallLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT025_InventoryUsageReport_Sub_Report.resx">
+      <DependentUpon>rptRPT025_InventoryUsageReport_Sub_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT029_ReceivePlanListReport.resx">
+      <DependentUpon>rptRPT029_ReceivePlanListReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT015_StockCardReport.resx">
+      <DependentUpon>rptRPT015_StockCardReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT027_SlowMovementReport.resx">
+      <DependentUpon>rptRPT027_SlowMovementReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT014_OrderBalanceReport.resx">
+      <DependentUpon>rptRPT014_OrderBalanceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT026_InventoryUsageReport_Chart.resx">
+      <DependentUpon>rptRPT026_InventoryUsageReport_Chart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT025_InventoryUsageReport.resx">
+      <DependentUpon>rptRPT025_InventoryUsageReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT005_ReceivingTransportationChargeReport.resx">
+      <DependentUpon>rptRPT005_ReceivingTransportationChargeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT024_MovementReport_Chart.resx">
+      <DependentUpon>rptRPT024_MovementReport_Chart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT023_MovementReport.resx">
+      <DependentUpon>rptRPT023_MovementReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT017_InventoryCheckListByZoneReport_SubReport.resx">
+      <DependentUpon>rptRPT017_InventoryCheckListByZoneReport_SubReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT012_EstimatePriceReport.resx">
+      <DependentUpon>rptRPT012_EstimatePriceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT003_OtherChargeReport.resx">
+      <DependentUpon>rptRPT003_OtherChargeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT016_InventoryCheckListByProductReport.resx">
+      <DependentUpon>rptRPT016_InventoryCheckListByProductReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT017_InventoryCheckListByZoneReport.resx">
+      <DependentUpon>rptRPT017_InventoryCheckListByZoneReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT011_TransportationChargeReport.resx">
+      <DependentUpon>rptRPT011_TransportationChargeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT002_PutAwayReport.resx">
+      <DependentUpon>rptRPT002_PutAwayReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT010_OutgoingChargeReport.resx">
+      <DependentUpon>rptRPT010_OutgoingChargeReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT009_PickingChargeReport.resx">
+      <DependentUpon>rptRPT009_PickingChargeReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT006_UnstaffingChargeReport.resx">
+      <DependentUpon>rptRPT006_UnstaffingChargeReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT013_ShippingDeliveryReport.resx">
+      <DependentUpon>rptRPT013_ShippingDeliveryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT013_ShippingDeliveryReport.yo-NG.resx">
+      <DependentUpon>rptRPT013_ShippingDeliveryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT018_ReceivingInstruction.resx">
+      <DependentUpon>rptRPT018_ReceivingInstruction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT022_DeliveryOrder.resx">
+      <DependentUpon>rptRPT022_DeliveryOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT021_PickingList_SubReport.resx">
+      <DependentUpon>rptRPT021_PickingList_SubReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT001_ReceivingReport.resx">
+      <DependentUpon>rptRPT001_ReceivingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT001_ReceivingReport.yo-NG.resx">
+      <DependentUpon>rptRPT001_ReceivingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT020_ShipmentQRCode.resx">
+      <DependentUpon>rptRPT020_ShipmentQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT007_IncomingChargeReport.resx">
+      <DependentUpon>rptRPT007_IncomingChargeReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT008_TransitServiceChargeReport.resx">
+      <DependentUpon>rptRPT008_TransitServiceChargeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT019_ReceivingQRCode.resx">
+      <DependentUpon>rptRPT019_ReceivingQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT021_PickingList.resx">
+      <DependentUpon>rptRPT021_PickingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT004_SummaryChargeReport.resx">
+      <DependentUpon>rptRPT004_SummaryChargeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT030_QRLocatinoLargeLabel.resx">
+      <DependentUpon>rptRPT030_QRLocatinoLargeLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT033_PartDeliverySheetReport.resx">
+      <DependentUpon>rptRPT033_PartDeliverySheetReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT034_PurchaseOrderReport.resx">
+      <DependentUpon>rptRPT034_PurchaseOrderReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT035_PackingInstruction.resx">
+      <DependentUpon>rptRPT035_PackingInstruction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT036_LoadingInstruction.resx">
+      <DependentUpon>rptRPT036_LoadingInstruction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT037_CaseMark.resx">
+      <DependentUpon>rptRPT037_CaseMark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT038_ExportInvoiceReport.resx">
+      <DependentUpon>rptRPT038_ExportInvoiceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT039_DomesticInvoiceReport.resx">
+      <DependentUpon>rptRPT039_DomesticInvoiceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT042_AdviceOfShipment.resx">
+      <DependentUpon>rptRPT042_AdviceOfShipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT043_PrivilegeFormatReport.resx">
+      <DependentUpon>rptRPT043_PrivilegeFormatReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT040_ShippingInstructionCoverReport.resx">
+      <DependentUpon>rptRPT040_ShippingInstructionCoverReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT041_ShippingInstructionListReport.resx">
+      <DependentUpon>rptRPT041_ShippingInstructionListReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT044_PackingList.resx">
+      <DependentUpon>rptRPT044_PackingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptRPT045_LabelSticker.resx">
+      <DependentUpon>rptRPT045_LabelSticker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubDialogBase.resx">
+      <DependentUpon>SubDialogBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitFormBase.resx">
+      <DependentUpon>WaitFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="FileImport\01.ImportCompanyCalendarTemplate.xlsx" />
+    <None Include="FileImport\02.ImportShippingCalendarTemplate.xlsx" />
+    <None Include="FileImport\03.ImportSalePriceTemplate.xlsx" />
+    <None Include="FileImport\04.ImportPurchasePriceTemplate.xlsx" />
+    <None Include="FileImport\05.ImportSaleOrderTemplete.xlsx" />
+    <None Include="FileImport\06.ImportReceivingPlanTemplate.xlsx" />
+    <None Include="FileImport\07.ImportShippingPlanTemplate.xlsx" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.HandyData+CRCS040DataTable.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.ReportModelContainer.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_CRCS051_ConfirmReceivingDetail_Get_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_GSCS012_StockControlDetail_Search_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_ISHS030_ConfirmShipService_GetConfirmShip_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_ISHS060_PrintDeliveryOrder_SearchAll_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_ISHS062_AttachFile_Get_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_ISHS070_ReturnPick_Get_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_JTRS010_InquiryTransportation_SearchAll_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_MSTS010_HistoryView_Search_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_MSTS010_HistoryView_Summary_Search_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT001_ReceivingReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT003_OtherChargeReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT004_SummaryChargeReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT005_ReceivingTransportationChargeReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT006_UnstaffingChargeReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT007_IncomingChargeReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT008_TransitChargeReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT008_TransitChargeReport_SubReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT009_PickingChargeReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT010_OutgoingChargeReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT010_OutgoingChargeReport_SubReport_GetData_Result1.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT011_TransportationChargeReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT012_EstimatePriceReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT013_ShippingDeliveryReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT013_ShippingDeliveryReport_SubReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT016_InventoryCheckingListByProduct_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT017_InventoryCheckingListByZone_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT017_InventoryCheckingListByZone_SubReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT018_ReceivingInstruction_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT019_ReceivingLabel_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT020_ShipmentLabel_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT020_ShipmentLabel_GetList_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT020_ShipmentLabel_GetProducetID_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT021_PickingList_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT021_PickingList_SubReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT022_DeliveryOrder_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT022_DeliveryOrder_SubReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT023_MovementReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT023_MovementReport_SubReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT024_MovementReport_Chart_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT025_InventoryUsageReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT025_InventoryUsageReport_GetData_Sub_Report_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT026_InventoryUsageReport_Chart_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT027_PalletReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT028_PalletReport_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT029_ReceivePlanList_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT030_StockCard_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT031_SlowMovement_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT032_OrderBalance_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT033_PartDeliverySheet_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT033_PartDeliverySheet_GetSubData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT034_PurchaseOrder_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT035_PackingInstruction_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT035_PackingInstruction_Material_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT036_LoadingInstruction_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT037_CaseMark_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT040_PrivilegeFormat_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT042_AdivceOfShipment_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT044_PackingList_GetDataSub_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT044_PackingList_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT045_LabelSticker_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_RPT046_UserStickerLaber_GetData_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_XMSS120_Zone_SearchAll_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.sp_XMSS170_Location_SearchAll_Result.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.tb_User.datasource" />
+    <None Include="Properties\DataSources\IMS.Report.rptRPT026_InventoryUsageReport_Chart.datasource" />
+    <None Include="Properties\DataSources\Rubix.Screen.Report.Schema.dsRPT038_ExportInvoiceReport.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLL\DevExpress.XtraGrid.Appearances.xml" />
+    <Content Include="DLL\DevExpress.XtraTreeList.Appearances.xml" />
+    <Content Include="DLL\Microsoft.Office.Interop.Excel.dll" />
+    <None Include="Report\Schema\dsRPT032_RMTagReport.xsc">
+      <DependentUpon>dsRPT032_RMTagReport.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Schema\dsRPT032_RMTagReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRPT032_RMTagReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\Schema\dsRPT032_RMTagReport.xss">
+      <DependentUpon>dsRPT032_RMTagReport.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Schema\dsRPT038_ExportInvoiceReport.xsc">
+      <DependentUpon>dsRPT038_ExportInvoiceReport.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Schema\dsRPT038_ExportInvoiceReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRPT038_ExportInvoiceReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\Schema\dsRPT038_ExportInvoiceReport.xss">
+      <DependentUpon>dsRPT038_ExportInvoiceReport.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Schema\dsRPT039_DomesticInvoiceReport.xsc">
+      <DependentUpon>dsRPT039_DomesticInvoiceReport.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Schema\dsRPT039_DomesticInvoiceReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRPT039_DomesticInvoiceReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\Schema\dsRPT039_DomesticInvoiceReport.xss">
+      <DependentUpon>dsRPT039_DomesticInvoiceReport.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Schema\dsRPT040_ShippingInstructionCoverReport.xsc">
+      <DependentUpon>dsRPT040_ShippingInstructionCoverReport.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Schema\dsRPT040_ShippingInstructionCoverReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRPT040_ShippingInstructionCoverReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\Schema\dsRPT040_ShippingInstructionCoverReport.xss">
+      <DependentUpon>dsRPT040_ShippingInstructionCoverReport.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Schema\dsRPT041_ShippingInstructionListReport.xsc">
+      <DependentUpon>dsRPT041_ShippingInstructionListReport.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Schema\dsRPT041_ShippingInstructionListReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRPT041_ShippingInstructionListReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\Schema\dsRPT041_ShippingInstructionListReport.xss">
+      <DependentUpon>dsRPT041_ShippingInstructionListReport.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Apex.png" />
+    <None Include="Resources\Aspect.png" />
+    <None Include="Resources\Black and White.png" />
+    <None Include="Resources\Chameleon.png" />
+    <None Include="Resources\Civic.png" />
+    <Content Include="Resources\CollapseIcon.gif" />
+    <None Include="Resources\Concourse.png" />
+    <None Include="Resources\Equity.png" />
+    <Content Include="Resources\ExpandIcon.gif" />
+    <None Include="Resources\Flow.png" />
+    <None Include="Resources\Foundry.png" />
+    <None Include="Resources\Grayscale.png" />
+    <None Include="Resources\In A Fog.png" />
+    <None Include="Resources\Median.png" />
+    <None Include="Resources\Metro.png" />
+    <None Include="Resources\Module.png" />
+    <None Include="Resources\Narthern Lights.png" />
+    <None Include="Resources\Nature Colors.png" />
+    <None Include="Resources\Office.png" />
+    <None Include="Resources\Opulent.png" />
+    <None Include="Resources\Oriel.png" />
+    <None Include="Resources\Origin.png" />
+    <None Include="Resources\Paper.png" />
+    <None Include="Resources\Pastel Kit.png" />
+    <None Include="Resources\Solstice.png" />
+    <None Include="Resources\Technic.png" />
+    <None Include="Resources\Terracotta Pie.png" />
+    <None Include="Resources\The Mixed.png" />
+    <None Include="Resources\The Trees.png" />
+    <None Include="Resources\Trek.png" />
+    <None Include="Resources\Urban.png" />
+    <None Include="Resources\Verve.png" />
+    <Content Include="RUBIX.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Form\Operation\L_WorkProgress\Dialog\" />
+    <Folder Include="Form\Operation\M_StatisticalManagement\Dialog\" />
+    <Folder Include="Form\Operation\R_OrderMaintenance\Dialog\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSI.Windows.Business\CSI.Business.csproj">
+      <Project>{33BCD130-D84E-49C0-BD18-51DE5885C333}</Project>
+      <Name>CSI.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rubix.Control\Rubix.Control.csproj">
+      <Project>{32E29853-DDA6-462B-9007-8DCEF234317B}</Project>
+      <Name>Rubix.Control</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rubix.Framework\Rubix.Framework.csproj">
+      <Project>{0A356D2B-DE8A-40D9-BA52-83B4BB60D3BB}</Project>
+      <Name>Rubix.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

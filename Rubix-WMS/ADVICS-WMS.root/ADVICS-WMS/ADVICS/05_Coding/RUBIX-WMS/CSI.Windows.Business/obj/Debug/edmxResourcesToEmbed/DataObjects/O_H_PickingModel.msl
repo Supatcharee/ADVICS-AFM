@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="PickingModel" />
+  <Alias Key="Target" Value="PickingModel.Store" />
+  <EntityContainerMapping CdmEntityContainer="PickingModelContainer" StorageEntityContainer="PickingModelStoreContainer">
+    <FunctionImportMapping FunctionImportName="sp_HPCS011_PickingInstruction_SearchReprint" FunctionName="PickingModel.Store.sp_HPCS011_PickingInstruction_SearchReprint">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PickingModel.sp_HPCS011_PickingInstruction_SearchReprint_Result">
+          <ScalarProperty Name="Select" ColumnName="Select" />
+          <ScalarProperty Name="PortOfLoadingID" ColumnName="PortOfLoadingID" />
+          <ScalarProperty Name="PortOfLoadingCode" ColumnName="PortOfLoadingCode" />
+          <ScalarProperty Name="PortOfLoadingName" ColumnName="PortOfLoadingName" />
+          <ScalarProperty Name="PortOfDischargeID" ColumnName="PortOfDischargeID" />
+          <ScalarProperty Name="PortOfDischargeCode" ColumnName="PortOfDischargeCode" />
+          <ScalarProperty Name="PortOfDischargeName" ColumnName="PortOfDischargeName" />
+          <ScalarProperty Name="FinalDestinationID" ColumnName="FinalDestinationID" />
+          <ScalarProperty Name="FinalDestinationCode" ColumnName="FinalDestinationCode" />
+          <ScalarProperty Name="FinalDestinationName" ColumnName="FinalDestinationName" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="NumberOfDetails" ColumnName="NumberOfDetails" />
+          <ScalarProperty Name="StockOutControlFlag" ColumnName="StockOutControlFlag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_HPCS020_ConfirmPicking_GetLocation" FunctionName="PickingModel.Store.sp_HPCS020_ConfirmPicking_GetLocation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PickingModel.sp_HPCS020_ConfirmPicking_GetLocation_Result">
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="FullCapacityFlag" ColumnName="FullCapacityFlag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_HPCS020_ConfirmPicking_SearchAll" FunctionName="PickingModel.Store.sp_HPCS020_ConfirmPicking_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PickingModel.sp_HPCS020_ConfirmPicking_SearchAll_Result">
+          <ScalarProperty Name="Select" ColumnName="Select" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="SortedLineNo" ColumnName="SortedLineNo" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+          <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+          <ScalarProperty Name="PortOfLoadingName" ColumnName="PortOfLoadingName" />
+          <ScalarProperty Name="PortOfDischargeName" ColumnName="PortOfDischargeName" />
+          <ScalarProperty Name="FinalDestinationName" ColumnName="FinalDestinationName" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="ActualQty" ColumnName="ActualQty" />
+          <ScalarProperty Name="PickingLineSeq" ColumnName="PickingLineSeq" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="Kanban" ColumnName="Kanban" />
+          <ScalarProperty Name="Pallet" ColumnName="Pallet" />
+          <ScalarProperty Name="sumKanban" ColumnName="sumKanban" />
+          <ScalarProperty Name="sumPallet" ColumnName="sumPallet" />
+          <ScalarProperty Name="UnitOfOrderQty" ColumnName="UnitOfOrderQty" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="CanEditConfirm" ColumnName="CanEditConfirm" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="PickingDate" ColumnName="PickingDate" />
+          <ScalarProperty Name="AllStatus" ColumnName="AllStatus" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="PickStatus" ColumnName="PickStatus" />
+          <ScalarProperty Name="CanPick" ColumnName="CanPick" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_HPCS030_UnplanPicking_SearchAll" FunctionName="PickingModel.Store.sp_HPCS030_UnplanPicking_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PickingModel.sp_HPCS030_UnplanPicking_SearchAll_Result">
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="ShippingAreaID" ColumnName="ShippingAreaID" />
+          <ScalarProperty Name="ShippingAreaCode" ColumnName="ShippingAreaCode" />
+          <ScalarProperty Name="ShippingAreaName" ColumnName="ShippingAreaName" />
+          <ScalarProperty Name="PickingDate" ColumnName="PickingDate" />
+          <ScalarProperty Name="VanningDate" ColumnName="VanningDate" />
+          <ScalarProperty Name="TransportationDate" ColumnName="TransportationDate" />
+          <ScalarProperty Name="CutDate" ColumnName="CutDate" />
+          <ScalarProperty Name="ETD" ColumnName="ETD" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="AgentSeal" ColumnName="AgentSeal" />
+          <ScalarProperty Name="InspectionSeal" ColumnName="InspectionSeal" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="BookingNo" ColumnName="BookingNo" />
+          <ScalarProperty Name="VesselName1" ColumnName="VesselName1" />
+          <ScalarProperty Name="VesselName2" ColumnName="VesselName2" />
+          <ScalarProperty Name="AgentOwner" ColumnName="AgentOwner" />
+          <ScalarProperty Name="PortOfLoadingID" ColumnName="PortOfLoadingID" />
+          <ScalarProperty Name="PortOfLoadingCode" ColumnName="PortOfLoadingCode" />
+          <ScalarProperty Name="PortOfLoadingName" ColumnName="PortOfLoadingName" />
+          <ScalarProperty Name="PortOfDischargeID" ColumnName="PortOfDischargeID" />
+          <ScalarProperty Name="PortOfDischargeCode" ColumnName="PortOfDischargeCode" />
+          <ScalarProperty Name="PortOfDischargeName" ColumnName="PortOfDischargeName" />
+          <ScalarProperty Name="FinalDestinationID" ColumnName="FinalDestinationID" />
+          <ScalarProperty Name="FinalDestinationCode" ColumnName="FinalDestinationCode" />
+          <ScalarProperty Name="FinalDestinationLongName" ColumnName="FinalDestinationLongName" />
+          <ScalarProperty Name="ShipCompleteFlag" ColumnName="ShipCompleteFlag" />
+          <ScalarProperty Name="NumberOfPallet" ColumnName="NumberOfPallet" />
+          <ScalarProperty Name="ShipCompleteDate" ColumnName="ShipCompleteDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tbt_PickingHeader">
+      <EntityTypeMapping TypeName="PickingModel.tbt_PickingHeader">
+        <MappingFragment StoreEntitySet="tbt_PickingHeader">
+          <ScalarProperty Name="DONo" ColumnName="DONo" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="GenerateDiffDate" ColumnName="GenerateDiffDate" />
+          <ScalarProperty Name="CancelPickingFlag" ColumnName="CancelPickingFlag" />
+          <ScalarProperty Name="CompleteInfoFlag" ColumnName="CompleteInfoFlag" />
+          <ScalarProperty Name="PickingCompleteDate" ColumnName="PickingCompleteDate" />
+          <ScalarProperty Name="DOIssuedDate" ColumnName="DOIssuedDate" />
+          <ScalarProperty Name="PickingIssuedDate" ColumnName="PickingIssuedDate" />
+          <ScalarProperty Name="StockOutControlFlag" ColumnName="StockOutControlFlag" />
+          <ScalarProperty Name="PalletQty" ColumnName="PalletQty" />
+          <ScalarProperty Name="NumberofDetails" ColumnName="NumberofDetails" />
+          <ScalarProperty Name="TransportationDate" ColumnName="TransportationDate" />
+          <ScalarProperty Name="VanningDate" ColumnName="VanningDate" />
+          <ScalarProperty Name="PickingDate" ColumnName="PickingDate" />
+          <ScalarProperty Name="InspectionSeal" ColumnName="InspectionSeal" />
+          <ScalarProperty Name="AgentSeal" ColumnName="AgentSeal" />
+          <ScalarProperty Name="ShippingAreaID" ColumnName="ShippingAreaID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_HPCS020_ConfirmPicking_GetPickingDetail" FunctionName="PickingModel.Store.sp_HPCS020_ConfirmPicking_GetPickingDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PickingModel.sp_HPCS020_ConfirmPicking_GetPickingDetail_Result">
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="PickingQty" ColumnName="PickingQty" />
+          <ScalarProperty Name="PickingLineSeq" ColumnName="PickingLineSeq" />
+          <ScalarProperty Name="FullCapacityFlag" ColumnName="FullCapacityFlag" />
+          <ScalarProperty Name="ConfirmFlag" ColumnName="ConfirmFlag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_HPCS010_PickingInstruction_Search" FunctionName="PickingModel.Store.sp_HPCS010_PickingInstruction_Search">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PickingModel.sp_HPCS010_PickingInstruction_Search_Result">
+          <ScalarProperty Name="Select" ColumnName="Select" />
+          <ScalarProperty Name="PortOfLoadingID" ColumnName="PortOfLoadingID" />
+          <ScalarProperty Name="PortOfLoadingCode" ColumnName="PortOfLoadingCode" />
+          <ScalarProperty Name="PortOfLoadingName" ColumnName="PortOfLoadingName" />
+          <ScalarProperty Name="PortOfDischargeID" ColumnName="PortOfDischargeID" />
+          <ScalarProperty Name="PortOfDischargeCode" ColumnName="PortOfDischargeCode" />
+          <ScalarProperty Name="PortOfDischargeName" ColumnName="PortOfDischargeName" />
+          <ScalarProperty Name="FinalDestinationID" ColumnName="FinalDestinationID" />
+          <ScalarProperty Name="FinalDestinationCode" ColumnName="FinalDestinationCode" />
+          <ScalarProperty Name="FinalDestinationName" ColumnName="FinalDestinationName" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="StockOutControlFlag" ColumnName="StockOutControlFlag" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="StockOut" ColumnName="StockOut" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

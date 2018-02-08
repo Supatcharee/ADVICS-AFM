@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OrderModelStoreContainer" CdmEntityContainer="O_R_OrderModel">
+    <FunctionImportMapping FunctionImportName="sp_ROMS010_OrderRefresh_SearchAll_Receiving" FunctionName="OrderModel.Store.sp_ROMS010_OrderRefresh_SearchAll_Receiving">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OrderModel.sp_ROMS010_OrderRefresh_SearchAll_Receiving_Result">
+          <ScalarProperty Name="Select" ColumnName="Select" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="Entry" ColumnName="Entry" />
+          <ScalarProperty Name="TransitInstruction" ColumnName="TransitInstruction" />
+          <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+          <ScalarProperty Name="TransitDate" ColumnName="TransitDate" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ROMS011_OrderRefresh_SearchReceivingDetail" FunctionName="OrderModel.Store.sp_ROMS011_OrderRefresh_SearchReceivingDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OrderModel.sp_ROMS011_OrderRefresh_SearchReceivingDetail_Result">
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Condition" ColumnName="Condition" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="TypeOfQty" ColumnName="TypeOfQty" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Measurement" ColumnName="Measurement" />
+          <ScalarProperty Name="TypeOfPackage" ColumnName="TypeOfPackage" />
+          <ScalarProperty Name="InPackage" ColumnName="InPackage" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ROMS012_OrderRefresh_SearchShippingDetail" FunctionName="OrderModel.Store.sp_ROMS012_OrderRefresh_SearchShippingDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OrderModel.sp_ROMS012_OrderRefresh_SearchShippingDetail_Result">
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Condition" ColumnName="Condition" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="TypeOfQty" ColumnName="TypeOfQty" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Measurement" ColumnName="Measurement" />
+          <ScalarProperty Name="TypeOfPackage" ColumnName="TypeOfPackage" />
+          <ScalarProperty Name="InPackage" ColumnName="InPackage" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ROMS020_OrderCancel_SearchAll_Receiving" FunctionName="OrderModel.Store.sp_ROMS020_OrderCancel_SearchAll_Receiving">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OrderModel.sp_ROMS020_OrderCancel_SearchAll_Receiving_Result">
+          <ScalarProperty Name="Select" ColumnName="Select" />
+          <ScalarProperty Name="Progress" ColumnName="Progress" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="SortedLineNo" ColumnName="SortedLineNo" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductCondition" ColumnName="ProductCondition" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="ReceivingEntryDate" ColumnName="ReceivingEntryDate" />
+          <ScalarProperty Name="TransitInstructionIssuedDate" ColumnName="TransitInstructionIssuedDate" />
+          <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+          <ScalarProperty Name="TransitDate" ColumnName="TransitDate" />
+          <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="PortOfDischargeCode" ColumnName="PortOfDischargeCode" />
+          <ScalarProperty Name="PortOfDischargeName" ColumnName="PortOfDischargeName" />
+          <ScalarProperty Name="FinalDestinationCode" ColumnName="FinalDestinationCode" />
+          <ScalarProperty Name="FinalDestinationName" ColumnName="FinalDestinationName" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ROMS020_OrderCancel_SearchAll_Shipping" FunctionName="OrderModel.Store.sp_ROMS020_OrderCancel_SearchAll_Shipping">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OrderModel.sp_ROMS020_OrderCancel_SearchAll_Shipping_Result">
+          <ScalarProperty Name="Select" ColumnName="Select" />
+          <ScalarProperty Name="Progress" ColumnName="Progress" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="SortedLineNo" ColumnName="SortedLineNo" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductCondition" ColumnName="ProductCondition" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="StockControlDate" ColumnName="StockControlDate" />
+          <ScalarProperty Name="PickingListIssuedDate" ColumnName="PickingListIssuedDate" />
+          <ScalarProperty Name="PickingDate" ColumnName="PickingDate" />
+          <ScalarProperty Name="ShippingDate" ColumnName="ShippingDate" />
+          <ScalarProperty Name="DOIssueDate" ColumnName="DOIssueDate" />
+          <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="PortOfDischargeCode" ColumnName="PortOfDischargeCode" />
+          <ScalarProperty Name="PortOfDischargeName" ColumnName="PortOfDischargeName" />
+          <ScalarProperty Name="FinalDestinationCode" ColumnName="FinalDestinationCode" />
+          <ScalarProperty Name="FinalDestinationName" ColumnName="FinalDestinationName" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ROMS010_OrderRefresh_SearchAll_Shipping" FunctionName="OrderModel.Store.sp_ROMS010_OrderRefresh_SearchAll_Shipping">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OrderModel.sp_ROMS010_OrderRefresh_SearchAll_Shipping_Result">
+          <ScalarProperty Name="Select" ColumnName="Select" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="Entry" ColumnName="Entry" />
+          <ScalarProperty Name="StockControl" ColumnName="StockControl" />
+          <ScalarProperty Name="PickingInstruction" ColumnName="PickingInstruction" />
+          <ScalarProperty Name="Picking" ColumnName="Picking" />
+          <ScalarProperty Name="Shipping" ColumnName="Shipping" />
+          <ScalarProperty Name="Transporation" ColumnName="Transporation" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="FinalDestinationID" ColumnName="FinalDestinationID" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="FinalDestinationCode" ColumnName="FinalDestinationCode" />
+          <ScalarProperty Name="PortCode" ColumnName="PortCode" />
+          <ScalarProperty Name="PortName" ColumnName="PortName" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

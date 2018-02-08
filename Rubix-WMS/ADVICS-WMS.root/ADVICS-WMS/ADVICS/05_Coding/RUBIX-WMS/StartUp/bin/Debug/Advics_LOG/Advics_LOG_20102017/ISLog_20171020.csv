@@ -1,0 +1,15 @@
+Method,Status,CurrentDate,Parameter
+"LoadImage(int ProductID)","START","20/10/17 14:48:49 PM","ProductID = 454"
+"LoadImage(int ProductID)","END","20/10/17 14:48:50 PM"
+"ConvertByteToImage(byte[] byteImage)","START","20/10/17 14:48:50 PM","byte[] byteImage is not null"
+"ConvertByteToImage(byte[] byteImage)","END","20/10/17 14:48:50 PM"
+"Exception --> ConvertByteToImage(byte[] byteImage)","Start Exception","20/10/17 14:48:59 PM","Exception Message is Parameter is not valid.; StackTrace is    at System.Drawing.Image.FromStream(Stream stream, Boolean useEmbeddedColorManagement, Boolean validateImageData)
+   at System.Drawing.Image.FromStream(Stream stream)
+   at Rubix.Framework.ControlUtil.ConvertByteToImage(Byte[] byteImage) in D:\Rubix\ADVICS-AFM\Rubix-WMS\ADVICS-WMS.root\ADVICS-WMS\ADVICS\05_Coding\RUBIX-WMS\Rubix.Framework\ControlUtil.cs:line 492"
+"Exception --> ConvertByteToImage(byte[] byteImage)","End Exception","20/10/17 14:48:59 PM"
+"ConvertByteToImage(byte[] byteImage)","START","20/10/17 14:48:59 PM","byte[] byteImage is not null"
+"ConvertByteToImage(byte[] byteImage)","END","20/10/17 14:48:59 PM"
+"Exception --> ConvertByteToImage(byte[] byteImage)","Start Exception","20/10/17 14:48:59 PM","Exception Message is Parameter is not valid.; StackTrace is    at System.Drawing.Image.FromStream(Stream stream, Boolean useEmbeddedColorManagement, Boolean validateImageData)
+   at System.Drawing.Image.FromStream(Stream stream)
+   at Rubix.Framework.ControlUtil.ConvertByteToImage(Byte[] byteImage) in D:\Rubix\ADVICS-AFM\Rubix-WMS\ADVICS-WMS.root\ADVICS-WMS\ADVICS\05_Coding\RUBIX-WMS\Rubix.Framework\ControlUtil.cs:line 492"
+"Exception --> ConvertByteToImage(byte[] byteImage)","End Exception","20/10/17 14:48:59 PM"

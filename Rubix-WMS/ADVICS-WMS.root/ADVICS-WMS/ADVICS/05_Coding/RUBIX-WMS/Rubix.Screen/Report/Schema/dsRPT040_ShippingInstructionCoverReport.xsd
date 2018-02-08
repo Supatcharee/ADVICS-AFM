@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsRPT040_ShippingInstructionCoverReport" targetNamespace="http://tempuri.org/dsRPT040_ShippingInstructionCoverReport.xsd" xmlns:mstns="http://tempuri.org/dsRPT040_ShippingInstructionCoverReport.xsd" xmlns="http://tempuri.org/dsRPT040_ShippingInstructionCoverReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsRPT040_ShippingInstructionCoverReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsRPT040_ShippingInstructionCoverReport" msprop:Generator_UserDSName="dsRPT040_ShippingInstructionCoverReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtbHeader" msprop:Generator_TableClassName="dtbHeaderDataTable" msprop:Generator_TableVarName="tabledtbHeader" msprop:Generator_RowChangedName="dtbHeaderRowChanged" msprop:Generator_TablePropName="dtbHeader" msprop:Generator_RowDeletingName="dtbHeaderRowDeleting" msprop:Generator_RowChangingName="dtbHeaderRowChanging" msprop:Generator_RowEvHandlerName="dtbHeaderRowChangeEventHandler" msprop:Generator_RowDeletedName="dtbHeaderRowDeleted" msprop:Generator_RowClassName="dtbHeaderRow" msprop:Generator_UserTableName="dtbHeader" msprop:Generator_RowEvArgName="dtbHeaderRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustomerName" msprop:Generator_ColumnVarNameInTable="columnCustomerName" msprop:Generator_ColumnPropNameInRow="CustomerName" msprop:Generator_ColumnPropNameInTable="CustomerNameColumn" msprop:Generator_UserColumnName="CustomerName" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerAddress" msprop:Generator_ColumnVarNameInTable="columnCustomerAddress" msprop:Generator_ColumnPropNameInRow="CustomerAddress" msprop:Generator_ColumnPropNameInTable="CustomerAddressColumn" msprop:Generator_UserColumnName="CustomerAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="NotifyName" msprop:Generator_ColumnVarNameInTable="columnNotifyName" msprop:Generator_ColumnPropNameInRow="NotifyName" msprop:Generator_ColumnPropNameInTable="NotifyNameColumn" msprop:Generator_UserColumnName="NotifyName" type="xs:string" minOccurs="0" />
+              <xs:element name="NotifyAddress" msprop:Generator_ColumnVarNameInTable="columnNotifyAddress" msprop:Generator_ColumnPropNameInRow="NotifyAddress" msprop:Generator_ColumnPropNameInTable="NotifyAddressColumn" msprop:Generator_UserColumnName="NotifyAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="OceanVesselName" msprop:Generator_ColumnVarNameInTable="columnOceanVesselName" msprop:Generator_ColumnPropNameInRow="OceanVesselName" msprop:Generator_ColumnPropNameInTable="OceanVesselNameColumn" msprop:Generator_UserColumnName="OceanVesselName" type="xs:string" minOccurs="0" />
+              <xs:element name="PortOfLoading" msprop:Generator_ColumnVarNameInTable="columnPortOfLoading" msprop:Generator_ColumnPropNameInRow="PortOfLoading" msprop:Generator_ColumnPropNameInTable="PortOfLoadingColumn" msprop:Generator_UserColumnName="PortOfLoading" type="xs:string" minOccurs="0" />
+              <xs:element name="PortOfDischarge" msprop:Generator_ColumnVarNameInTable="columnPortOfDischarge" msprop:Generator_ColumnPropNameInRow="PortOfDischarge" msprop:Generator_ColumnPropNameInTable="PortOfDischargeColumn" msprop:Generator_UserColumnName="PortOfDischarge" type="xs:string" minOccurs="0" />
+              <xs:element name="FinalDestination" msprop:Generator_ColumnVarNameInTable="columnFinalDestination" msprop:Generator_ColumnPropNameInRow="FinalDestination" msprop:Generator_ColumnPropNameInTable="FinalDestinationColumn" msprop:Generator_UserColumnName="FinalDestination" type="xs:string" minOccurs="0" />
+              <xs:element name="InvoiceNo" msprop:Generator_ColumnVarNameInTable="columnInvoiceNo" msprop:Generator_ColumnPropNameInRow="InvoiceNo" msprop:Generator_ColumnPropNameInTable="InvoiceNoColumn" msprop:Generator_UserColumnName="InvoiceNo" type="xs:string" minOccurs="0" />
+              <xs:element name="ETD" msprop:Generator_ColumnVarNameInTable="columnETD" msprop:Generator_ColumnPropNameInRow="ETD" msprop:Generator_ColumnPropNameInTable="ETDColumn" msprop:Generator_UserColumnName="ETD" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CarreirName" msprop:Generator_ColumnVarNameInTable="columnCarreirName" msprop:Generator_ColumnPropNameInRow="CarreirName" msprop:Generator_ColumnPropNameInTable="CarreirNameColumn" msprop:Generator_UserColumnName="CarreirName" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalPallet" msprop:Generator_ColumnVarNameInTable="columnTotalPallet" msprop:Generator_ColumnPropNameInRow="TotalPallet" msprop:Generator_ColumnPropNameInTable="TotalPalletColumn" msprop:Generator_UserColumnName="TotalPallet" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalBox" msprop:Generator_ColumnVarNameInTable="columnTotalBox" msprop:Generator_ColumnPropNameInRow="TotalBox" msprop:Generator_ColumnPropNameInTable="TotalBoxColumn" msprop:Generator_UserColumnName="TotalBox" type="xs:int" minOccurs="0" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:int" minOccurs="0" />
+              <xs:element name="UnitCode" msprop:Generator_ColumnVarNameInTable="columnUnitCode" msprop:Generator_ColumnPropNameInRow="UnitCode" msprop:Generator_ColumnPropNameInTable="UnitCodeColumn" msprop:Generator_UserColumnName="UnitCode" type="xs:string" minOccurs="0" />
+              <xs:element name="PaymentType" msprop:Generator_ColumnVarNameInTable="columnPaymentType" msprop:Generator_ColumnPropNameInRow="PaymentType" msprop:Generator_ColumnPropNameInTable="PaymentTypeColumn" msprop:Generator_UserColumnName="PaymentType" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerRemark" msprop:Generator_ColumnVarNameInTable="columnCustomerRemark" msprop:Generator_ColumnPropNameInRow="CustomerRemark" msprop:Generator_ColumnPropNameInTable="CustomerRemarkColumn" msprop:Generator_UserColumnName="CustomerRemark" type="xs:string" minOccurs="0" />
+              <xs:element name="ShippingInstructionRemark" msprop:Generator_ColumnVarNameInTable="columnShippingInstructionRemark" msprop:Generator_ColumnPropNameInRow="ShippingInstructionRemark" msprop:Generator_ColumnPropNameInTable="ShippingInstructionRemarkColumn" msprop:Generator_UserColumnName="ShippingInstructionRemark" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

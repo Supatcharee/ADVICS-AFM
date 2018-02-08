@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="PickingModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="PickingModelContainer" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_HPCS011_PickingInstruction_SearchReprint" ReturnType="Collection(PickingModel.sp_HPCS011_PickingInstruction_SearchReprint_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+      <Parameter Name="PortOfDischargeID" Mode="In" Type="Int32" />
+      <Parameter Name="FinalDestinationID" Mode="In" Type="Int32" />
+      <Parameter Name="PickingDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="PickingDateTo" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_HPCS020_ConfirmPicking_GetLocation" ReturnType="Collection(PickingModel.sp_HPCS020_ConfirmPicking_GetLocation_Result)">
+      <Parameter Name="ShipmentNO" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+      <Parameter Name="LineNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_HPCS020_ConfirmPicking_SearchAll" ReturnType="Collection(PickingModel.sp_HPCS020_ConfirmPicking_SearchAll_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+      <Parameter Name="PickDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="PickDateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="AllStatus" Mode="In" Type="Int32" />
+      <Parameter Name="CustomerID" Mode="In" Type="Int32" />
+      <Parameter Name="DeliveryDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="DeliveryDateTo" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_HPCS030_UnplanPicking_SearchAll" ReturnType="Collection(PickingModel.sp_HPCS030_UnplanPicking_SearchAll_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+      <Parameter Name="CustomerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="tbt_PickingHeader" EntityType="PickingModel.tbt_PickingHeader" />
+    <FunctionImport Name="sp_HPCS020_ConfirmPicking_GetPickingDetail" ReturnType="Collection(PickingModel.sp_HPCS020_ConfirmPicking_GetPickingDetail_Result)">
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+      <Parameter Name="LineNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_HPCS010_PickingInstruction_Search" ReturnType="Collection(PickingModel.sp_HPCS010_PickingInstruction_Search_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+      <Parameter Name="CustomerID" Mode="In" Type="Int32" />
+      <Parameter Name="DeliveryDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="DeliveryDateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="InvoiceNo" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_HPCS011_PickingInstruction_SearchReprint_Result">
+    <Property Type="Boolean" Name="Select" Nullable="true" />
+    <Property Type="Int32" Name="PortOfLoadingID" Nullable="true" />
+    <Property Type="String" Name="PortOfLoadingCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PortOfLoadingName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="PortOfDischargeID" Nullable="true" />
+    <Property Type="String" Name="PortOfDischargeCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PortOfDischargeName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="FinalDestinationID" Nullable="true" />
+    <Property Type="String" Name="FinalDestinationCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="FinalDestinationName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="NumberOfDetails" Nullable="false" />
+    <Property Type="Boolean" Name="StockOutControlFlag" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_HPCS020_ConfirmPicking_GetLocation_Result">
+    <Property Type="Int32" Name="LocationID" Nullable="false" />
+    <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PalletNo" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="Quantity" Nullable="true" Precision="38" Scale="7" />
+    <Property Type="Int32" Name="FullCapacityFlag" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_HPCS020_ConfirmPicking_SearchAll_Result">
+    <Property Type="Boolean" Name="Select" Nullable="true" />
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="Int64" Name="SortedLineNo" Nullable="true" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="Int32" Name="ProductID" Nullable="true" />
+    <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="ProductConditionID" Nullable="true" />
+    <Property Type="String" Name="ProductConditionName" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PortOfLoadingName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="PortOfDischargeName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="FinalDestinationName" Nullable="true" MaxLength="60" />
+    <Property Type="Decimal" Name="Qty" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Int32" Name="LocationID" Nullable="true" />
+    <Property Type="String" Name="LocationCode" Nullable="false" MaxLength="1" />
+    <Property Type="Decimal" Name="ActualQty" Nullable="false" Precision="18" Scale="3" />
+    <Property Type="Int32" Name="PickingLineSeq" Nullable="false" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="Int32" Name="WarehouseID" Nullable="true" />
+    <Property Type="Int32" Name="Kanban" Nullable="true" />
+    <Property Type="Int32" Name="Pallet" Nullable="false" />
+    <Property Type="Int32" Name="sumKanban" Nullable="false" />
+    <Property Type="Int32" Name="sumPallet" Nullable="false" />
+    <Property Type="Int32" Name="UnitOfOrderQty" Nullable="true" />
+    <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="CanEditConfirm" Nullable="false" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="PickingDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="AllStatus" Nullable="true" />
+    <Property Type="DateTime" Name="DeliveryDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="PickStatus" Nullable="false" MaxLength="8" />
+    <Property Type="Int32" Name="CanPick" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_HPCS030_UnplanPicking_SearchAll_Result">
+    <Property Type="String" Name="StatusName" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="StatusID" Nullable="true" />
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="PickingNo" Nullable="true" MaxLength="22" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="String" Name="OwnerCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CustomerCode" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="WarehouseID" Nullable="true" />
+    <Property Type="String" Name="WarehouseCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="WarehouseName" Nullable="true" MaxLength="40" />
+    <Property Type="Int32" Name="ShippingAreaID" Nullable="true" />
+    <Property Type="String" Name="ShippingAreaCode" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="ShippingAreaName" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="PickingDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="VanningDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="TransportationDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="CutDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ETD" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="DeliveryDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="AgentSeal" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="InspectionSeal" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="BookingNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="VesselName1" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="VesselName2" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="AgentOwner" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="PortOfLoadingID" Nullable="true" />
+    <Property Type="String" Name="PortOfLoadingCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PortOfLoadingName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="PortOfDischargeID" Nullable="true" />
+    <Property Type="String" Name="PortOfDischargeCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PortOfDischargeName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="FinalDestinationID" Nullable="true" />
+    <Property Type="String" Name="FinalDestinationCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="FinalDestinationLongName" Nullable="true" MaxLength="60" />
+    <Property Type="Boolean" Name="ShipCompleteFlag" Nullable="false" />
+    <Property Type="Int32" Name="NumberOfPallet" Nullable="true" />
+    <Property Type="DateTime" Name="ShipCompleteDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CreateUser" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="UpdateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="UpdateUser" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="tbt_PickingHeader">
+    <Key>
+      <PropertyRef Name="Installment" />
+      <PropertyRef Name="PickingNo" />
+    </Key>
+    <Property Type="String" Name="ShipmentNo" MaxLength="22" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="Int32" Name="WarehouseID" />
+    <Property Type="Int32" Name="ShippingAreaID" />
+    <Property Type="String" Name="AgentSeal" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="InspectionSeal" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="PickingDate" />
+    <Property Type="DateTime" Name="VanningDate" />
+    <Property Type="DateTime" Name="TransportationDate" />
+    <Property Type="Int32" Name="NumberofDetails" />
+    <Property Type="Int32" Name="PalletQty" />
+    <Property Type="Boolean" Name="StockOutControlFlag" />
+    <Property Type="DateTime" Name="PickingIssuedDate" />
+    <Property Type="DateTime" Name="DOIssuedDate" />
+    <Property Type="DateTime" Name="PickingCompleteDate" />
+    <Property Type="Boolean" Name="CompleteInfoFlag" />
+    <Property Type="Boolean" Name="CancelPickingFlag" />
+    <Property Type="DateTime" Name="GenerateDiffDate" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+    <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="UpdateDate" />
+    <Property Type="String" Name="UpdateUser" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DONo" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="sp_HPCS020_ConfirmPicking_GetPickingDetail_Result">
+    <Property Type="Int32" Name="LocationID" Nullable="true" />
+    <Property Type="String" Name="LocationCode" Nullable="true" MaxLength="17" />
+    <Property Type="Decimal" Name="Quantity" Nullable="true" Precision="38" Scale="7" />
+    <Property Type="Decimal" Name="PickingQty" Nullable="false" Precision="18" Scale="3" />
+    <Property Type="Int32" Name="PickingLineSeq" Nullable="false" />
+    <Property Type="Int32" Name="FullCapacityFlag" Nullable="true" />
+    <Property Type="Boolean" Name="ConfirmFlag" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_HPCS010_PickingInstruction_Search_Result">
+    <Property Type="Boolean" Name="Select" Nullable="true" />
+    <Property Type="Int32" Name="PortOfLoadingID" Nullable="true" />
+    <Property Type="String" Name="PortOfLoadingCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PortOfLoadingName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="PortOfDischargeID" Nullable="true" />
+    <Property Type="String" Name="PortOfDischargeCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PortOfDischargeName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="FinalDestinationID" Nullable="true" />
+    <Property Type="String" Name="FinalDestinationCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="FinalDestinationName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+    <Property Type="Boolean" Name="StockOutControlFlag" Nullable="true" />
+    <Property Type="DateTime" Name="DeliveryDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="InvoiceNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="StockOut" Nullable="false" MaxLength="9" />
+    <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ProductLongName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="String" Name="PalletNo" Nullable="false" MaxLength="50" />
+  </ComplexType>
+</Schema>

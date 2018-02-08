@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.BusinessLayer", "1.BusinessLayer", "{4756E119-3428-49B7-96CF-1AE8CAF5540C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.PresentationLayer", "2.PresentationLayer", "{3AF91084-73B1-45FF-80C0-A2955C2F201F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advics.Framework", "Advics.Framework\Advics.Framework.csproj", "{6EDF73F8-2DAE-4604-8873-E4CCDE81F363}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advics.Screen", "Advics.Screen\Advics.Screen.csproj", "{892385D8-F412-46B5-B38F-80557321A64B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advics.Startup", "Advics.Startup\Advics.Startup.csproj", "{01E24906-A206-4DB3-83A4-442F4188F363}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{7E5E60AE-7A17-48AB-8DD0-BC58D0AA25EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileAutoUpdate", "MobileAutoUpdate\MobileAutoUpdate.csproj", "{E5AED35F-08CD-4453-9EE6-DB00EED3E8D5}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 6
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Advics.Framework\\Advics.Framework.csproj
+		SccProjectTopLevelParentUniqueName1 = ADVICE-WinCE7.sln
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = Advics.Framework\\
+		SccProjectUniqueName2 = Advics.Screen\\Advics.Screen.csproj
+		SccProjectTopLevelParentUniqueName2 = ADVICE-WinCE7.sln
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = Advics.Screen\\
+		SccProjectUniqueName3 = Advics.Startup\\Advics.Startup.csproj
+		SccProjectTopLevelParentUniqueName3 = ADVICE-WinCE7.sln
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = Advics.Startup\\
+		SccProjectUniqueName4 = BusinessLayer\\BusinessLayer.csproj
+		SccProjectTopLevelParentUniqueName4 = ADVICE-WinCE7.sln
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = BusinessLayer\\
+		SccProjectUniqueName5 = MobileAutoUpdate\\MobileAutoUpdate.csproj
+		SccProjectTopLevelParentUniqueName5 = ADVICE-WinCE7.sln
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = MobileAutoUpdate\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EDF73F8-2DAE-4604-8873-E4CCDE81F363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EDF73F8-2DAE-4604-8873-E4CCDE81F363}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EDF73F8-2DAE-4604-8873-E4CCDE81F363}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EDF73F8-2DAE-4604-8873-E4CCDE81F363}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EDF73F8-2DAE-4604-8873-E4CCDE81F363}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{892385D8-F412-46B5-B38F-80557321A64B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{892385D8-F412-46B5-B38F-80557321A64B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{892385D8-F412-46B5-B38F-80557321A64B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{892385D8-F412-46B5-B38F-80557321A64B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{892385D8-F412-46B5-B38F-80557321A64B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{01E24906-A206-4DB3-83A4-442F4188F363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01E24906-A206-4DB3-83A4-442F4188F363}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01E24906-A206-4DB3-83A4-442F4188F363}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{01E24906-A206-4DB3-83A4-442F4188F363}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01E24906-A206-4DB3-83A4-442F4188F363}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01E24906-A206-4DB3-83A4-442F4188F363}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7E5E60AE-7A17-48AB-8DD0-BC58D0AA25EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E5E60AE-7A17-48AB-8DD0-BC58D0AA25EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E5E60AE-7A17-48AB-8DD0-BC58D0AA25EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E5E60AE-7A17-48AB-8DD0-BC58D0AA25EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E5E60AE-7A17-48AB-8DD0-BC58D0AA25EE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E5AED35F-08CD-4453-9EE6-DB00EED3E8D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5AED35F-08CD-4453-9EE6-DB00EED3E8D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5AED35F-08CD-4453-9EE6-DB00EED3E8D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5AED35F-08CD-4453-9EE6-DB00EED3E8D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5AED35F-08CD-4453-9EE6-DB00EED3E8D5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7E5E60AE-7A17-48AB-8DD0-BC58D0AA25EE} = {4756E119-3428-49B7-96CF-1AE8CAF5540C}
+		{6EDF73F8-2DAE-4604-8873-E4CCDE81F363} = {3AF91084-73B1-45FF-80C0-A2955C2F201F}
+		{892385D8-F412-46B5-B38F-80557321A64B} = {3AF91084-73B1-45FF-80C0-A2955C2F201F}
+		{01E24906-A206-4DB3-83A4-442F4188F363} = {3AF91084-73B1-45FF-80C0-A2955C2F201F}
+		{E5AED35F-08CD-4453-9EE6-DB00EED3E8D5} = {3AF91084-73B1-45FF-80C0-A2955C2F201F}
+	EndGlobalSection
+EndGlobal

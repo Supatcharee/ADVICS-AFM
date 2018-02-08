@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CommonModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="CommonModelStoreContainer">
+    <EntitySet Name="tbs_SystemConfig" EntityType="CommonModel.Store.tbs_SystemConfig" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="tbs_SystemConfig">
+    <Key>
+      <PropertyRef Name="ConfigID" />
+    </Key>
+    <Property Name="ConfigID" Type="int" Nullable="false" />
+    <Property Name="ConfigItem" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ConfigValue" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="DeleteFlag" Type="bit" />
+    <Property Name="OrderRow" Type="int" />
+    <Property Name="IsSystem" Type="int" Nullable="false" />
+  </EntityType>
+  <Function Name="sp_common_LoadAttention" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadByLocationType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadClassification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadCondition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_common_LoadCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadFinalDestination" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadFloor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadLocation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ZoneID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadLocationType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_common_LoadLot" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadOwner" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadPackaging" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_common_LoadPackingNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="ShippingDateFrom" Type="date" Mode="In" />
+    <Parameter Name="ShippingDateTo" Type="date" Mode="In" />
+    <Parameter Name="PackingDateFrom" Type="date" Mode="In" />
+    <Parameter Name="PackingDateTo" Type="date" Mode="In" />
+    <Parameter Name="SpecificStatus" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadPallet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ReceivingNo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadPickingNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShipmentNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="SpecificStatus" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadPort" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_common_LoadPortOfDischarge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_common_LoadPortOfLoading" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_common_LoadProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadProductCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductGroupID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadProductCondition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadProductGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_common_LoadProductPrice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="SupplierID" Type="int" Mode="In" />
+    <Parameter Name="PriceType" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadRack" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ZoneID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadReceiving" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadSalePrice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadScanType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_common_LoadShipmentArea" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadShippingNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+    <Parameter Name="ShippingDateFrom" Type="date" Mode="In" />
+    <Parameter Name="ShippingDateTo" Type="date" Mode="In" />
+    <Parameter Name="PickDateFrom" Type="date" Mode="In" />
+    <Parameter Name="PickDateTo" Type="date" Mode="In" />
+    <Parameter Name="PackDateFrom" Type="date" Mode="In" />
+    <Parameter Name="PackDateTo" Type="date" Mode="In" />
+    <Parameter Name="SpecificStatus" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadSupplier" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadTransportType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TruckCompanyID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadTruckCompany" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_common_LoadUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_common_LoadWarehouse" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_common_LoadZone" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="Warehouse" Type="int" Mode="In" />
+    <Parameter Name="Floor" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_Common_ProductUnit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SelectUnitID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_VerifyData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TableName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ColumnName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Key" Type="nvarchar" Mode="In" />
+    <Parameter Name="LastUpdateDate" Type="varchar" Mode="InOut" />
+  </Function>
+</Schema>

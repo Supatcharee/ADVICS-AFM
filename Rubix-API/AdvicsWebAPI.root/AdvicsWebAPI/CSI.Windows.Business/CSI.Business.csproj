@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{33BCD130-D84E-49C0-BD18-51DE5885C333}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSI.Business</RootNamespace>
+    <AssemblyName>CSI.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\RubixWebAPI\DLL\Net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessFactory\Admin\UserWebMaintenance.cs" />
+    <Compile Include="BusinessFactory\Admin\ScreenControl.cs" />
+    <Compile Include="BusinessFactory\Admin\SecurityMapping.cs" />
+    <Compile Include="BusinessFactory\Admin\UserGroup.cs" />
+    <Compile Include="BusinessFactory\Admin\UserMaintenance.cs" />
+    <Compile Include="BusinessFactory\Authentication\Authentication.cs" />
+    <Compile Include="BusinessFactory\AutoUpdate\AutoUpdate.cs" />
+    <Compile Include="BusinessFactory\Database.cs" />
+    <Compile Include="BusinessFactory\HandyTerminal\HandyTerminal.cs" />
+    <Compile Include="BusinessFactory\Master\CalendarShipping.cs" />
+    <Compile Include="BusinessFactory\Common.cs" />
+    <Compile Include="BusinessFactory\Common\Common.cs" />
+    <Compile Include="BusinessFactory\Common\IdleValidator.cs" />
+    <Compile Include="BusinessFactory\DatabaseConnection.cs" />
+    <Compile Include="BusinessFactory\Master\CalendarCompany.cs" />
+    <Compile Include="BusinessFactory\Master\Classification.cs" />
+    <Compile Include="BusinessFactory\Master\Currency.cs" />
+    <Compile Include="BusinessFactory\Master\Owner.cs" />
+    <Compile Include="BusinessFactory\Master\Package.cs" />
+    <Compile Include="BusinessFactory\Master\Pallet.cs" />
+    <Compile Include="BusinessFactory\Master\Privilege.cs" />
+    <Compile Include="BusinessFactory\Master\PurchasePrice.cs" />
+    <Compile Include="BusinessFactory\Master\SalePrice.cs" />
+    <Compile Include="BusinessFactory\Master\Customer.cs" />
+    <Compile Include="BusinessFactory\Master\Supplier.cs" />
+    <Compile Include="BusinessFactory\Master\SystemConfig.cs" />
+    <Compile Include="BusinessFactory\Master\TruckCompany.cs" />
+    <Compile Include="BusinessFactory\Master\Condition.cs" />
+    <Compile Include="BusinessFactory\Master\TransportType.cs" />
+    <Compile Include="BusinessFactory\Master\DeadStock.cs" />
+    <Compile Include="BusinessFactory\Master\FinalDestination.cs" />
+    <Compile Include="BusinessFactory\Master\Location.cs" />
+    <Compile Include="BusinessFactory\Master\PortInformation.cs" />
+    <Compile Include="BusinessFactory\Master\Product.cs" />
+    <Compile Include="BusinessFactory\Master\ShippingArea.cs" />
+    <Compile Include="BusinessFactory\Master\TransportCharge.cs" />
+    <Compile Include="BusinessFactory\Master\ProductGroup.cs" />
+    <Compile Include="BusinessFactory\Master\TypeOfUnit.cs" />
+    <Compile Include="BusinessFactory\Master\Warehouse.cs" />
+    <Compile Include="BusinessFactory\Master\WorkMethod.cs" />
+    <Compile Include="BusinessFactory\Master\Zone.cs" />
+    <Compile Include="BusinessFactory\MultiLangBiz.cs" />
+    <Compile Include="BusinessFactory\Operation\Base\BaseReceiving.cs" />
+    <Compile Include="BusinessFactory\Operation\CalBilling.cs" />
+    <Compile Include="BusinessFactory\Operation\ChangeLocation.cs" />
+    <Compile Include="BusinessFactory\Operation\CheckingInventory.cs" />
+    <Compile Include="BusinessFactory\Operation\CollectionASN.cs" />
+    <Compile Include="BusinessFactory\Operation\ConfirmPicking.cs" />
+    <Compile Include="BusinessFactory\Operation\ConfirmProductStoring.cs" />
+    <Compile Include="BusinessFactory\Operation\ConfirmReturn.cs" />
+    <Compile Include="BusinessFactory\Operation\ConfirmShippingEntry.cs" />
+    <Compile Include="BusinessFactory\Operation\ExportDocument.cs" />
+    <Compile Include="BusinessFactory\Operation\PackingInstruction.cs" />
+    <Compile Include="BusinessFactory\Operation\SalePurchaseOrder.cs" />
+    <Compile Include="BusinessFactory\Operation\SqlServerAgent.cs" />
+    <Compile Include="BusinessFactory\Operation\StockChecking.cs" />
+    <Compile Include="BusinessFactory\Operation\WarehouseUtilization.cs" />
+    <Compile Include="BusinessFactory\Operation\ProcessConfig.cs" />
+    <Compile Include="BusinessFactory\Operation\CorrectInventory.cs" />
+    <Compile Include="BusinessFactory\Operation\CreateInventory.cs" />
+    <Compile Include="BusinessFactory\Operation\DailySummary.cs" />
+    <Compile Include="BusinessFactory\Operation\DialyPost.cs" />
+    <Compile Include="BusinessFactory\Operation\ExciseTaxRpt.cs" />
+    <Compile Include="BusinessFactory\Operation\InquiryInventory.cs" />
+    <Compile Include="BusinessFactory\Operation\InquiryTransportation.cs" />
+    <Compile Include="BusinessFactory\Operation\InventoryClearance.cs" />
+    <Compile Include="BusinessFactory\Operation\OrderCancel.cs" />
+    <Compile Include="BusinessFactory\Operation\OrderManage.cs" />
+    <Compile Include="BusinessFactory\Operation\OrderRefresh.cs" />
+    <Compile Include="BusinessFactory\Operation\PickingInstruction.cs" />
+    <Compile Include="BusinessFactory\Operation\PickingShippingRpt.cs" />
+    <Compile Include="BusinessFactory\Operation\PrepareBilling .cs" />
+    <Compile Include="BusinessFactory\Operation\PrintBilling.cs" />
+    <Compile Include="BusinessFactory\Operation\PrintPCIDriver.cs" />
+    <Compile Include="BusinessFactory\Operation\PrintReceivingStoring.cs" />
+    <Compile Include="BusinessFactory\Operation\ProductReceiveEntry.cs" />
+    <Compile Include="BusinessFactory\Operation\ReceivingEntry.cs" />
+    <Compile Include="BusinessFactory\Operation\ReceivingShippingHist.cs" />
+    <Compile Include="BusinessFactory\Operation\SerialNumChange.cs" />
+    <Compile Include="BusinessFactory\Operation\ShippingInstruction.cs" />
+    <Compile Include="BusinessFactory\Operation\ShippingProgress.cs" />
+    <Compile Include="BusinessFactory\Operation\StatManage.cs" />
+    <Compile Include="BusinessFactory\Operation\StockControl.cs" />
+    <Compile Include="BusinessFactory\Operation\StoringInstruction.cs" />
+    <Compile Include="BusinessFactory\Operation\ReceivingProgress.cs" />
+    <Compile Include="BusinessFactory\Report\Base\BaseReport.cs" />
+    <Compile Include="BusinessFactory\Report\AdviceOfShipmentReport.cs" />
+    <Compile Include="BusinessFactory\Report\LabelStickerReport.cs" />
+    <Compile Include="BusinessFactory\Report\PackingListReport.cs" />
+    <Compile Include="BusinessFactory\Report\ShippingInstructionReport.cs" />
+    <Compile Include="BusinessFactory\Report\DomesticInvoiceReport.cs" />
+    <Compile Include="BusinessFactory\Report\ExportInvoiceReport.cs" />
+    <Compile Include="BusinessFactory\Report\LoadingInstructionReport.cs" />
+    <Compile Include="BusinessFactory\Report\OrderBalanceReport.cs" />
+    <Compile Include="BusinessFactory\Report\PackingInstructionReport.cs" />
+    <Compile Include="BusinessFactory\Report\PalletReport.cs" />
+    <Compile Include="BusinessFactory\Report\InventoryUsageReport.cs" />
+    <Compile Include="BusinessFactory\Report\DeliveryOrderReport.cs" />
+    <Compile Include="BusinessFactory\Report\PartDeliverySheetReport.cs" />
+    <Compile Include="BusinessFactory\Report\PickingListReport.cs" />
+    <Compile Include="BusinessFactory\Report\MovementReport.cs" />
+    <Compile Include="BusinessFactory\Report\InventoryCheckingListReport.cs" />
+    <Compile Include="BusinessFactory\Report\EstimatePriceReport.cs" />
+    <Compile Include="BusinessFactory\Report\PickingChargeReport.cs" />
+    <Compile Include="BusinessFactory\Report\PrivilegeFormatReport.cs" />
+    <Compile Include="BusinessFactory\Report\PurchaseOrderReport.cs" />
+    <Compile Include="BusinessFactory\Report\PutAwayReport.cs" />
+    <Compile Include="BusinessFactory\Report\RawMaterialTagReport.cs" />
+    <Compile Include="BusinessFactory\Report\ReceivePlanListReport.cs" />
+    <Compile Include="BusinessFactory\Report\ReceivingInstruction.cs" />
+    <Compile Include="BusinessFactory\Report\ReceivingReport.cs" />
+    <Compile Include="BusinessFactory\Report\ShippingDeliveryReport.cs" />
+    <Compile Include="BusinessFactory\Report\SlowMovementReport.cs" />
+    <Compile Include="BusinessFactory\Report\StockCardReport.cs" />
+    <Compile Include="DataObjects\AdminModel1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataObjects\CommonModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataObjects\O_BC_ReceivingModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>O_BC_ReceivingModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataObjects\O_D_TransitModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>O_D_TransitModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataObjects\O_E_StockModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>O_E_StockModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataObjects\O_FGIJ_ShippingModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>O_FGIJ_ShippingModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataObjects\O_H_PickingModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>O_H_PickingModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataObjects\O_ML_HistoryViewModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>O_ML_HistoryViewModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataObjects\O_R_OrderModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>O_R_OrderModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataObjects\MasterModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasterModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataObjects\ReportDefaultParam.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataObjects\ReportModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EntityDeploy Include="DataObjects\AdminModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AdminModel1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="DataObjects\MasterModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MasterModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="DataObjects\CommonModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CommonModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="DataObjects\ReportModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ReportModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="DataObjects\O_BC_ReceivingModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>O_BC_ReceivingModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="DataObjects\O_D_TransitModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>O_D_TransitModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="DataObjects\O_E_StockModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>O_E_StockModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="DataObjects\O_FGIJ_ShippingModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>O_FGIJ_ShippingModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="DataObjects\O_H_PickingModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>O_H_PickingModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="DataObjects\O_ML_HistoryViewModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>O_ML_HistoryViewModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="DataObjects\O_R_OrderModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>O_R_OrderModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.AdminModelContainer.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.CommonModelContainer.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.IMSConnection.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.O_BC_ReceivingModelContainer.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.O_D_TransitModelContainer.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.O_FGIJ_ShippingModelContainer.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.O_H_PickingModelContainer.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.PickingModelContainer.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.ReceivingModelContainer.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.ShippingModelContainer.datasource" />
+    <None Include="Properties\DataSources\CSI.Business.DataObjects.StockModelContainer.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IMS.Framework\Rubix.Framework.csproj">
+      <Project>{0A356D2B-DE8A-40D9-BA52-83B4BB60D3BB}</Project>
+      <Name>Rubix.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLL\Microsoft.SqlServer.ConnectionInfo.dll" />
+    <Content Include="DLL\Microsoft.SqlServer.Management.Sdk.Sfc.dll" />
+    <Content Include="DLL\Microsoft.SqlServer.Smo.dll" />
+    <Content Include="DLL\Microsoft.SqlServer.SqlEnum.dll" />
+    <Content Include="DLL\System.Data.SqlServerCe.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

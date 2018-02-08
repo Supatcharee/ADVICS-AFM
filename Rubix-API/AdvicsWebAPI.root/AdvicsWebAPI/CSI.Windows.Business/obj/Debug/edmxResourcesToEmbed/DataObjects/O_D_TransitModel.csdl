@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="O_D_TransitModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="O_D_TransitModelContainer" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_DSRS010_ConfirmProductStoring_LoadStockByLocation" ReturnType="Collection(O_D_TransitModel.sp_DSRS010_ConfirmProductStoring_LoadStockByLocation_Result)">
+      <Parameter Name="LocationID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="tbt_TransitConfirmed" EntityType="O_D_TransitModel.tbt_TransitConfirmed" />
+    <EntitySet Name="tbt_TransitInstructionItems" EntityType="O_D_TransitModel.tbt_TransitInstructionItems" />
+    <FunctionImport Name="sp_DSRS010_ConfirmProductStoring_SearchAll" ReturnType="Collection(O_D_TransitModel.sp_DSRS010_ConfirmProductStoring_SearchAll_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+      <Parameter Name="LineNo" Mode="In" Type="Int32" />
+      <Parameter Name="SupplierID" Mode="In" Type="Int32" />
+      <Parameter Name="ShowConfirm" Mode="In" Type="Int32" />
+      <Parameter Name="isAfterMarket" Mode="In" Type="Int32" />
+      <Parameter Name="TransitDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="TransitDateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="isPackingMaterial" Mode="In" Type="Int32" />
+      <Parameter Name="isPart" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DSRS010_ConfirmProductStoring_LoadTransitConfirm" ReturnType="Collection(O_D_TransitModel.sp_DSRS010_ConfirmProductStoring_LoadTransitConfirm_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+      <Parameter Name="Installment" Mode="In" Type="Int32" />
+      <Parameter Name="LineNo" Mode="In" Type="Int32" />
+      <Parameter Name="ReceiveSeq" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DSRS010_ConfirmProductStoring_LoadSuggest" ReturnType="Collection(O_D_TransitModel.sp_DSRS010_ConfirmProductStoring_LoadSuggest_Result)">
+      <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+      <Parameter Name="LineNo" Mode="In" Type="Int32" />
+      <Parameter Name="ReceiveSeq" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_DSRS010_ConfirmProductStoring_LoadStockByLocation_Result">
+    <Property Type="Int32" Name="TransitSeq" Nullable="false" />
+    <Property Type="Int32" Name="LocationID" Nullable="false" />
+    <Property Type="Decimal" Name="TotalCapacity" Nullable="true" Precision="19" Scale="5" />
+    <Property Type="Decimal" Name="CurrentCapacity" Nullable="false" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="StockActualQty" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Boolean" Name="FullCapacityFlag" Nullable="true" />
+    <Property Type="String" Name="UnitCode" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <EntityType Name="tbt_TransitConfirmed">
+    <Key>
+      <PropertyRef Name="ReceivingNo" />
+      <PropertyRef Name="Installment" />
+      <PropertyRef Name="LineNo" />
+      <PropertyRef Name="ReceiveSeq" />
+      <PropertyRef Name="TransitSeq" />
+    </Key>
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="Int32" Name="ReceiveSeq" Nullable="false" />
+    <Property Type="Int32" Name="TransitSeq" Nullable="false" />
+    <Property Type="Int32" Name="LocationID" Nullable="false" />
+    <Property Type="Decimal" Name="TransitQty" Nullable="false" Precision="18" Scale="3" />
+    <Property Type="Boolean" Name="ConfirmFlag" Nullable="false" />
+    <Property Type="DateTime" Name="LastUpdate" />
+    <Property Type="Decimal" Name="StockActualQty" Precision="18" Scale="3" />
+    <Property Type="String" Name="CreateUser" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbt_TransitInstructionItems">
+    <Key>
+      <PropertyRef Name="ReceivingNo" />
+      <PropertyRef Name="Installment" />
+      <PropertyRef Name="LineNo" />
+    </Key>
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="String" Name="PalletNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="Int32" Name="ProductConditionID" Nullable="false" />
+    <Property Type="Decimal" Name="TransitInstructQty" Nullable="false" Precision="18" Scale="3" />
+    <Property Type="DateTime" Name="ConfirmTransitDraftTime" />
+    <Property Type="String" Name="ConfirmTransitDraftNo" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+    <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="UpdateDate" />
+    <Property Type="String" Name="UpdateUser" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="sp_DSRS010_ConfirmProductStoring_SearchAll_Result">
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+    <Property Type="Boolean" Name="Select" Nullable="true" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+    <Property Type="Int32" Name="SortedLineNo" Nullable="true" />
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="Int32" Name="ProductConditionID" Nullable="false" />
+    <Property Type="Decimal" Name="Qty" Nullable="true" Precision="38" Scale="7" />
+    <Property Type="Decimal" Name="ReceiveQty" Nullable="true" Precision="38" Scale="7" />
+    <Property Type="Decimal" Name="TransitQty" Nullable="true" Precision="1" Scale="1" />
+    <Property Type="String" Name="TransitStatus" Nullable="false" MaxLength="13" />
+    <Property Type="Boolean" Name="TransitCompleteFlag" Nullable="false" />
+    <Property Type="Int32" Name="LocationID" Nullable="true" />
+    <Property Type="DateTime" Name="TransitDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="WarehouseID" Nullable="false" />
+    <Property Type="Int32" Name="ReceiveSeq" Nullable="false" />
+    <Property Type="Int32" Name="TransitSeq" Nullable="true" />
+    <Property Type="Int32" Name="StatusID" Nullable="false" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="String" Name="PalletNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="LotNo" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="FullFlag" Nullable="true" />
+    <Property Type="Int32" Name="AllStatus" Nullable="true" />
+    <Property Type="String" Name="UnitCode" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="sp_DSRS010_ConfirmProductStoring_LoadTransitConfirm_Result">
+    <Property Type="Int32" Name="TransitSeq" Nullable="false" />
+    <Property Type="Int32" Name="LocationID" Nullable="true" />
+    <Property Type="Decimal" Name="TotalCapacity" Nullable="true" Precision="19" Scale="5" />
+    <Property Type="Decimal" Name="CurrentCapacity" Nullable="true" Precision="38" Scale="7" />
+    <Property Type="Decimal" Name="StockActualQty" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="Boolean" Name="FullCapacityFlag" Nullable="true" />
+    <Property Type="String" Name="UnitCode" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="LocationTypeID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_DSRS010_ConfirmProductStoring_LoadSuggest_Result">
+    <Property Type="Int32" Name="TransitSeq" Nullable="false" />
+    <Property Type="Int32" Name="LocationID" Nullable="true" />
+    <Property Type="Decimal" Name="TotalCapacity" Nullable="true" Precision="19" Scale="5" />
+    <Property Type="Decimal" Name="CurrentCapacity" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Decimal" Name="StockActualQty" Nullable="true" Precision="38" Scale="7" />
+    <Property Type="Boolean" Name="FullCapacityFlag" Nullable="true" />
+    <Property Type="String" Name="UnitCode" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="LocationTypeID" Nullable="true" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,2 @@
+CurrentDate,Message,StackTrace
+"31/05/17 17:18:29 PM","Attempted to divide by zero.","   at Rubix.Framework.ControlUtil.ConvertByteToImage(Byte[] byteImage) in D:\Rubix\ADVICS-AFM\Rubix-WMS\ADVICS-WMS.root\ADVICS-WMS\ADVICS\05_Coding\RUBIX-WMS\Rubix.Framework\ControlUtil.cs:line 470"

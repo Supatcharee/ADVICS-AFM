@@ -1,0 +1,755 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="tbm_Customer" EntityType="Model.Store.tbm_Customer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbm_Owner" EntityType="Model.Store.tbm_Owner" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbm_Package" EntityType="Model.Store.tbm_Package" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbm_Product" EntityType="Model.Store.tbm_Product" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbm_ProductCondition" EntityType="Model.Store.tbm_ProductCondition" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbm_ProductDefaultUnit" EntityType="Model.Store.tbm_ProductDefaultUnit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbm_ProductDefaultZoneTransit" EntityType="Model.Store.tbm_ProductDefaultZoneTransit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbm_TransportType" EntityType="Model.Store.tbm_TransportType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbm_TypeOfUnit" EntityType="Model.Store.tbm_TypeOfUnit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbm_Warehouse" EntityType="Model.Store.tbm_Warehouse" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="tbm_Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="CustomerName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="BusinessType" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="StateOrProvince" Type="nvarchar" MaxLength="50" />
+    <Property Name="PostalCode" Type="nvarchar" MaxLength="15" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Extension" Type="nvarchar" MaxLength="10" />
+    <Property Name="FaxNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="ContactName1" Type="nvarchar" MaxLength="100" />
+    <Property Name="ContactName2" Type="nvarchar" MaxLength="100" />
+    <Property Name="ContactName3" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeleteFlag" Type="int" Nullable="false" />
+    <Property Name="IsCalVAT" Type="bit" Nullable="false" />
+    <Property Name="VAT" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="PaymentTerm" Type="nvarchar" MaxLength="200" />
+    <Property Name="PickingLeadTime" Type="int" />
+    <Property Name="PackingLeadTime" Type="int" />
+    <Property Name="TransportLeadTime" Type="int" />
+    <Property Name="InvoiceType" Type="char" MaxLength="1" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="CopyInvoice" Type="int" />
+    <Property Name="CopyPackList" Type="int" />
+    <Property Name="CopyM3" Type="int" />
+    <Property Name="CopyCerOrigin" Type="int" />
+    <Property Name="CopyBillLading" Type="int" />
+    <Property Name="CopyBillLadingOrigin" Type="int" />
+    <Property Name="CopyPolicy" Type="int" />
+    <Property Name="CopyPolicyOrigin" Type="int" />
+    <Property Name="CopyCustomInvoice" Type="int" />
+    <Property Name="CopyCertificate" Type="int" />
+    <Property Name="Branch" Type="nvarchar" MaxLength="20" />
+    <Property Name="TaxID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Priority" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbm_Owner">
+    <Key>
+      <PropertyRef Name="OwnerID" />
+    </Key>
+    <Property Name="OwnerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="OwnerName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="BusinessType" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="StateOrProvince" Type="nvarchar" MaxLength="50" />
+    <Property Name="PostalCode" Type="nvarchar" MaxLength="15" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Extension" Type="nvarchar" MaxLength="10" />
+    <Property Name="FaxNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="ContactName1" Type="nvarchar" MaxLength="100" />
+    <Property Name="ContactName2" Type="nvarchar" MaxLength="100" />
+    <Property Name="ContactName3" Type="nvarchar" MaxLength="100" />
+    <Property Name="DefaultReceivingDateType" Type="int" />
+    <Property Name="LimitCapacity" Type="int" />
+    <Property Name="BankAccount" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeleteFlag" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbm_Package">
+    <Key>
+      <PropertyRef Name="PackageID" />
+    </Key>
+    <Property Name="PackageID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PackageCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PackageName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Weight" Type="numeric" Scale="4" />
+    <Property Name="Width" Type="numeric" Scale="4" />
+    <Property Name="Length" Type="numeric" Scale="4" />
+    <Property Name="Height" Type="numeric" Scale="4" />
+    <Property Name="M3" Type="numeric" Scale="4" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="255" />
+    <Property Name="DeleteFlag" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbm_Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerID" Type="int" Nullable="false" />
+    <Property Name="ClassificationID" Type="int" />
+    <Property Name="SupplierID" Type="int" Nullable="false" />
+    <Property Name="ProductCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ProductLongName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProductShortCode" Type="nvarchar" MaxLength="40" />
+    <Property Name="ProductMask" Type="nvarchar" MaxLength="10" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" />
+    <Property Name="SerialMask" Type="nvarchar" MaxLength="10" />
+    <Property Name="SerialLength" Type="int" />
+    <Property Name="ScanType" Type="int" Nullable="false" />
+    <Property Name="LotControl" Type="bit" />
+    <Property Name="KanbanControl" Type="bit" />
+    <Property Name="FreeOfCharge" Type="int" />
+    <Property Name="EstimateValue" Type="numeric" Scale="3" />
+    <Property Name="ProductGroupID" Type="int" Nullable="false" />
+    <Property Name="ProductCategoryID" Type="int" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="200" />
+    <Property Name="PalletTypeID" Type="int" />
+    <Property Name="ItemExpiredTypeID" Type="int" />
+    <Property Name="ShelfLife" Type="int" />
+    <Property Name="ImageFile" Type="image" />
+    <Property Name="SafetyStock" Type="numeric" Scale="3" />
+    <Property Name="UnitLevelReceivingLabel" Type="int" />
+    <Property Name="ProductTypeID" Type="int" />
+    <Property Name="MinOrder" Type="int" />
+    <Property Name="TypeOfUnit" Type="int" />
+    <Property Name="IsShowGrossWeight" Type="bit" />
+    <Property Name="DeleteFlag" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbm_ProductCondition">
+    <Key>
+      <PropertyRef Name="ProductConditionID" />
+    </Key>
+    <Property Name="ProductConditionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProductConditionCode" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="ProductConditionName" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeleteFlag" Type="int" Nullable="false" />
+    <Property Name="IsSystem" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbm_ProductDefaultUnit">
+    <Key>
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="CargoType" />
+    </Key>
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="CargoType" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="PackageID" Type="int" Nullable="false" />
+    <Property Name="VolumeOfUnitLevel1" Type="numeric" Precision="19" Scale="5" />
+    <Property Name="TypeOfUnitLevel1" Type="int" />
+    <Property Name="NumberOfUnitLevel2" Type="numeric" Scale="4" />
+    <Property Name="TypeOfUnitLevel2" Type="int" />
+    <Property Name="NumberOfUnitLevel3" Type="numeric" Scale="4" />
+    <Property Name="TypeOfUnitLevel3" Type="int" />
+    <Property Name="NumberOfUnitLevel4" Type="numeric" Scale="4" />
+    <Property Name="TypeOfUnitLevel4" Type="int" />
+    <Property Name="TypeOfUnitInventory" Type="int" />
+    <Property Name="NetWeight" Type="numeric" Scale="4" />
+    <Property Name="GrossWeight" Type="numeric" Scale="4" />
+    <Property Name="rptTypeOfUnitLevel1" Type="bit" />
+    <Property Name="rptTypeOfUnitLevel2" Type="bit" />
+    <Property Name="rptTypeOfUnitLevel3" Type="bit" />
+    <Property Name="rptTypeOfUnitLevel4" Type="bit" />
+    <Property Name="PalletID" Type="int" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbm_ProductDefaultZoneTransit">
+    <Key>
+      <PropertyRef Name="ProductDefaultID" />
+    </Key>
+    <Property Name="ProductDefaultID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="ProductConditionID" Type="int" Nullable="false" />
+    <Property Name="ZoneID" Type="int" Nullable="false" />
+    <Property Name="LocationID" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbm_TransportType">
+    <Key>
+      <PropertyRef Name="TransportTypeID" />
+    </Key>
+    <Property Name="TransportTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TransportTypeCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="TransportTypeName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MaxM3" Type="decimal" Precision="19" Scale="4" />
+    <Property Name="ContainerWeight" Type="decimal" Scale="4" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="Width" Type="numeric" Scale="4" />
+    <Property Name="Length" Type="numeric" Scale="4" />
+    <Property Name="Height" Type="numeric" Scale="4" />
+    <Property Name="MaxPallet" Type="int" />
+    <Property Name="LGL" Type="bit" />
+    <Property Name="DeleteFlag" Type="int" Nullable="false" />
+    <Property Name="IsSystem" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbm_TypeOfUnit">
+    <Key>
+      <PropertyRef Name="UnitID" />
+    </Key>
+    <Property Name="UnitID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UnitCode" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="UnitName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Remark" Type="varchar" MaxLength="2550" />
+    <Property Name="DeleteFlag" Type="int" Nullable="false" />
+    <Property Name="IsSystem" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbm_Warehouse">
+    <Key>
+      <PropertyRef Name="WarehouseID" />
+    </Key>
+    <Property Name="WarehouseID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="WarehouseCode" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="WarehouseName" Type="nvarchar" MaxLength="40" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Extension" Type="nvarchar" MaxLength="10" />
+    <Property Name="FaxNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address1" Type="nvarchar" MaxLength="200" />
+    <Property Name="Address2" Type="nvarchar" MaxLength="200" />
+    <Property Name="ContactName1" Type="nvarchar" MaxLength="100" />
+    <Property Name="ContactName2" Type="nvarchar" MaxLength="100" />
+    <Property Name="ContactName3" Type="nvarchar" MaxLength="100" />
+    <Property Name="MaxM3" Type="numeric" Precision="19" Scale="5" />
+    <Property Name="MaxM2" Type="numeric" Scale="2" />
+    <Property Name="ExternalDivisionFlag" Type="bit" />
+    <Property Name="MaxPallet" Type="int" />
+    <Property Name="MaxCapacity" Type="numeric" Scale="2" />
+    <Property Name="ManPower" Type="int" />
+    <Property Name="NoOfForklift" Type="int" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="1000" />
+    <Property Name="InChargeEmail" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeleteFlag" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Function Name="sp_XMSS010_Owner_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="OwnerName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS020_TruckCompany_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TruckCompanyCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="TruckCompanyName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS021_TruckTransportTypeMapping_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TruckCompanyID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS030_Supplier_CheckExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SupplierID" Type="int" Mode="In" />
+    <Parameter Name="SupplierCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS030_Supplier_CheckReference" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SupplierID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS030_Supplier_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SupplierID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS030_Supplier_Save" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SupplierID" Type="int" Mode="In" />
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="SupplierCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="SupplierLongName" Type="nvarchar" Mode="In" />
+    <Parameter Name="SupplierAddress1" Type="nvarchar" Mode="In" />
+    <Parameter Name="SupplierAddress2" Type="nvarchar" Mode="In" />
+    <Parameter Name="City" Type="nvarchar" Mode="In" />
+    <Parameter Name="StateOrProvince" Type="nvarchar" Mode="In" />
+    <Parameter Name="PostalCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Country" Type="nvarchar" Mode="In" />
+    <Parameter Name="KM" Type="int" Mode="In" />
+    <Parameter Name="MobileNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PhoneNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Extension" Type="nvarchar" Mode="In" />
+    <Parameter Name="FaxNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmailAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="ContactName1" Type="nvarchar" Mode="In" />
+    <Parameter Name="ContactName2" Type="nvarchar" Mode="In" />
+    <Parameter Name="ContactName3" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreateUser" Type="nvarchar" Mode="In" />
+    <Parameter Name="SupplierNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="ArrivalLeadTime" Type="int" Mode="In" />
+    <Parameter Name="ArrivalTime" Type="time" Mode="In" />
+    <Parameter Name="CollectTime" Type="time" Mode="In" />
+    <Parameter Name="CreditTerm" Type="nvarchar" Mode="In" />
+    <Parameter Name="DeliveryPlace" Type="nvarchar" Mode="In" />
+    <Parameter Name="isCalVat" Type="bit" Mode="In" />
+    <Parameter Name="VAT" Type="decimal" Mode="In" />
+    <Parameter Name="Monday" Type="bit" Mode="In" />
+    <Parameter Name="Tuesday" Type="bit" Mode="In" />
+    <Parameter Name="Wednesday" Type="bit" Mode="In" />
+    <Parameter Name="Thursday" Type="bit" Mode="In" />
+    <Parameter Name="Friday" Type="bit" Mode="In" />
+    <Parameter Name="Saturday" Type="bit" Mode="In" />
+    <Parameter Name="Sunday" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS030_Supplier_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SupplierCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="SupplierName" Type="nvarchar" Mode="In" />
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS040_Warehouse_CheckExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS040_Warehouse_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="WarehouseName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS040_Warehouse_SearchByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS070_FinalDestination_CheckExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FinalDestinationCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS070_FinalDestination_CheckReference" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FinalDestinationID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS070_FinalDestination_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FinalDestinationID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS070_FinalDestination_Save" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FinalDestinationID" Type="int" Mode="In" />
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="FinalDestinationCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="FinalDestinationLongName" Type="nvarchar" Mode="In" />
+    <Parameter Name="FinalDestinationAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="FinalDestinationDetail" Type="nvarchar" Mode="In" />
+    <Parameter Name="City" Type="nvarchar" Mode="In" />
+    <Parameter Name="StateOrProvince" Type="nvarchar" Mode="In" />
+    <Parameter Name="PostalCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Extension" Type="nvarchar" Mode="In" />
+    <Parameter Name="FaxNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="ContactName1" Type="nvarchar" Mode="In" />
+    <Parameter Name="ContactName2" Type="nvarchar" Mode="In" />
+    <Parameter Name="ContactName3" Type="nvarchar" Mode="In" />
+    <Parameter Name="Remark" Type="nvarchar" Mode="In" />
+    <Parameter Name="PhoneNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Country" Type="nvarchar" Mode="In" />
+    <Parameter Name="KM" Type="decimal" Mode="In" />
+    <Parameter Name="MobileNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="LeadTimeDays" Type="int" Mode="In" />
+    <Parameter Name="LeadTimeHr" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreateUser" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+    <Parameter Name="ImageFile" Type="image" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS070_FinalDestination_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FinalDestinationCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="FinalDestinationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS090_LoadPortClassification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_XMSS090_Port_CheckExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PortCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS090_Port_CheckReference" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PortID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS090_Port_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PortID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS090_Port_LoadPortOwner" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PortID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS090_Port_Save" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PortID" Type="int" Mode="In" />
+    <Parameter Name="PortCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="PortLongName" Type="nvarchar" Mode="In" />
+    <Parameter Name="PortClassification" Type="int" Mode="In" />
+    <Parameter Name="CountryCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="LeadTimeDays" Type="int" Mode="In" />
+    <Parameter Name="LeadTimeHr" Type="nvarchar" Mode="In" />
+    <Parameter Name="PortAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="PostalCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Remark" Type="nvarchar" Mode="In" />
+    <Parameter Name="Freight" Type="decimal" Mode="In" />
+    <Parameter Name="CurrencyID" Type="int" Mode="In" />
+    <Parameter Name="CreateUser" Type="nvarchar" Mode="In" />
+    <Parameter Name="xmlResult" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS090_Port_SaveCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="xmlResult" Type="xml" Mode="In" />
+    <Parameter Name="PortID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS090_Port_SavePortCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PortCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="CreateUser" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS090_Port_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="PortCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="PortLongName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS110_ConditionOfProduct_CheckExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductConditionCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS110_ConditionOfProduct_CheckReference" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductConditionID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS110_ConditionOfProduct_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductConditionID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS110_ConditionOfProduct_Save" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductConditionID" Type="int" Mode="In" />
+    <Parameter Name="ProductConditionCode" Type="char" Mode="In" />
+    <Parameter Name="ProductConditionName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Remark" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreateUser" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS110_ConditionOfProduct_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ConditionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="ConditionName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS120_Zone_CheckExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ZoneCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="Floor" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS120_Zone_CheckReference" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ZoneID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS120_Zone_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ZoneID" Type="int" Mode="In" />
+    <Parameter Name="UpdateUser" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS120_Zone_GetZoneIDForCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ZoneCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS120_Zone_SaveZone" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ZoneID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="Floor" Type="int" Mode="In" />
+    <Parameter Name="ZoneCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="ZoneName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ZoneType" Type="int" Mode="In" />
+    <Parameter Name="DeleteFlag" Type="int" Mode="In" />
+    <Parameter Name="CreateUser" Type="nvarchar" Mode="In" />
+    <Parameter Name="UpdateUser" Type="nvarchar" Mode="In" />
+    <Parameter Name="ZoneColor" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS120_Zone_SaveZoneCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="xmlResult" Type="xml" Mode="In" />
+    <Parameter Name="ZoneID" Type="int" Mode="In" />
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS120_Zone_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="Floor" Type="int" Mode="In" />
+    <Parameter Name="ZoneCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="ZoneName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS130_TransportType_CheckExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TransportTypeCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS130_TransportType_CheckReference" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TransportTypeID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS130_TransportType_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TransportTypeID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS130_TransportType_Save" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TransportTypeID" Type="int" Mode="In" />
+    <Parameter Name="TransportTypeCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="TransportTypeName" Type="nvarchar" Mode="In" />
+    <Parameter Name="MaxM3" Type="numeric" Mode="In" />
+    <Parameter Name="ContainerWeight" Type="numeric" Mode="In" />
+    <Parameter Name="Remark" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreateUser" Type="nvarchar" Mode="In" />
+    <Parameter Name="Width" Type="numeric" Mode="In" />
+    <Parameter Name="Length" Type="numeric" Mode="In" />
+    <Parameter Name="Height" Type="numeric" Mode="In" />
+    <Parameter Name="MaxPallet" Type="int" Mode="In" />
+    <Parameter Name="LGL" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS130_TransportType_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TransportTypeCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="TransportTypeName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS140_DeadStock_GetData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_XMSS140_DeadStock_Save" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodeName" Type="nvarchar" Mode="In" />
+    <Parameter Name="CodeDescription" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmptyStockDay" Type="int" Mode="In" />
+    <Parameter Name="ExpReceiveCompleteDay" Type="int" Mode="In" />
+    <Parameter Name="ExpReceiveIncompleteDay" Type="int" Mode="In" />
+    <Parameter Name="ExpShippingCompleteDay" Type="int" Mode="In" />
+    <Parameter Name="ExpShippingIncompleteDay" Type="int" Mode="In" />
+    <Parameter Name="ExpHistoryDay" Type="int" Mode="In" />
+    <Parameter Name="ExpBillingDataDay" Type="int" Mode="In" />
+    <Parameter Name="ExpBillingCostDay" Type="int" Mode="In" />
+    <Parameter Name="ExpSerialDataDay" Type="int" Mode="In" />
+    <Parameter Name="ExpStockTaking" Type="int" Mode="In" />
+    <Parameter Name="CreateUser" Type="nvarchar" Mode="In" />
+    <Parameter Name="UpdateUser" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS140_DeadStockDatabase_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ServerName" Type="nvarchar" Mode="In" />
+    <Parameter Name="DatabaseName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Login" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+    <Parameter Name="UpdateUser" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS150_ShippingArea_CheckReference" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShippingAreaID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS150_ShippingArea_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShippingAreaID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS150_ShippingArea_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ShippingAreaID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ShippingAreaCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="ShippingAreaName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS170_Location_CheckExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LocationCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="ZoneID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS170_Location_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LayoutID" Type="varchar" Mode="In" />
+    <Parameter Name="UpdateUser" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS170_Location_Save" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ZoneID" Type="int" Mode="In" />
+    <Parameter Name="LocationTypeID" Type="int" Mode="In" />
+    <Parameter Name="LocationXML" Type="xml" Mode="In" />
+    <Parameter Name="CreateUser" Type="nvarchar" Mode="In" />
+    <Parameter Name="LayoutID" Type="int" Mode="In" />
+    <Parameter Name="LocationLayoutCode" Type="varchar" Mode="In" />
+    <Parameter Name="LocationLayoutName" Type="nvarchar" Mode="In" />
+    <Parameter Name="CaptionPosition" Type="varchar" Mode="In" />
+    <Parameter Name="Width" Type="int" Mode="In" />
+    <Parameter Name="Height" Type="int" Mode="In" />
+    <Parameter Name="PositionX" Type="int" Mode="In" />
+    <Parameter Name="PositionY" Type="int" Mode="In" />
+    <Parameter Name="Type" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS190_TransportCharge_GetFinalDestinationID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS190_TransportCharge_GetTransportTypeID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TransportName" Type="nvarchar" Mode="In" />
+    <Parameter Name="TruckCompanyID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS190_TransportCharge_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS190_TransportCharge_SearchByCondition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="EffectiveDate" Type="date" Mode="In" />
+    <Parameter Name="TruckCompanyID" Type="int" Mode="In" />
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS220_TypeOfUnit_CheckExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UnitCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS220_TypeOfUnit_CheckReference" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UnitID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS220_TypeOfUnit_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UnitID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS220_TypeOfUnit_Save" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UnitID" Type="int" Mode="In" />
+    <Parameter Name="UnitCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="UnitName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Remark" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreateUser" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS220_TypeOfUnit_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UnitCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="UnitName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS230_WorkMethod_CheckExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkMethodCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS230_WorkMethod_CheckReference" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkMethodID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS230_WorkMethod_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkMethodID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS230_WorkMethod_Save" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkMethodID" Type="int" Mode="In" />
+    <Parameter Name="WorkMethodCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="WorkMethodName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Description" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreateUser" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS230_WorkMethod_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkMethodCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="WorkMethodName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS240_Classification_CheckExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClassificationCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS240_Classification_CheckReference" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClassificationID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS240_Classification_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClassificationID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS240_Classification_Save" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClassificationID" Type="int" Mode="In" />
+    <Parameter Name="ClassificationCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="ClassificationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Remark" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreateUser" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS240_Classification_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClassificationCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="ClassificationName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS250_ProductGroup_CheckExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductGroupCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS250_ProductGroup_CheckReference" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductGroupID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS250_ProductGroup_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductGroupID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS250_ProductGroup_LoadProductCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductGroupID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS250_ProductGroup_Save" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductGroupID" Type="int" Mode="In" />
+    <Parameter Name="ProductGroupCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProductGroupName" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreateUser" Type="nvarchar" Mode="In" />
+    <Parameter Name="resultXML" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS250_ProductGroup_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductGroupCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProductGroupName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS260_Package_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PackageCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="PackageName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS270_Customer_Save" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+    <Parameter Name="CustomerCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomerName" Type="nvarchar" Mode="In" />
+    <Parameter Name="BusinessType" Type="nvarchar" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar" Mode="In" />
+    <Parameter Name="City" Type="nvarchar" Mode="In" />
+    <Parameter Name="StateOrProvince" Type="nvarchar" Mode="In" />
+    <Parameter Name="PostalCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Country" Type="nvarchar" Mode="In" />
+    <Parameter Name="MobileNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PhoneNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Extension" Type="nvarchar" Mode="In" />
+    <Parameter Name="FaxNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmailAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="ContactName1" Type="nvarchar" Mode="In" />
+    <Parameter Name="ContactName2" Type="nvarchar" Mode="In" />
+    <Parameter Name="ContactName3" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreateUser" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsCalVat" Type="int" Mode="In" />
+    <Parameter Name="Vat" Type="numeric" Mode="In" />
+    <Parameter Name="PaymentTerm" Type="nvarchar" Mode="In" />
+    <Parameter Name="PickingLeadTime" Type="int" Mode="In" />
+    <Parameter Name="PackingLeadTime" Type="int" Mode="In" />
+    <Parameter Name="TransportLeadTime" Type="int" Mode="In" />
+    <Parameter Name="InvoiceType" Type="nvarchar" Mode="In" />
+    <Parameter Name="Remark" Type="nvarchar" Mode="In" />
+    <Parameter Name="CopyInvoice" Type="int" Mode="In" />
+    <Parameter Name="CopyPackList" Type="int" Mode="In" />
+    <Parameter Name="CopyM3" Type="int" Mode="In" />
+    <Parameter Name="CopyCerOrigin" Type="int" Mode="In" />
+    <Parameter Name="CopyBillLadingOrigin" Type="int" Mode="In" />
+    <Parameter Name="CopyBillLading" Type="int" Mode="In" />
+    <Parameter Name="CopyPolicyOrigin" Type="int" Mode="In" />
+    <Parameter Name="CopyPolicy" Type="int" Mode="In" />
+    <Parameter Name="CopyCustomInvoice" Type="int" Mode="In" />
+    <Parameter Name="CopyCertificate" Type="int" Mode="In" />
+    <Parameter Name="Branch" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaxID" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomerPriority" Type="int" Mode="In" />
+    <Parameter Name="OwnerXML" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS270_Customer_SearchAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OwnerID" Type="int" Mode="In" />
+    <Parameter Name="CustomerCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomerName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS280_SystemConfig_CheckExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ConfigItem" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS280_SystemConfig_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ConfigID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS280_SystemConfig_Save" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ConfigID" Type="int" Mode="In" />
+    <Parameter Name="ConfigItem" Type="nvarchar" Mode="In" />
+    <Parameter Name="ConfigValue" Type="nvarchar" Mode="In" />
+    <Parameter Name="Description" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_XMSS280_SystemConfig_Search" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ConfigItem" Type="nvarchar" Mode="In" />
+  </Function>
+</Schema>

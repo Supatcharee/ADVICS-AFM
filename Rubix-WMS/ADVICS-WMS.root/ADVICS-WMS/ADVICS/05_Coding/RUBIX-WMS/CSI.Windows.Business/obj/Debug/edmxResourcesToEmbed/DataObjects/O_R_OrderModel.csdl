@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OrderModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="O_R_OrderModel" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_ROMS010_OrderRefresh_SearchAll" ReturnType="Collection(OrderModel.sp_ROMS010_OrderRefresh_SearchAll_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ROMS010_OrderRefresh_SearchAll_Receiving" ReturnType="Collection(OrderModel.sp_ROMS010_OrderRefresh_SearchAll_Receiving_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ReceivingNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ROMS011_OrderRefresh_SearchReceivingDetail" ReturnType="Collection(OrderModel.sp_ROMS011_OrderRefresh_SearchReceivingDetail_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ROMS012_OrderRefresh_SearchShippingDetail" ReturnType="Collection(OrderModel.sp_ROMS012_OrderRefresh_SearchShippingDetail_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ROMS020_OrderCancel_SearchAll" ReturnType="Collection(OrderModel.sp_ROMS020_OrderCancel_SearchAll_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ROMS020_OrderCancel_SearchAll_Receiving" ReturnType="Collection(OrderModel.sp_ROMS020_OrderCancel_SearchAll_Receiving_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ReceiveNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ROMS020_OrderCancel_SearchAll_Shipping" ReturnType="Collection(OrderModel.sp_ROMS020_OrderCancel_SearchAll_Shipping_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ROMS010_OrderRefresh_SearchAll_Shipping" ReturnType="Collection(OrderModel.sp_ROMS010_OrderRefresh_SearchAll_Shipping_Result)">
+      <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="ShipmentNo" Mode="In" Type="String" />
+      <Parameter Name="PickingNo" Mode="In" Type="String" />
+      <Parameter Name="CustomerID" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_ROMS010_OrderRefresh_SearchAll_Result">
+    <Property Type="Boolean" Name="Select" Nullable="true" />
+    <Property Type="String" Name="WorkUnit" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Entry" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="StockControl" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="PickingInstruction" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Picking" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Shipping" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Transportation" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="sp_ROMS010_OrderRefresh_SearchAll_Receiving_Result">
+    <Property Type="Boolean" Name="Select" Nullable="true" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+    <Property Type="DateTime" Name="Entry" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="TransitInstruction" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ReceivingDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="TransitDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="WarehouseID" Nullable="true" />
+    <Property Type="Int32" Name="SupplierID" Nullable="true" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="String" Name="WarehouseCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="SupplierCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SupplierName" Nullable="true" MaxLength="60" />
+    <Property Type="Int32" Name="OwnerID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_ROMS011_OrderRefresh_SearchReceivingDetail_Result">
+    <Property Type="String" Name="LineNo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ProductName" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Condition" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="LotNo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Qty" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="TypeOfQty" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Weight" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Measurement" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="TypeOfPackage" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="InPackage" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="PONo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="sp_ROMS012_OrderRefresh_SearchShippingDetail_Result">
+    <Property Type="String" Name="LineNo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ProductName" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Condition" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="LotNo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Qty" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="TypeOfQty" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Weight" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Measurement" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="TypeOfPackage" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="InPackage" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="PONo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="sp_ROMS020_OrderCancel_SearchAll_Result">
+    <Property Type="Boolean" Name="Select" Nullable="true" />
+    <Property Type="String" Name="Progress" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="LineNo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ProductCode" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ProductName" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Condition" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Qty" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Remark" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="sp_ROMS020_OrderCancel_SearchAll_Receiving_Result">
+    <Property Type="Boolean" Name="Select" Nullable="true" />
+    <Property Type="String" Name="Progress" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="Int64" Name="SortedLineNo" Nullable="true" />
+    <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ProductCondition" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="Qty" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="DateTime" Name="ReceivingEntryDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="TransitInstructionIssuedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ReceivingDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="TransitDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="DetailRemark" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ReceivingNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="SupplierCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SupplierName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="PortOfDischargeCode" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="PortOfDischargeName" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="FinalDestinationCode" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="FinalDestinationName" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="StatusID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_ROMS020_OrderCancel_SearchAll_Shipping_Result">
+    <Property Type="Boolean" Name="Select" Nullable="true" />
+    <Property Type="String" Name="Progress" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="Int64" Name="SortedLineNo" Nullable="true" />
+    <Property Type="String" Name="ProductCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ProductCondition" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="Qty" Nullable="true" Precision="18" Scale="3" />
+    <Property Type="DateTime" Name="EntryDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="StockControlDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="PickingListIssuedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="PickingDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ShippingDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DOIssueDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="DetailRemark" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="PortOfDischargeCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PortOfDischargeName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="FinalDestinationCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="FinalDestinationName" Nullable="true" MaxLength="60" />
+    <Property Type="Int32" Name="StatusID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_ROMS010_OrderRefresh_SearchAll_Shipping_Result">
+    <Property Type="Boolean" Name="Select" Nullable="true" />
+    <Property Type="String" Name="ShipmentNo" Nullable="false" MaxLength="22" />
+    <Property Type="DateTime" Name="Entry" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="StockControl" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="PickingInstruction" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Picking" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Shipping" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Transporation" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="WarehouseID" Nullable="true" />
+    <Property Type="DateTime" Name="DeliveryDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="FinalDestinationID" Nullable="true" />
+    <Property Type="String" Name="WarehouseCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="FinalDestinationCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PortCode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PortName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="Installment" Nullable="false" />
+    <Property Type="String" Name="PickingNo" Nullable="false" MaxLength="22" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,984 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="ReportModel" />
+  <Alias Key="Target" Value="ReportModel.Store" />
+  <EntityContainerMapping CdmEntityContainer="ReportModelContainer" StorageEntityContainer="ReportModelStoreContainer">
+    <FunctionImportMapping FunctionImportName="sp_RPT001_ReceivingReport_GetData" FunctionName="ReportModel.Store.sp_RPT001_ReceivingReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT001_ReceivingReport_GetData_Result">
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="Attention" ColumnName="Attention" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+          <ScalarProperty Name="CusAddress" ColumnName="CusAddress" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="DCAddress" ColumnName="DCAddress" />
+          <ScalarProperty Name="SupplierLongName" ColumnName="SupplierLongName" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="ContainerNo" ColumnName="ContainerNo" />
+          <ScalarProperty Name="TruckCompanyLongName" ColumnName="TruckCompanyLongName" />
+          <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+          <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="SQty" ColumnName="SQty" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="UnitVolume" ColumnName="UnitVolume" />
+          <ScalarProperty Name="ProductConditionCode" ColumnName="ProductConditionCode" />
+          <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="PackingSize" ColumnName="PackingSize" />
+          <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT001_ReceivingReport_SearchAll" FunctionName="ReportModel.Store.sp_RPT001_ReceivingReport_SearchAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT001_ReceivingReport_SearchAll_Result">
+          <ScalarProperty Name="select" ColumnName="select" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+          <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT002_PutAwayReport_GetData" FunctionName="ReportModel.Store.sp_RPT002_PutAwayReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT002_PutAwayReport_GetData_Result">
+          <ScalarProperty Name="TransitDate" ColumnName="TransitDate" />
+          <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="StockActualQty" ColumnName="StockActualQty" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="ZoneName" ColumnName="ZoneName" />
+          <ScalarProperty Name="lvl" ColumnName="lvl" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT003_OtherChargeReport_GetData" FunctionName="ReportModel.Store.sp_RPT003_OtherChargeReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT003_OtherChargeReport_GetData_Result">
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="SlipNo" ColumnName="SlipNo" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="ReceivingAmount" ColumnName="ReceivingAmount" />
+          <ScalarProperty Name="ReceivingDescription" ColumnName="ReceivingDescription" />
+          <ScalarProperty Name="ShippingNo" ColumnName="ShippingNo" />
+          <ScalarProperty Name="ShippingAmount" ColumnName="ShippingAmount" />
+          <ScalarProperty Name="ShippingDescription" ColumnName="ShippingDescription" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT004_SummaryChargeReport_GetData" FunctionName="ReportModel.Store.sp_RPT004_SummaryChargeReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT004_SummaryChargeReport_GetData_Result">
+          <ScalarProperty Name="UnstaffingCharge" ColumnName="UnstaffingCharge" />
+          <ScalarProperty Name="IncomingCharge" ColumnName="IncomingCharge" />
+          <ScalarProperty Name="TransitCharge" ColumnName="TransitCharge" />
+          <ScalarProperty Name="PickingCharge" ColumnName="PickingCharge" />
+          <ScalarProperty Name="OutgoingCharge" ColumnName="OutgoingCharge" />
+          <ScalarProperty Name="ReceiveCharge" ColumnName="ReceiveCharge" />
+          <ScalarProperty Name="TransportCharge" ColumnName="TransportCharge" />
+          <ScalarProperty Name="OtherCharge" ColumnName="OtherCharge" />
+          <ScalarProperty Name="UnstaffingQty" ColumnName="UnstaffingQty" />
+          <ScalarProperty Name="IncomingQty" ColumnName="IncomingQty" />
+          <ScalarProperty Name="TransitQty" ColumnName="TransitQty" />
+          <ScalarProperty Name="PickingQty" ColumnName="PickingQty" />
+          <ScalarProperty Name="OutgoingQty" ColumnName="OutgoingQty" />
+          <ScalarProperty Name="ReceiveQty" ColumnName="ReceiveQty" />
+          <ScalarProperty Name="TransportQty" ColumnName="TransportQty" />
+          <ScalarProperty Name="OtherQty" ColumnName="OtherQty" />
+          <ScalarProperty Name="UnstaffingUnit" ColumnName="UnstaffingUnit" />
+          <ScalarProperty Name="IncomingUnit" ColumnName="IncomingUnit" />
+          <ScalarProperty Name="TransitUnit" ColumnName="TransitUnit" />
+          <ScalarProperty Name="PickingUnit" ColumnName="PickingUnit" />
+          <ScalarProperty Name="OutgoingUnit" ColumnName="OutgoingUnit" />
+          <ScalarProperty Name="ReceiveUnit" ColumnName="ReceiveUnit" />
+          <ScalarProperty Name="TransportUnit" ColumnName="TransportUnit" />
+          <ScalarProperty Name="OtherUnit" ColumnName="OtherUnit" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT005_ReceivingTransportationChargeReport_GetData" FunctionName="ReportModel.Store.sp_RPT005_ReceivingTransportationChargeReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT005_ReceivingTransportationChargeReport_GetData_Result">
+          <ScalarProperty Name="TransportationDate" ColumnName="TransportationDate" />
+          <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+          <ScalarProperty Name="Trips" ColumnName="Trips" />
+          <ScalarProperty Name="TotalContainer" ColumnName="TotalContainer" />
+          <ScalarProperty Name="TransportAmount" ColumnName="TransportAmount" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="ReceiveQty" ColumnName="ReceiveQty" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT006_UnstaffingChargeReport_GetData" FunctionName="ReportModel.Store.sp_RPT006_UnstaffingChargeReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT006_UnstaffingChargeReport_GetData_Result">
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="TaxInvoice" ColumnName="TaxInvoice" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT007_IncomingChargeReport_GetData" FunctionName="ReportModel.Store.sp_RPT007_IncomingChargeReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT007_IncomingChargeReport_GetData_Result">
+          <ScalarProperty Name="ReceiveDate" ColumnName="ReceiveDate" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="Volumn" ColumnName="Volumn" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="RateUOM" ColumnName="RateUOM" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="InventoryQty" ColumnName="InventoryQty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT007_IncomingChargeReport_SubReport_GetData" FunctionName="ReportModel.Store.sp_RPT007_IncomingChargeReport_SubReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT007_IncomingChargeReport_SubReport_GetData_Result">
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT008_TransitChargeReport_GetData" FunctionName="ReportModel.Store.sp_RPT008_TransitChargeReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT008_TransitChargeReport_GetData_Result">
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="OpenningVolume" ColumnName="OpenningVolume" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="ShippingDate" ColumnName="ShippingDate" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="RateUOM" ColumnName="RateUOM" />
+          <ScalarProperty Name="StockDay" ColumnName="StockDay" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="ChargeByPallet" ColumnName="ChargeByPallet" />
+          <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+          <ScalarProperty Name="ShippingQty" ColumnName="ShippingQty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT008_TransitChargeReport_SubReport_GetData" FunctionName="ReportModel.Store.sp_RPT008_TransitChargeReport_SubReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT008_TransitChargeReport_SubReport_GetData_Result">
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT009_PickingChargeReport_GetData" FunctionName="ReportModel.Store.sp_RPT009_PickingChargeReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT009_PickingChargeReport_GetData_Result">
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="PickingQty" ColumnName="PickingQty" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="RateUOM" ColumnName="RateUOM" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="InvoiceNo1" ColumnName="InvoiceNo1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT010_OutgoingChargeReport_GetData" FunctionName="ReportModel.Store.sp_RPT010_OutgoingChargeReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT010_OutgoingChargeReport_GetData_Result">
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="OutQty" ColumnName="OutQty" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="BathUOM" ColumnName="BathUOM" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT010_OutgoingChargeReport_SubReport_GetData" FunctionName="ReportModel.Store.sp_RPT010_OutgoingChargeReport_SubReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT010_OutgoingChargeReport_SubReport_GetData_Result">
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="OutQty" ColumnName="OutQty" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT012_EstimatePriceReport_GetData" FunctionName="ReportModel.Store.sp_RPT012_EstimatePriceReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT012_EstimatePriceReport_GetData_Result">
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="PackingSize" ColumnName="PackingSize" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT013_ShippingDeliveryReport_GetData" FunctionName="ReportModel.Store.sp_RPT013_ShippingDeliveryReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT013_ShippingDeliveryReport_GetData_Result">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="ReceivingDate" ColumnName="ReceivingDate" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="BeginQty" ColumnName="BeginQty" />
+          <ScalarProperty Name="ReceivingQty" ColumnName="ReceivingQty" />
+          <ScalarProperty Name="ShippingQty" ColumnName="ShippingQty" />
+          <ScalarProperty Name="BalanceQty" ColumnName="BalanceQty" />
+          <ScalarProperty Name="lvl" ColumnName="lvl" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT016_InventoryCheckingListByProduct_GetData" FunctionName="ReportModel.Store.sp_RPT016_InventoryCheckingListByProduct_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT016_InventoryCheckingListByProduct_GetData_Result">
+          <ScalarProperty Name="ZoneCode" ColumnName="ZoneCode" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="ExpiredDate" ColumnName="ExpiredDate" />
+          <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+          <ScalarProperty Name="QtyLevel1" ColumnName="QtyLevel1" />
+          <ScalarProperty Name="TypeOfUnitLevel1" ColumnName="TypeOfUnitLevel1" />
+          <ScalarProperty Name="QtyLevel2" ColumnName="QtyLevel2" />
+          <ScalarProperty Name="TypeOfUnitLevel2" ColumnName="TypeOfUnitLevel2" />
+          <ScalarProperty Name="QtyLevel3" ColumnName="QtyLevel3" />
+          <ScalarProperty Name="TypeOfUnitLevel3" ColumnName="TypeOfUnitLevel3" />
+          <ScalarProperty Name="QtyLevel4" ColumnName="QtyLevel4" />
+          <ScalarProperty Name="TypeOfUnitLevel4" ColumnName="TypeOfUnitLevel4" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT017_InventoryCheckingListByZone_SubReport_GetData" FunctionName="ReportModel.Store.sp_RPT017_InventoryCheckingListByZone_SubReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT017_InventoryCheckingListByZone_SubReport_GetData_Result">
+          <ScalarProperty Name="UnitOfLevel" ColumnName="UnitOfLevel" />
+          <ScalarProperty Name="QtyTotal" ColumnName="QtyTotal" />
+          <ScalarProperty Name="lvl" ColumnName="lvl" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT020_ShipmentLabel_GetData" FunctionName="ReportModel.Store.sp_RPT020_ShipmentLabel_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT020_ShipmentLabel_GetData_Result">
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="TransportationDate" ColumnName="TransportationDate" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductCodeLabel" ColumnName="ProductCodeLabel" />
+          <ScalarProperty Name="ShipmentLabel" ColumnName="ShipmentLabel" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="ShipQty" ColumnName="ShipQty" />
+          <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT022_DeliveryOrder_GetData" FunctionName="ReportModel.Store.sp_RPT022_DeliveryOrder_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT022_DeliveryOrder_GetData_Result">
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="ShippingAreaCode" ColumnName="ShippingAreaCode" />
+          <ScalarProperty Name="PortOfLoading" ColumnName="PortOfLoading" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="PortOfDischarge" ColumnName="PortOfDischarge" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="FinalCodeName" ColumnName="FinalCodeName" />
+          <ScalarProperty Name="FinalAddress" ColumnName="FinalAddress" />
+          <ScalarProperty Name="BookingNo" ColumnName="BookingNo" />
+          <ScalarProperty Name="ContainerNo" ColumnName="ContainerNo" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="TruckCompanyLongName" ColumnName="TruckCompanyLongName" />
+          <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+          <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="ShipQty" ColumnName="ShipQty" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="M3" ColumnName="M3" />
+          <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+          <ScalarProperty Name="DOIssuedDate" ColumnName="DOIssuedDate" />
+          <ScalarProperty Name="ReferenceNo" ColumnName="ReferenceNo" />
+          <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="PackingSize" ColumnName="PackingSize" />
+          <ScalarProperty Name="PackingSale" ColumnName="PackingSale" />
+          <ScalarProperty Name="SumPackingSale" ColumnName="SumPackingSale" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT023_MovementReport_SubReport_GetData" FunctionName="ReportModel.Store.sp_RPT023_MovementReport_SubReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT023_MovementReport_SubReport_GetData_Result">
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="In" ColumnName="In" />
+          <ScalarProperty Name="Out" ColumnName="Out" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT024_MovementReport_Chart" FunctionName="ReportModel.Store.sp_RPT024_MovementReport_Chart">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT024_MovementReport_Chart_Result">
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="In" ColumnName="In" />
+          <ScalarProperty Name="Out" ColumnName="Out" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT025_InventoryUsageReport_GetData" FunctionName="ReportModel.Store.sp_RPT025_InventoryUsageReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT025_InventoryUsageReport_GetData_Result">
+          <ScalarProperty Name="ActualUsage" ColumnName="ActualUsage" />
+          <ScalarProperty Name="ActualInPercent" ColumnName="ActualInPercent" />
+          <ScalarProperty Name="TypeOfGoodsID" ColumnName="TypeOfGoodsID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="TypeOfGoodsCode" ColumnName="TypeOfGoodsCode" />
+          <ScalarProperty Name="TypeOfGoodsName" ColumnName="TypeOfGoodsName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT025_InventoryUsageReport_GetData_Sub_Report" FunctionName="ReportModel.Store.sp_RPT025_InventoryUsageReport_GetData_Sub_Report">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT025_InventoryUsageReport_GetData_Sub_Report_Result">
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="ActualUsage" ColumnName="ActualUsage" />
+          <ScalarProperty Name="AllInventoryUsage" ColumnName="AllInventoryUsage" />
+          <ScalarProperty Name="ActualUsageInPercent" ColumnName="ActualUsageInPercent" />
+          <ScalarProperty Name="IdealUsage" ColumnName="IdealUsage" />
+          <ScalarProperty Name="OverUsage" ColumnName="OverUsage" />
+          <ScalarProperty Name="OverUsageInPercent" ColumnName="OverUsageInPercent" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT026_InventoryUsageReport_Chart_GetData" FunctionName="ReportModel.Store.sp_RPT026_InventoryUsageReport_Chart_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT026_InventoryUsageReport_Chart_GetData_Result">
+          <ScalarProperty Name="ActualUsage" ColumnName="ActualUsage" />
+          <ScalarProperty Name="ActualInPercent" ColumnName="ActualInPercent" />
+          <ScalarProperty Name="TypeOfGoodsID" ColumnName="TypeOfGoodsID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="TypeOfGoodsCode" ColumnName="TypeOfGoodsCode" />
+          <ScalarProperty Name="TypeOfGoodsName" ColumnName="TypeOfGoodsName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT028_PalletReport_GetData" FunctionName="ReportModel.Store.sp_RPT028_PalletReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT028_PalletReport_GetData_Result">
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="PalletCnt" ColumnName="PalletCnt" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT029_ReceivePlanList_GetData" FunctionName="ReportModel.Store.sp_RPT029_ReceivePlanList_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT029_ReceivePlanList_GetData_Result">
+          <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="SupplierLongName" ColumnName="SupplierLongName" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="TruckCompanyNameList" ColumnName="TruckCompanyNameList" />
+          <ScalarProperty Name="ContainerNoList" ColumnName="ContainerNoList" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="PackingSize" ColumnName="PackingSize" />
+          <ScalarProperty Name="PackingSizeUnit" ColumnName="PackingSizeUnit" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="InventoryQty" ColumnName="InventoryQty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT029_ReceivePlanList_SubReport_GetData" FunctionName="ReportModel.Store.sp_RPT029_ReceivePlanList_SubReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT029_ReceivePlanList_SubReport_GetData_Result">
+          <ScalarProperty Name="ContainerNoList" ColumnName="ContainerNoList" />
+          <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT030_StockCard_GetData" FunctionName="ReportModel.Store.sp_RPT030_StockCard_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT030_StockCard_GetData_Result">
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="PDSNo" ColumnName="PDSNo" />
+          <ScalarProperty Name="TypeOfGoodsCode" ColumnName="TypeOfGoodsCode" />
+          <ScalarProperty Name="InventoryUnit" ColumnName="InventoryUnit" />
+          <ScalarProperty Name="Stock_In" ColumnName="Stock_In" />
+          <ScalarProperty Name="Stock_Out" ColumnName="Stock_Out" />
+          <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="SourceT" ColumnName="SourceT" />
+          <ScalarProperty Name="x" ColumnName="x" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT032_OrderBalance_GetData" FunctionName="ReportModel.Store.sp_RPT032_OrderBalance_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT032_OrderBalance_GetData_Result">
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="PlanDate" ColumnName="PlanDate" />
+          <ScalarProperty Name="OnHandQty" ColumnName="OnHandQty" />
+          <ScalarProperty Name="AllocateQty" ColumnName="AllocateQty" />
+          <ScalarProperty Name="ShippingDate" ColumnName="ShippingDate" />
+          <ScalarProperty Name="PlanQty" ColumnName="PlanQty" />
+          <ScalarProperty Name="PickQty" ColumnName="PickQty" />
+          <ScalarProperty Name="ShipQty" ColumnName="ShipQty" />
+          <ScalarProperty Name="ShortageQty" ColumnName="ShortageQty" />
+          <ScalarProperty Name="UndeliveryQty" ColumnName="UndeliveryQty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT023_MovementReport_GetData" FunctionName="ReportModel.Store.sp_RPT023_MovementReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT023_MovementReport_GetData_Result">
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="In" ColumnName="In" />
+          <ScalarProperty Name="Out" ColumnName="Out" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="StockDay" ColumnName="StockDay" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT011_TransportationChargeReport_GetData" FunctionName="ReportModel.Store.sp_RPT011_TransportationChargeReport_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT011_TransportationChargeReport_GetData_Result">
+          <ScalarProperty Name="TransportationDate" ColumnName="TransportationDate" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="FinalDestinationLongName" ColumnName="FinalDestinationLongName" />
+          <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+          <ScalarProperty Name="Trips" ColumnName="Trips" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="TransportAmount" ColumnName="TransportAmount" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="ShippingQty" ColumnName="ShippingQty" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT017_InventoryCheckingListByZone_GetData" FunctionName="ReportModel.Store.sp_RPT017_InventoryCheckingListByZone_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT017_InventoryCheckingListByZone_GetData_Result">
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="UnitOfLevel" ColumnName="UnitOfLevel" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="lvl" ColumnName="lvl" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+          <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT019_ReceivingLabel_GetData" FunctionName="ReportModel.Store.sp_RPT019_ReceivingLabel_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT019_ReceivingLabel_GetData_Result">
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+          <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="ActualLotNo" ColumnName="ActualLotNo" />
+          <ScalarProperty Name="Issue_By" ColumnName="Issue_By" />
+          <ScalarProperty Name="Issue_date" ColumnName="Issue_date" />
+          <ScalarProperty Name="ExpiredDate" ColumnName="ExpiredDate" />
+          <ScalarProperty Name="ReceivedDate" ColumnName="ReceivedDate" />
+          <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+          <ScalarProperty Name="LabelCnt" ColumnName="LabelCnt" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT021_PickingList_GetData" FunctionName="ReportModel.Store.sp_RPT021_PickingList_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT021_PickingList_GetData_Result">
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="WarehouseCode" ColumnName="WarehouseCode" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="ShippingAreaCode" ColumnName="ShippingAreaCode" />
+          <ScalarProperty Name="ETD" ColumnName="ETD" />
+          <ScalarProperty Name="FinalCodeName" ColumnName="FinalCodeName" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="BookingNo" ColumnName="BookingNo" />
+          <ScalarProperty Name="PickingDate" ColumnName="PickingDate" />
+          <ScalarProperty Name="VanningDate" ColumnName="VanningDate" />
+          <ScalarProperty Name="TransportationDate" ColumnName="TransportationDate" />
+          <ScalarProperty Name="PortOfLoading" ColumnName="PortOfLoading" />
+          <ScalarProperty Name="PortOfDischarge" ColumnName="PortOfDischarge" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="StockQty" ColumnName="StockQty" />
+          <ScalarProperty Name="UOMInventory" ColumnName="UOMInventory" />
+          <ScalarProperty Name="AssignQty" ColumnName="AssignQty" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+          <ScalarProperty Name="PickingLineNo" ColumnName="PickingLineNo" />
+          <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+          <ScalarProperty Name="ProductConditionCode" ColumnName="ProductConditionCode" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="ProductConditionName" ColumnName="ProductConditionName" />
+          <ScalarProperty Name="PalletQty" ColumnName="PalletQty" />
+          <ScalarProperty Name="lvl" ColumnName="lvl" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT033_PartDeliverySheet_GetData" FunctionName="ReportModel.Store.sp_RPT033_PartDeliverySheet_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT033_PartDeliverySheet_GetData_Result">
+          <ScalarProperty Name="ReportType" ColumnName="ReportType" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+          <ScalarProperty Name="ArrivalTime" ColumnName="ArrivalTime" />
+          <ScalarProperty Name="CollectDate" ColumnName="CollectDate" />
+          <ScalarProperty Name="CollectTime" ColumnName="CollectTime" />
+          <ScalarProperty Name="SupplierLongName" ColumnName="SupplierLongName" />
+          <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="PDSNo" ColumnName="PDSNo" />
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="PartID" ColumnName="PartID" />
+          <ScalarProperty Name="ProductGroup" ColumnName="ProductGroup" />
+          <ScalarProperty Name="QtyPack" ColumnName="QtyPack" />
+          <ScalarProperty Name="QtyBox" ColumnName="QtyBox" />
+          <ScalarProperty Name="UnitLv2" ColumnName="UnitLv2" />
+          <ScalarProperty Name="QtyPCS" ColumnName="QtyPCS" />
+          <ScalarProperty Name="UnitLv3" ColumnName="UnitLv3" />
+          <ScalarProperty Name="PDSQRCode" ColumnName="PDSQRCode" />
+          <ScalarProperty Name="WeightMinimumOrder" ColumnName="WeightMinimumOrder" />
+          <ScalarProperty Name="M3MinimumOrder" ColumnName="M3MinimumOrder" />
+          <ScalarProperty Name="PalletQty" ColumnName="PDSQRCode" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="ProductTypeName" ColumnName="ProductTypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT033_PartDeliverySheet_GetSubData" FunctionName="ReportModel.Store.sp_RPT033_PartDeliverySheet_GetSubData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT033_PartDeliverySheet_GetSubData_Result">
+          <ScalarProperty Name="PDSNo" ColumnName="PDSNo" />
+          <ScalarProperty Name="QtyPack" ColumnName="QtyPack" />
+          <ScalarProperty Name="UnitPact" ColumnName="UnitPact" />
+          <ScalarProperty Name="QtyBox" ColumnName="QtyBox" />
+          <ScalarProperty Name="UnitLv2" ColumnName="UnitLv2" />
+          <ScalarProperty Name="QtyPCS" ColumnName="QtyPCS" />
+          <ScalarProperty Name="UnitLv3" ColumnName="UnitLv3" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT032_RMTag_GetData" FunctionName="ReportModel.Store.sp_RPT032_RMTag_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT032_RMTag_GetData_Result">
+          <ScalarProperty Name="PDSNo" ColumnName="PDSNo" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="SupplierNo" ColumnName="SupplierNo" />
+          <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+          <ScalarProperty Name="SupplierLongName" ColumnName="SupplierLongName" />
+          <ScalarProperty Name="CollectDate" ColumnName="CollectDate" />
+          <ScalarProperty Name="CollectTime" ColumnName="CollectTime" />
+          <ScalarProperty Name="RunningNo" ColumnName="RunningNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT036_LoadingInstruction_GetData" FunctionName="ReportModel.Store.sp_RPT036_LoadingInstruction_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT036_LoadingInstruction_GetData_Result">
+          <ScalarProperty Name="ROWNUM" ColumnName="ROWNUM" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="ContainerNo" ColumnName="ContainerNo" />
+          <ScalarProperty Name="ShipmentDate" ColumnName="ShipmentDate" />
+          <ScalarProperty Name="TransportDate" ColumnName="TransportDate" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+          <ScalarProperty Name="TotalPallet" ColumnName="TotalPallet" />
+          <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+          <ScalarProperty Name="PackingNo" ColumnName="PackingNo" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="QtyLevel3" ColumnName="QtyLevel3" />
+          <ScalarProperty Name="UnitLevel3" ColumnName="UnitLevel3" />
+          <ScalarProperty Name="QtyLevel2" ColumnName="QtyLevel2" />
+          <ScalarProperty Name="UnitLevel2" ColumnName="UnitLevel2" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="BookingNo" ColumnName="BookingNo" />
+          <ScalarProperty Name="SealNo" ColumnName="SealNo" />
+          <ScalarProperty Name="HeaderRemark" ColumnName="HeaderRemark" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT043_PrivilegeFormat_GetData" FunctionName="ReportModel.Store.sp_RPT043_PrivilegeFormat_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT043_PrivilegeFormat_GetData_Result">
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="HSCode" ColumnName="HSCode" />
+          <ScalarProperty Name="PVCode" ColumnName="PVCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT042_AdivceOfShipment_GetData" FunctionName="ReportModel.Store.sp_RPT042_AdivceOfShipment_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT042_AdivceOfShipment_GetData_Result">
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+          <ScalarProperty Name="CustomerPONo" ColumnName="CustomerPONo" />
+          <ScalarProperty Name="InvoiceAmount" ColumnName="InvoiceAmount" />
+          <ScalarProperty Name="VesselName" ColumnName="VesselName" />
+          <ScalarProperty Name="BookingNo" ColumnName="BookingNo" />
+          <ScalarProperty Name="ShippingDate" ColumnName="ShippingDate" />
+          <ScalarProperty Name="ETA" ColumnName="ETA" />
+          <ScalarProperty Name="ShippingPort" ColumnName="ShippingPort" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="CopyInvoice" ColumnName="CopyInvoice" />
+          <ScalarProperty Name="CopyCustomerInvoice" ColumnName="CopyCustomerInvoice" />
+          <ScalarProperty Name="CopyPackList" ColumnName="CopyPackList" />
+          <ScalarProperty Name="CopyCertificate" ColumnName="CopyCertificate" />
+          <ScalarProperty Name="CopyM3" ColumnName="CopyM3" />
+          <ScalarProperty Name="TotalPCS" ColumnName="TotalPCS" />
+          <ScalarProperty Name="CopyCerOrigin" ColumnName="CopyCerOrigin" />
+          <ScalarProperty Name="CopyBillLadingOrigin" ColumnName="CopyBillLadingOrigin" />
+          <ScalarProperty Name="CopyBillLading" ColumnName="CopyBillLading" />
+          <ScalarProperty Name="CopyPolicyOrigin" ColumnName="CopyPolicyOrigin" />
+          <ScalarProperty Name="CopyPolicy" ColumnName="CopyPolicy" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="ContainerNo" ColumnName="ContainerNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT034_PurchaseOrder_GetData" FunctionName="ReportModel.Store.sp_RPT034_PurchaseOrder_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT034_PurchaseOrder_GetData_Result">
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="IssuedDate" ColumnName="IssuedDate" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="PartCode" ColumnName="PartCode" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="OrderQty" ColumnName="OrderQty" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="CreditTerm" ColumnName="CreditTerm" />
+          <ScalarProperty Name="DeliveryPlace" ColumnName="DeliveryPlace" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT044_PackingList_GetData" FunctionName="ReportModel.Store.sp_RPT044_PackingList_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT044_PackingList_GetData_Result">
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="InvoiceIssuedDate" ColumnName="InvoiceIssuedDate" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="FinalDestination" ColumnName="FinalDestination" />
+          <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+          <ScalarProperty Name="VesselName" ColumnName="VesselName" />
+          <ScalarProperty Name="ETD" ColumnName="ETD" />
+          <ScalarProperty Name="PortOfLoadingName" ColumnName="PortOfLoadingName" />
+          <ScalarProperty Name="PortOfDischargeName" ColumnName="PortOfDischargeName" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="PackingNo" ColumnName="PackingNo" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+          <ScalarProperty Name="M3" ColumnName="M3" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT045_LabelSticker_GetData" FunctionName="ReportModel.Store.sp_RPT045_LabelSticker_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT045_LabelSticker_GetData_Result">
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="SupBN" ColumnName="SupBN" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+          <ScalarProperty Name="PartShortCode" ColumnName="PartShortCode" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="CustomerPONo" ColumnName="CustomerPONo" />
+          <ScalarProperty Name="PackingDate" ColumnName="PackingDate" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT031_SlowMovement_GetData" FunctionName="ReportModel.Store.sp_RPT031_SlowMovement_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT031_SlowMovement_GetData_Result">
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="ProductGroupCode" ColumnName="ProductGroupCode" />
+          <ScalarProperty Name="ProductGroupName" ColumnName="ProductGroupName" />
+          <ScalarProperty Name="ProductCategoryCode" ColumnName="ProductCategoryCode" />
+          <ScalarProperty Name="ProductCategoryName" ColumnName="ProductCategoryName" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="QtyPeriod1" ColumnName="QtyPeriod1" />
+          <ScalarProperty Name="QtyPeriod2" ColumnName="QtyPeriod2" />
+          <ScalarProperty Name="QtyPeriod3" ColumnName="QtyPeriod3" />
+          <ScalarProperty Name="QtyPeriod4" ColumnName="QtyPeriod4" />
+          <ScalarProperty Name="AmtEstimateValuePeriod1" ColumnName="AmtEstimateValuePeriod1" />
+          <ScalarProperty Name="AmtEstimateValuePeriod2" ColumnName="AmtEstimateValuePeriod2" />
+          <ScalarProperty Name="AmtEstimateValuePeriod3" ColumnName="AmtEstimateValuePeriod3" />
+          <ScalarProperty Name="AmtEstimateValuePeriod4" ColumnName="AmtEstimateValuePeriod4" />
+          <ScalarProperty Name="PeriodDateFrom" ColumnName="PeriodDateFrom" />
+          <ScalarProperty Name="PeriodDateTo" ColumnName="PeriodDateTo" />
+          <ScalarProperty Name="StockAmt" ColumnName="StockAmt" />
+          <ScalarProperty Name="ProductConditionID" ColumnName="ProductConditionID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT035_PackingInstruction_Material_GetData" FunctionName="ReportModel.Store.sp_RPT035_PackingInstruction_Material_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT035_PackingInstruction_Material_GetData_Result">
+          <ScalarProperty Name="ProductShortCode" ColumnName="ProductShortCode" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="Usage" ColumnName="Usage" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT037_CaseMark_GetData" FunctionName="ReportModel.Store.sp_RPT037_CaseMark_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT037_CaseMark_GetData_Result">
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="is_special" ColumnName="is_special" />
+          <ScalarProperty Name="Packing_date" ColumnName="Packing_date" />
+          <ScalarProperty Name="Special_Code" ColumnName="Special_Code" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT018_ReceivingInstruction_GetData" FunctionName="ReportModel.Store.sp_RPT018_ReceivingInstruction_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT018_ReceivingInstruction_GetData_Result">
+          <ScalarProperty Name="ReceivingNo" ColumnName="ReceivingNo" />
+          <ScalarProperty Name="ReceivingLabel" ColumnName="ReceivingLabel" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+          <ScalarProperty Name="ArrivalTime" ColumnName="ArrivalTime" />
+          <ScalarProperty Name="WarehouseName" ColumnName="WarehouseName" />
+          <ScalarProperty Name="SupplierLongName" ColumnName="SupplierLongName" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="ContainerNo" ColumnName="ContainerNo" />
+          <ScalarProperty Name="TruckCompanyLongName" ColumnName="TruckCompanyLongName" />
+          <ScalarProperty Name="TransportTypeName" ColumnName="TransportTypeName" />
+          <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="Installment" ColumnName="Installment" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductLongName" ColumnName="ProductLongName" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="PalletNoRef" ColumnName="PalletNoRef" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="DetailRemark" ColumnName="DetailRemark" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="QtyLv2" ColumnName="QtyLv2" />
+          <ScalarProperty Name="PackingSize" ColumnName="PackingSize" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT035_PackingInstruction_GetData" FunctionName="ReportModel.Store.sp_RPT035_PackingInstruction_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT035_PackingInstruction_GetData_Result">
+          <ScalarProperty Name="ShipmentNo" ColumnName="ShipmentNo" />
+          <ScalarProperty Name="PickingNo" ColumnName="PickingNo" />
+          <ScalarProperty Name="PackingNo" ColumnName="PackingNo" />
+          <ScalarProperty Name="PalletNo" ColumnName="PalletNo" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="ShippingDate" ColumnName="ShippingDate" />
+          <ScalarProperty Name="PackingDate" ColumnName="PackingDate" />
+          <ScalarProperty Name="PickingDate" ColumnName="PickingDate" />
+          <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+          <ScalarProperty Name="ShortCode" ColumnName="ShortCode" />
+          <ScalarProperty Name="PartCode" ColumnName="PartCode" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="PDSNo" ColumnName="PDSNo" />
+          <ScalarProperty Name="PlanQty" ColumnName="PlanQty" />
+          <ScalarProperty Name="NumberOfUnitLevel3" ColumnName="NumberOfUnitLevel3" />
+          <ScalarProperty Name="PickedQty" ColumnName="PickedQty" />
+          <ScalarProperty Name="RemainPicking" ColumnName="RemainPicking" />
+          <ScalarProperty Name="PackedQty" ColumnName="PackedQty" />
+          <ScalarProperty Name="RemainPacking" ColumnName="RemainPacking" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="TotalBox" ColumnName="TotalBox" />
+          <ScalarProperty Name="PackingTime" ColumnName="PackingTime" />
+          <ScalarProperty Name="PrepareTime" ColumnName="PrepareTime" />
+          <ScalarProperty Name="PalletizeTime" ColumnName="PalletizeTime" />
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RPT046_UserStickerLaber_GetData" FunctionName="ReportModel.Store.sp_RPT046_UserStickerLaber_GetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReportModel.sp_RPT046_UserStickerLaber_GetData_Result">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

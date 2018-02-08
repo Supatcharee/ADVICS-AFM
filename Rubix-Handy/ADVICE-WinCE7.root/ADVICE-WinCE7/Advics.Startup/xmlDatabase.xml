@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dsDatabase>
+<dtDatabase>
+  <WebApiUrl>http://rubixsvr/AdvicsWebAPI/</WebApiUrl>
+</dtDatabase>
+  <dtAutoUpdate>
+    <WebUrl>http://rubixsvr/AdvicsAutoUpdate/</WebUrl>
+  </dtAutoUpdate>
+  <dtVersion>
+    <Version>1.5</Version>
+  </dtVersion>
+</dsDatabase>
