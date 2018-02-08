@@ -1,0 +1,40 @@
+Receiving 4 Screen
+frmZHRC010_ReceivingInstructionEntry.cs
+frmZHRC020_ReceivingPlanList.cs
+frmZHRC030_ReceivingDetailAndConfirmation.cs
+frmZHRC031_ReceivingDetailEntry.cs
+
+Transit 2 Screen
+frmZHTS010_SearchTransitInstruction.cs
+frmZHTS020_TransitConfirmation.cs
+
+Picking 4 Screen
+frmZHPK010_PickingInstructionEntry.cs
+frmZHPK020_PickingPlanList.cs
+frmZHPK030_PickingDetail.cs
+frmZHPK031_PickingDetailConfirmation.cs
+
+Shipping 4 Screen
+frmZHSH010_ShippingInstructionEntry.cs
+frmZHSH020_ShippingPlanList.cs
+frmZHSH030_ShippingInstructionDetail.cs
+frmZHSH031_ShippingConfirmation.cs
+
+Inquiry 6 Screen
+frmZHIQ010_InquiryMenu.cs
+frmZHIQ020_LocationInquiry.cs
+frmZHIQ030_ItemInformation.cs
+frmZHIQ031_ItemDetail.cs
+frmZHIQ032_ItemMovement.cs
+frmZHIQ033_ItemStorageList.cs
+
+ChangeLocation 5 Screen
+frmZHCH010_ChangeLocationInstruction.cs
+frmZHCH020_ChangeLocationConfirmation.cs
+frmZHCH030_ChangeLocationScanItem.cs
+frmZHCH040_ChangeLocationScanLocation.cs
+frmZHCH050_ChangeLocationConfirmation.cs
+
+Return Receiving 2 Screen
+frmZHRC040_ReturnReceivingEntry.cs
+frmZHRC041_ReturnReceivingDetailEntry.cs
